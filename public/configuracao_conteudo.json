@@ -1,0 +1,390 @@
+[
+    {
+        "identificador": "apresentacao_do_curso",
+        "nome": "Apresentação do Curso",
+        "descricao": "Unidade de introdução ao conteúdo.",
+        "permitePorcentagem": "true",
+        "topicos": [
+            {
+                "identificador": "topico_1",
+                "nome": "Apresentação do Curso"
+            }
+        ],
+        "atividades": [
+            {
+                "identificador": "atividade_1_apresentacao_do_curso",
+                "nomeAtividade": "Atividade 1 - Apresentação do Curso",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a1_apresentacao_do_curso",
+                        "enunciado": "Assinale a alternativa que lhe parece mais apropriada com respeito à afirmação a seguir, considerado o quadro \"Uma ida não planejada ao supermercado\".",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Não, pois ele sempre segue a mesma rotina e já faz o melhor aproveitamento do seu tempo!",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa":  "Sim, pois José poderia por exemplo aprender um pouco sobre algoritmos e criar um para sempre buscar o menor caminho no mercado otimizando seu tempo.",
+                                "chave": "2",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Sim, José deve obrigatoriamnte comprar um notebook e instalar um programa para ajudá-lo a planejar suas compras e otimizar seu tempo.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Sim, José deve obrigatoriamnte comprar um \"smartphone\" e instalar um aplicativo para ajudá-lo a planejar suas compras e otimizar seu tempo.",
+                                "chave": "4",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "identificador": "introducao_ao_pensamento_computacional",
+        "nome": "Introdução ao Pensamento Computacional",
+        "descricao": "",
+        "permitePorcentagem": "true",
+        "identificadorPai": "",
+        "topicos": [
+            {
+                "identificador": "topico_1",
+                "nome": "Introdução ao Pensamento Computacional"
+            }
+        ],
+        "atividades": []
+    },
+    {
+        "identificador": "decomposicao",
+        "nome": "Decomposição",
+        "descricao": "",
+        "permitePorcentagem": "true",
+        "identificadorPai": "",
+        "topicos": [
+            {
+                "identificador": "topico_1",
+                "nome": "Conceituação"
+            },
+            {
+                "identificador": "topico_2",
+                "nome": "Aplicações"
+            },
+            {
+                "identificador": "topico_3",
+                "nome": "Recomendações"
+            },
+            {
+                "identificador": "topico_4",
+                "nome": "Problemas"
+            }
+        ],
+        "atividades": [{
+                "identificador": "atividade_1_decomposicao",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a1_decomposicao",
+                        "enunciado": "Avaliando um festival folclórico",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Tempo da apresentação.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Sincronia.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Precisão de movimentos.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Participação da audiência.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Figurino.",
+                                "chave": "5",
+                                "valor": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q2_a1_decomposicao",
+                        "enunciado": "Organizando um evento",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Convidados; Local; Refrigeração; Mídia/Transmissão; Comissão julgadora.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Divulgação; Patrocínio; Local; Atrações; Licenciamento; Ingressos; Segurança.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Local; Convites; Figurino; Sonorização; Apresentação.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Inscrições; Data; Patrocínio; Comitês; Local; Transporte; Programação.",
+                                "chave": "4",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Convites; Cardápio; Música; Bolo decorado; Doces; Salgados; Bebidas; Lembranças.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q3_a1_decomposicao",
+                        "enunciado": "Entendendo o corpo humano",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Cardiovascular, respiratório, digestivo, nervoso, sensorial, endócrino, excretor, urinário, reprodutor, esquelético, muscular, imunológico, linfático, tegumentar.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Cavidades nasais, faringe, laringe, traquéia, brônquios, pulmões.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Cabeça, tronco, membros.",
+                                "chave": "3",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Visão, audição, olfato, paladar, tato.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Artérias, veias, vasos capilares.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q4_a1_decomposicao",
+                        "enunciado": "Planejando as próximas férias",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Transporte; hospedagem; alimentação; atrações.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Caminhar; pescar; jogar futebol; nadar; cochilar, ir ao teatro.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Armários abastecidos; acendimento de luzes; retirada de correspondência.",
+                                "chave": "3",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Compra de passagem de avião, reserva de hotel, aluguel de carro.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Atividades na primeira cidade visitada, atividades na segunda cidade visitada, atividades na última cidade.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                ]
+            }]
+    },
+    {
+        "identificador": "abstracao",
+        "nome": "Abstração",
+        "descricao": "",
+        "permitePorcentagem": "true",
+        "identificadorPai": "",
+        "topicos": [
+            {
+                "identificador": "topico_1",
+                "nome": "Conceituação"
+            },
+            {
+                "identificador": "topico_2",
+                "nome": "Aplicações"
+            },
+            {
+                "identificador": "topico_3",
+                "nome": "Recomendações"
+            },
+            {
+                "identificador": "topico_4",
+                "nome": "Assuntos correlatos"
+            }
+        ],
+        "atividades": [
+            {
+                "identificador": "atividade_1_abstracao",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a1_abstracai",
+                        "enunciado": "Considere a organização de uma biblioteca e indique o que lhe parece ser uma abstração mais conveniente para falar de livros: ",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Cores das capas.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Autores dos livros.",
+                                "chave": "2",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Tamanho das letras.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Gramatura do papel.",
+                                "chave": "4",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q2_a1_abstracao",
+                        "enunciado": "Para organizar seu guarda-roupas, o que lhe parece ser uma abstração mais conveniente para falar de roupas: ",
+                        "gabaritos": [
+                            {
+                                "alternativa": "A grife das peças.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "O país onde as peças são fabricadas.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "O preço das peças.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "O tipo das peças, por exemplo, calça, bermuda, vestido, saia, blazer etc.",
+                                "chave": "4",
+                                "valor": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q3_a1_abstracao",
+                        "enunciado": "Para organizar a circulação de veículos de uma cidade, o que parece ser uma característica irrelevante de suas vias: ",
+                        "gabaritos": [
+                            {
+                                "alternativa": "A largura da via.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "A altura máxima permitida para o tráfego de veículos.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "A idade média dos veículos que trafegam na via.",
+                                "chave": "3",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "A tonelagem máxima suportada pela via.",
+                                "chave": "4",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q4_a1_abstracao",
+                        "enunciado": "Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores: ",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Padaria, Materiais de Limpeza, Congelados, Hortigranjeiros.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Produtos da empresa X, Produtos da Empresa Y, Produtos da Empresa Z.",
+                                "chave": "2",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Higiene pessoal, Laticinios, Adega, Bomboniere, Açougue.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Frios, Congelados, Matinais, Materiais Elétricos.",
+                                "chave": "4",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q5_a1_abstracao",
+                        "enunciado": "Para falar das atividades necessárias para detalhar a abstração “Organizar o seu guarda-roupa”, identifique a atividade que lhe parece menos adequada: ",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Separar as peças de roupa por tipo.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Para cada tipo de peça, organizar por cores.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Guardar cada peça no espaço reservado para o seu tipo.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Separar as peças por cor, independentemente do tipo.",
+                                "chave": "4",
+                                "valor": "1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

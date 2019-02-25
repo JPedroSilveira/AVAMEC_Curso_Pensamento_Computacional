@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Menu from './components/menu'
+import Header from './components/header'
+import Footer from './components/footer'
+import Conteudo from './components/conteudo'
+import InfLogo from './images/inf_logo.png'
+import './App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+class App extends React.Component {
+    render() {        
+        return (
+            <div className="App">
+                <Menu />
+                <div className="container">
+                    <Header />
+                    <Conteudo />
+                </div>
+                <div className="footer">
+                    <Footer />
+                </div>
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App

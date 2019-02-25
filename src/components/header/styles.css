@@ -1,0 +1,13 @@
+.image-box{
+    justify-content: center;
+}
+
+.image{
+    height: 350px;
+}
+
+@media screen and (orientation: portrait) {
+   .image{
+        height: 150px;
+    }
+}

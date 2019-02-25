@@ -1,0 +1,239 @@
+h1{
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    margin-top: 2em;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+    margin-top: 2em;
+}
+
+h4{
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    margin-top: 3em;
+}
+
+p{
+    margin-bottom: 1.5em;
+    line-height: 1.7em;
+}
+
+a{
+    color: inherit;
+}
+
+.aprc-container{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #585858;
+    font-weight: 100;
+}
+
+.simple-text{
+    margin-bottom: 3em;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+.box{ /*To-Do: Modificar o flex para compatibilidade com IE*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.boxed{
+    border: 0.05em solid;
+    width: 70%;
+    border-color: #000000;
+    text-align: justify;
+    padding: 2em;
+    padding-top: 0em;
+}
+
+.boxed.problema{
+    background-color: rgb(251, 229, 205);
+    margin-bottom: 3em;
+}
+
+.boxed.problema textarea{
+    width: 100%;
+    font-size: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #585858;
+}
+
+.options-box{
+    display: inline-block;
+}
+
+.option{
+    margin-top: 1em;
+}
+
+.hint{
+    border: 0.05em solid;
+    border-color: #000000;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: whitesmoke;
+}
+
+.hint.wrong{
+    background-color: rgb(255, 94, 36);
+}
+
+.hint.right{
+    background-color: green;
+}
+
+.button{
+    border: 0.1em solid black;
+    background-color: white;
+    border-radius: 0.2em;
+    font-size: 0.9em;
+    font-family: inherit;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: inherit;
+    padding: 1em 2em;
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+.button img{
+    height: 1.8em;
+    margin-bottom: -0.5em;
+    margin-right: 1em;
+    margin-left: -1em;
+    margin-top: -0.5em;
+}
+
+.button:hover{
+    color:rgb(242, 132, 158);
+    border-color: rgb(242, 132, 158);
+    cursor: pointer;
+}
+
+.button.voltar{
+    width: 45%;
+    margin-right: 10%;
+    text-justify: center;
+}
+
+.button.avancar{
+    width: 45%;
+    padding-left: 0;
+    padding-right: 0;
+    text-justify: center;
+}
+
+.seletor{
+    width: 40%;
+    margin-top: 2em;
+    margin-left: 30%;
+}
+
+.optionRadio:hover{
+    cursor: pointer;
+}
+
+.radioLabel:hover{
+    color:rgb(242, 132, 158);
+    cursor: pointer;
+}
+
+.seletor .button{
+    width: 100%;
+    padding: 0 0 0 0;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.container-proxima-unidade{
+    text-align: center;
+}
+
+.span-referencia{
+    color:red;
+}
+
+#nota{
+    margin-top: 1em;
+}
+
+.atividadeAvaliativa{
+    margin-bottom: 5em;
+}
+
+.imagem-centralizada {
+    text-align: center;
+    width: 100%;
+}
+
+.imagem-centralizada a{
+    font-size: 0.9em;
+}
+
+.imagem-centralizada a:link{
+    text-decoration: none;
+}
+
+.figura{
+    width:50%;
+}
+
+.algoritmos{
+    border: 0.05em solid black;
+    width: 80%;
+    padding: 0em 1em;
+    background-color: rgb(241, 239, 198);
+    margin-bottom: 1em;
+}
+
+.algoritmos h4{
+    margin-top: 1em;
+}
+
+.algoritmos input{
+    width: 100%;
+}
+
+.algoritmos textarea{
+    width: 100%;
+    font-size: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #585858;
+}
+
+.add-button{
+    float:right;
+}
+
+.delete-button{
+    float:right;
+}
+
+.save-button{
+    float:right;
+}
+
+.button-unidade{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.quadro{
+    background-color:rgb(207, 226, 243)
+}
