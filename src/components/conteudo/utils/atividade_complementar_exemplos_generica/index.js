@@ -218,17 +218,15 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
 
     /*Atualiza o valor de uma resposta conforme o usuário a altera*/
     onChangeResposta = (tamMaximo, indiceExemplo, idQuestao, data) => {
-        if (data.currentTarget.value.length < tamMaximo) {
-            let atividade = this.state.atividade
+        let atividade = this.state.atividade
 
-            atividade.exemplos[indiceExemplo]
-                .questoes[idQuestao]
-                .resposta = data.currentTarget.value
+        atividade.exemplos[indiceExemplo]
+            .questoes[idQuestao]
+            .resposta = data.currentTarget.value.substr(0, tamMaximo)
 
-            this.setState({
-                atividade: atividade
-            })
-        }
+        this.setState({
+            atividade: atividade
+        })
     }
 
     render(){

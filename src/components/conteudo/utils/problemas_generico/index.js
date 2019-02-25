@@ -132,19 +132,17 @@ class ProblemasGenerico extends AtividadeGenerica {
 
     /*Atualiza o valor de uma resposta conforme o usuário a altera*/
     onChangeResposta = (tamMaximo, data) => {
-        if (data.currentTarget.value.length < tamMaximo) {
+        
+        /*Encontra o indice do problema a ser modificado*/
+        let indice = this.props.atividade.problemas
+            .findIndex(problema => problema.id === data.currentTarget.id)
 
-            /*Encontra o indice do problema a ser modificado*/
-            let indice = this.props.atividade.problemas
-                .findIndex(problema => problema.id === data.currentTarget.id)
+        /*Atualiza seu valor de resposta*/
+        this.props.atividade.problemas[indice].resposta = data.currentTarget.value.substr(0, tamMaximo)
 
-            /*Atualiza seu valor de resposta*/
-            this.props.atividade.problemas[indice].resposta = data.currentTarget.value
-
-            /*Utilizado pelo fato de a modificação ser na props e não no state, 
-            sendo assim não atualiza o render sozinho*/
-            this.forceUpdate()
-        }
+        /*Utilizado pelo fato de a modificação ser na props e não no state, 
+        sendo assim não atualiza o render sozinho*/
+        this.forceUpdate()
     }
 
     carregarTitulo = () => {
