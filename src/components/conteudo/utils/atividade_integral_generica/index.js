@@ -2,6 +2,7 @@ import React from 'react'
 import AtividadeGenerica from '../atividade_generica'
 import SimboloRecarregar from '../../../../images/simbolo-recarregar.png'
 import SimboloRecarregarPressionado from '../../../../images/simbolo-recarregar-pressionado.png'
+import { formatWithOptions } from 'util';
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETIVO "atividade" DO TIPO:
     atividade: um objetivo com os atributos:
@@ -43,37 +44,37 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
 
     validaProps = () => {
         if (this.props.atividade === undefined){
-            throw Error("Erro: propriedade 'atividade' é indefinida!")
+            throw Error(" propriedade 'atividade' é indefinida!")
         } else {
             if (this.props.atividade.idUnidade === undefined) {
-                throw Error("Erro: propriedade 'atividade.idUnidade' é indefinida!")
+                throw Error(" propriedade 'atividade.idUnidade' é indefinida!")
             }
 
             if (this.props.atividade.id === undefined) {
-                throw Error("Erro: propriedade 'atividade.id' é indefinida!")
+                throw Error(" propriedade 'atividade.id' é indefinida!")
             } else if (this.props.atividade.id.length > MAX_CARACTERES_ID){
-                throw Error("Erro: propriedade 'atividade.id' ultrapassa o limite de "+MAX_CARACTERES_ID+" caracteres!")
+                throw Error(" propriedade 'atividade.id' ultrapassa o limite de "+MAX_CARACTERES_ID+" caracteres!")
             }
 
             if (this.props.atividade.questoes === undefined || this.props.atividade.questoes.length === 0) {
-                throw Error("Erro: propriedade 'atividade.questoes' é indefinida ou vazia!")
+                throw Error(" propriedade 'atividade.questoes' é indefinida ou vazia!")
             } else {
                 this.props.atividade.questoes.forEach(questao => {
                     if (questao.id > MAX_CARACTERES_ID){
-                        throw Error("Erro: propriedade 'questao.id' ultrapassa o limite de " + MAX_CARACTERES_ID + " caracteres!")
+                        throw Error(" propriedade 'questao.id' ultrapassa o limite de " + MAX_CARACTERES_ID + " caracteres!")
                     }
                     questao.alternativas.forEach(alternativa => {
                         if (alternativa.valor === undefined){
-                            throw Error("Erro: propriedade 'alternativa.valor' é indefinida!")
+                            throw Error(" propriedade 'alternativa.valor' é indefinida!")
                         }
                         if (alternativa.chave === undefined) {
-                            throw Error("Erro: propriedade 'alternativa.chave' é indefinida!")
+                            throw Error(" propriedade 'alternativa.chave' é indefinida!")
                         }
                         if (alternativa.texto === undefined || alternativa.texto.length === 0) {
-                            throw Error("Erro: propriedade 'alternativa.chave' é indefinida ou vazia!")
+                            throw Error(" propriedade 'alternativa.chave' é indefinida ou vazia!")
                         }
                         if (alternativa.dica === undefined || alternativa.dica.length === 0) {
-                            throw Error("Erro: propriedade 'alternativa.dica' é indefinida ou vazia!")
+                            throw Error(" propriedade 'alternativa.dica' é indefinida ou vazia!")
                         }
                     })
                 })
@@ -87,8 +88,9 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         //Gera opções selecionadas vazias para cada questão
         this.props.atividade.questoes.forEach(questao => {
             opcoesSelecionadas.push({
-                "idQuestao": questao.id,
-                "chave": "0"
+                idQuestao: questao.id,
+                chave: "0",
+                respondida: false
             })
         })
 
@@ -132,8 +134,9 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
 
                         if (opcaoSelecionada !== undefined){
                             opcoesSelecionadas.push({
-                                "idQuestao": questao.id,
-                                "chave": opcaoSelecionada.chave
+                                idQuestao: questao.id,
+                                chave: opcaoSelecionada.chave,
+                                respondida: true
                             })
                         }
                     }
@@ -197,11 +200,18 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
     tratarRetornoRespostasDaAtividade = (retorno) => {
         /*Em caso de sucesso ao salvar a resposta*/
         if (retorno.detail.status === 200) {
+
+            /*Atualiza as opções selecionadas para salvar que elas foram respondidas já*/
+            this.state.opcoesSelecionadas.forEach(opcao => {
+                opcao.respondida = true
+            })
+
             /*Atualiza as informações de estado da página correspondentes a questão 1*/
             this.setState({
                 atividadeRespondida: true,
                 nota: retorno.detail.data.notaAtividade
             })
+
         }
         /*TO-DO Tratar erros caso não seja possível salvar a resposta*/
 
@@ -213,33 +223,35 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
     onChangeRadioButton = data => {
         /*Só pode alterar a opção caso não tenha respondido*/
         if (!this.state.atividadeRespondida) {
-            let opcoesSelecionadas = this.state.opcoesSelecionadas
 
-            //Busca a posição da opção selecionada da questão que disparou o botão no vetor opcoesSelecionadas e modifica a sua chave
-            let contador = 0
-            let continuar = true
+            //Pega a opção selecionada da questão que disparou o evento e 
+            //altera o seu valor para a alternativa selecionada no evento
+            let indiceSelecionada = this.getIndiceOpcaoSelecionadaDaQuestao(data.currentTarget.name)
 
-            while (continuar && contador < opcoesSelecionadas.length){
-                if (opcoesSelecionadas[contador].idQuestao === data.currentTarget.name){
-                    opcoesSelecionadas[contador].chave = data.currentTarget.value
-                    continuar = false
-                }
+            //Apenas se não estiver respondida e enviada corretamente já
+            if (!this.state.opcoesSelecionadas[indiceSelecionada].respondida){
+                this.state.opcoesSelecionadas[indiceSelecionada].chave = data.currentTarget.value
 
-                contador++
+                this.forceUpdate()
             }
-
-            /*Salva no estado a opção selecionada no RadioButton da questão 1*/
-            this.setState({
-                opcoesSelecionadas: opcoesSelecionadas
-            })
         }
+    }
+
+    getIndiceOpcaoSelecionadaDaQuestao = (idQuestao) => {
+        return this.state.opcoesSelecionadas.findIndex(opcao => opcao.idQuestao === idQuestao)
     }
 
     /*Embaralha as alternativas de todas as questões dentro de this.props.atividade*/
     embaralhaAlternativas = () => {
         this.props.atividade.questoes.forEach(questao => {
-            /*Para cada questão redefine a ordem da lista de alternativas*/
-            questao.alternativas = questao.alternativas.sort(() => (Math.round(Math.random()) - 0.5))
+            //Pega a opção selecionada da questão
+            let opcaoSelecionada = this.getIndiceOpcaoSelecionadaDaQuestao(questao.id)
+
+            //Apenas embaralha as questões que não tiverem sido respondidas
+            if (!opcaoSelecionada.respondida){
+                /*Para cada questão redefine a ordem da lista de alternativas*/
+                questao.alternativas = questao.alternativas.sort(() => (Math.round(Math.random()) - 0.5))
+            }
         })
 
         this.forceUpdate()
@@ -258,10 +270,13 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
             <div>
                 {questao.alternativas.map((alternativa, key) => {
                     //Busca a posição da opção selecionada correspondente a questão atual
-                    let posicaoOpcao = this.state.opcoesSelecionadas.map(opcao => opcao.idQuestao).indexOf(questao.id)
+                    let posicaoOpcao = this.getPosicaoOpcaoSelecionadaPeloIdQuestao(questao.id) 
 
                     /*Define se a alternativa atual é a opção selecionada pelo usuário na questão*/
                     let ehOpcaoSelecionada = this.state.opcoesSelecionadas[posicaoOpcao].chave === alternativa.chave
+
+                    /*Válida se a questão já foi respondida corretamente e enviada ao servidor*/
+                    let jaFoiRespondida = this.state.opcoesSelecionadas[posicaoOpcao].respondida
 
                     return (
                         <div key={key} className="option">
@@ -271,7 +286,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
                                     onChange={this.onChangeRadioButton} />
                                 {alternativa.texto}
                             </label>
-                            {(ehOpcaoSelecionada && this.state.atividadeRespondida) &&
+                            {(ehOpcaoSelecionada && (this.state.atividadeRespondida || jaFoiRespondida)) &&
                                 <div>
                                     {alternativa.valor === "0" ?
                                         <div className="hint wrong">
@@ -316,14 +331,38 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         )
     }
 
+    getPosicaoOpcaoSelecionadaPeloIdQuestao = (idQuestao) => {
+        return this.state.opcoesSelecionadas.map(opcao => opcao.idQuestao).indexOf(idQuestao)
+    }
+
     /*Zera a resposta e re-embaralha as alternativas*/
     configurarNovaTentativa = () => {
         /*Embaralha alternativas de todas as questões*/
         this.embaralhaAlternativas()
 
+        let opcoesSelecionadas = this.state.opcoesSelecionadas
+        
+        /*Limpa as alternativas erradas*/
+        opcoesSelecionadas.forEach((opcaoSelecionada) => {
+            //Busca a questão correspondente a opção selecionada
+            let questaoDaOpcao = this.props.atividade.questoes.find(questao => 
+                questao.id === opcaoSelecionada.idQuestao
+            )
+
+            //Busca a alternativa da questão correspondente a opção selecionada
+            let alternativaDaOpcao = questaoDaOpcao.alternativas.find(alternativa => 
+                alternativa.chave === opcaoSelecionada.chave
+            )
+
+            if (alternativaDaOpcao !== undefined && alternativaDaOpcao.valor === "0"){
+                opcaoSelecionada.chave = "0"
+                opcaoSelecionada.respondida = false
+            }
+        })
+
         this.setState({
             atividadeRespondida: false,
-            opcoesSelecionadas: this.pegarOpcoesSelecionadasVazias()
+            opcoesSelecionadas: opcoesSelecionadas
         })
     }
 

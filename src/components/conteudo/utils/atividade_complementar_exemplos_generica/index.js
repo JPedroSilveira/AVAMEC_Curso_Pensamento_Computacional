@@ -55,45 +55,45 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
 
     validarProps = () => {
         if(this.props.atividade === undefined){
-            throw Error("Erro: Propriedade \"atividade\" não existente!")
+            throw Error("Propriedade \"atividade\" não existente!")
         } else {
             if (this.props.atividade.id === undefined || this.props.atividade.id.length === 0 || 
                 this.props.atividade.id.length > LIMITE_CARACTERES_ID) {
-                throw Error("Erro: Propriedade \"atividade.id\" não respeita o tamanho determinado!")
+                throw Error("Propriedade \"atividade.id\" não respeita o tamanho determinado!")
             }
 
             if (this.props.atividade.idUnidade === undefined || this.props.atividade.idUnidade.length === 0 ||
                 this.props.atividade.idUnidade.length > LIMITE_CARACTERES_ID_UNIDADE) {
-                throw Error("Erro: Propriedade \"atividade.idUnidade\" não respeita o tamanho determinado!")
+                throw Error("Propriedade \"atividade.idUnidade\" não respeita o tamanho determinado!")
             }
 
             if(this.props.atividade.quantidadeMinimaExemplos === undefined ||
             this.props.atividade.quantidadeMaximaExemplos === undefined) 
             {
-                throw Error("Erro: Propriedade \"atividade.quantidadeMinimaExemplos\" e/ou \"atividade.quantidadeMaximaExemplos\" não existe(m)!")
+                throw Error("Propriedade \"atividade.quantidadeMinimaExemplos\" e/ou \"atividade.quantidadeMaximaExemplos\" não existe(m)!")
             } else if (this.props.atividade.quantidadeMinimaExemplos > this.props.atividade.quantidadeMaximaExemplos){
-                throw Error("Erro: Propriedade \"atividade.quantidadeMinimaExemplos\" é maior que a propriedade \"atividade.quantidadeMaximaExemplos\"!")
+                throw Error("Propriedade \"atividade.quantidadeMinimaExemplos\" é maior que a propriedade \"atividade.quantidadeMaximaExemplos\"!")
             }
 
             if(this.props.atividade.questoes === undefined) {
-                throw Error("Erro: Propriedade \"atividade.questoes\" não existente!")
+                throw Error("Propriedade \"atividade.questoes\" não existente!")
             } else if (this.props.atividade.questoes.length === 0) {
-                throw Error("Erro: Propriedade \"atividade.questoes\" é vazia!")
+                throw Error("Propriedade \"atividade.questoes\" é vazia!")
             } else {
                 let someTamMaxResposta = 0
                 this.props.atividade.questoes.forEach((questao, indice) => {
                     if (questao.titulo === undefined || questao.titulo === ""){
-                        throw Error("Erro: Propriedade \"questao.titulo\" da questao de indice " +indice+ " da lista \"atividade.questoes\" é vazia!")
+                        throw Error("Propriedade \"questao.titulo\" da questao de indice " +indice+ " da lista \"atividade.questoes\" é vazia!")
                     }
                     if (questao.tamanhoMaximoResposta === undefined || questao.tamanhoMaximoResposta === 0) {
-                        throw Error("Erro: Propriedade \"questao.tamanhoMaximoResposta\" da questao de indice " + indice + " da lista \"atividade.questoes\" é vazia!")
+                        throw Error("Propriedade \"questao.tamanhoMaximoResposta\" da questao de indice " + indice + " da lista \"atividade.questoes\" é vazia!")
                     } else {
                         someTamMaxResposta += questao.tamanhoMaximoResposta
                     }
                 })
 
                 if (someTamMaxResposta > LIMITE_CARACTERES_TAM_MAX_RESPOSTA) {
-                    throw Error("Erro: a soma dos tamanhos de resposta das questões ultrapassa o limite de "+LIMITE_CARACTERES_TAM_MAX_RESPOSTA+" caracteres!")
+                    throw Error("A soma dos tamanhos de resposta das questões ultrapassa o limite de "+LIMITE_CARACTERES_TAM_MAX_RESPOSTA+" caracteres!")
                 }
             }
         }

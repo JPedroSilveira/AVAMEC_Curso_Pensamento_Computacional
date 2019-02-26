@@ -250,7 +250,7 @@
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q1_a1_abstracai",
+                        "identificador": "q1_a1_abstracao",
                         "enunciado": "Considere a organização de uma biblioteca e indique o que lhe parece ser uma abstração mais conveniente para falar de livros: ",
                         "gabaritos": [
                             {

@@ -31,15 +31,15 @@ class AtividadeComplementar1 extends React.Component {
             questoes: [
                 {
                     titulo: "Área de interesse",
-                    tamanhoMaximoResposta: 300
+                    tamanhoMaximoResposta: 200
                 },
                 {
                     titulo: "A situação problema",
-                    tamanhoMaximoResposta: 500
+                    tamanhoMaximoResposta: 400
                 },
                 {
                     titulo: "A forma de uso do Pilar “Decomposição”",
-                    tamanhoMaximoResposta: 500
+                    tamanhoMaximoResposta: 400
                 },
                 {
                     titulo: "Justifique o uso e argumente sobre a sua importância",
