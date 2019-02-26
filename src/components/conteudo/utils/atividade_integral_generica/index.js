@@ -6,9 +6,9 @@ import SimboloRecarregarPressionado from '../../../../images/simbolo-recarregar-
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETIVO "atividade" DO TIPO:
     atividade: um objetivo com os atributos:
         idUnidade: String,
-        id: String,
+        id: String, //Deve ter no máximo o valor da constante MAX_CARACTERES_ID de caracteres
         questoes: Lista de objetos com os atributos:
-            id: String,
+            id: String, //Deve ter no máximo o valor da constante MAX_CARACTERES_ID de caracteres
             titulo: String,
             enunciado: String,
             alternativas: Lista de objetos com os atributos:
@@ -18,9 +18,14 @@ import SimboloRecarregarPressionado from '../../../../images/simbolo-recarregar-
                 dica: String
 */
 
+const MAX_CARACTERES_ID = 250
+
 class AtividadeIntegralGenerica extends AtividadeGenerica {
     constructor(props) {
         super(props)
+
+        /*Valida se todas as propriedades estão sendo passadas corretamente*/
+        this.validaProps()
 
         this.state = {
             atividadeRespondida: false,
@@ -34,6 +39,46 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
 
         /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades*/
         this.obterDadosConclusaoUnidade()
+    }
+
+    validaProps = () => {
+        if (this.props.atividade === undefined){
+            throw Error("Erro: propriedade 'atividade' é indefinida!")
+        } else {
+            if (this.props.atividade.idUnidade === undefined) {
+                throw Error("Erro: propriedade 'atividade.idUnidade' é indefinida!")
+            }
+
+            if (this.props.atividade.id === undefined) {
+                throw Error("Erro: propriedade 'atividade.id' é indefinida!")
+            } else if (this.props.atividade.id.length > MAX_CARACTERES_ID){
+                throw Error("Erro: propriedade 'atividade.id' ultrapassa o limite de "+MAX_CARACTERES_ID+" caracteres!")
+            }
+
+            if (this.props.atividade.questoes === undefined || this.props.atividade.questoes.length === 0) {
+                throw Error("Erro: propriedade 'atividade.questoes' é indefinida ou vazia!")
+            } else {
+                this.props.atividade.questoes.forEach(questao => {
+                    if (questao.id > MAX_CARACTERES_ID){
+                        throw Error("Erro: propriedade 'questao.id' ultrapassa o limite de " + MAX_CARACTERES_ID + " caracteres!")
+                    }
+                    questao.alternativas.forEach(alternativa => {
+                        if (alternativa.valor === undefined){
+                            throw Error("Erro: propriedade 'alternativa.valor' é indefinida!")
+                        }
+                        if (alternativa.chave === undefined) {
+                            throw Error("Erro: propriedade 'alternativa.chave' é indefinida!")
+                        }
+                        if (alternativa.texto === undefined || alternativa.texto.length === 0) {
+                            throw Error("Erro: propriedade 'alternativa.chave' é indefinida ou vazia!")
+                        }
+                        if (alternativa.dica === undefined || alternativa.dica.length === 0) {
+                            throw Error("Erro: propriedade 'alternativa.dica' é indefinida ou vazia!")
+                        }
+                    })
+                })
+            }
+        }
     }
 
     /*Gera um objeto vazio com as questões selecionadas*/

@@ -3,7 +3,6 @@ import Menu from './components/menu'
 import Header from './components/header'
 import Footer from './components/footer'
 import Conteudo from './components/conteudo'
-import InfLogo from './images/inf_logo.png'
 import './App.css'
 
 class App extends React.Component {
