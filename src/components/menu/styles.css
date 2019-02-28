@@ -1,94 +1,33 @@
-/* Position and sizing of burger button */
-.bm-burger-button {
+.menu{
+  width: 'auto'; 
+}
+
+.menu .item{
+  padding-bottom: 1.2em;
+  padding-top: 1.2em;
+}
+
+.menu .item:hover{
+  background-color: rgb(235, 235, 235);
+}
+
+.menu .titulo{
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+.menu .titulo .image{
+  height: 8em;
+}
+
+.menu-button{
   position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
-  top: 36px;
+  padding-top: 0em;
+  top: 1em;
+  right: 1em;
 }
 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #a90000;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-    position: fixed;
-    top: 0;
-    overflow: -moz-scrollbars-none; /*Firefox*/
-}
-
-.bm-menu::-webkit-scrollbar { width: 0 } /*Chrome, Safari, Opera*/
-
-/* General sidebar styles */
-.bm-menu {
-  background: rgb(88, 88, 88);
-  padding: 2em 1.5em 1em 2em;
-  -ms-overflow-style: none; /*IE 10+*/
-}
-
-.menu-item{
-  font-size: 1.3em;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  text-decoration: none;
-  color: whitesmoke;
-  font-weight: lighter;
-  padding-bottom: 1em;
-}
-
-.menu-title{
-  font-size: 1.5em;
-  letter-spacing: 0.3em;
-  color: whitesmoke;
-  font-weight: 900;
-  margin-bottom: 2.5em;
-}
-
-.linha-espaçamento{
-    height: 0.1em;
-    margin-bottom: 1.5em;
-    width: 100%;
-    background-color: rgb(113, 113, 113);
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-  top:0;
+/*"!important" utilizado para sobre-escrever o tamanho do ícone padrão da lib material.ui*/
+.menu-button-icon{
+  font-size: 1.8em !important;
 }

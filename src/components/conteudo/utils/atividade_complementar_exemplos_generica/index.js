@@ -1,11 +1,9 @@
 import React from 'react'
 import AtividadeGenerica from '../atividade_generica'
-import Button from '@material-ui/core/Button'
 import Fab from '@material-ui/core/Fab'
 import AddIcon from '@material-ui/icons/Add'
 import IconButton from '@material-ui/core/IconButton'
 import DeleteIcon from '@material-ui/icons/Delete'
-import SaveIcon from '@material-ui/icons/Save'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETO atividade do tipo:
     atividade: um objetivo com os atributos:
@@ -310,10 +308,9 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         if (!this.state.unidadeConcluida){
             return (
                 <div className="box">
-                    <Button variant="contained" size="large" className="save-button" onClick={this.onClickSalvarRespostas}>
-                        <SaveIcon />
-                        Salvar respostas
-                    </Button>
+                    <div className="button-container">
+                        <button type="button" className="button" onClick={this.onClickSalvarRespostas}>ENVIAR RESPOSTAS</button>
+                    </div>
                 </div>
             )
         }

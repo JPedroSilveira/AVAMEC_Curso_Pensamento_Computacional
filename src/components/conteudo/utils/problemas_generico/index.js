@@ -180,10 +180,9 @@ class ProblemasGenerico extends AtividadeGenerica {
         if (!this.state.unidadeConcluida){
             return (
                 <div className="box">
-                    <Button variant="contained" size="large" className="save-button" onClick={this.onClickSalvarRespostas}>
-                        <SaveIcon />
-                        Salvar respostas
-                    </Button>
+                    <div className="button-container">
+                        <button type="button" className="button" onClick={this.onClickSalvarRespostas}>ENVIAR RESPOSTAS</button>
+                    </div>
                 </div>
             )
         }

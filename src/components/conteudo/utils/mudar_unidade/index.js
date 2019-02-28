@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles.css'
+import './styles.css'
 
 class MudarUnidade extends React.Component {
     constructor(props){

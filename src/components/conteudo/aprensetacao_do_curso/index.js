@@ -32,9 +32,7 @@ class ApresentacaoDoCurso extends ConteudoGenerico {
             case "2":
                 return (
                     <div>
-                        <div className="atividadeAvaliativa">
-                            <AtividadeAvaliativa1 idUnidade={this.props.id} />
-                        </div>
+                        <AtividadeAvaliativa1 idUnidade={this.props.id} />
                         <Texto2 />
                         <Desafio />
                     </div>

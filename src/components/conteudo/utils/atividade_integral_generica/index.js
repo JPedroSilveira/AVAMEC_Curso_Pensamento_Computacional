@@ -2,7 +2,7 @@ import React from 'react'
 import AtividadeGenerica from '../atividade_generica'
 import SimboloRecarregar from '../../../../images/simbolo-recarregar.png'
 import SimboloRecarregarPressionado from '../../../../images/simbolo-recarregar-pressionado.png'
-import { formatWithOptions } from 'util';
+import './styles.css'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETIVO "atividade" DO TIPO:
     atividade: um objetivo com os atributos:
@@ -280,11 +280,11 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
 
                     return (
                         <div key={key} className="option">
-                            <label className="radioLabel">
+                            <label className="radioLabel">{alternativa.texto}
                                 <input type="radio" className="optionRadio" name={questao.id} value={alternativa.chave}
                                     checked={ehOpcaoSelecionada}
                                     onChange={this.onChangeRadioButton} />
-                                {alternativa.texto}
+                                <span class="checkmark"></span>
                             </label>
                             {(ehOpcaoSelecionada && (this.state.atividadeRespondida || jaFoiRespondida)) &&
                                 <div>
@@ -398,7 +398,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
                 {this.carregarNota()}
 
                 {!this.state.unidadeConcluida &&
-                    <div>
+                    <div className="button-container">
                         {!this.state.atividadeRespondida ?
                             <button type="button" className="button" onClick={this.registrarRespostasDaAtividade}>ENVIAR RESPOSTAS</button>
                             :

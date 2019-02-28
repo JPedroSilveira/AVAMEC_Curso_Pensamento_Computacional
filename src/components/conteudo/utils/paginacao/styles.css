@@ -1,17 +1,17 @@
 .paginacao{
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 700;
     list-style: none;
     background-color: inherit;
     text-align: center;
-    margin-top: 5em;
+    margin-top: 3em;
     padding-left: 0;
 }
 
 @media only screen and (max-width: 520px) {
   .paginacao{
-      font-size: 1em;
+      font-size: 0.7em;
   }
 }
 
