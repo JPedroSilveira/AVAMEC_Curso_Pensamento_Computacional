@@ -18,7 +18,7 @@ const Problemas = () => (
         <p>Fazer a cobertura de uma imagem com as peças de um Tangram, conforme o molde na imagem a seguir.</p>
         <div className="imagem-centralizada">
             <img src={Tangram2} alt="Tangram desmontado feito com sete peças coloridas."/>
-            <p><strong>Figura 02: Proposta para cobertura de um fundo com as peças de um Tangram: <br />(Fazer online no <a href="https://rachacuca.com.br/raciocinio/tangram/1/" target="_blank" rel="nofollow noopener noreferrer">site</a>, salvar a imagem em arquivo de postar no site do PC)</strong></p>
+            <p><strong>Figura 02: Proposta para cobertura de um fundo com as peças de um Tangram: <br/>(Fazer online no <a href="https://rachacuca.com.br/raciocinio/tangram/1/" target="_blank" rel="nofollow noopener noreferrer">site</a>, salvar a imagem em arquivo de postar no site do PC)</strong></p>
         </div>
     </div>
 )

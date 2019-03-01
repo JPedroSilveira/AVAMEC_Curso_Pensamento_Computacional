@@ -12,7 +12,7 @@ const Aplicacoes = () => (
         
         <div className="imagem-centralizada">
             <img src={IMGMapaLolla2015} alt="Mapa do local de realização do Festival Lolla Palooza de 2015"/>
-            <p> <strong> Figura 1: Mapa do local de realização do Festival Lolla Palooza de 2015 </strong><br /><a href="http://breno.freeshell.org/Est_veic.pdf" target="_blank" rel="nofollow noopener noreferrer">Fonte: http://breno.freeshell.org/Est_veic.pdf</a> </p>
+            <p> <strong> Figura 1: Mapa do local de realização do Festival Lolla Palooza de 2015 </strong><br/><a href="http://breno.freeshell.org/Est_veic.pdf" target="_blank" rel="nofollow noopener noreferrer">Fonte: http://breno.freeshell.org/Est_veic.pdf</a> </p>
         </div>
         <h4>Organizando o guarda-roupas</h4>
         <p>Da mesma forma que abstrairmos detalhes de objetos, podemos abstrair detalhes de atividades, ações, processos de uma maneira mais geral. Por exemplo, para descrever o trabalho de manter em ordem uma determinada residência, podemos denominar de “Organizar o guarda-roupa”  à toda uma lista de atividades menores que são necessárias para colocar um guarda-roupa em ordem, abstraindo os detalhes sobre como esta atividade deve ser realizada.</p>

@@ -34,6 +34,10 @@ a{
     color: inherit;
 }
 
+.centralizado{
+    text-align: center;
+}
+
 .aprc-container{
     font-family: 'Source Sans Pro', sans-serif;
     color: #585858;
@@ -53,13 +57,62 @@ a{
     margin-top: 1em;
 }
 
+.boxed, .box-alg-question{
+    border: 0.05em solid #000000;
+}
+
+.box-alg-question{
+    width: 90%;
+    text-align: left;
+    padding-bottom: 3em;
+}
+
+.box-alg-question .head .titulo{
+    font-weight: 700;
+    color: rgb(77, 132, 4);
+    padding-left: 1em;
+}
+
 .boxed{
-    border: 0.05em solid;
     width: 70%;
-    border-color: #000000;
     text-align: justify;
     padding: 2em;
-    padding-top: 0em;
+}
+
+.boxed.algoritmos{
+    background-color: rgb(241, 239, 198);
+    margin-bottom: 3em;
+    text-align: left;
+}
+
+.boxed.algoritmos .nivel-1, .box-alg-question .nivel-1{
+    padding-top: 2em;
+    padding-left: 1em;
+}
+
+.boxed.algoritmos .subnivel, .box-alg-question .subnivel{
+    padding-left: 2em;
+}
+
+.boxed.algoritmos .bg-orange{
+    background-color: rgb(249, 203, 156);
+}
+
+.boxed.algoritmos .titulo{
+    text-align: center;
+    font-weight: 700;
+}
+
+.textblue{
+    color: blue;
+}
+
+.textred{
+    color: red;
+}
+
+.textdarkgreen{
+    color: #4d8404;
 }
 
 .boxed.problema{
@@ -185,4 +238,9 @@ a{
 
 .quadro{
     background-color:rgb(207, 226, 243)
+}
+
+.enunciado-atividade{
+    margin-top: 1em;
+    margin-bottom: 2em;
 }

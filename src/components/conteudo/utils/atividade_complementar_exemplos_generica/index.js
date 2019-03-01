@@ -327,7 +327,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
                     onChange={this.onChangeResposta.bind(this, questao.tamanhoMaximoResposta, numeroExemplo, questao.id)}
                     cols="30"
                     rows={Math.round(questao.tamanhoMaximoResposta / QUANTIDADE_LETRAS_POR_LINHA)}
-                /><br />
+                /><br/>
             </p>
         )
     }

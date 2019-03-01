@@ -237,6 +237,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         }
     }
 
+    /*Retorna o indice da resposta de uma questão dentro do vetor "this.state.opcoesSelecionadas"*/
     getIndiceOpcaoSelecionadaDaQuestao = (idQuestao) => {
         return this.state.opcoesSelecionadas.findIndex(opcao => opcao.idQuestao === idQuestao)
     }
@@ -269,45 +270,82 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         return (
             <div>
                 {questao.alternativas.map((alternativa, key) => {
-                    //Busca a posição da opção selecionada correspondente a questão atual
-                    let posicaoOpcao = this.getPosicaoOpcaoSelecionadaPeloIdQuestao(questao.id) 
-
-                    /*Define se a alternativa atual é a opção selecionada pelo usuário na questão*/
-                    let ehOpcaoSelecionada = this.state.opcoesSelecionadas[posicaoOpcao].chave === alternativa.chave
-
-                    /*Válida se a questão já foi respondida corretamente e enviada ao servidor*/
-                    let jaFoiRespondida = this.state.opcoesSelecionadas[posicaoOpcao].respondida
-
                     return (
                         <div key={key} className="option">
-                            <label className="radioLabel">{alternativa.texto}
-                                <input type="radio" className="optionRadio" name={questao.id} value={alternativa.chave}
-                                    checked={ehOpcaoSelecionada}
-                                    onChange={this.onChangeRadioButton} />
-                                <span class="checkmark"></span>
-                            </label>
-                            {(ehOpcaoSelecionada && (this.state.atividadeRespondida || jaFoiRespondida)) &&
-                                <div>
-                                    {alternativa.valor === "0" ?
-                                        <div className="hint wrong">
-                                            <strong>Resposta Errada: </strong>
-                                            {alternativa.dica}
-                                        </div>
-                                        :
-                                        <div className="hint right">
-                                            <strong>Resposta Certa: </strong>
-                                            {alternativa.dica}
-                                        </div>
-                                    }
-                                </div>
-                            }
+                            {this.carregaTextoAlternativa(questao, alternativa)}
+                            {this.carregaDicaAlternativa(questao, alternativa)}
                         </div>
                     )
                 })}
             </div>
         )
     }
+
+    /*Define se a alternativa atual é a opção selecionada pelo usuário na questão*/
+    isOpcaoSelecionada = (questao, alternativa) => {
+        //Busca a posição da opção selecionada correspondente a questão atual
+        let posicaoOpcao = this.getPosicaoOpcaoSelecionadaPeloIdQuestao(questao.id) 
+
+        return this.state.opcoesSelecionadas[posicaoOpcao].chave === alternativa.chave
+    }
+
+    /*Carrega o radioButton com o texto da alternativa*/
+    carregaTextoAlternativa = (questao, alternativa) => {
+        /*Define se a alternativa atual é a opção selecionada pelo usuário na questão*/
+        let isOpcaoSelecionada = this.isOpcaoSelecionada(questao, alternativa)
+
+        return (
+            <label className="radioLabel">{alternativa.texto}
+                <input type="radio" className="optionRadio" name={questao.id} value={alternativa.chave}
+                    checked={isOpcaoSelecionada}
+                    onChange={this.onChangeRadioButton} />
+                <span class="checkmark"></span>
+            </label>
+        )
+    }
     
+    /*Carrega a dica da alternativa se respondida*/
+    carregaDicaAlternativa = (questao, alternativa) => {
+        /*Define se a alternativa atual é a opção selecionada pelo usuário na questão*/
+        let isOpcaoSelecionada = this.isOpcaoSelecionada(questao, alternativa)
+
+        /*Só irá carregar a dica se for a opção selecionada pelo usuário*/
+        if (isOpcaoSelecionada){
+
+            /*Define se ela foi respondida pelo estado da atividade*/
+            let isRespondida = this.state.atividadeRespondida;
+
+            /*Caso a atividade não tenha sido respondida*/
+            if (!isRespondida) {
+                //Busca a posição da opção selecionada correspondente a questão atual
+                let posicaoOpcao = this.getPosicaoOpcaoSelecionadaPeloIdQuestao(questao.id)
+
+                /*Válida se a questão já foi respondida corretamente e enviada ao servidor anteriormente
+                para o caso da atividade ter sido recarregada pelo tentar novamente*/
+                isRespondida = this.state.opcoesSelecionadas[posicaoOpcao].respondida
+            }
+            
+            /*Se a conclusão foi que ela já foi respondida então carrega a dica*/
+            if (isRespondida) {
+                return (
+                    <div>
+                        {alternativa.valor === "0" ?
+                            <div className="hint wrong">
+                                <strong>Resposta Errada: </strong>
+                                {alternativa.dica}
+                            </div>
+                            :
+                            <div className="hint right">
+                                <strong>Resposta Certa: </strong>
+                                {alternativa.dica}
+                            </div>
+                        }
+                    </div>
+                ) 
+            }
+
+        }
+    }
     /*Carrega todas as questões com suas alternativas*/
     carregaQuestoes = (questoes) => {
         return (
@@ -315,12 +353,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
                 {questoes.map((questao, key) => {
                     return (
                         <div key={key}>
-                            {questao.titulo !== "" &&
-                                <h4>{questao.titulo}</h4>
-                            }
-                            {questao.enunciado !== "" &&
-                                <p>{questao.enunciado}</p>
-                            }
+                            {this.carregaEnunciadoQuestao(questao)}
                             <div className="options-box">
                                 {this.carregaAlternativas(questao)}
                             </div>
@@ -331,6 +364,82 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         )
     }
 
+    /*Carrega o enunciado da questão com as instruções e infomações para realizar ela*/
+    carregaEnunciadoQuestao = (questao) => {
+        if (questao.algoritmo){
+            return (
+                <div>
+                    {this.carregaEnunciadoAlgoritmo(questao)}
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    {questao.titulo !== "" &&
+                        <h4>{questao.titulo}</h4>
+                    }
+                    {questao.enunciado !== "" &&
+                        <p>{questao.enunciado}</p>
+                    }
+                </div>
+            )
+        }
+    }
+
+    /*Carrega o tipo de enunciado algoritmo de forma recursiva conforme seus subníveis*/
+    carregaEnunciadoAlgoritmo = (questao) => {
+        return (
+            <div className="box">
+                <div className="box-alg-question">
+                    <div className="head">
+                        <p className="titulo">{questao.titulo}</p>
+                    </div>
+                    <div className="nivel-1">
+                        <ol>
+                            {questao.instrucoes.map((instrucao, key) => {
+                                return (
+                                    <div key={key}>
+                                        {this.carregaInstrucao(instrucao)}                                                                   
+                                    </div>
+                                )
+                            })}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    /*Carrega uma instrução do algoritmo e suas sub-instruções*/
+    carregaInstrucao = (instrucao) => {
+        return (
+            <li>
+                {instrucao.texto}
+                {this.carregaSubInstrucoes(instrucao.instrucoes)}
+            </li>
+        )
+    }
+    
+    /*Carrega as sub-instruções de uma instrução e suas sub-instruções*/
+    carregaSubInstrucoes = (subInstrucoes) => {
+        if(subInstrucoes !== undefined && subInstrucoes.length > 0){
+            return (
+                <div className="subnivel">
+                    {subInstrucoes.map((subInstrucao, key) => {
+                        return (
+                            <div key={key}>
+                                {subInstrucao.texto}
+                                {this.carregaSubInstrucoes(subInstrucao.instrucoes)}
+                            </div>
+                        )
+                    })}
+                </div>
+            )
+        }
+    }
+
+    /*Carrega a posição no vetor "this.state.opcoesSelecionadas" onde se encontra a resposta
+    para o id da questão passado*/
     getPosicaoOpcaoSelecionadaPeloIdQuestao = (idQuestao) => {
         return this.state.opcoesSelecionadas.map(opcao => opcao.idQuestao).indexOf(idQuestao)
     }
@@ -366,6 +475,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         })
     }
 
+    /*Carrega o titulo conforme a quantidade de questões*/
     carregarTitulo = () => {
         return (
             <div>
@@ -374,10 +484,16 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
                     :
                     <h3>ATIVIDADE AVALIATIVA</h3>
                 }
+                {this.props.atividade.enunciado !== undefined && this.props.atividade.enunciado.length > 0 &&
+                    <div className="enunciado-atividade">
+                        <h4>{this.props.atividade.enunciado}</h4>
+                    </div>
+                }
             </div>
         )
     }
 
+    /*Carrega a nota do usuário caso a mesma exista*/
     carregarNota = () => {
         return (
             <div>
