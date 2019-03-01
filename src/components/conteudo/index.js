@@ -3,6 +3,7 @@ import ApresentacaoDoCurso from './aprensetacao_do_curso'
 import IntroducaoAoPensamentoComputacional from './introducao_ao_pensamento_computacional'
 import Decomposicao from './decomposicao'
 import Abstracao from './abstracao'
+import ReconhecimentoDePadroes from './reconhecimento_de_padroes'
 import './styles.css'
 
 /*IDs das unidades: */
@@ -10,6 +11,7 @@ const APRESENTACAO_CURSO = "apresentacao_do_curso"
 const INTRO_PENSAMENTO_COMP = "introducao_ao_pensamento_computacional"
 const DECOMPOSICAO = "decomposicao"
 const ABSTRACAO = "abstracao"
+const RECONHECIMENTO_DE_PADROES = "reconhecimento_de_padroes"
 
 class Conteudo extends React.Component {
     constructor() {
@@ -32,6 +34,8 @@ class Conteudo extends React.Component {
                 return (<Decomposicao id={DECOMPOSICAO} />)
             case ABSTRACAO:
                 return (<Abstracao id={ABSTRACAO} />)
+            case RECONHECIMENTO_DE_PADROES:
+                return (<ReconhecimentoDePadroes id={RECONHECIMENTO_DE_PADROES}/>)
             default:
                 return null
         }  

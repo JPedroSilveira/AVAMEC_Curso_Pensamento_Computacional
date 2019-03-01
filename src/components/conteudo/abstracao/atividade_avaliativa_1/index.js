@@ -92,7 +92,7 @@ class AtividadeAvaliativa1 extends React.Component {
                         {
                             valor: "0",
                             chave: "1",
-                            texto: "A largura da via",
+                            texto: "A largura da via.",
                             dica: "A largura da via pode impedir que mais de um veículo circule pela mesma simultaneamente, sendo uma característica muito relevante."
                         },
                         {

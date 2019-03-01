@@ -386,5 +386,206 @@
                 ]
             }
         ]
+    },
+    {
+        "identificador": "reconhecimento_de_padroes",
+        "nome": "Reconhecimento de Padrões",
+        "descricao": "",
+        "permitePorcentagem": "true",
+        "identificadorPai": "",
+        "topicos": [
+            {
+                "identificador": "topico_1",
+                "nome": "Conceituação"
+            },
+            {
+                "identificador": "topico_2",
+                "nome": "Aplicações"
+            },
+            {
+                "identificador": "topico_3",
+                "nome": "Atividades Avaliativas"
+            },
+            {
+                "identificador": "topico_4",
+                "nome": "Problemas"
+            },
+            {
+                "identificador": "topico_5",
+                "nome": "Atividades Complementares"
+            },
+            {
+                "identificador": "topico_6",
+                "nome": "Assuntos Correlatos"
+            }
+        ],
+        "atividades": [
+            {
+                "identificador": "atividade_1_reconhecimento_de_padroes",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a1_reconhecimento_de_padroes",
+                        "enunciado": "Passeando pelo centro de uma cidade conhecida, digamos que no Rio de Janeiro, você se depara com um aglomerado de pessoas. De repente um desconhecido estabelece uma conversa buscando também entender o que está acontecendo. Nessa conversa, levantando hipóteses e trocando opiniões quando percebem já se passaram uns 30 minutos e se despedem sem descobrirem o motivo da aglomeração. Pensando na conversa com o estranho, você se dá conta que o mesmo não parecia ser carioca nato ou criado naquela cidade. Motivado pela curiosidade, você tenta reconhecer em qual estado aquela pessoa teria nascido e/ou sido criada. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Sotaque.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Uso de expressões idiomáticas.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Aspecto físicos.",
+                                "chave": "3",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Referências a elementos regionais.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Preferência por estilo musical.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q2_a1_reconhecimento_de_padroes",
+                        "enunciado": "A2. Pense em alguma vez que você ou alguém próximo adoeceu e a natureza da enfermidade foi sugerida por alguém e confirmada posteriormente por diagnóstico médico. Em contexto similar, diga qual, dentre os elementos a seguir, seria o menos provável de auxiliar a estabelecer um padrão adequado a tal propósito?",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Histórico de doenças.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Limpeza da pele e cabelo.",
+                                "chave": "2",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Mudança involuntária de comportamento (apetite, por exemplo).",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Dores no corpo.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Alterações físicas (febre, vômito, diarréia, etc).",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q3_a1_reconhecimento_de_padroes",
+                        "enunciado": "A3. Considere que uma telenovela que você acompanha aproxima-se dos capítulos finais e você, como vários de seus conhecidos, tentam prever como será o final da mesma e discutem entre si, as possibilidades de desfecho baseado nos acontecimentos dos capítulos anteriores. Considere qual, dentre os acontecimentos de capítulos recentes, seria o menos provável de ter impacto direto no final da novela.",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Morte de um personagem.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Nascimento de gêmeos.",
+                                "chave": "2",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Fuga/Soltura de um personagem preso na etapa inicial.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Aproximação entre casal de personagens que antes eram adversários.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Revelação de fatos sobre o nascimento do protagonista.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q4_a1_reconhecimento_de_padroes",
+                        "enunciado": "Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores: ",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Curso formal na área.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Habilidades sociais.",
+                                "chave": "2",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Contato com o público.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Local de estágio.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Uso de fardamento no dia a dia.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q5_a1_reconhecimento_de_padroes",
+                        "enunciado": "A5. Num mercado, determinar se o peixe está de fato fresco envolve analisar se cada exemplar está em conformidade com certos elementos, como os mencionados a seguir. Qual, dentre os aspectos abaixo, parece menos provável de caracterizar a frescura de um certo pescado?",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Cor dos olhos.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Brilho das escamas.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Firmeza da carne.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Peso.",
+                                "chave": "4",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Cor/Estado das vísceras.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]

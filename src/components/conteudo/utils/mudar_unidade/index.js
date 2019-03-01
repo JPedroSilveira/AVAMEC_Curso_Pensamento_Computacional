@@ -69,7 +69,7 @@ class MudarUnidade extends React.Component {
         if (this.props.podeAvancar && this.state.existeProximaUnidade){
             return (
                 <button type="button" onClick={this.avancarUnidade} className="button button-unidade">
-                AVANÇAR PARA A PRÓXIMA UNIDADE
+                CONCLUIR E AVANÇAR PARA A PRÓXIMA UNIDADE
                 </button>
             )
         }
