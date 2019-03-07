@@ -8,7 +8,7 @@ const AplicacoesParte2 = () => (
             <div className="boxed algoritmos bg-orange">
                 <p className="titulo">ALG 07 - Preparando o almoço de domingo</p>
                 <div className="nivel-1">
-                    <p className="textdarkgreen">Salmão assado com molho parisiense acompanhado de risoto de alho poró:</p><br/>
+                    <span className="textdarkgreen">Salmão assado com molho parisiense acompanhado de risoto de alho poró:</span><br/>
                     <div className="subnivel">
                         <ol>
                             <li>Prepare o salmão;</li>
@@ -17,7 +17,6 @@ const AplicacoesParte2 = () => (
                             <li>Sirva o almoço</li>
                         </ol>
                     </div>
-                    <br/>
                     <p className="titulo">ALG 07.1 - Preparando o salmão</p>
                     <div className="subnivel">
                         <ol>
@@ -57,7 +56,7 @@ const AplicacoesParte2 = () => (
             <div className="boxed algoritmos bg-orange">
                 <p className="titulo">ALG 08 - Mesclagem de duas listas ordenadas</p>
                 <div className="nivel-1">
-                    <p className="textdarkgreen">Vamos chamar de  L1 e L2 as duas listas ordenadas e de L3 a lista a ser construída, com  os elementos de L1 e L2, garantindo que os elementos de L3 também estarão ordenados. A lista L3 inicialmente estará sem elementos.</p><br/>
+                    <span className="textdarkgreen">Vamos chamar de  L1 e L2 as duas listas ordenadas e de L3 a lista a ser construída, com  os elementos de L1 e L2, garantindo que os elementos de L3 também estarão ordenados. A lista L3 inicialmente estará sem elementos.</span><br/>
                     <div className="subnivel">
                         <ol>
                             <li><span className="textred">Enquanto</span> L1 tem elementos e L2 tem elementos <span className="textred">faça</span> <br/>

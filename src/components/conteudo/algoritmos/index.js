@@ -60,7 +60,7 @@ class Algoritmos extends ConteudoGenerico {
                 )
             case "8":
                 return (
-                    <ProblemasPropostos/>
+                    <ProblemasPropostos idUnidade={this.props.id}/>
                 )
             case "9":
                 return (

@@ -8,11 +8,11 @@ const AplicacoesParte1 = () => (
         <div className="box">
             <div className="boxed algoritmos bg-orange">
                 <p className="titulo">ALG 05 - Subir uma escada</p>
-                <div className="nivel-1">
+                <div className="subnivel">
                     <ol>
-                        <li><span className="textred">Enquanto</span> houver degrau à sua frente <span className="textred">Faça</span>
+                        <li><span className="textred">Enquanto</span> houver degrau à sua frente <span className="textred">faça</span>
                             <div className="subnivel">
-                                <p>suba o degrau à sua frente.</p>
+                                Suba o degrau à sua frente.
                             </div>
                         </li>
                     </ol>
@@ -23,28 +23,28 @@ const AplicacoesParte1 = () => (
         <div className="box">
             <div className="boxed algoritmos bg-orange">
                 <p className="titulo">ALG 06 - Trocando um pneu</p>
-                <div className="nivel-1">
+                <div className="subnivel">
                     <ol>
-                        <li>estacione o carro junto à margem da via;</li>
-                        <li>coloque o triângulo sinalizador na posição apropriada;</li>
-                        <li>identifique a posição do pneu furado;</li>
-                        <li>pegue o macaco;</li>
-                        <li>coloque o macaco na posição adequada para retirada do pneu furado;</li>
-                        <li>levante o macaco até a posição que o peso do carro esteja sob o macaco, sem levantá-lo;</li>
-                        <li>afrouxe cada parafuso da roda, usando a chave de roda;</li>
-                        <li>levante o carro até uma altura que possibilite a colocação de um pneu nas condições de uso;</li>
-                        <li>retire os parafusos, um por um, usando a chave de roda;</li>
-                        <li>retire o pneu furado;</li>
-                        <li>pegue o pneu sobressalente;</li>
-                        <li>coloque o pneu sobressalente, na posição do pneu furado;</li>
-                        <li>coloque os parafusos um por um, sem dar o aperto final;</li>
-                        <li>baixe o carro;</li>
-                        <li>retire o macaco;</li>
-                        <li>de um aperto final em cada parafuso;</li>
-                        <li>guarde o pneu furado no local para pneu reserva;</li>
-                        <li>tire o triângulo;</li>
-                        <li>guarde o triângulo;</li>
-                        <li>prossiga a viagem.</li>
+                        <li>Estacione o carro junto à margem da via;</li>
+                        <li>Coloque o triângulo sinalizador na posição apropriada;</li>
+                        <li>Identifique a posição do pneu furado;</li>
+                        <li>Pegue o macaco;</li>
+                        <li>Coloque o macaco na posição adequada para retirada do pneu furado;</li>
+                        <li>Levante o macaco até a posição que o peso do carro esteja sob o macaco, sem levantá-lo;</li>
+                        <li>Afrouxe cada parafuso da roda, usando a chave de roda;</li>
+                        <li>Levante o carro até uma altura que possibilite a colocação de um pneu nas condições de uso;</li>
+                        <li>Retire os parafusos, um por um, usando a chave de roda;</li>
+                        <li>Retire o pneu furado;</li>
+                        <li>Pegue o pneu sobressalente;</li>
+                        <li>Coloque o pneu sobressalente, na posição do pneu furado;</li>
+                        <li>Coloque os parafusos um por um, sem dar o aperto final;</li>
+                        <li>Baixe o carro;</li>
+                        <li>Retire o macaco;</li>
+                        <li>Dê um aperto final em cada parafuso;</li>
+                        <li>Guarde o pneu furado no local para pneu reserva;</li>
+                        <li>Tire o triângulo;</li>
+                        <li>Guarde o triângulo;</li>
+                        <li>Prossiga a viagem.</li>
                     </ol>
                 </div>
             </div>

@@ -33,7 +33,7 @@ class AtividadeAvaliativa1 extends React.Component {
                             texto: "Pegue o livro desejado;"
                         },
                         {
-                            texto: "Enquanto houver páginas não lidas faça:",
+                            texto: "<span class=\"textred\">Enquanto</span> <span class=\"textblue\">houver páginas não lidas </span><span class=\"textred\">faça</span>:",
                             instrucoes: [
                                 {
                                     texto: "a. abra a primeira página não lida;"
@@ -90,7 +90,7 @@ class AtividadeAvaliativa1 extends React.Component {
                             texto: "Pegue a lista de compras;"
                         },
                         {
-                            texto: "Enquanto houver um item ainda não encontrado faça:",
+                            texto: "<span class=\"textred\">Enquanto</span><span class=\"textblue\"> houver um item ainda não encontrado</span><span class=\"textred\"> faça:</span>",
                             instrucoes: [
                                 {
                                     texto: "a. selecione o primeiro item ainda não comprado;"
@@ -99,10 +99,10 @@ class AtividadeAvaliativa1 extends React.Component {
                                     texto: "b. encontre o produto nas prateleiras do supermercado;"
                                 },
                                 {
-                                    texto: "c. Se o produto foi encontrado:",
+                                    texto: "c. <span class=\"textred\">Se</span> o produto foi encontrado:",
                                     instrucoes: [
                                         {
-                                            texto: "então",
+                                            texto: "<span class=\"textred\">então</span>",
                                             instrucoes: [
                                                 {
                                                     texto: "coloque o produto em seu carrinho de compras;"
@@ -113,7 +113,7 @@ class AtividadeAvaliativa1 extends React.Component {
                                             ]
                                         },
                                         {
-                                            texto: "senão",
+                                            texto: "<span class=\"textred\">senão</span>",
                                             instrucoes:  [
                                                 {
                                                     texto: "risque o item de sua lista de compras;"
@@ -171,7 +171,7 @@ class AtividadeAvaliativa1 extends React.Component {
                     algoritmo: true,
                     instrucoes: [
                         {
-                            texto: "Enquanto a pilha de pratos sujos não estiver vazia faça:",
+                            texto: "<span class=\"textred\">Enquanto</span> <span class=\"textblue\">a pilha de pratos sujos não estiver vazia</span> <span class=\"textred\">faça</span>:",
                             instrucoes: [
                                 {
                                     texto: "a. Pegue o prato que está no topo da pilha de pratos sujos; "
@@ -240,7 +240,7 @@ class AtividadeAvaliativa1 extends React.Component {
                             texto: "Levante o carro deixando-o cerca de 5 centímetros acima do piso;"
                         },
                         {
-                            texto: "Enquanto houver parafuso por retirar faça:",
+                            texto: "<span class=\"textred\">Enquanto</span> <span class=\"textblue\">houver parafuso por retirar</span> <span class=\"textred\">faça</span>:",
                             instrucoes: [
                                 {
                                     texto: "a. Retire um dos parafusos restantes na roda;"

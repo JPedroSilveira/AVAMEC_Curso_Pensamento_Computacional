@@ -7,10 +7,10 @@ const ConceituacaoParte1 = () => (
         <p>Muitas atividades que fazemos, individualmente ou em grupo, são chamadas de rotinas. Desde quando acordamos até o deitar, realizamos em grande número desse tipo de atividade ao longo do dia. É bem verdade que não necessariamente as realizamos de forma igual todos os dias. Em geral as fazemos com ligeiras variações, em função das estações do ano, do dia da semana, de nossas ocupações etc. </p>
         <p>No quadro a seguir, apresentamos um algoritmo executado por uma grande quantidade de pessoas, em diferentes locais do planeta.</p>
         <div className="box">
-            <div className="boxed algoritmo">
+            <div className="boxed algoritmos">
                 <p className="titulo"><strong>Algoritmo 01 <br/> Iniciação - Do acordar até chegar no local de trabalho </strong> </p>
                 <div className="nivel-1">
-                    <p>Após o barulho do despertador: </p>
+                    <span className="textdarkgreen">Após o barulho do despertador:</span>
                     <div className="subnivel">
                         <ol>
                             <li>Despertar.</li>
@@ -42,8 +42,8 @@ const ConceituacaoParte1 = () => (
             </div>
         </div>
         <br/>
-        <p>Não se assuste, isso não faz de nós uma máquina, mas traz a evidência de que isso não é algo que apenas o pessoal da Ciência da Computação precisa conhecer. O <strong>algoritmo 01</strong> é tão repetido por nós, que o executamos automaticamente, ou seja, sem refletir. Não é por acaso que, quando observamos alguém repetir uma sequência de etapas muito concentrado, dizemos “hoje ele/ela está no automático”.</p>
-        <p>Você pode estar achando estranho ouvir dizer que essa sequência de etapas é um “algoritmo”, e que você realiza essa rotina (ou uma variação dela) todos os dias, cegamente, sem errar, de cor e salteado. Na verdade, você deve estar pensando que “apenas as máquinas agem assim, sem distração, sem olhar para o lado, sem dar uma paradinha”. Não é bem verdade, mas, façamos de conta que sim. Pense em uma pessoa que está executando a etapa “<strong>ir à padaria</strong>” e de repente encontra um amigo que lhe pede para subir um instante ao seu apartamento, pois ele precisa lhe entregar uma encomenda. Nesse momento, você segue o amigo, pega a encomenda e decide voltar em casa e deixar a encomenda, antes de continuar a execução do <strong>Algoritmo 01.</strong> Para sua surpresa, os computadores também podem exibir esse comportamento. Nesse momento, não é conveniente discutir isso, portanto, deixemos assim e, quando for oportuno, voltaremos ao caso.  O que importa é entender que você executa um algoritmo e que a execução só termina quando você conclui a última etapa. Se, por algum motivo, você precisa fazer alguma coisa durante a realização de uma etapa, isso não precisa atrapalhar a execução de sua rotina, basta lembrar onde você estava e depois seguir a partir desse ponto.</p>
+        <p>Não se assuste, isso não faz de nós uma máquina, mas traz a evidência de que isso não é algo que apenas o pessoal da Ciência da Computação precisa conhecer. O <strong>Algoritmo 01</strong> é tão repetido por nós, que o executamos automaticamente, ou seja, sem refletir. Não é por acaso que, quando observamos alguém repetir uma sequência de etapas muito concentrado, dizemos “hoje ele/ela está no automático”.</p>
+        <p>Você pode estar achando estranho ouvir dizer que essa sequência de etapas é um “algoritmo”, e que você realiza essa rotina (ou uma variação dela) todos os dias, cegamente, sem errar, de cor e salteado. Na verdade, você deve estar pensando que “apenas as máquinas agem assim, sem distração, sem olhar para o lado, sem dar uma paradinha”. Não é bem verdade, mas, façamos de conta que sim. Pense em uma pessoa que está executando a etapa <strong>"ir à padaria"</strong> e de repente encontra um amigo que lhe pede para subir um instante ao seu apartamento, pois ele precisa lhe entregar uma encomenda. Nesse momento, você segue o amigo, pega a encomenda e decide voltar em casa e deixar a encomenda, antes de continuar a execução do <strong>Algoritmo 01.</strong> Para sua surpresa, os computadores também podem exibir esse comportamento. Nesse momento, não é conveniente discutir isso, portanto, deixemos assim e, quando for oportuno, voltaremos ao caso.  O que importa é entender que você executa um algoritmo e que a execução só termina quando você conclui a última etapa. Se, por algum motivo, você precisa fazer alguma coisa durante a realização de uma etapa, isso não precisa atrapalhar a execução de sua rotina, basta lembrar onde você estava e depois seguir a partir desse ponto.</p>
     </div>
 )
 

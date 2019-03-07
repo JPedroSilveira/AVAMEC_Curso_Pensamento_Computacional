@@ -43,13 +43,15 @@ class Menu extends React.Component {
 
     /*Trata a resposta da API para o método "buscarUnidadeAPI"*/
     buscarUnidadeAPIResposta = (evento) => {
-        evento.detail.data.modulos.forEach(modulo => {
-            modulo.unidades.forEach(unidade => {
-                if (unidade.situacao === TIPO_SITUACAO_ATIVA) {
-                    this.state.unidades.push(unidade)
-                }
+        if (evento.detail.status === 200) {
+            evento.detail.data.modulos.forEach(modulo => {
+                modulo.unidades.forEach(unidade => {
+                    if (unidade.situacao === TIPO_SITUACAO_ATIVA) {
+                        this.state.unidades.push(unidade)
+                    }
+                })
             })
-        })
+        }
 
         window.removeEventListener("evObtemDadosCurso", this.buscarUnidadeAPIResposta, false)
     }
