@@ -309,7 +309,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
             return (
                 <div className="box">
                     <div className="button-container">
-                        <button type="button" className="button" onClick={this.onClickSalvarRespostas}>ENVIAR RESPOSTAS</button>
+                        <button type="button" className="button" onClick={this.onClickSalvarRespostas}>SALVAR RESPOSTAS</button>
                     </div>
                 </div>
             )

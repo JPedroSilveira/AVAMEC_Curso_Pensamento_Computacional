@@ -33,8 +33,8 @@ class Paginacao extends React.Component {
                 pageCount={this.state.numeroPaginas}
                 initialPage={this.state.paginaAtual - 1}
                 activeClassName={'pagina-atual'}
-                marginPagesDisplayed={2}
-                pageRangeDisplayed={4}
+                marginPagesDisplayed={1}
+                pageRangeDisplayed={2}
                 onPageChange={this.mudarPagina}
                 containerClassName={'paginacao'}
             />

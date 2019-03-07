@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactHtmlParser from 'react-html-parser';
 import AtividadeGenerica from '../atividade_generica'
 import SimboloRecarregar from '../../../../images/simbolo-recarregar.png'
 import SimboloRecarregarPressionado from '../../../../images/simbolo-recarregar-pressionado.png'
@@ -299,7 +300,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
                 <input type="radio" className="optionRadio" name={questao.id} value={alternativa.chave}
                     checked={isOpcaoSelecionada}
                     onChange={this.onChangeRadioButton} />
-                <span class="checkmark"></span>
+                <span className="checkmark"></span>
             </label>
         )
     }
@@ -392,7 +393,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
             <div className="box">
                 <div className="box-alg-question">
                     <div className="head">
-                        <p className="titulo">{questao.titulo}</p>
+                        <span className="titulo">{questao.titulo}</span>
                     </div>
                     <div className="nivel-1">
                         <ol>
@@ -414,7 +415,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
     carregaInstrucao = (instrucao) => {
         return (
             <li>
-                {instrucao.texto}
+                {ReactHtmlParser(instrucao.texto)}
                 {this.carregaSubInstrucoes(instrucao.instrucoes)}
             </li>
         )
@@ -428,7 +429,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
                     {subInstrucoes.map((subInstrucao, key) => {
                         return (
                             <div key={key}>
-                                {subInstrucao.texto}
+                                {ReactHtmlParser(subInstrucao.texto)}
                                 {this.carregaSubInstrucoes(subInstrucao.instrucoes)}
                             </div>
                         )
@@ -486,7 +487,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
                 }
                 {this.props.atividade.enunciado !== undefined && this.props.atividade.enunciado.length > 0 &&
                     <div className="enunciado-atividade">
-                        <h4>{this.props.atividade.enunciado}</h4>
+                        <p>{this.props.atividade.enunciado}</p>
                     </div>
                 }
             </div>

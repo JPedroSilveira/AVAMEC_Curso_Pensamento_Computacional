@@ -1,7 +1,6 @@
 import React from 'react'
+import ReactHtmlParser from 'react-html-parser';
 import AtividadeGenerica from '../atividade_generica'
-import Button from '@material-ui/core/Button'
-import SaveIcon from '@material-ui/icons/Save'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETO atividade do tipo:
     atividade: um objetivo com os atributos:
@@ -145,12 +144,15 @@ class ProblemasGenerico extends AtividadeGenerica {
         this.forceUpdate()
     }
 
-    carregarTitulo = () => {
-        if (this.props.atividade.problemas.length > 1 ){
+    carregarTitulo = (titulo) => {
+        if (titulo !== undefined){
+            return (<h2>{titulo}</h2>)
+        } else if (this.props.atividade.problemas.length > 1) {
             return (<h2>PROBLEMAS</h2>)
         } else {
             return (<h2>PROBLEMA</h2>)
         }
+        
     }
 
     carregarProblemas = (problemas) => {
@@ -158,9 +160,11 @@ class ProblemasGenerico extends AtividadeGenerica {
             <div>
                 {problemas.map((problema, key) => {
                         return (
-                            <div className="box">
-                                <div key={key} className="boxed problema">
-                                    <p><strong>{problema.titulo}.</strong> {problema.texto}</p>
+                            <div className="box" key={key}>
+                                <div className="boxed problema">
+                                    <strong>{problema.titulo}.</strong> {ReactHtmlParser(problema.texto)}
+                                    <br /><br />
+                                    {ReactHtmlParser(problema.subtitulo)}
                                     <textarea
                                         id={problema.id}
                                         value={problema.resposta}
@@ -181,7 +185,7 @@ class ProblemasGenerico extends AtividadeGenerica {
             return (
                 <div className="box">
                     <div className="button-container">
-                        <button type="button" className="button" onClick={this.onClickSalvarRespostas}>ENVIAR RESPOSTAS</button>
+                        <button type="button" className="button" onClick={this.onClickSalvarRespostas}>SALVAR RESPOSTAS</button>
                     </div>
                 </div>
             )
@@ -191,7 +195,7 @@ class ProblemasGenerico extends AtividadeGenerica {
     render() {
         return (
             <div>
-                {this.carregarTitulo()}
+                {this.carregarTitulo(this.props.atividade.titulo)}
                 {this.carregarProblemas(this.props.atividade.problemas)}
                 {this.carregarBotaoSalvar()}
             </div>
