@@ -1,0 +1,14 @@
+.image-box{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.image{
+    height: 250px;
+}
+
+@media screen and (orientation: portrait) {
+   .image{
+        height: 125px;
+    }
+}

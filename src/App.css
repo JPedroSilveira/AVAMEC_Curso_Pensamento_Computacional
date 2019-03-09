@@ -1,11 +1,10 @@
-.App{
+.app{
     position: relative;
-    min-height: 100%;
     background: white;
-    font-size: 15px;
+    font-size: 18px;
 }
 
-.container{
+.content-container{
     width: 70%;
     height: 100%;
     display: flex;
@@ -22,12 +21,6 @@
         width: 94%;
         margin-left: 3%;
     }
-}
-
-.footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 @media screen and (orientation: portrait) {

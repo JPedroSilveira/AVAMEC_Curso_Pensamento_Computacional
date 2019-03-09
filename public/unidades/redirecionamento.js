@@ -8,11 +8,8 @@ function salvarDadosLocalStorage(){
     /*Por padrão o nome da unidade é o diretório onde estão as páginas html.*/
     let unidade = urlCompletaArray[urlCompletaArray.length - 2]
 
-    let primeiraVez = localStorage.getItem("PaginaAberta") === undefined
-
     localStorage.setItem("PaginaAberta", numeroPagina)
     localStorage.setItem("UnidadeAberta", unidade)
-    localStorage.setItem("PrimeiraVez", primeiraVez)
 }
 
 salvarDadosLocalStorage()

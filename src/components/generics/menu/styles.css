@@ -1,0 +1,33 @@
+.menu{
+  width: 'auto'; 
+}
+
+.menu .item{
+  padding-bottom: 1.2em;
+  padding-top: 1.2em;
+}
+
+.menu .item:hover{
+  background-color: rgb(235, 235, 235);
+}
+
+.menu .header{
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+.menu .header .image{
+  height: 8em;
+}
+
+.menu-button{
+  position: fixed;
+  padding-top: 0em;
+  top: 1em;
+  right: 1em;
+}
+
+/*"!important" utilizado para sobre-escrever o tamanho do ícone padrão da lib material.ui.*/
+.menu-button-icon{
+  font-size: 1.8em !important;
+}
