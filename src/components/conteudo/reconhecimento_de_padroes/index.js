@@ -9,7 +9,7 @@ import AssuntosCorrelatos from './assuntos_correlatos'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
-*/
+.*/
 class ReconhecimentoDePadroes extends ConteudoGenerico {
     constructor(props) {
         super(props)
@@ -19,12 +19,12 @@ class ReconhecimentoDePadroes extends ConteudoGenerico {
         }
     }
 
-    /*Retorna o título da unidade*/
+    /*Retorna o título da unidade.*/
     carregarTitulo = () => {
         return (<h1>5. Reconhecimento de Padrões</h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual*/
+    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
     carregarPaginaAtual = () => {
         switch (this.state.paginaAberta) {
             case "1":

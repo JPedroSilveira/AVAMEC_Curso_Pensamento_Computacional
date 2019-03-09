@@ -18,7 +18,7 @@ import './styles.css'
                 chave: String numérica,
                 texto: String,
                 dica: String
-*/
+.*/
 
 const MAX_CARACTERES_ID = 250
 
@@ -26,7 +26,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
     constructor(props) {
         super(props)
 
-        /*Valida se todas as propriedades estão sendo passadas corretamente*/
+        /*Valida se todas as propriedades estão sendo passadas corretamente.*/
         this.validaProps()
 
         this.state = {
@@ -36,10 +36,10 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
             unidadeConcluida: false
         }
 
-        /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido*/
+        /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido.*/
         this.obterRespostasDaAtividade()
 
-        /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades*/
+        /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades.*/
         this.obterDadosConclusaoUnidade()
     }
 
@@ -83,7 +83,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         }
     }
 
-    /*Gera um objeto vazio com as questões selecionadas*/
+    /*Gera um objeto vazio com as questões selecionadas.*/
     pegarOpcoesSelecionadasVazias = () => {
         let opcoesSelecionadas = []
         //Gera opções selecionadas vazias para cada questão
@@ -98,7 +98,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         return opcoesSelecionadas
     }
 
-    /*Obtem as respostas da atividade caso tenha sido resolvida*/
+    /*Obtem as respostas da atividade caso tenha sido resolvida.*/
     obterRespostasDaAtividade = () => {
         let API = new window.BridgeRestApi()
 
@@ -107,71 +107,78 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         API.obterRespostaAtividade(this.props.atividade.id)
     }
 
-    /*Trata o retorno da API no método local obterRespostasDaAtividade*/
+    /*Trata o retorno da API no método local obterRespostasDaAtividade.*/
     tratarRespostasDaAtividade = (retorno) => {
-        /*Apenas em caso de sucesso (status 200)*/
+        /*Apenas em caso de sucesso (status 200).*/
         if (retorno.detail.status === 200) {
             let data = retorno.detail.data
 
-            /*Caso tenha sido mapeada no mínimo uma resposta*/
+            /*Caso tenha sido mapeada no mínimo uma resposta.*/
             if (data.mapaAtributos.quantidadeRespostasResgistradas > 0) {
                 let opcoesSelecionadas = []
 
-                /*Busca as questões passadas como propriedade na resposta da API AvaMEC*/
+                /*Busca as questões passadas como propriedade na resposta da API AvaMEC.*/
                 this.props.atividade.questoes.forEach(questao => {
                     let opcaoSelecionada = 0
     
-                    /*Busca a resposta de uma questão pelo seu identificador*/
-                    let resposta = data.questoesUsuario.find(questaoUsuario =>
+                    /*Busca a resposta de uma questão pelo seu identificador.*/
+                    let respostas = data.questoesUsuario.find(questaoUsuario =>
                         questaoUsuario.questao.identificador === questao.id
                     ).respostas
 
-                    /*Caso existe resposta*/
-                    if (resposta !== undefined) {
-                        /*Busca a opção selecionada pelo usuário*/
-                        opcaoSelecionada = resposta.find(opcao =>
+                    /*Caso existam respostas.*/
+                    if (respostas !== undefined) {
+                        /*Busca a opção selecionada pelo usuário.*/
+                        opcaoSelecionada = respostas.find(opcao =>
                             opcao.valor === "1"
                         )
 
+                        /*Caso tenha sido selecionada uma opção*/
                         if (opcaoSelecionada !== undefined){
                             opcoesSelecionadas.push({
                                 idQuestao: questao.id,
                                 chave: opcaoSelecionada.chave,
                                 respondida: true
                             })
+                        } else { //Caso não 
+                            opcoesSelecionadas.push({
+                                idQuestao: questao.id,
+                                chave: "0",
+                                respondida: false
+                            })
                         }
                     }
                 })
 
-                /*Atualiza as informações da página com respeito as questões da atividade*/
+                /*Atualiza as informações da página com respeito as questões da atividade.*/
                 this.setState({
                     atividadeRespondida: true,
                     nota: data.nota,
                     opcoesSelecionadas: opcoesSelecionadas
                 })
             } else {
-                /*Embaralha alternativas de todas as questões*/
+                /*Embaralha alternativas de todas as questões.*/
                 this.embaralhaAlternativas()
             }
         } else {
-            /*Embaralha alternativas de todas as questões*/
+            /*Embaralha alternativas de todas as questões.*/
             this.embaralhaAlternativas()
         }
 
         //To-Do Tratar erros caso não seja possível salvar a resposta
-        /*Remove o listener para evitar chamadas consecutivas*/
+        /*Remove o listener para evitar chamadas consecutivas.*/
         window.removeEventListener("evObtemDadosRespostaAtividade", this.tratarRespostasDaAtividade, false)
     }
 
-    /*Registra a resposta do usuário na API AvaMEC*/
+    /*Registra a resposta do usuário na API AvaMEC.*/
     registrarRespostasDaAtividade = () => {
-        /*Monta o objeto com a resposta do usuário para a API AvaMEC*/
+        /*Monta o objeto com a resposta do usuário para a API AvaMEC.*/
         let atividadeAPI = {
             "identificador": this.props.atividade.id,
             "questoes": []
         }
 
-        /*Salva uma questão para cada item em questoes passado como propriedade*/
+        /*Salva uma questão para cada item em questoes passado como propriedade.*/
         this.props.atividade.questoes.forEach(questao => {
             let questaoAPI = {
                 "identificador": questao.id,
@@ -197,39 +204,39 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         API.registrarRespostaAtividade(atividadeAPI)
     }
 
-    /*Trata o retorno da API no método local registrarRespostasDaAtividade*/
+    /*Trata o retorno da API no método local registrarRespostasDaAtividade.*/
     tratarRetornoRespostasDaAtividade = (retorno) => {
-        /*Em caso de sucesso ao salvar a resposta*/
+        /*Em caso de sucesso ao salvar a resposta.*/
         if (retorno.detail.status === 200) {
 
-            /*Atualiza as opções selecionadas para salvar que elas foram respondidas já*/
+            /*Atualiza as opções selecionadas para salvar que elas foram respondidas.*/
             this.state.opcoesSelecionadas.forEach(opcao => {
                 opcao.respondida = true
             })
 
-            /*Atualiza as informações de estado da página correspondentes a questão 1*/
+            /*Atualiza as informações de estado da página correspondentes a questão 1.*/
             this.setState({
                 atividadeRespondida: true,
                 nota: retorno.detail.data.notaAtividade
             })
 
         }
-        /*TO-DO Tratar erros caso não seja possível salvar a resposta*/
+        /*TO-DO Tratar erros caso não seja possível salvar a resposta.*/
 
-        /*Remove o listener para evitar chamadas consecutivas*/
+        /*Remove o listener para evitar chamadas consecutivas.*/
         window.removeEventListener("evRegistraRespostaAtividade", this.tratarRetornoRespostasDaAtividade, false)
     }
 
-    /*Realiza a mudança na opção da resposta*/
+    /*Realiza a mudança na opção da resposta.*/
     onChangeRadioButton = data => {
-        /*Só pode alterar a opção caso não tenha respondido*/
+        /*Só pode alterar a opção caso não tenha respondido.*/
         if (!this.state.atividadeRespondida) {
 
             //Pega a opção selecionada da questão que disparou o evento e 
-            //altera o seu valor para a alternativa selecionada no evento
+            //altera o seu valor para a alternativa selecionada no evento.
             let indiceSelecionada = this.getIndiceOpcaoSelecionadaDaQuestao(data.currentTarget.name)
 
-            //Apenas se não estiver respondida e enviada corretamente já
+            //Apenas se não estiver respondida e enviada corretamente já.
             if (!this.state.opcoesSelecionadas[indiceSelecionada].respondida){
                 this.state.opcoesSelecionadas[indiceSelecionada].chave = data.currentTarget.value
 
@@ -238,20 +245,36 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         }
     }
 
-    /*Retorna o indice da resposta de uma questão dentro do vetor "this.state.opcoesSelecionadas"*/
+    /*Retorna o indice da resposta de uma questão dentro do vetor "this.state.opcoesSelecionadas".*/
     getIndiceOpcaoSelecionadaDaQuestao = (idQuestao) => {
         return this.state.opcoesSelecionadas.findIndex(opcao => opcao.idQuestao === idQuestao)
     }
 
-    /*Embaralha as alternativas de todas as questões dentro de this.props.atividade*/
+    /*Retorna a alternativa selecionada da ativida baseado na opcaoSelecionada do state*/
+    getAlternativaDaOpcaoSelecionada = (opcaoSelecionada) => {
+
+        //Busca a questão correspondente a opção selecionada
+        let questaoDaOpcao = this.props.atividade.questoes.find(questao =>
+            questao.id === opcaoSelecionada.idQuestao
+        )
+
+        //Busca a alternativa da questão correspondente a opção selecionada
+        let alternativaDaOpcao = questaoDaOpcao.alternativas.find(alternativa =>
+            alternativa.chave === opcaoSelecionada.chave
+        )
+
+        return alternativaDaOpcao
+    }
+
+    /*Embaralha as alternativas de todas as questões dentro de this.props.atividade.*/
     embaralhaAlternativas = () => {
         this.props.atividade.questoes.forEach(questao => {
             //Pega a opção selecionada da questão
             let opcaoSelecionada = this.getIndiceOpcaoSelecionadaDaQuestao(questao.id)
 
-            //Apenas embaralha as questões que não tiverem sido respondidas
+            //Apenas embaralha as questões que não tiverem sido respondidas corretamente
             if (!opcaoSelecionada.respondida){
-                /*Para cada questão redefine a ordem da lista de alternativas*/
+                /*Para cada questão redefine a ordem da lista de alternativas.*/
                 questao.alternativas = questao.alternativas.sort(() => (Math.round(Math.random()) - 0.5))
             }
         })
@@ -259,14 +282,14 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         this.forceUpdate()
     }
 
-    /*Carrega uma alternativa de uma questao*/
+    /*Carrega uma alternativa de uma questao.*/
     /*questao deve conter os atributos:
         id: String,
         alternativas: lista de objetos com os atributos:
             valor: Boolean,
             chave: String numérica,
             texto: String,
-            dica: String*/
+            dica: String.*/
     carregaAlternativas = (questao) => {
         return (
             <div>
@@ -282,7 +305,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         )
     }
 
-    /*Define se a alternativa atual é a opção selecionada pelo usuário na questão*/
+    /*Define se a alternativa atual é a opção selecionada pelo usuário na questão.*/
     isOpcaoSelecionada = (questao, alternativa) => {
         //Busca a posição da opção selecionada correspondente a questão atual
         let posicaoOpcao = this.getPosicaoOpcaoSelecionadaPeloIdQuestao(questao.id) 
@@ -290,9 +313,9 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         return this.state.opcoesSelecionadas[posicaoOpcao].chave === alternativa.chave
     }
 
-    /*Carrega o radioButton com o texto da alternativa*/
+    /*Carrega o radioButton com o texto da alternativa.*/
     carregaTextoAlternativa = (questao, alternativa) => {
-        /*Define se a alternativa atual é a opção selecionada pelo usuário na questão*/
+        /*Define se a alternativa atual é a opção selecionada pelo usuário na questão.*/
         let isOpcaoSelecionada = this.isOpcaoSelecionada(questao, alternativa)
 
         return (
@@ -305,28 +328,28 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         )
     }
     
-    /*Carrega a dica da alternativa se respondida*/
+    /*Carrega a dica da alternativa se respondida.*/
     carregaDicaAlternativa = (questao, alternativa) => {
-        /*Define se a alternativa atual é a opção selecionada pelo usuário na questão*/
+        /*Define se a alternativa atual é a opção selecionada pelo usuário na questão.*/
         let isOpcaoSelecionada = this.isOpcaoSelecionada(questao, alternativa)
 
-        /*Só irá carregar a dica se for a opção selecionada pelo usuário*/
+        /*Só irá carregar a dica se for a opção selecionada pelo usuário.*/
         if (isOpcaoSelecionada){
 
-            /*Define se ela foi respondida pelo estado da atividade*/
+            /*Define se ela foi respondida pelo estado da atividade.*/
             let isRespondida = this.state.atividadeRespondida;
 
-            /*Caso a atividade não tenha sido respondida*/
+            /*Caso a atividade não tenha sido respondida.*/
             if (!isRespondida) {
                 //Busca a posição da opção selecionada correspondente a questão atual
                 let posicaoOpcao = this.getPosicaoOpcaoSelecionadaPeloIdQuestao(questao.id)
 
                 /*Válida se a questão já foi respondida corretamente e enviada ao servidor anteriormente
-                para o caso da atividade ter sido recarregada pelo tentar novamente*/
+                para o caso da atividade ter sido recarregada pelo tentar novamente.*/
                 isRespondida = this.state.opcoesSelecionadas[posicaoOpcao].respondida
             }
             
-            /*Se a conclusão foi que ela já foi respondida então carrega a dica*/
+            /*Se a conclusão foi que ela já foi respondida então carrega a dica.*/
             if (isRespondida) {
                 return (
                     <div>
@@ -347,7 +370,8 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
 
         }
     }
-    /*Carrega todas as questões com suas alternativas*/
+
+    /*Carrega todas as questões com suas alternativas.*/
     carregaQuestoes = (questoes) => {
         return (
             <div>
@@ -365,7 +389,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         )
     }
 
-    /*Carrega o enunciado da questão com as instruções e infomações para realizar ela*/
+    /*Carrega o enunciado da questão com as instruções e infomações para realizar ela.*/
     carregaEnunciadoQuestao = (questao) => {
         if (questao.algoritmo){
             return (
@@ -377,17 +401,17 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
             return (
                 <div>
                     {questao.titulo !== "" &&
-                        <h4>{questao.titulo}</h4>
+                        <h4>{ReactHtmlParser(questao.titulo)}</h4>
                     }
                     {questao.enunciado !== "" &&
-                        <p>{questao.enunciado}</p>
+                        <p>{ReactHtmlParser(questao.enunciado)}</p>
                     }
                 </div>
             )
         }
     }
 
-    /*Carrega o tipo de enunciado algoritmo de forma recursiva conforme seus subníveis*/
+    /*Carrega o tipo de enunciado algoritmo de forma recursiva conforme seus subníveis.*/
     carregaEnunciadoAlgoritmo = (questao) => {
         return (
             <div className="box">
@@ -411,7 +435,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         )
     }
 
-    /*Carrega uma instrução do algoritmo e suas sub-instruções*/
+    /*Carrega uma instrução do algoritmo e suas sub-instruções.*/
     carregaInstrucao = (instrucao) => {
         return (
             <li>
@@ -421,7 +445,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         )
     }
     
-    /*Carrega as sub-instruções de uma instrução e suas sub-instruções*/
+    /*Carrega as sub-instruções de uma instrução e suas sub-instruções.*/
     carregaSubInstrucoes = (subInstrucoes) => {
         if(subInstrucoes !== undefined && subInstrucoes.length > 0){
             return (
@@ -440,31 +464,24 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
     }
 
     /*Carrega a posição no vetor "this.state.opcoesSelecionadas" onde se encontra a resposta
-    para o id da questão passado*/
+    para o id da questão passado.*/
     getPosicaoOpcaoSelecionadaPeloIdQuestao = (idQuestao) => {
         return this.state.opcoesSelecionadas.map(opcao => opcao.idQuestao).indexOf(idQuestao)
     }
 
-    /*Zera a resposta e re-embaralha as alternativas*/
+    /*Zera a resposta e re-embaralha as alternativas.*/
     configurarNovaTentativa = () => {
-        /*Embaralha alternativas de todas as questões*/
+        /*Embaralha alternativas de todas as questões.*/
         this.embaralhaAlternativas()
 
         let opcoesSelecionadas = this.state.opcoesSelecionadas
         
-        /*Limpa as alternativas erradas*/
+        /*Limpa as alternativas erradas.*/
         opcoesSelecionadas.forEach((opcaoSelecionada) => {
-            //Busca a questão correspondente a opção selecionada
-            let questaoDaOpcao = this.props.atividade.questoes.find(questao => 
-                questao.id === opcaoSelecionada.idQuestao
-            )
-
             //Busca a alternativa da questão correspondente a opção selecionada
-            let alternativaDaOpcao = questaoDaOpcao.alternativas.find(alternativa => 
-                alternativa.chave === opcaoSelecionada.chave
-            )
+            let alternativaDaOpcao = this.getAlternativaDaOpcaoSelecionada(opcaoSelecionada)
 
-            if (alternativaDaOpcao !== undefined && alternativaDaOpcao.valor === "0"){
+            if (alternativaDaOpcao === undefined || alternativaDaOpcao.valor === "0") {
                 opcaoSelecionada.chave = "0"
                 opcaoSelecionada.respondida = false
             }
@@ -476,7 +493,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         })
     }
 
-    /*Carrega o titulo conforme a quantidade de questões*/
+    /*Carrega o titulo conforme a quantidade de questões.*/
     carregarTitulo = () => {
         return (
             <div>
@@ -494,7 +511,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         )
     }
 
-    /*Carrega a nota do usuário caso a mesma exista*/
+    /*Carrega a nota do usuário caso a mesma exista.*/
     carregarNota = () => {
         return (
             <div>
@@ -503,6 +520,43 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
                 }
             </div>
         )
+    }
+
+    /*Carrega o botão Tentar Novamente caso ainda existem alternativas erradas*/
+    carregarBotaoTentarNovamente = () => {
+        /*Verifica se existe alguma questão não respondida corretamente*/
+        let alternativasSelecionadas = this.state.opcoesSelecionadas.map(opcaoSelecionada => this.getAlternativaDaOpcaoSelecionada(opcaoSelecionada))
+        
+        let existeAlternativaNaoRespondida = alternativasSelecionadas
+            .some(alternativa => alternativa === undefined || alternativa.valor === "0")
+        
+        if (existeAlternativaNaoRespondida){
+            return (
+                <button type="button" className="button" onClick={this.configurarNovaTentativa}
+                    onMouseOver={e => e.currentTarget.firstChild.src = SimboloRecarregarPressionado}
+                    onMouseOut={e => e.currentTarget.firstChild.src = SimboloRecarregar}>
+                    <img src={SimboloRecarregar} alt="Clique para tentar responder novamente ao questionário." />
+                    TENTAR NOVAMENTE
+                </button>
+            )
+        }
+    }
+
+    /*Carrega os botões de Enviar Respostas e Tentar Novamento conforme os status da unidade.*/
+    carregaBotoesEnviarTentarNovamente = () => {
+        if (!this.state.unidadeConcluida){
+            return (
+                <div>
+                    <div className="button-container">
+                        {!this.state.atividadeRespondida ?
+                            <button type="button" className="button" onClick={this.registrarRespostasDaAtividade}>ENVIAR RESPOSTAS</button>
+                            :
+                            <div>{this.carregarBotaoTentarNovamente()}</div>
+                        }
+                    </div>
+                </div>
+            )
+        }
     }
 
     render() {
@@ -514,20 +568,7 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
 
                 {this.carregarNota()}
 
-                {!this.state.unidadeConcluida &&
-                    <div className="button-container">
-                        {!this.state.atividadeRespondida ?
-                            <button type="button" className="button" onClick={this.registrarRespostasDaAtividade}>ENVIAR RESPOSTAS</button>
-                            :
-                            <button type="button" className="button" onClick={this.configurarNovaTentativa}
-                                onMouseOver={e => e.currentTarget.firstChild.src = SimboloRecarregarPressionado}
-                                onMouseOut={e => e.currentTarget.firstChild.src = SimboloRecarregar}>
-                                <img src={SimboloRecarregar} alt="Clique para tentar responder novamente ao questionário." />
-                                TENTAR NOVAMENTE
-                            </button>
-                        }
-                    </div>
-                }
+                {this.carregaBotoesEnviarTentarNovamente()}
             </div>
         )
     }

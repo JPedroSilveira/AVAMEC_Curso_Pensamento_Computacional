@@ -3,7 +3,7 @@ import AtividadeIntegralGenerica from '../../utils/atividade_integral_generica'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     idUnidade: String, representa o id da unidade em que a atividade se encontra
-*/
+.*/
 class AtividadeAvaliativa1 extends React.Component {
     constructor(props) {
         super(props)

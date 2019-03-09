@@ -3,7 +3,7 @@ import AtividadeIntegralGenerica from '../../utils/atividade_integral_generica'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     idUnidade: String, representa o id da unidade em que a atividade se encontra
-*/
+.*/
 class AtividadeAvaliativa1 extends React.Component {
     constructor(props) {
         super(props)
@@ -55,7 +55,7 @@ class AtividadeAvaliativa1 extends React.Component {
                             dica: "Sim pois permite procedimentar a leitura."
                         },
                         {
-                            valor: "1",
+                            valor: "0",
                             chave: "2",
                             texto: "Todas as suas operações podem ser realizadas em um tempo finito;",
                             dica: "Pode-se verificar que a leitura de uma página leva uma quantidade determinada de minutos e estimar o tempo total de leitura."
@@ -153,7 +153,7 @@ class AtividadeAvaliativa1 extends React.Component {
                         {
                             valor: "0",
                             chave: "4",
-                            texto: "Se a lista de compras for dividida em 2 partes, é possível dar uma parte cada pessoa e cada uma pode usar o mesmo procedimento reduzindo com isso o tempo no supermercado.",
+                            texto: "Se a lista de compras for dividida em 2 partes, é possível dar uma parte cada pessoa e cada uma pode usar o mesmo procedimento reduzindo com isso o tempo no supermercado;",
                             dica: "Sim, e cada pessoa vai realizar o mesmo algoritmo para dar conta de sua lista particular. Neste caso, cada agente (humano) está realizando uma compra específica."
                         },
                         {
@@ -189,7 +189,7 @@ class AtividadeAvaliativa1 extends React.Component {
                         {
                             valor: "0",
                             chave: "1",
-                            texto: "Descreve uma sequência de operações para a realização da tarefa de lavar pratos",
+                            texto: "Descreve uma sequência de operações para a realização da tarefa de lavar pratos.",
                             dica: "Sim, conforme descrição do algoritmo."
                         },
                         {

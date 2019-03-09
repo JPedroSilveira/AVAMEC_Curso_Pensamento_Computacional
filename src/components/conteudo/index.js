@@ -7,7 +7,7 @@ import ReconhecimentoDePadroes from './reconhecimento_de_padroes'
 import Algoritmos from './algoritmos'
 import './styles.css'
 
-/*IDs das unidades: */
+/*IDs das unidades: .*/
 const APRESENTACAO_CURSO = "apresentacao_do_curso"
 const INTRO_PENSAMENTO_COMP = "introducao_ao_pensamento_computacional"
 const DECOMPOSICAO = "decomposicao"
@@ -19,13 +19,13 @@ class Conteudo extends React.Component {
     constructor() {
         super()
 
-        /*Recupera a unidade aberta no localStorage e salva no state*/
+        /*Recupera a unidade aberta no localStorage e salva no state.*/
         this.state = {
             unidadeAberta: localStorage.getItem("UnidadeAberta")
         }
     }
 
-    /*Seleciona a unidade que deve ser carregada conforme o identificador da unidadeAberta*/
+    /*Seleciona a unidade que deve ser carregada conforme o identificador da unidadeAberta.*/
     CarregarUnidadeAtual = () => {
         switch(this.state.unidadeAberta){
             case APRESENTACAO_CURSO:

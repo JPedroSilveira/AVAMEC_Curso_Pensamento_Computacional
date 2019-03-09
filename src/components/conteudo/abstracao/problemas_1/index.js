@@ -3,7 +3,7 @@ import ProblemasGenerico from '../../utils/problemas_generico'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     idUnidade: String, representa o id da unidade em que a atividade se encontra
-*/
+.*/
 class Problemas extends React.Component {
     constructor(props){
         super(props)

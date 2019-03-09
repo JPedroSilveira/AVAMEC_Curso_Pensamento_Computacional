@@ -10,7 +10,7 @@ import AtividadeComplementar1 from './atividade_complementar_1'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
-*/
+.*/
 class Decomposicao extends ConteudoGenerico {
     constructor(props) {
         super(props)
@@ -20,12 +20,12 @@ class Decomposicao extends ConteudoGenerico {
         }
     }
 
-    /*Retorna o título da unidade*/
+    /*Retorna o título da unidade.*/
     carregarTitulo = () => {
         return (<h1>3. Decomposição </h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual*/
+    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
     carregarPaginaAtual = () => {
         switch (this.state.paginaAberta){
             case "1":

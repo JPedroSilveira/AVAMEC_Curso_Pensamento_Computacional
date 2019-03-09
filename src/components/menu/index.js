@@ -1,17 +1,17 @@
 import React from 'react'
 
-/*Itens do Drawer*/
+/*Itens do Drawer.*/
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 
-/*Itens do botão de menu*/
+/*Itens do botão de menu.*/
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
-/*Outro itens utilizados*/
+/*Outro itens utilizados.*/
 import ArrowForward from '@material-ui/icons/ArrowForward'
 import Divider from '@material-ui/core/Divider'
 import Logo from '../../images/logo.png'
@@ -32,7 +32,7 @@ class Menu extends React.Component {
         this.buscarUnidadesAPI()
     }
 
-    /*Consulta a API do AvaMEC para buscar as unidades disponíveis*/
+    /*Consulta a API do AvaMEC para buscar as unidades disponíveis.*/
     buscarUnidadesAPI = () => {
         let API = new window.BridgeRestApi()
 
@@ -41,7 +41,7 @@ class Menu extends React.Component {
         API.obterDadosCurso()  
     }
 
-    /*Trata a resposta da API para o método "buscarUnidadeAPI"*/
+    /*Trata a resposta da API para o método "buscarUnidadeAPI".*/
     buscarUnidadeAPIResposta = (evento) => {
         if (evento.detail.status === 200) {
             evento.detail.data.modulos.forEach(modulo => {
@@ -56,14 +56,14 @@ class Menu extends React.Component {
         window.removeEventListener("evObtemDadosCurso", this.buscarUnidadeAPIResposta, false)
     }
 
-    /*Atualiza o parâmetro de abertura do menu*/
+    /*Atualiza o parâmetro de abertura do menu.*/
     abrirMenu = (aberto) => () => {
         this.setState({
             aberto: aberto
         })
     }
 
-    /*Carrega a lista de itens do menu conforme a lista "this.state.unidades"*/
+    /*Carrega a lista de itens do menu conforme a lista "this.state.unidades".*/
     carregarListaUnidadesDrawer = () => {
         return (
             <div className="menu">
@@ -90,7 +90,7 @@ class Menu extends React.Component {
         )
     }
 
-    /*Carrega o drawer com a lista de unidades*/
+    /*Carrega o drawer com a lista de unidades.*/
     carregarDrawer = () => {
         return (
             <SwipeableDrawer
@@ -109,7 +109,7 @@ class Menu extends React.Component {
         )
     }
 
-    /*Carrega o botão para abrir o menu*/
+    /*Carrega o botão para abrir o menu.*/
     carregarMenuButton = () => {
         return (
             <div className="menu-button">
@@ -120,7 +120,7 @@ class Menu extends React.Component {
         )
     }
 
-    /*Requisita a troca de unidade para a API do AvaMEC*/
+    /*Requisita a troca de unidade para a API do AvaMEC.*/
     mudarUnidade = (data) => {
         let API = new window.BridgeRestApi()
 

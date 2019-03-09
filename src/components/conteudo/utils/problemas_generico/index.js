@@ -10,7 +10,7 @@ import AtividadeGenerica from '../atividade_generica'
             titulo: String,
             texto: String,
             tamanhoMaximoResposta: Número inteiro
-*/
+.*/
 
 const QUANTIDADE_LETRAS_POR_LINHA = 180
 const SEPARADOR_ID = "_sep%ger_"
@@ -26,14 +26,14 @@ class ProblemasGenerico extends AtividadeGenerica {
 
         this.validarPropriedades()
 
-        /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido*/
+        /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido.*/
         this.obterRespostas()
 
-        /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades*/
+        /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades.*/
         this.obterDadosConclusaoUnidade()
     }
 
-    /*Válida se todas as propriedades necessárias foram passadas*/
+    /*Válida se todas as propriedades necessárias foram passadas.*/
     validarPropriedades = () => {
         if(this.props.atividade === undefined){
             throw Error("Não foi repassada a propriedade atividade para o componente!")
@@ -56,7 +56,7 @@ class ProblemasGenerico extends AtividadeGenerica {
         } 
     }
 
-    /*Obtem as respostas do problema em looping*/
+    /*Obtem as respostas do problema em looping.*/
     obterRespostas = () => {
         //Busca por mais respostas até o máximo configurado
         let API = new window.BridgeRestApi()
@@ -68,7 +68,7 @@ class ProblemasGenerico extends AtividadeGenerica {
         })
     }
 
-    /*Trata o resultado da chamada a API AvaMEC dentro do método local obterRespostas*/
+    /*Trata o resultado da chamada a API AvaMEC dentro do método local obterRespostas.*/
     tratarRespostaAPI = (retorno) => {
 
         //Quando o idBusca já não tiver sido buscado e em caso de sucesso apenas
@@ -92,11 +92,11 @@ class ProblemasGenerico extends AtividadeGenerica {
                 //Adiciona o item a lista de itens já carregados
                 this.state.problemasBuscados.push(problemaAPI.id)
 
-                /*Atualiza o render com os novos valores*/
+                /*Atualiza o render com os novos valores.*/
                 this.forceUpdate()
 
                 if (this.state.problemasBuscados.length === this.props.atividade.problemas.length) {
-                    /*Remove o listener para evitar mais chamadas*/
+                    /*Remove o listener para evitar mais chamadas.*/
                     window.removeEventListener("evObtemDadosGenericos", this.tratarRespostaAPI, false)
                 }
             }
@@ -105,17 +105,17 @@ class ProblemasGenerico extends AtividadeGenerica {
 
     //Verifica se uma chave dentro do objeto data já está na lista de problemasBuscados do state
     aindaNaoBuscouItem = (data) => {
-        /*Cria um regex para pegar o id do item que vem depois da primeira aparição do separador padrão*/
+        /*Cria um regex para pegar o id do item que vem depois da primeira aparição do separador padrão.*/
         let regex = new RegExp(SEPARADOR_ID + "(.+)")
 
-        /*Realiza o split com o regex para pegar o id na segunda parte da lista retornada*/
+        /*Realiza o split com o regex para pegar o id na segunda parte da lista retornada.*/
         let infoId = data[0].chave.split(regex)[1]
 
-        /*Retorna verdadeiro se o id não estiver na lista "problemasBuscados"*/
+        /*Retorna verdadeiro se o id não estiver na lista "problemasBuscados".*/
         return !this.state.problemasBuscados.includes(infoId)
     }
     
-    /*Registra a resposta de todos os problemas na API do AvaMEC*/
+    /*Registra a resposta de todos os problemas na API do AvaMEC.*/
     onClickSalvarRespostas = () => {
         let API = new window.BridgeRestApi()
 
@@ -126,21 +126,21 @@ class ProblemasGenerico extends AtividadeGenerica {
             let problemaJSON = JSON.stringify(problema)
             API.registrarDadosGenericos(this.props.atividade.idUnidade + SEPARADOR_ID + problema.id, problemaJSON)
         })
-        /*To-Do: Escutar resposta para tratar erros*/
+        /*To-Do: Escutar resposta para tratar erros.*/
     }
 
-    /*Atualiza o valor de uma resposta conforme o usuário a altera*/
+    /*Atualiza o valor de uma resposta conforme o usuário a altera.*/
     onChangeResposta = (tamMaximo, data) => {
         
-        /*Encontra o indice do problema a ser modificado*/
+        /*Encontra o indice do problema a ser modificado.*/
         let indice = this.props.atividade.problemas
             .findIndex(problema => problema.id === data.currentTarget.id)
 
-        /*Atualiza seu valor de resposta*/
+        /*Atualiza seu valor de resposta.*/
         this.props.atividade.problemas[indice].resposta = data.currentTarget.value.substr(0, tamMaximo)
 
         /*Utilizado pelo fato de a modificação ser na props e não no state, 
-        sendo assim não atualiza o render sozinho*/
+        sendo assim não atualiza o render sozinho.*/
         this.forceUpdate()
     }
 

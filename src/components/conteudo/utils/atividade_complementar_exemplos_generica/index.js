@@ -16,7 +16,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
             titulo: String,
             tamanhoMaximoResposta: Número inteiro sendo que:
                 a soma de todos os tamanhos de todas as questões não pode passar o valor da constante LIMITE_CARACTERES_TAM_MAX_RESPOSTA de caracteres,
-*/
+.*/
 
 const QUANTIDADE_LETRAS_POR_LINHA = 180
 const SEPARADOR_ID = "_sep%ger_"
@@ -44,10 +44,10 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         //Atualiza a quantidade de respostas com o número de exemplos exibidos
         this.state.quantidadeRespostas = this.state.atividade.exemplos.filter(exemplo => exemplo.exibir).length
 
-        /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido*/
+        /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido.*/
         this.obterProximaResposta()                                          
 
-        /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades*/
+        /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades.*/
         this.obterDadosConclusaoUnidade()
     }
 
@@ -97,7 +97,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         }
     }
 
-    /*Obtem as respostas da atividade caso tenha sido resolvida em looping*/
+    /*Obtem as respostas da atividade caso tenha sido resolvida em looping.*/
     obterProximaResposta = () => {
         let API = new window.BridgeRestApi()
 
@@ -113,7 +113,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
                 this.props.atividade.id + SEPARADOR_ID + numero
     }
 
-    /*Trata o resultado da chamada a API AvaMEC dentro do método local obterRespostas*/
+    /*Trata o resultado da chamada a API AvaMEC dentro do método local obterRespostas.*/
     tratarRespostas = (retorno) => {
         //A segunda verificação é feita por que o evento é disparado mais de uma vez para o mesmo item
         if (retorno.detail.status === 200 && this.aindaNaoBuscouItem(retorno.detail.data)) { 
@@ -155,7 +155,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         return !this.state.itensBuscados.includes(data[0].chave)
     }
 
-    /*Gera uma estrutura de atividade com exemplos sem resposta dentro do state*/
+    /*Gera uma estrutura de atividade com exemplos sem resposta dentro do state.*/
     inicializarExemplos = () => {
         this.state.atividade = {
             id: this.props.atividade.id,
@@ -191,7 +191,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         }
     }
 
-    /*Registra a resposta de todos os exemplos na API do AvaMEC*/
+    /*Registra a resposta de todos os exemplos na API do AvaMEC.*/
     onClickSalvarRespostas = () => {
         let API = new window.BridgeRestApi()
 
@@ -202,13 +202,13 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
             let exemploJSON = JSON.stringify(exemplo)
             API.registrarDadosGenericos(this.gerarIdentificadorDadoGenerico(exemplo.numero), exemploJSON)
         })
-        /*To-Do: Escutar resposta para tratar erros*/
-        /*To-Do: Criar tratamento para não salvar itens não modificados*/
+        /*To-Do: Escutar resposta para tratar erros.*/
+        /*To-Do: Criar tratamento para não salvar itens não modificados.*/
     }
 
-    /*Adiciona um novo espaço para exemplo*/
+    /*Adiciona um novo espaço para exemplo.*/
     onClickAdd = () => {
-        /*Busca o indíce de um elemento escondido*/
+        /*Busca o indíce de um elemento escondido.*/
         let indice = this.state.atividade.exemplos.findIndex(exemplo => !exemplo.exibir)
 
         //Caso o item exista
@@ -228,31 +228,31 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         }
     }
 
-    /*Remove um espaço de exemplo*/
+    /*Remove um espaço de exemplo.*/
     onClickDelete = (numeroExemplo) => {
-        /*Encontra o indíce do exemplo pelo seu número*/
+        /*Encontra o indíce do exemplo pelo seu número.*/
         let indiceExemplo = this.state.atividade.exemplos.findIndex(exemplo => exemplo.numero === numeroExemplo)
 
-        /*Deixa de exibir o exemplo selecionado*/
+        /*Deixa de exibir o exemplo selecionado.*/
         this.state.atividade.exemplos[indiceExemplo].exibir = false
 
-        /*Limpa as respostas*/
+        /*Limpa as respostas.*/
         this.state.atividade.exemplos[indiceExemplo].questoes.forEach(questao =>{
             questao.resposta = ""
         })
 
-        /*Reordena o número dos exemplos exibidos*/
+        /*Reordena o número dos exemplos exibidos.*/
         this.state.atividade.exemplos.sort(exemplo => !exemplo.exibir).forEach((exemplo, indice) => {
             exemplo.numero = indice + 1
         })
 
-        /*Salva as atualizações do state*/
+        /*Salva as atualizações do state.*/
         this.setState({
             quantidadeRespostas: this.state.quantidadeRespostas - 1
         })
     }
 
-    /*Atualiza o valor de uma resposta conforme o usuário a altera*/
+    /*Atualiza o valor de uma resposta conforme o usuário a altera.*/
     onChangeResposta = (tamMaximo, numeroExemplo, idQuestao, data) => {
         let atividade = this.state.atividade
 

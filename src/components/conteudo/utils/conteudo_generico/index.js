@@ -9,44 +9,44 @@ class ConteudoGenerico extends React.Component {
         this.validaPropriedades()
     }
 
-    /*Busca a página atual do localStorage*/
+    /*Busca a página atual do localStorage.*/
     buscaPaginaAtual = () => {
         this.setState({
             paginaAberta: localStorage.getItem("PaginaAberta")
         })
     }
 
-    /*Valida se o id da unidade foi repassado como propriedade*/
+    /*Valida se o id da unidade foi repassado como propriedade.*/
     validaPropriedades = () => {
         if(this.props.id === undefined || this.props.id === ""){
             throw Error("A propriedade \"id\" da unidade atual não foi repassada como atributo!")
         }
     }
 
-    /*Função chamada dentro da Paginacao para atualizar os dados do componente atual*/
+    /*Função chamada dentro da Paginacao para atualizar os dados do componente atual.*/
     atualizarPagina = () => {
         let paginaAtual = localStorage.getItem("PaginaAberta")
-        /*Recuperado localStorage a página aberta atual*/
+        /*Recuperado localStorage a página aberta atual.*/
         this.setState({
             paginaAberta: paginaAtual
         })
-        /*PageUP ao carregar nova página*/
+        /*PageUP ao carregar nova página.*/
         window.scrollTo(0, 0)
 
         this.salvaUltimaPaginaVisitada(paginaAtual)
     }
 
-    /*Salva a última página de redirecionamento acessada na API AvaMEC*/
+    /*Salva a última página de redirecionamento acessada na API AvaMEC.*/
     salvaUltimaPaginaVisitada = (paginaAtual) => {
         let caminhoPaginaAtual = "unidades/" + this.props.id + "/page_" + paginaAtual + ".html"
 
         let API = new window.BridgeRestApi()
         
         API.registrarUltimaPaginaAcessada(this.props.id, caminhoPaginaAtual)
-        /*To-Do: Ouvir a resposta e tratar erro caso não consiga salvar a última página acessada*/
+        /*To-Do: Ouvir a resposta e tratar erro caso não consiga salvar a última página acessada.*/
     }
     
-    /*Carrega o componente de paginação com as propriedades da unidade*/
+    /*Carrega o componente de paginação com as propriedades da unidade.*/
     carregarPaginacao = () => {
         return (
             <Paginacao
@@ -56,7 +56,7 @@ class ConteudoGenerico extends React.Component {
         )
     }
 
-    /*Carrega o componente que deve exibir as opções para mudar a unidade (avançar e retroceder)*/
+    /*Carrega o componente que deve exibir as opções para mudar a unidade (avançar e retroceder).*/
     carregarMudarUnidade = () => {
         return (
             <MudarUnidade 

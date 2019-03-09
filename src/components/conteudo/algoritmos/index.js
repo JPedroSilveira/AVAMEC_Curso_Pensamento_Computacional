@@ -12,7 +12,7 @@ import TopicosAvancados from './topicos_avancados'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
-*/
+.*/
 class Algoritmos extends ConteudoGenerico {
     constructor(props) {
         super(props)
@@ -22,12 +22,12 @@ class Algoritmos extends ConteudoGenerico {
         }
     }
 
-    /*Retorna o título da unidade*/
+    /*Retorna o título da unidade.*/
     carregarTitulo = () => {
         return (<h1>6. Algoritmos</h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual*/
+    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
     carregarPaginaAtual = () => {
         switch (this.state.paginaAberta) {
             case "1":

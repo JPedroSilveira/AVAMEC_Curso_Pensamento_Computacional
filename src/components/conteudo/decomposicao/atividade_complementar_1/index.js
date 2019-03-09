@@ -3,7 +3,7 @@ import AtividadeComplementarExemplosGenerica from '../../utils/atividade_complem
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     idUnidade: String, representa o id da unidade em que a atividade se encontra
-*/
+.*/
 
 const QUANTIDADE_MINIMA_DE_RESPOSTAS_ATIVIDADE_COMPLEMENTAR = 1
 const QUANTIDADE_MAXIMA_DE_RESPOSTAS_ATIVIDADE_COMPLEMENTAR = 3

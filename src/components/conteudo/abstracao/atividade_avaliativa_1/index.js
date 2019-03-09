@@ -3,7 +3,7 @@ import AtividadeIntegralGenerica from '../../utils/atividade_integral_generica'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     idUnidade: String, representa o id da unidade em que a atividade se encontra
-*/
+.*/
 class AtividadeAvaliativa1 extends React.Component {
     constructor(props) {
         super(props)
@@ -24,8 +24,8 @@ class AtividadeAvaliativa1 extends React.Component {
             questoes: [
                 {
                     id: "q1_a1_abstracao",
-                    titulo: "A1. Considere a organização de uma biblioteca e indique o que lhe parece ser uma abstração mais conveniente para falar de livros: ",
-                    enunciado: "",
+                    titulo: "",
+                    enunciado: "<span class=\"negrito\">A1.</span> Considere a organização de uma biblioteca e indique o que lhe parece ser uma abstração mais conveniente para falar de livros:",
                     alternativas: [
                         {
                             valor: "0",
@@ -55,8 +55,8 @@ class AtividadeAvaliativa1 extends React.Component {
                 },
                 {
                     id: "q2_a1_abstracao",
-                    titulo: "A2. Para organizar seu guarda-roupas, o que lhe parece ser uma abstração mais conveniente para falar de roupas: ",
-                    enunciado: "",
+                    titulo: "",
+                    enunciado: "<span class=\"negrito\">A2.</span> Para organizar seu guarda-roupas, o que lhe parece ser uma abstração mais conveniente para falar de roupas: ",
                     alternativas: [
                         {
                             valor: "0",
@@ -86,8 +86,8 @@ class AtividadeAvaliativa1 extends React.Component {
                 },
                 {
                     id: "q3_a1_abstracao",
-                    titulo: "A3. Para organizar a circulação de veículos de uma cidade, o que parece ser uma característica irrelevante de suas vias: ",
-                    enunciado: "",
+                    titulo: "",
+                    enunciado: "<span class=\"negrito\">A3.</span> Para organizar a circulação de veículos de uma cidade, o que parece ser uma característica irrelevante de suas vias: ",
                     alternativas: [
                         {
                             valor: "0",
@@ -117,8 +117,8 @@ class AtividadeAvaliativa1 extends React.Component {
                 },
                 {
                     id: "q4_a1_abstracao",
-                    titulo: "A4. Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores: ",
-                    enunciado: "",
+                    titulo: "",
+                    enunciado: "<span class=\"negrito\">A4.</span> Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores: ",
                     alternativas: [
                         {
                             valor: "0",
@@ -148,8 +148,8 @@ class AtividadeAvaliativa1 extends React.Component {
                 },
                 {
                     id: "q5_a1_abstracao",
-                    titulo: "A5. Para falar das atividades necessárias para detalhar a abstração “Organizar o seu guarda-roupa”, identifique a atividade que lhe parece menos adequada: ",
-                    enunciado: "",
+                    titulo: "",
+                    enunciado: "<span class=\"negrito\">A5.</span> Para falar das atividades necessárias para detalhar a abstração “Organizar o seu guarda-roupa”, identifique a atividade que lhe parece menos adequada: ",
                     alternativas: [
                         {
                             valor: "0",

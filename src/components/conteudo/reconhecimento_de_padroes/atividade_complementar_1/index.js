@@ -6,7 +6,7 @@ const QUANTIDADE_MAXIMA_DE_RESPOSTAS_ATIVIDADE_COMPLEMENTAR = 3
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     idUnidade: String, representa o id da unidade em que a atividade se encontra
-*/
+.*/
 class AtividadeComplementar1 extends React.Component {
     constructor(props) {
         super(props)

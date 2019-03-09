@@ -6,7 +6,7 @@ class Paginacao extends React.Component {
     constructor(props){
         super(props)
 
-        /*Recupera a página atual do localStorage*/ 
+        /*Recupera a página atual do localStorage.*/ 
         let paginaAtual = parseInt(localStorage.getItem("PaginaAberta"))
 
         this.state = {
@@ -16,11 +16,11 @@ class Paginacao extends React.Component {
     }
 
     mudarPagina = data => {
-        /*Atualiza a página atual no localStorage*/
-        let paginaSelecionada = data.selected + 1 /*Primeira página = 0*/
+        /*Atualiza a página atual no localStorage.*/
+        let paginaSelecionada = data.selected + 1 /*Primeira página = 0.*/
         localStorage.setItem("PaginaAberta", paginaSelecionada)
 
-        /*Chama a função de atualização do componente pai*/
+        /*Chama a função de atualização do componente pai.*/
         this.props.funcaoParaAtualizarPagina()
     }
 

@@ -54,7 +54,7 @@ a{
     font-size: 1.3em;
 }
 
-.box{ /*To-Do: Modificar o flex para compatibilidade com IE*/
+.box{ /*To-Do: Modificar o flex para compatibilidade com IE.*/
     width: 100%;
     display: flex;
     justify-content: center;
@@ -168,7 +168,7 @@ a{
     margin-right: 2em;
 }
 
-/*Centraliza o botão apenas quando a tela estiver na vertical*/
+/*Centraliza o botão apenas quando a tela estiver na vertical.*/
 @media screen and (orientation: portrait) {
    .button-container{
         text-align: center;
@@ -271,4 +271,8 @@ a{
     margin-top: 3em;
     margin-bottom: 2em;
     font-weight: 700;
+}
+
+.negrito{
+    font-weight: 700
 }

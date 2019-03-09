@@ -27,7 +27,7 @@
   right: 1em;
 }
 
-/*"!important" utilizado para sobre-escrever o tamanho do ícone padrão da lib material.ui*/
+/*"!important" utilizado para sobre-escrever o tamanho do ícone padrão da lib material.ui.*/
 .menu-button-icon{
   font-size: 1.8em !important;
 }
