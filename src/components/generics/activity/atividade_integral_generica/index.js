@@ -1,7 +1,7 @@
 import React from 'react'
+import BaseActivity from '../baseActivity'
 import BasicButton from '../basic_button'
 import ReactHtmlParser from 'react-html-parser';
-import AtividadeGenerica from '../atividade_generica'
 import SimboloRecarregar from '../../../images/simbolo-recarregar.png'
 import SimboloRecarregarPressionado from '../../../images/simbolo-recarregar-pressionado.png'
 import './styles.css'
@@ -23,7 +23,7 @@ import './styles.css'
 
 const MAX_CARACTERES_ID = 250
 
-class AtividadeIntegralGenerica extends AtividadeGenerica {
+class AtividadeIntegralGenerica extends BaseActivity {
     constructor(props) {
         super(props)
 

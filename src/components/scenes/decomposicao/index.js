@@ -16,7 +16,7 @@ class Decomposicao extends ConteudoGenerico {
         super(props)
 
         this.state = {
-            paginasDisponiveis: 3
+            availablePages: 3
         }
     }
 
@@ -57,8 +57,8 @@ class Decomposicao extends ConteudoGenerico {
             <div className="aprc-container">
                 {this.carregarTitulo()}
                 {this.carregarPaginaAtual()}
-                {this.carregarPaginacao()}
-                {this.carregarMudarUnidade()}
+                {this.loadPagination()}
+                {this.loadUnitController()}
             </div>
         )
     }

@@ -12,7 +12,7 @@ class IntroducaoAoPensamentoComputacional extends ConteudoGenerico {
         super(props)
 
         this.state = {
-            paginasDisponiveis: 1
+            availablePages: 1
         }
     }
 
@@ -36,8 +36,8 @@ class IntroducaoAoPensamentoComputacional extends ConteudoGenerico {
             <div className="aprc-container">
                 {this.carregarTitulo()}
                 {this.carregarPaginaAtual()}
-                {this.carregarPaginacao()}
-                {this.carregarMudarUnidade()}
+                {this.loadPagination()}
+                {this.loadUnitController()}
             </div>
         )
     }

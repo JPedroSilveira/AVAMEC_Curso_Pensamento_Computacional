@@ -2,22 +2,18 @@ import React from 'react'
 import YouTube from 'react-youtube'
 import './styles.css'
 
-/*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
-    videoId: String, representa o id do video do YouTube 
-.*/
 class YouTubePlayer extends React.Component {
     constructor(props){
         super(props)
 
-        /*Define a classe inicial para o video.*/
         this.state = {
             videoClass: "youtube-video",
             containerClass: "youtube-video-container"
         }
-        
-        /*Configura o player.*/
+
+        //YouTube parameters available on: https://developers.google.com/youtube/player_parameters
         this.opts = {
-            playerVars: { //Parametros de configuração do YouTube disponíveis em: https://developers.google.com/youtube/player_parameters
+            playerVars: { 
                 controls: 1,
                 disablekb: 1,
                 iv_load_policy: 3,
@@ -28,16 +24,13 @@ class YouTubePlayer extends React.Component {
                 start: 0
             }
         }
-
-        /*Salva se o player deve realmente pausar.*/
-        this.shouldPause = false
     }
 
     render(){
         return (
             <YouTube
                 videoId={this.props.videoId}
-                id="SortingAlgorithmsVideo"
+                id={this.props.videoId}
                 className={this.state.videoClass}
                 containerClassName={this.state.containerClass}
                 opts={this.opts}

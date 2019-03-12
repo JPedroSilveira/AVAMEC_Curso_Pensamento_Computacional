@@ -1,0 +1,4 @@
+export default {
+    MARGIN_PAGES_DISPLAYED: 1,
+    PAGE_RANGE_DISPLAYED: 2,
+}

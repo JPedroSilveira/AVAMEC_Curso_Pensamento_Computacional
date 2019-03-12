@@ -1,4 +1,4 @@
-.paginacao{
+.pagination{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1em;
     font-weight: 700;
@@ -10,16 +10,16 @@
 }
 
 @media only screen and (max-width: 520px) {
-  .paginacao{
+  .pagination{
       font-size: 0.7em;
   }
 }
 
-.paginacao li{
+.pagination li{
     display: inline-block;
 }
 
-.paginacao li a {
+.pagination li a {
     padding: 0.7em 1em;
     margin: 0.7em 0.7em;
     display: inline-block;
@@ -29,19 +29,19 @@
     border-radius: 50%;
 }
 
-.paginacao li a:hover{
+.pagination li a:hover{
     border: 0.1em solid rgb(242, 132, 158);;
     font-size: 1.4em;
     margin: 0em 0.1em;
 }
 
-.paginacao li a:active{
+.pagination li a:active{
     border: 0.1em solid rgb(242, 132, 158);
     color: rgb(242, 132, 158);
     font-size: 1.4em;
     margin: 0em 0.1em;
 }
 
-.paginacao .pagina-atual a{
+.pagination .selected-page a{
     color: rgb(242, 132, 158);
 }

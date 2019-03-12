@@ -1,49 +1,44 @@
 import React from 'react'
 import BasicButton from '../basic_button'
-import AtividadeGenerica from '../atividade_generica'
+import BaseActivity from '../baseActivity'
+import ActivityConstants from '../../../../constants/activityConstants'
+
 import Fab from '@material-ui/core/Fab'
 import AddIcon from '@material-ui/icons/Add'
 import IconButton from '@material-ui/core/IconButton'
 import DeleteIcon from '@material-ui/icons/Delete'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETO atividade do tipo:
-    atividade: um objetivo com os atributos:
-        id: String única para este dado genérico, sendo que deve ter no máximo o valor da constante LIMITE_CARACTERES_ID de caracteres
-        idUnidade: id da unidade em que se encontra a atividade, sendo que deve ter no máximo o valor da constante LIMITE_CARACTERES_ID_UNIDADE de caracteres,
-        enunciado: String,
-        quantidadeMinimaExemplos: Número inteiro,
-        quantidadeMaximaExemplos: Número inteiro,
-        questoes: lista de objetos com os atributos:
-            titulo: String,
-            tamanhoMaximoResposta: Número inteiro sendo que:
-                a soma de todos os tamanhos de todas as questões não pode passar o valor da constante LIMITE_CARACTERES_TAM_MAX_RESPOSTA de caracteres,
+    activity: um objetivo com os atributos:
+        id: String única para este dado genérico, sendo que deve ter no máximo o valor da constante ActivityConstants.MAX_LENGTH_ID de caracteres
+        unitId: id da unidade em que se encontra a atividade, sendo que deve ter no máximo o valor da constante ActivityConstants.MAX_LENGTH_UNIT_ID de caracteres,
+        statement: String,
+        minExamplesAmount: Número inteiro,
+        maxExamplesAmount: Número inteiro,
+        questions: lista de objetos com os atributos:
+            title: String,
+            maxAnswerLength: Número inteiro sendo que:
+                a soma de todos os tamanhos de todas as questões não pode passar o valor da constante ActivityConstants.MAX_ANSWER_LENGTH de caracteres,
 .*/
 
-const QUANTIDADE_LETRAS_POR_LINHA = 180
-const SEPARADOR_ID = "_sep%ger_"
-const LIMITE_CARACTERES_ID = 100
-const LIMITE_CARACTERES_ID_UNIDADE = 125
-const LIMITE_CARACTERES_TAM_MAX_RESPOSTA = 2000
-
-class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
+class ComplementaryActivity extends BaseActivity {
     constructor(props) {
         super(props)
 
-        //Valida se as propriedadas passadas para o componente existem e respeitam as regras do mesmo
-        this.validarProps() 
+        this.validateProps()
 
         this.state = {
-            unidadeConcluida: false,
-            atividade: null,
-            quantidadeRespostas: 0,
-            itensBuscados: []
+            completeUnit: false,
+            activity: null,
+            answersAmount: 0,
+            grabbedItems: []
         }
 
         //Preenche os dados necessários para a exibição dos exemplos
         this.inicializarExemplos()
 
         //Atualiza a quantidade de respostas com o número de exemplos exibidos
-        this.state.quantidadeRespostas = this.state.atividade.exemplos.filter(exemplo => exemplo.exibir).length
+        this.state.answersAmount = this.state.activity.exemplos.filter(exemplo => exemplo.exibir).length
 
         /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido.*/
         this.obterProximaResposta()                                          
@@ -52,47 +47,47 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         this.obterDadosConclusaoUnidade()
     }
 
-    validarProps = () => {
-        if(this.props.atividade === undefined){
-            throw Error("Propriedade \"atividade\" não existente!")
+    validateProps = () => {
+        if(this.props.activity === undefined){
+            throw Error("Property \"activity\" is undefined!")
         } else {
-            if (this.props.atividade.id === undefined || this.props.atividade.id.length === 0 || 
-                this.props.atividade.id.length > LIMITE_CARACTERES_ID) {
-                throw Error("Propriedade \"atividade.id\" não respeita o tamanho determinado!")
+            if (this.props.activity.id === undefined || this.props.activity.id.length === 0 || 
+                this.props.activity.id.length > ActivityConstants.MAX_LENGTH_ID) {
+                throw Error("Property \"activity.id\" is invalid!")
             }
 
-            if (this.props.atividade.idUnidade === undefined || this.props.atividade.idUnidade.length === 0 ||
-                this.props.atividade.idUnidade.length > LIMITE_CARACTERES_ID_UNIDADE) {
-                throw Error("Propriedade \"atividade.idUnidade\" não respeita o tamanho determinado!")
+            if (this.props.activity.unitId === undefined || this.props.activity.unitId.length === 0 ||
+                this.props.activity.unitId.length > ActivityConstants.MAX_LENGTH_UNIT_ID) {
+                throw Error("Property \"activity.unitId\" is invalid!")
             }
 
-            if(this.props.atividade.quantidadeMinimaExemplos === undefined ||
-            this.props.atividade.quantidadeMaximaExemplos === undefined) 
+            if (this.props.activity.minExamplesAmount === undefined ||
+                this.props.activity.maxExamplesAmount === undefined) 
             {
-                throw Error("Propriedade \"atividade.quantidadeMinimaExemplos\" e/ou \"atividade.quantidadeMaximaExemplos\" não existe(m)!")
-            } else if (this.props.atividade.quantidadeMinimaExemplos > this.props.atividade.quantidadeMaximaExemplos){
-                throw Error("Propriedade \"atividade.quantidadeMinimaExemplos\" é maior que a propriedade \"atividade.quantidadeMaximaExemplos\"!")
+                throw Error("Property \"activity.minExamplesAmount\" and/or \"activity.maxExamplesAmount\" is/are undefined!")
+            } else if (this.props.activity.minExamplesAmount > this.props.activity.maxExamplesAmount){
+                throw Error("Property \"activity.minExamplesAmount\" is greater than \"activity.maxExamplesAmount\"!")
             }
 
-            if(this.props.atividade.questoes === undefined) {
-                throw Error("Propriedade \"atividade.questoes\" não existente!")
-            } else if (this.props.atividade.questoes.length === 0) {
-                throw Error("Propriedade \"atividade.questoes\" é vazia!")
+            if (this.props.activity.questions === undefined) {
+                throw Error("Property \"activity.questions\" is undefined!")
+            } else if (this.props.activity.questions.length === 0) {
+                throw Error("Property \"activity.questions\" is empty!")
             } else {
-                let someTamMaxResposta = 0
-                this.props.atividade.questoes.forEach((questao, indice) => {
-                    if (questao.titulo === undefined || questao.titulo === ""){
-                        throw Error("Propriedade \"questao.titulo\" da questao de indice " +indice+ " da lista \"atividade.questoes\" é vazia!")
+                let asnwerLengthSum = 0
+                this.props.activity.questions.forEach((question, index) => {
+                    if (question.title === undefined || question.title === ""){
+                        throw Error("Property \"question.title\" of index question " + index + " os list \"activity.questions\" is empty!")
                     }
-                    if (questao.tamanhoMaximoResposta === undefined || questao.tamanhoMaximoResposta === 0) {
-                        throw Error("Propriedade \"questao.tamanhoMaximoResposta\" da questao de indice " + indice + " da lista \"atividade.questoes\" é vazia!")
+                    if (question.maxAnswerLength === undefined || question.maxAnswerLength === 0) {
+                        throw Error("Property \"question.maxAnswerLength\" of index question " + index + " of list \"activity.questions\" is empty!")
                     } else {
-                        someTamMaxResposta += questao.tamanhoMaximoResposta
+                        asnwerLengthSum += questao.maxAnswerLength
                     }
                 })
 
-                if (someTamMaxResposta > LIMITE_CARACTERES_TAM_MAX_RESPOSTA) {
-                    throw Error("A soma dos tamanhos de resposta das questões ultrapassa o limite de "+LIMITE_CARACTERES_TAM_MAX_RESPOSTA+" caracteres!")
+                if (asnwerLengthSum > ActivityConstants.MAX_ANSWER_LENGTH) {
+                    throw Error("The sum of the answers max length of the questions exceeds the limit of " + ActivityConstants.MAX_ANSWER_LENGTH + " characters!")
                 }
             }
         }
@@ -104,14 +99,14 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
 
         window.addEventListener("evObtemDadosGenericos", this.tratarRespostas, false)
 
-        this.state.atividade.exemplos.forEach(exemplo => {
+        this.state.activity.exemplos.forEach(exemplo => {
             API.obterDadosGenericos(this.gerarIdentificadorDadoGenerico(exemplo.numero))
         })
     }
 
     gerarIdentificadorDadoGenerico = (numero) => {
-        return this.props.atividade.idUnidade + SEPARADOR_ID +
-                this.props.atividade.id + SEPARADOR_ID + numero
+        return this.props.atividade.idUnidade + ActivityConstants.SEPARADOR +
+                this.props.atividade.id + ActivityConstants.SEPARADOR + numero
     }
 
     /*Trata o resultado da chamada a API AvaMEC dentro do método local obterRespostas.*/
@@ -128,22 +123,22 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
                 let exemploAPI = JSON.parse(data.valor)
 
                 //Busca o indice do problema no vetor de exemplos
-                let indice = this.state.atividade.exemplos
+                let indice = this.state.activity.exemplos
                     .findIndex(exemplo => exemplo.numero === exemploAPI.numero)
                 
                 //Atualiza o valor no indice encontrado
-                this.state.atividade.exemplos[indice] = exemploAPI
+                this.state.activity.exemplos[indice] = exemploAPI
 
                 //Adiciona o item a lista de itens já carregados
-                this.state.itensBuscados.push(data.chave)
+                this.state.grabbedItems.push(data.chave)
 
                 this.setState({
-                    quantidadeRespostas: this.state.atividade.exemplos.filter(exemplo => exemplo.exibir).length  
+                    quantidadeRespostas: this.state.activity.exemplos.filter(exemplo => exemplo.exibir).length  
                     //Atualiza a quantidade de respostas com o número de exemplos exibidos
                 })
 
                 //Quando o número de itens buscados for igual ao número total de itens existentes
-                if (this.state.itensBuscados.length === this.state.atividade.exemplos.length) {
+                if (this.state.grabbedItems.length === this.state.activity.exemplos.length) {
                     //Remove o evento para evitar mais chamadas repetidas
                     window.removeEventListener("evObtemDadosGenericos", this.tratarRespostas, false)
                 }
@@ -153,12 +148,12 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
 
     //Verifica se uma chave dentro do objeto data já está na lista de itensBuscados do state
     aindaNaoBuscouItem = (data) => {
-        return !this.state.itensBuscados.includes(data[0].chave)
+        return !this.state.grabbedItems.includes(data[0].chave)
     }
 
     /*Gera uma estrutura de atividade com exemplos sem resposta dentro do state.*/
     inicializarExemplos = () => {
-        this.state.atividade = {
+        this.state.activity = {
             id: this.props.atividade.id,
             enunciado: this.props.atividade.enunciado,
             quantidadeMinimaExemplos: this.props.atividade.quantidadeMinimaExemplos,
@@ -167,7 +162,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         }
 
         //Inicializa os exemplos e suas questões
-        for (let x = 1; x <= this.state.atividade.quantidadeMaximaExemplos; x++){
+        for (let x = 1; x <= this.state.activity.quantidadeMaximaExemplos; x++){
             let contador = 0
 
             let questoes = []
@@ -184,9 +179,9 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
             })
 
             //Inicializa exibindo apenas um número de exemplos equivalente a quantidade mínima passada
-            this.state.atividade.exemplos.push({
+            this.state.activity.exemplos.push({
                 numero: x, 
-                exibir: x <= this.state.atividade.quantidadeMinimaExemplos,
+                exibir: x <= this.state.activity.quantidadeMinimaExemplos,
                 questoes: questoes
             })
         }
@@ -196,7 +191,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
     onClickSalvarRespostas = () => {
         let API = new window.BridgeRestApi()
 
-        let exemplos = this.state.atividade.exemplos
+        let exemplos = this.state.activity.exemplos
 
         //Salva dado a dado do vetor na API AvaMEC
         exemplos.forEach(exemplo => {
@@ -210,17 +205,17 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
     /*Adiciona um novo espaço para exemplo.*/
     onClickAdd = () => {
         /*Busca o indíce de um elemento escondido.*/
-        let indice = this.state.atividade.exemplos.findIndex(exemplo => !exemplo.exibir)
+        let indice = this.state.activity.exemplos.findIndex(exemplo => !exemplo.exibir)
 
         //Caso o item exista
-        if (this.state.atividade.exemplos[indice] !== undefined) {
+        if (this.state.activity.exemplos[indice] !== undefined) {
 
             //Aumenta a quantidade de respostas com o novo item
-            let quantidadeRespostas = this.state.quantidadeRespostas + 1
+            let quantidadeRespostas = this.state.answersAmount + 1
 
             //Configura o novo exemplo para ser exibido e o enumera
-            this.state.atividade.exemplos[indice].exibir = true
-            this.state.atividade.exemplos[indice].numero = quantidadeRespostas
+            this.state.activity.exemplos[indice].exibir = true
+            this.state.activity.exemplos[indice].numero = quantidadeRespostas
 
             //Atualiza o estado do programa
             this.setState({
@@ -232,32 +227,32 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
     /*Remove um espaço de exemplo.*/
     onClickDelete = (numeroExemplo) => {
         /*Encontra o indíce do exemplo pelo seu número.*/
-        let indiceExemplo = this.state.atividade.exemplos.findIndex(exemplo => exemplo.numero === numeroExemplo)
+        let indiceExemplo = this.state.activity.exemplos.findIndex(exemplo => exemplo.numero === numeroExemplo)
 
         /*Deixa de exibir o exemplo selecionado.*/
-        this.state.atividade.exemplos[indiceExemplo].exibir = false
+        this.state.activity.exemplos[indiceExemplo].exibir = false
 
         /*Limpa as respostas.*/
-        this.state.atividade.exemplos[indiceExemplo].questoes.forEach(questao =>{
+        this.state.activity.exemplos[indiceExemplo].questoes.forEach(questao =>{
             questao.resposta = ""
         })
 
         /*Reordena o número dos exemplos exibidos.*/
-        this.state.atividade.exemplos.sort(exemplo => !exemplo.exibir).forEach((exemplo, indice) => {
+        this.state.activity.exemplos.sort(exemplo => !exemplo.exibir).forEach((exemplo, indice) => {
             exemplo.numero = indice + 1
         })
 
         /*Salva as atualizações do state.*/
         this.setState({
-            quantidadeRespostas: this.state.quantidadeRespostas - 1
+            quantidadeRespostas: this.state.answersAmount - 1
         })
     }
 
     /*Atualiza o valor de uma resposta conforme o usuário a altera.*/
     onChangeResposta = (tamMaximo, numeroExemplo, idQuestao, data) => {
-        let atividade = this.state.atividade
+        let atividade = this.state.activity
 
-        let indiceExemplo = this.state.atividade.exemplos.findIndex(exemplo => exemplo.numero === numeroExemplo)
+        let indiceExemplo = this.state.activity.exemplos.findIndex(exemplo => exemplo.numero === numeroExemplo)
 
         atividade.exemplos[indiceExemplo]
             .questoes[idQuestao]
@@ -276,7 +271,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         //Por padrão da API do AvaMEC após concluida a unidade as respostas não podem ser modificadas, 
         //a primera verificação mantém esta regra
         //A segunda verificação limita a adição ao número máximo de exemplos
-        if (!this.state.unidadeConcluida && this.state.quantidadeRespostas < this.state.atividade.quantidadeMaximaExemplos){
+        if (!this.state.completeUnit && this.state.answersAmount < this.state.activity.quantidadeMaximaExemplos){
             return (
                 <Fab size="large" color="primary" aria-label="Add" className="add-button" onClick={this.onClickAdd}>
                     <AddIcon />
@@ -289,8 +284,8 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
     carregarBotaoDeletarExemplo = (exemplo) => {
         //Para seguir o padrão da API AvaMEC só permite alterações enquanto a unidade não estiver concluída
         //Não permite deletar itens quando a quantidade estiver igual ou menor a quantidade mínima
-        if (!this.state.unidadeConcluida 
-            && this.state.quantidadeRespostas > this.state.atividade.quantidadeMinimaExemplos){
+        if (!this.state.completeUnit 
+            && this.state.answersAmount > this.state.activity.quantidadeMinimaExemplos){
                 return (
                     <IconButton id={exemplo.numero} 
                                 onClick={this.onClickDelete.bind(null, exemplo.numero)} 
@@ -306,7 +301,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
     carregarBotaoSalvar = () => {
         //Por padrão da API AvaMEC só é possível modificar uma atividade antes de a mesma ser concluída
         //Esta condição segue o padrão da API
-        if (!this.state.unidadeConcluida){
+        if (!this.state.completeUnit){
             return (
                 <BasicButton onClick={this.onClickSalvarRespostas} centralize={true}>
                     SALVAR RESPOSTAS
@@ -325,7 +320,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
                     value={questao.resposta}
                     onChange={this.onChangeResposta.bind(this, questao.tamanhoMaximoResposta, numeroExemplo, questao.id)}
                     cols="30"
-                    rows={Math.round(questao.tamanhoMaximoResposta / QUANTIDADE_LETRAS_POR_LINHA)}
+                    rows={Math.round(questao.tamanhoMaximoResposta / ActivityConstants.NUMBER_OF_LETTERS_PER_LINE_TEXTBOX)}
                 /><br/>
             </p>
         )
@@ -361,7 +356,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
     carregarExemplos = () => {
         return(
             <div>
-                {this.state.atividade.exemplos.map((exemplo, key) => {
+                {this.state.activity.exemplos.map((exemplo, key) => {
                     return ( this.carregarExemplo(exemplo, key) )
                 })}
             </div>
@@ -372,7 +367,7 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         return(
             <div>
                 <h2>ATIVIDADE COMPLEMENTAR</h2>
-                <p>{this.state.atividade.enunciado}</p>
+                <p>{this.state.activity.enunciado}</p>
                 {this.carregarExemplos()}
                 {this.carregarBotaoAdicionarNovoExemplo()}
                 {this.carregarBotaoSalvar()}
@@ -381,4 +376,4 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
     }
 }
 
-export default AtividadeComplementarExemplosGenerica
+export default ComplementaryActivity

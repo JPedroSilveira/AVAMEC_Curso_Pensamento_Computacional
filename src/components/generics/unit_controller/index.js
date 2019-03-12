@@ -1,10 +1,10 @@
 import React from 'react'
-import avaMecApi from '../../../services/avaMecApi'
+import AvaMecApi from '../../../services/AvaMecApi'
 import BasicButton from '../../generics/basic_button'
 
 import './styles.css'
 
-class MudarUnidade extends React.Component {
+class UnitController extends React.Component {
     constructor(props){
         super(props)
         
@@ -13,11 +13,11 @@ class MudarUnidade extends React.Component {
             hasPreviousUnit: false
         }
 
-        avaMecApi.getIfNextUnitExist(this.props.unit, this.nextUnitCallback)
-        avaMecApi.getIfPreviousUnitExist(this.props.unit, this.previousUnitCallback)
+        AvaMecApi.getIfNextUnitExist(this.props.unit, this.nextUnitCallback)
+        AvaMecApi.getIfPreviousUnitExist(this.props.unit, this.previousUnitCallback)
     }
 
-    nextUnitCallback = (info) => {
+    nextUnitCallback = info => {
         if (info.detail.status === 200) { 
             this.setState({
                 hasNextUnit: info.detail.data
@@ -25,18 +25,17 @@ class MudarUnidade extends React.Component {
         }
         /*To-Do: Tratar erro caso o serviço não retorne uma resposta com sucesso (200).*/
 
-        avaMecApi.closeGetIfNextUnitExist(this.nextUnitCallback)
+        AvaMecApi.closeGetIfNextUnitExist(this.nextUnitCallback)
     }
 
-
-    previousUnitCallback = (info) => {
+    previousUnitCallback = info => {
         if (info.detail.status === 200) { 
             this.setState({
                 hasPreviousUnit: info.detail.data
             })
         }
         
-        avaMecApi.closeGetIfPreviousUnitExist(this.previousUnitCallback)
+        AvaMecApi.closeGetIfPreviousUnitExist(this.previousUnitCallback)
     }
 
     loadNextButton = () => {
@@ -60,25 +59,25 @@ class MudarUnidade extends React.Component {
     }
 
     nextUnit = () => {
-        avaMecApi.getUnitProgress(this.props.unit, this.nextUnitReturn)
+        AvaMecApi.getUnitProgress(this.props.unit, this.nextUnitReturn)
     }
 
-    nextUnitReturn = (info) => {
+    nextUnitReturn = info => {
         if (info.detail.status === 200) {
             if (info.detail.data.unidade.permitePorcentagem) {
                 if (String(info.detail.data.porcentagemConclusao) < "100"){
-                    avaMecApi.saveUnitProgress(this.props.unit, 100)
+                    AvaMecApi.saveUnitProgress(this.props.unit, 100)
                 }
             }
         }
 
-        avaMecApi.closeGetUnitProgress(this.nextUnitReturn)
+        AvaMecApi.closeGetUnitProgress(this.nextUnitReturn)
 
-        avaMecApi.getNextUnit()
+        AvaMecApi.getNextUnit()
     }
 
     previousUnit = () => {
-        avaMecApi.getPreviousUnit(this.props.unit)
+        AvaMecApi.getPreviousUnit(this.props.unit)
     }
 
     render() {
@@ -91,5 +90,5 @@ class MudarUnidade extends React.Component {
     }
 }
 
-export default MudarUnidade
+export default UnitController
 

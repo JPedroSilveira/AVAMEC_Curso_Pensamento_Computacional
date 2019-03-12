@@ -13,7 +13,7 @@ class ApresentacaoDoCurso extends ConteudoGenerico {
         super(props)
 
         this.state = {
-            paginasDisponiveis: 2
+            availablePages: 2
         }
     }
 
@@ -47,8 +47,8 @@ class ApresentacaoDoCurso extends ConteudoGenerico {
             <div className="aprc-container">
                 {this.carregarTitulo()}
                 {this.carregarPaginaAtual()}
-                {this.carregarPaginacao()}
-                {this.carregarMudarUnidade()}
+                {this.loadPagination()}
+                {this.loadUnitController()}
             </div>
         )
     }

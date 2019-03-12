@@ -1,69 +1,48 @@
 import React from 'react'
-import Paginacao from '../paginacao'
-import MudarUnidade from '../unit_controller'
-import localStorageUtils from '../../../utils/localStorageUtils'
+import AvaMecApi from '../../../services/avaMecApi'
+import Pagination from '../pagination'
+import UnitController from '../unit_controller'
+import LocalStorageUtils from '../../../utils/LocalStorageUtils'
 import './styles.css'
 
 class ConteudoGenerico extends React.Component {
     componentDidMount() {
-        this.buscaPaginaAtual()
-        this.validaPropriedades()
-    }
-
-    /*Busca a página atual do localStorage.*/
-    buscaPaginaAtual = () => {
         this.setState({
-            paginaAberta: localStorageUtils.getOpenPage()
+            openPage: LocalStorageUtils.getOpenPage()
         })
+
+        this.validateProperties()
     }
 
-    /*Valida se o id da unidade foi repassado como propriedade.*/
-    validaPropriedades = () => {
+    validateProperties = () => {
         if(this.props.id === undefined || this.props.id === ""){
-            throw Error("A propriedade \"id\" da unidade atual não foi repassada como atributo!")
+            throw Error("error in property \"id\"!")
         }
     }
 
-    /*Função chamada dentro da Paginacao para atualizar os dados do componente atual.*/
-    atualizarPagina = () => {
-        /*Recuperado localStorage a página aberta atual.*/
+    updatePage = () => {
         this.setState({
-            paginaAberta: localStorageUtils.getOpenPage()
+            openPage: LocalStorageUtils.getOpenPage()
         })
-        /*PageUP ao carregar nova página.*/
+
+        /*PageUp on update*/
         window.scrollTo(0, 0)
 
-        this.salvaUltimaPaginaVisitada()
-    }
-
-    /*Salva a última página de redirecionamento acessada na API AvaMEC.*/
-    salvaUltimaPaginaVisitada = () => {
-        let caminhoPaginaAtual = "unidades/" + this.props.id + "/page_" + localStorageUtils.getOpenPage() + ".html"
-
-        let API = new window.BridgeRestApi()
-        
-        API.registrarUltimaPaginaAcessada(this.props.id, caminhoPaginaAtual)
-        /*To-Do: Ouvir a resposta e tratar erro caso não consiga salvar a última página acessada.*/
+        AvaMecApi.saveLastPage(this.props.id)
     }
     
-    /*Carrega o componente de paginação com as propriedades da unidade.*/
-    carregarPaginacao = () => {
+    loadPagination = () => {
         return (
-            <Paginacao
-                paginasDisponiveis={this.state.paginasDisponiveis}
-                funcaoParaAtualizarPagina={this.atualizarPagina}
-                unidadeAtual={this.props.id} />
+            <Pagination
+                availablePages={this.state.availablePages}
+                onPageChange={this.updatePage}
+                unit={this.props.id} />
         )
     }
 
-    /*Carrega o componente que deve exibir as opções para mudar a unidade (avançar e retroceder).*/
-    carregarMudarUnidade = () => {
+    loadUnitController = () => {
         return (
-            <MudarUnidade 
-                podeRetroceder={this.state.paginaAberta === "1"} 
-                podeAvancar={this.state.paginaAberta === String(this.state.paginasDisponiveis)}
-                unit={this.props.id}
-                dadosDeConclusaoUnidade={this.state.dadosConclusaoUnidade} />
+            <UnitController unit={this.props.id}/>        
         )
     }
 }

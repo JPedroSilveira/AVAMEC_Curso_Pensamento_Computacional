@@ -1,49 +1,60 @@
-import eventNames from '../constants/avaMECApiEvents'
+import EventNames from '../constants/avaMECApiEvents'
+import PaginationUtils from '../utils/paginationUtils'
 
 class AvaMecApi {   
     constructor(){
         this.api = new window.BridgeRestApi()
     }
+
+    getUnitConclusionData = (unit, callback) => {
+        window.addEventListener(EventNames.GET_UNIT_CONCLUSION_DATA, callback, false)
+
+        this.api.obterDadosConclusaoUnidade(unit)
+    }
+
+    closeGetUnitConclusionData = callback => {
+        window.removeEventListener(EventNames.GET_UNIT_CONCLUSION_DATA, callback, false)
+    }
     
-    getCourseData = (callbackFunction) => {
-        window.addEventListener(eventNames.COURSE_DATA, callbackFunction, false)
+    getCourseData = callback => {
+        window.addEventListener(EventNames.COURSE_DATA, callback, false)
 
         this.api.obterDadosCurso()  
     }
 
-    closeGetCourseData = (callbackFunction) => {
-        window.removeEventListener(eventNames.COURSE_DATA, callbackFunction, false)
+    closeGetCourseData = callback => {
+        window.removeEventListener(EventNames.COURSE_DATA, callback, false)
     }
 
-    changeUnit = (unitId) => {
+    changeUnit = unitId => {
         this.api.obterUnidade(unitId)  
     }
     
-    getIfNextUnitExist = (unit, callbackFunction) => {        
-        window.addEventListener(eventNames.GET_IF_NEXT_UNIT_EXIST, callbackFunction, false)
+    getIfNextUnitExist = (unit, callback) => {        
+        window.addEventListener(EventNames.GET_IF_NEXT_UNIT_EXIST, callback, false)
 
         this.api.obterSeExisteUnidadeAnterior(unit)
     }
 
-    closeGetIfNextUnitExist = (callbackFunction) => {
-        window.removeEventListener(eventNames.GET_IF_NEXT_UNIT_EXIST, callbackFunction, false)
+    closeGetIfNextUnitExist = callback => {
+        window.removeEventListener(EventNames.GET_IF_NEXT_UNIT_EXIST, callback, false)
     }
 
-    getIfPreviousUnitExist = (unit, callbackFunction) => {
-        window.addEventListener(eventNames.GET_IF_PREVIOUS_UNIT_EXIST, callbackFunction, false)
+    getIfPreviousUnitExist = (unit, callback) => {
+        window.addEventListener(EventNames.GET_IF_PREVIOUS_UNIT_EXIST, callback, false)
 
         this.api.obterSeExisteProximaUnidade(unit)
     }
 
-    closeGetIfPreviousUnitExist = (callbackFunction) => {
-        window.removeEventListener(eventNames.GET_IF_PREVIOUS_UNIT_EXIST, callbackFunction, false)
+    closeGetIfPreviousUnitExist = callback => {
+        window.removeEventListener(EventNames.GET_IF_PREVIOUS_UNIT_EXIST, callback, false)
     }
 
-    getPreviousUnit = (unit) => {
+    getPreviousUnit = unit => {
         this.api.obterUnidadeAnterior(unit)
     }
 
-    getNextUnit = (unit) => {
+    getNextUnit = unit => {
         this.api.obterProximaUnidade(unit)
     }
 
@@ -51,14 +62,18 @@ class AvaMecApi {
         this.api.registrarPorcentagemConclusaoUnidade(unit, String(percentage))
     }
 
-    getUnitProgress = (unit, callbackFunction) => {
-        window.addEventListener(eventNames.UNIT_PROGRESS, callbackFunction, false)
+    getUnitProgress = (unit, callback) => {
+        window.addEventListener(EventNames.UNIT_PROGRESS, callback, false)
 
-        this.api.obterDadosConclusaoUnidade(unit, callbackFunction)
+        this.api.obterDadosConclusaoUnidade(unit, callback)
     }
 
-    closeGetUnitProgress = (callbackFunction) => {
-        window.removeEventListener(eventNames.UNIT_PROGRESS, callbackFunction, false)
+    closeGetUnitProgress = (callback) => {
+        window.removeEventListener(EventNames.UNIT_PROGRESS, callback, false)
+    }
+
+    saveLastPage = unit => {
+        this.api.registrarUltimaPaginaAcessada(unit, PaginationUtils.getPath())
     }
 }
 
