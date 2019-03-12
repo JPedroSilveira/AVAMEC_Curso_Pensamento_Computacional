@@ -1,4 +1,5 @@
 import React from 'react'
+import BasicButton from '../basic_button'
 import AtividadeGenerica from '../atividade_generica'
 import Fab from '@material-ui/core/Fab'
 import AddIcon from '@material-ui/icons/Add'
@@ -307,11 +308,9 @@ class AtividadeComplementarExemplosGenerica extends AtividadeGenerica {
         //Esta condição segue o padrão da API
         if (!this.state.unidadeConcluida){
             return (
-                <div className="box">
-                    <div className="button-container">
-                        <button type="button" className="button" onClick={this.onClickSalvarRespostas}>SALVAR RESPOSTAS</button>
-                    </div>
-                </div>
+                <BasicButton onClick={this.onClickSalvarRespostas} centralize={true}>
+                    SALVAR RESPOSTAS
+                </BasicButton>
             )
         }
     }

@@ -16,15 +16,13 @@ class Conteudo extends React.Component {
     constructor() {
         super()
 
-        /*Recupera a unidade aberta no localStorage e salva no state.*/
         this.state = {
-            unidadeAberta: localStorageUtils.getOpenUnit()
+            openUnitId: localStorageUtils.getOpenUnit()
         }
     }
 
-    /*Seleciona a unidade que deve ser carregada conforme o identificador da unidadeAberta.*/
-    CarregarUnidadeAtual = () => {
-        switch(this.state.unidadeAberta){
+    LoadUnit = () => {
+        switch (this.state.openUnitId){
             case unitIds.APRESENTACAO_CURSO:
                 return (<ApresentacaoDoCurso id={unitIds.APRESENTACAO_CURSO} />)
             case unitIds.INTRO_PENSAMENTO_COMP:
@@ -47,7 +45,7 @@ class Conteudo extends React.Component {
             <div>
                 <Menu/>
                 <Header/>
-                {this.CarregarUnidadeAtual()}
+                {this.LoadUnit()}
             </div>
         )
     }

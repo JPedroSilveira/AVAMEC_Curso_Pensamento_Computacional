@@ -1,4 +1,5 @@
 import React from 'react'
+import BasicButton from '../basic_button'
 import ReactHtmlParser from 'react-html-parser';
 import AtividadeGenerica from '../atividade_generica'
 import SimboloRecarregar from '../../../images/simbolo-recarregar.png'
@@ -532,12 +533,13 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         
         if (existeAlternativaNaoRespondida){
             return (
-                <button type="button" className="button" onClick={this.configurarNovaTentativa}
+                <BasicButton 
+                    onClick={this.configurarNovaTentativa}
                     onMouseOver={e => e.currentTarget.firstChild.src = SimboloRecarregarPressionado}
                     onMouseOut={e => e.currentTarget.firstChild.src = SimboloRecarregar}>
-                    <img src={SimboloRecarregar} alt="Clique para tentar responder novamente ao questionário." />
+                    <img src={SimboloRecarregar} alt="Clique para tentar responder novamente ao questionário."/>
                     TENTAR NOVAMENTE
-                </button>
+                </BasicButton>
             )
         }
     }
@@ -547,13 +549,15 @@ class AtividadeIntegralGenerica extends AtividadeGenerica {
         if (!this.state.unidadeConcluida){
             return (
                 <div>
-                    <div className="button-container">
-                        {!this.state.atividadeRespondida ?
-                            <button type="button" className="button" onClick={this.registrarRespostasDaAtividade}>ENVIAR RESPOSTAS</button>
-                            :
-                            <div>{this.carregarBotaoTentarNovamente()}</div>
-                        }
-                    </div>
+                    {!this.state.atividadeRespondida ?
+                        <BasicButton onClick={this.registrarRespostasDaAtividade}>
+                            ENVIAR RESPOSTAS
+                        </BasicButton>
+                        :
+                        <div>
+                            {this.carregarBotaoTentarNovamente()}
+                        </div>
+                    }
                 </div>
             )
         }

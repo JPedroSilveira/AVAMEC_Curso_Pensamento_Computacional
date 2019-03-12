@@ -1,6 +1,6 @@
 import React from 'react'
 import Paginacao from '../paginacao'
-import MudarUnidade from '../mudar_unidade'
+import MudarUnidade from '../unit_controller'
 import localStorageUtils from '../../../utils/localStorageUtils'
 import './styles.css'
 
@@ -62,7 +62,7 @@ class ConteudoGenerico extends React.Component {
             <MudarUnidade 
                 podeRetroceder={this.state.paginaAberta === "1"} 
                 podeAvancar={this.state.paginaAberta === String(this.state.paginasDisponiveis)}
-                unidadeAtual={this.props.id}
+                unit={this.props.id}
                 dadosDeConclusaoUnidade={this.state.dadosConclusaoUnidade} />
         )
     }

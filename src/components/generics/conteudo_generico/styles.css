@@ -139,59 +139,6 @@ a{
     margin-top: 0.3em;
 }
 
-.button{
-    border: 0.1em solid black;
-    background-color: white;
-    border-radius: 0.2em;
-    font-size: 0.9em;
-    font-family: inherit;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-    color: inherit;
-    padding: 1em 2em;
-    margin-top: 2em;
-    margin-right: 2em;
-}
-
-/*Centraliza o botão apenas quando a tela estiver na vertical.*/
-@media screen and (orientation: portrait) {
-   .button-container{
-        text-align: center;
-    }
-
-    .button{
-        margin-right: 0em;
-        margin-top: 0em;
-    }
-}
-
-.button img{
-    height: 1.8em;
-    margin-bottom: -0.5em;
-    margin-right: 1em;
-    margin-left: -1em;
-    margin-top: -0.5em;
-}
-
-.button:hover{
-    color:rgb(245, 0, 87);
-    border-color: rgb(245, 0, 87);
-    cursor: pointer;
-}
-
-.button.voltar{
-    width: 45%;
-    margin-right: 10%;
-    text-justify: center;
-}
-
-.button.avancar{
-    width: 45%;
-    padding-left: 0;
-    padding-right: 0;
-    text-justify: center;
-}
-
 .span-referencia{
     color:red;
 }

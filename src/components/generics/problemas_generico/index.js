@@ -1,4 +1,5 @@
 import React from 'react'
+import BasicButton from '../basic_button'
 import ReactHtmlParser from 'react-html-parser';
 import AtividadeGenerica from '../atividade_generica'
 
@@ -183,11 +184,9 @@ class ProblemasGenerico extends AtividadeGenerica {
     carregarBotaoSalvar = () => {
         if (!this.state.unidadeConcluida){
             return (
-                <div className="box">
-                    <div className="button-container">
-                        <button type="button" className="button" onClick={this.onClickSalvarRespostas}>SALVAR RESPOSTAS</button>
-                    </div>
-                </div>
+                <BasicButton onClick={this.onClickSalvarRespostas} centralize={true}>
+                    SALVAR RESPOSTAS
+                </BasicButton>
             )
         }
     }
