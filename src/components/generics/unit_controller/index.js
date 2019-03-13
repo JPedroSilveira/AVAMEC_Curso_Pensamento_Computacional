@@ -25,7 +25,7 @@ class UnitController extends React.Component {
         }
         /*To-Do: Tratar erro caso o serviço não retorne uma resposta com sucesso (200).*/
 
-        AvaMecApi.closeGetIfNextUnitExist(this.nextUnitCallback)
+        AvaMecApi.closeGetIfNextUnitExistListener(this.nextUnitCallback)
     }
 
     previousUnitCallback = info => {
@@ -35,7 +35,7 @@ class UnitController extends React.Component {
             })
         }
         
-        AvaMecApi.closeGetIfPreviousUnitExist(this.previousUnitCallback)
+        AvaMecApi.closeGetIfPreviousUnitExistListener(this.previousUnitCallback)
     }
 
     loadNextButton = () => {
@@ -71,7 +71,7 @@ class UnitController extends React.Component {
             }
         }
 
-        AvaMecApi.closeGetUnitProgress(this.nextUnitReturn)
+        AvaMecApi.closeGetUnitProgressListener(this.nextUnitReturn)
 
         AvaMecApi.getNextUnit()
     }

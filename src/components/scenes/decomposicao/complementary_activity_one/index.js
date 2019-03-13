@@ -5,13 +5,13 @@ const MIN_EXAMPLES_AMOUNT = 0
 const MAX_EXAMPLES_AMOUNT = 3
 
 class ComplementaryActivityOne extends React.Component {
-    constructor(props) {
+    constructor(props){
         super(props)
 
-        this.validarPropriedades()
+        this.validateProps()
     }
 
-    validarPropriedades = () => {
+    validateProps = () => {
         if (this.props.unitId === undefined) {
             throw Error("Property 'unitId' can't be undefined!")
         }
@@ -19,9 +19,9 @@ class ComplementaryActivityOne extends React.Component {
 
     generateActivity = () => {
         return {
-            id: "atividade_completamentar_exemplos_reconhecimento_de_padroes_um",
+            id: "atividade_completamentar_decomposicao_exemplos_um",
             unitId: this.props.unitId,
-            statement: "Apresente até 3 exemplos, preferencialmente de sua área de interesse, onde você identifica a utilização deste pilar do pensamento computacional. Em cada exemplo, justifique o uso e argumente sobre a importância.",
+            statement: "Apresente até 3 exemplos, preferencialmente de sua área de interesse, onde você identifica a utilização deste pilar do pensamento computacional. Em cada exemplo, justifique o uso e argumente sobre sua importância.",
             minExamplesAmount: MIN_EXAMPLES_AMOUNT,
             maxExamplesAmount: MAX_EXAMPLES_AMOUNT,
             questions: [
@@ -34,7 +34,7 @@ class ComplementaryActivityOne extends React.Component {
                     maxAnswerLength: 400
                 },
                 {
-                    title: "A forma de uso do Pilar \"Reconhecimento de Padrões\"",
+                    title: "A forma de uso do Pilar “Decomposição”",
                     maxAnswerLength: 400
                 },
                 {
@@ -51,5 +51,4 @@ class ComplementaryActivityOne extends React.Component {
         )
     }
 }
-
 export default ComplementaryActivityOne

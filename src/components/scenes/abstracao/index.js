@@ -5,7 +5,7 @@ import Aplicacoes from './aplicacoes'
 import AssuntosCorrelatos from './assuntos_correlatos'
 import AtividadeAvaliativa1 from './atividade_avaliativa_1'
 import Problemas1 from './problemas_1'
-import AtividadeComplementar1 from './atividade_complementar_1'
+import ComplementaryActivityOne from './complementary_activity_one'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -48,7 +48,7 @@ class Abstracao extends ConteudoGenerico {
                 )
             case "5":
                 return (
-                    <AtividadeComplementar1 idUnidade={this.props.id}/>
+                    <ComplementaryActivityOne unitId={this.props.id}/>
                 )
             default: 
                 return null

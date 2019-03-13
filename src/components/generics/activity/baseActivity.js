@@ -15,9 +15,8 @@ class BaseActivity extends React.Component {
                 })
             }
         }
-        /*To-Do: Tratar erro na resposta do servidor.*/
-
-        AvaMecApi.closeGetUnitConclusionData(this.callbackUnitConclusionData)
+        
+        AvaMecApi.closeGetUnitConclusionDataListener(this.callbackUnitConclusionData)
     }
 }
 

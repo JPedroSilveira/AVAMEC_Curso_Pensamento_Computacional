@@ -5,7 +5,7 @@ import Aplicacoes from './aplicacoes'
 import Recomendacoes from './recomendacoes'
 import AtividadeAvaliativa1 from './atividade_avaliativa_1'
 import Problemas from './problemas'
-import AtividadeComplementar1 from './atividade_complementar_1'
+import ComplementaryActivityOne from './complementary_activity_one'
 
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -44,7 +44,7 @@ class Decomposicao extends ConteudoGenerico {
                 return (
                     <div>
                         <Problemas />
-                        <AtividadeComplementar1 idUnidade={this.props.id} />
+                        <ComplementaryActivityOne unitId={this.props.id} />
                     </div>
                 )
             default:

@@ -1,12 +1,12 @@
 import React from 'react'
-import BasicButton from '../basic_button'
+import BasicButton from '../../buttons/basic_button'
+import AddButton from '../../buttons/add_button'
+import DeleteButton from '../../buttons/delete_button'
 import BaseActivity from '../baseActivity'
 import ActivityConstants from '../../../../constants/activityConstants'
-
-import Fab from '@material-ui/core/Fab'
-import AddIcon from '@material-ui/icons/Add'
-import IconButton from '@material-ui/core/IconButton'
-import DeleteIcon from '@material-ui/icons/Delete'
+import AvaMecApi from '../../../../services/avaMecApi'
+import AvaMecUtils from '../../../../utils/avaMecUtils'
+import './styles.css'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETO atividade do tipo:
     activity: um objetivo com os atributos:
@@ -20,7 +20,6 @@ import DeleteIcon from '@material-ui/icons/Delete'
             maxAnswerLength: Número inteiro sendo que:
                 a soma de todos os tamanhos de todas as questões não pode passar o valor da constante ActivityConstants.MAX_ANSWER_LENGTH de caracteres,
 .*/
-
 class ComplementaryActivity extends BaseActivity {
     constructor(props) {
         super(props)
@@ -28,28 +27,23 @@ class ComplementaryActivity extends BaseActivity {
         this.validateProps()
 
         this.state = {
-            completeUnit: false,
+            unitComplete: false,
             activity: null,
             answersAmount: 0,
-            grabbedItems: []
+            ApiLoadedAnswers: [],
+            activity: this.generateEmptyActivity()
         }
 
-        //Preenche os dados necessários para a exibição dos exemplos
-        this.inicializarExemplos()
+        this.updateAnswersAmount() 
 
-        //Atualiza a quantidade de respostas com o número de exemplos exibidos
-        this.state.answersAmount = this.state.activity.exemplos.filter(exemplo => exemplo.exibir).length
+        this.getSavedAnswers()                                            
 
-        /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido.*/
-        this.obterProximaResposta()                                          
-
-        /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades.*/
-        this.obterDadosConclusaoUnidade()
+        this.getUnitConclusionData()
     }
 
     validateProps = () => {
         if(this.props.activity === undefined){
-            throw Error("Property \"activity\" is undefined!")
+            throw Error("Property \"activity\" can't be undefined!")
         } else {
             if (this.props.activity.id === undefined || this.props.activity.id.length === 0 || 
                 this.props.activity.id.length > ActivityConstants.MAX_LENGTH_ID) {
@@ -70,7 +64,7 @@ class ComplementaryActivity extends BaseActivity {
             }
 
             if (this.props.activity.questions === undefined) {
-                throw Error("Property \"activity.questions\" is undefined!")
+                throw Error("Property \"activity.questions\" can't be undefined!")
             } else if (this.props.activity.questions.length === 0) {
                 throw Error("Property \"activity.questions\" is empty!")
             } else {
@@ -93,271 +87,236 @@ class ComplementaryActivity extends BaseActivity {
         }
     }
 
-    /*Obtem as respostas da atividade caso tenha sido resolvida em looping.*/
-    obterProximaResposta = () => {
-        let API = new window.BridgeRestApi()
-
-        window.addEventListener("evObtemDadosGenericos", this.tratarRespostas, false)
-
-        this.state.activity.exemplos.forEach(exemplo => {
-            API.obterDadosGenericos(this.gerarIdentificadorDadoGenerico(exemplo.numero))
+    getSavedAnswers = () => {
+        this.state.activity.examples.forEach(example => {
+            AvaMecApi.getGenericData(
+                this.getGenericId(example.number), 
+                this.callbackGetSavedAnswers
+            )
         })
     }
 
-    gerarIdentificadorDadoGenerico = (numero) => {
-        return this.props.atividade.idUnidade + ActivityConstants.SEPARADOR +
-                this.props.atividade.id + ActivityConstants.SEPARADOR + numero
-    }
+    callbackGetSavedAnswers = (info) => {
+        let canUpdateAnswer = info.detail.status === 200 
+            && info.detail.data[0] !== undefined
+            && !this.wasLoaded(info.detail.data[0].chave)
 
-    /*Trata o resultado da chamada a API AvaMEC dentro do método local obterRespostas.*/
-    tratarRespostas = (retorno) => {
-        //A segunda verificação é feita por que o evento é disparado mais de uma vez para o mesmo item
-        if (retorno.detail.status === 200 && this.aindaNaoBuscouItem(retorno.detail.data)) { 
+        if (canUpdateAnswer) { 
+            let data = detail.data[0]
+
+            let savedExample = JSON.parse(data.valor)
+
+            let index = this.getExampleIndexByNumber(savedExample.number)
             
-            //O valor do item por padrão é o primeiro do vetor data
-            let data = retorno.detail.data[0]
+            this.state.activity.examples[index] = savedExample
 
-            //Tenta apenas se encontrar algo
-            if (data !== undefined) {
-                //Converte o valor para um objeto JS
-                let exemploAPI = JSON.parse(data.valor)
+            this.addToLoadedAnswers(data.chave)
 
-                //Busca o indice do problema no vetor de exemplos
-                let indice = this.state.activity.exemplos
-                    .findIndex(exemplo => exemplo.numero === exemploAPI.numero)
-                
-                //Atualiza o valor no indice encontrado
-                this.state.activity.exemplos[indice] = exemploAPI
+            this.updateAnswersAmount()
 
-                //Adiciona o item a lista de itens já carregados
-                this.state.grabbedItems.push(data.chave)
+            let shouldCloseApiListener = this.state.ApiLoadedAnswers.length === this.state.activity.examplas.length
 
-                this.setState({
-                    quantidadeRespostas: this.state.activity.exemplos.filter(exemplo => exemplo.exibir).length  
-                    //Atualiza a quantidade de respostas com o número de exemplos exibidos
-                })
-
-                //Quando o número de itens buscados for igual ao número total de itens existentes
-                if (this.state.grabbedItems.length === this.state.activity.exemplos.length) {
-                    //Remove o evento para evitar mais chamadas repetidas
-                    window.removeEventListener("evObtemDadosGenericos", this.tratarRespostas, false)
-                }
+            if (shouldCloseApiListener) {
+                AvaMecApi.closeGenericDataListener()
             }
         }
     }
 
-    //Verifica se uma chave dentro do objeto data já está na lista de itensBuscados do state
-    aindaNaoBuscouItem = (data) => {
-        return !this.state.grabbedItems.includes(data[0].chave)
+    getGenericId = (number) => {
+        return AvaMecUtils.getGenericId(
+            this.props.activity.idUnidade,
+            this.props.activity.id,
+            number
+        )
     }
 
-    /*Gera uma estrutura de atividade com exemplos sem resposta dentro do state.*/
-    inicializarExemplos = () => {
-        this.state.activity = {
-            id: this.props.atividade.id,
-            enunciado: this.props.atividade.enunciado,
-            quantidadeMinimaExemplos: this.props.atividade.quantidadeMinimaExemplos,
-            quantidadeMaximaExemplos: this.props.atividade.quantidadeMaximaExemplos,
-            exemplos: []
-        }
-
-        //Inicializa os exemplos e suas questões
-        for (let x = 1; x <= this.state.activity.quantidadeMaximaExemplos; x++){
-            let contador = 0
-
-            let questoes = []
-
-            this.props.atividade.questoes.forEach(questao => {
-                questoes.push({
-                    id: contador,
-                    resposta: "",
-                    titulo: questao.titulo,
-                    tamanhoMaximoResposta: questao.tamanhoMaximoResposta,
-                })
-                
-                contador++
-            })
-
-            //Inicializa exibindo apenas um número de exemplos equivalente a quantidade mínima passada
-            this.state.activity.exemplos.push({
-                numero: x, 
-                exibir: x <= this.state.activity.quantidadeMinimaExemplos,
-                questoes: questoes
-            })
+    addToLoadedAnswers = (key) => {
+        if (!this.wasLoaded(key)){
+            this.state.ApiLoadedAnswers.push(key)
         }
     }
 
-    /*Registra a resposta de todos os exemplos na API do AvaMEC.*/
-    onClickSalvarRespostas = () => {
-        let API = new window.BridgeRestApi()
+    wasLoaded = (key) => {
+        return this.state.ApiLoadedAnswers.find(loadedKey => loadedKey === key) !== undefined
+    }
 
-        let exemplos = this.state.activity.exemplos
+    generateEmptyActivityData = () => {
+        return {
+            id: this.props.activity.id,
+            statement: this.props.activity.statement,
+            minExamplesAmount: this.props.activity.minExamplesAmount,
+            maxExamplesAmount: this.props.activity.maxExamplesAmount,
+            examples: this.generateEmptyExamples()
+        }
+    }
 
-        //Salva dado a dado do vetor na API AvaMEC
-        exemplos.forEach(exemplo => {
-            let exemploJSON = JSON.stringify(exemplo)
-            API.registrarDadosGenericos(this.gerarIdentificadorDadoGenerico(exemplo.numero), exemploJSON)
+    generateEmptyExamples = () => {
+        let examples = []
+
+        for (let x = 1; x <= this.props.activity.maxExamplesAmount; x++){
+            examples.push({
+                number: x, 
+                show: x <= this.state.activity.minExamplesAmount,
+                questions: this.generateEmptyQuestions()
+            })
+        }
+
+        return examples
+    }
+
+    generateEmptyQuestions = () => {
+        let questions = []
+
+        this.props.activity.questions.forEach((question, index) => {
+            questions.push({
+                id: index,
+                answer: "",
+                title: questao.titulo,
+                maxAnswerLength: question.maxAnswerLength
+            })
         })
-        /*To-Do: Escutar resposta para tratar erros.*/
-        /*To-Do: Criar tratamento para não salvar itens não modificados.*/
+
+        return questions
     }
 
-    /*Adiciona um novo espaço para exemplo.*/
+    updateAnswersAmount = () => {
+        this.setState(
+            answersAmount = this.state.activity.examples.filter(example => example.show).length
+        )
+    }
+
+    saveAnswers = () => {
+        this.state.activity.examples.forEach(example => {
+            this.AvaMecApi.saveGenericData(this.getGenericId(example.numero), example)
+        })
+    }
+
     onClickAdd = () => {
-        /*Busca o indíce de um elemento escondido.*/
-        let indice = this.state.activity.exemplos.findIndex(exemplo => !exemplo.exibir)
+        let index = this.state.activity.examples.findIndex(example => !example.show)
 
-        //Caso o item exista
-        if (this.state.activity.exemplos[indice] !== undefined) {
+        let existsHiddenExample = index !== -1 
 
-            //Aumenta a quantidade de respostas com o novo item
-            let quantidadeRespostas = this.state.answersAmount + 1
+        if (existsHiddenExample) {
+            this.state.activity.examples[index].show = true
+            this.state.activity.examples[index].number = this.state.answersAmount + 1
 
-            //Configura o novo exemplo para ser exibido e o enumera
-            this.state.activity.exemplos[indice].exibir = true
-            this.state.activity.exemplos[indice].numero = quantidadeRespostas
-
-            //Atualiza o estado do programa
-            this.setState({
-                quantidadeRespostas: quantidadeRespostas
-            })
+            this.updateAnswersAmount()
         }
     }
 
-    /*Remove um espaço de exemplo.*/
-    onClickDelete = (numeroExemplo) => {
-        /*Encontra o indíce do exemplo pelo seu número.*/
-        let indiceExemplo = this.state.activity.exemplos.findIndex(exemplo => exemplo.numero === numeroExemplo)
+    onClickDelete = (number) => {
+        let index = this.getExampleIndexByNumber(number)
 
-        /*Deixa de exibir o exemplo selecionado.*/
-        this.state.activity.exemplos[indiceExemplo].exibir = false
+        this.state.activity.examples[index].show = false
 
-        /*Limpa as respostas.*/
-        this.state.activity.exemplos[indiceExemplo].questoes.forEach(questao =>{
-            questao.resposta = ""
-        })
+        this.state.activity.examples[index].questions = this.generateEmptyQuestions()
 
-        /*Reordena o número dos exemplos exibidos.*/
-        this.state.activity.exemplos.sort(exemplo => !exemplo.exibir).forEach((exemplo, indice) => {
-            exemplo.numero = indice + 1
-        })
+        this.sortExamples()
 
-        /*Salva as atualizações do state.*/
+        this.updateAnswersAmount()
+    }
+
+    sortExamples = () => {
+        this.state.activity.examples
+            .sort(example => !example.show)
+            .forEach((example, index) => {
+                example.number = index + 1
+            })
+    }
+
+    onChangeAnswer = (maxLength, number, questionId, data) => {
+        let activity = this.state.activity
+
+        let index = this.getExampleIndexByNumber(number)
+
+        activity.exemplos[index]
+            .questions[questionId]
+            .answer = data.currentTarget.value.substr(0, maxLength) 
+
         this.setState({
-            quantidadeRespostas: this.state.answersAmount - 1
+            activity: activity
         })
     }
 
-    /*Atualiza o valor de uma resposta conforme o usuário a altera.*/
-    onChangeResposta = (tamMaximo, numeroExemplo, idQuestao, data) => {
-        let atividade = this.state.activity
-
-        let indiceExemplo = this.state.activity.exemplos.findIndex(exemplo => exemplo.numero === numeroExemplo)
-
-        atividade.exemplos[indiceExemplo]
-            .questoes[idQuestao]
-            .resposta = data.currentTarget.value.substr(0, tamMaximo) 
-            //Salva a resposta somente até o valor máximo do campo
-            //Isto trata casos de colagem de respostas maiores que o limite máximo
-
-        this.setState({
-            atividade: atividade
-        })
+    getExampleIndexByNumber = (number) => {
+        return this.state.activity.examples.findIndex(example => example.number === number)
     }
 
-    //Adiciona o botão de "+" na tela para exibir um novo exemplo
-    carregarBotaoAdicionarNovoExemplo = () => {
-        //Caso seja possível, carrega o botão
-        //Por padrão da API do AvaMEC após concluida a unidade as respostas não podem ser modificadas, 
-        //a primera verificação mantém esta regra
-        //A segunda verificação limita a adição ao número máximo de exemplos
-        if (!this.state.completeUnit && this.state.answersAmount < this.state.activity.quantidadeMaximaExemplos){
+    renderAddButton = () => {
+        let canAddNewExample = !this.state.completeUnit && this.state.answersAmount < this.state.activity.maxExamplesAmount
+        
+        if (canAddNewExample){
             return (
-                <Fab size="large" color="primary" aria-label="Add" className="add-button" onClick={this.onClickAdd}>
-                    <AddIcon />
-                </Fab>
+                <AddButton onClick={this.onClickAdd}/>
             )
         }   
     }
 
-    //Adicionar um botão para deletar um exemplo se possível
-    carregarBotaoDeletarExemplo = (exemplo) => {
-        //Para seguir o padrão da API AvaMEC só permite alterações enquanto a unidade não estiver concluída
-        //Não permite deletar itens quando a quantidade estiver igual ou menor a quantidade mínima
-        if (!this.state.completeUnit 
-            && this.state.answersAmount > this.state.activity.quantidadeMinimaExemplos){
-                return (
-                    <IconButton id={exemplo.numero} 
-                                onClick={this.onClickDelete.bind(null, exemplo.numero)} 
-                                aria-label="Delete" 
-                                className="delete-button">
-                        <DeleteIcon fontSize="large" />
-                    </IconButton>
-                )
+    renderDeleteButton = (example) => {
+        let canDelete = !this.state.completeUnit
+            && this.state.answersAmount > this.state.activity.quantidadeMinimaExemplos
+
+        if (canDelete){
+            return (
+                <DeleteButton id={example.number} onClick={this.onClickDelete}/>
+            )
         }
     }
 
-    //Carrega um botão para salvar os exemplos
-    carregarBotaoSalvar = () => {
-        //Por padrão da API AvaMEC só é possível modificar uma atividade antes de a mesma ser concluída
-        //Esta condição segue o padrão da API
+    renderSaveButton = () => {
         if (!this.state.completeUnit){
             return (
-                <BasicButton onClick={this.onClickSalvarRespostas} centralize={true}>
+                <BasicButton onClick={this.saveAnswers} centralize={true}>
                     SALVAR RESPOSTAS
                 </BasicButton>
             )
         }
     }
 
-    //Carrega uma questão de um exemplo para a tela
-    carregarQuestaoExemplo = (numeroExemplo, questao, key) => {
+    renderQuestion = (number, question, key) => {
         return (
             <p key={key}>
-                {questao.titulo}:
-                            <textarea
-                    id={numeroExemplo}
-                    value={questao.resposta}
-                    onChange={this.onChangeResposta.bind(this, questao.tamanhoMaximoResposta, numeroExemplo, questao.id)}
+                {question.title}:
+                <textarea
+                    id={number}
+                    value={question.answer}
+                    onChange={this.onChangeAnswer.bind(this, question.maxAnswerLength, number, question.id)}
                     cols="30"
-                    rows={Math.round(questao.tamanhoMaximoResposta / ActivityConstants.NUMBER_OF_LETTERS_PER_LINE_TEXTBOX)}
+                    rows={Math.round(question.maxAnswerLength/ActivityConstants.NUMBER_OF_LETTERS_PER_LINE_TEXTBOX)}
                 /><br/>
             </p>
         )
     }
 
-    //Carrega as questões de um exemplo com seus dados para a tela
-    carregarQuestoesExemplo = (numeroExemplo, questoes) => {
+    renderQuestions = (number, questions) => {
         return (
             <div>
-                {questoes.map((questao, key) => {
-                    return ( this.carregarQuestaoExemplo(numeroExemplo, questao, key) )
+                {questions.map((question, key) => {
+                    return (this.renderQuestion(number, question, key) )
                 })}
             </div>
         )
     }
 
-    //Carrega um exemplo para a tela
-    carregarExemplo = (exemplo, key) => {
-        if(exemplo.exibir) {
+    renderExample = (example, key) => {
+        if(example.show) {
             return (
                 <div className="box" key={key}>
-                    <div className="algoritmos">
-                        {this.carregarBotaoDeletarExemplo(exemplo)}
-                        <h4>EXEMPLO {exemplo.numero}</h4>
-                        {this.carregarQuestoesExemplo(exemplo.numero, exemplo.questoes)}
+                    <div className="algorithms">
+                        {this.renderDeleteButton(example)}
+                        <h4>EXEMPLO {example.number}</h4>
+                        {this.renderQuestions(example.number, example.questions)}
                     </div>
                 </div>
             )
         }
     }
 
-    //Carrega uma lista de exemplos para a tela
-    carregarExemplos = () => {
+    renderExamples = () => {
         return(
             <div>
-                {this.state.activity.exemplos.map((exemplo, key) => {
-                    return ( this.carregarExemplo(exemplo, key) )
+                {this.state.activity.examples.map((example, key) => {
+                    return (this.renderExample(example, key) )
                 })}
             </div>
         )
@@ -367,10 +326,10 @@ class ComplementaryActivity extends BaseActivity {
         return(
             <div>
                 <h2>ATIVIDADE COMPLEMENTAR</h2>
-                <p>{this.state.activity.enunciado}</p>
-                {this.carregarExemplos()}
-                {this.carregarBotaoAdicionarNovoExemplo()}
-                {this.carregarBotaoSalvar()}
+                <p>{this.state.activity.statement}</p>
+                {this.renderExamples()}
+                {this.renderAddButton()}
+                {this.renderSaveButton()}
             </div>
         )
     }

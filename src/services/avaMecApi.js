@@ -1,5 +1,6 @@
-import EventNames from '../constants/avaMECApiEvents'
+import EventNames from '../constants/AvaMECApiEvents'
 import PaginationUtils from '../utils/paginationUtils'
+import AvaMECApiEvents from '../constants/AvaMECApiEvents';
 
 class AvaMecApi {   
     constructor(){
@@ -12,7 +13,7 @@ class AvaMecApi {
         this.api.obterDadosConclusaoUnidade(unit)
     }
 
-    closeGetUnitConclusionData = callback => {
+    closeGetUnitConclusionDataListener = callback => {
         window.removeEventListener(EventNames.GET_UNIT_CONCLUSION_DATA, callback, false)
     }
     
@@ -22,7 +23,7 @@ class AvaMecApi {
         this.api.obterDadosCurso()  
     }
 
-    closeGetCourseData = callback => {
+    closeGetCourseDataListener = callback => {
         window.removeEventListener(EventNames.COURSE_DATA, callback, false)
     }
 
@@ -36,7 +37,7 @@ class AvaMecApi {
         this.api.obterSeExisteUnidadeAnterior(unit)
     }
 
-    closeGetIfNextUnitExist = callback => {
+    closeGetIfNextUnitExistListener = callback => {
         window.removeEventListener(EventNames.GET_IF_NEXT_UNIT_EXIST, callback, false)
     }
 
@@ -46,7 +47,7 @@ class AvaMecApi {
         this.api.obterSeExisteProximaUnidade(unit)
     }
 
-    closeGetIfPreviousUnitExist = callback => {
+    closeGetIfPreviousUnitExistListener = callback => {
         window.removeEventListener(EventNames.GET_IF_PREVIOUS_UNIT_EXIST, callback, false)
     }
 
@@ -68,12 +69,26 @@ class AvaMecApi {
         this.api.obterDadosConclusaoUnidade(unit, callback)
     }
 
-    closeGetUnitProgress = (callback) => {
+    closeGetUnitProgressListener = (callback) => {
         window.removeEventListener(EventNames.UNIT_PROGRESS, callback, false)
     }
 
     saveLastPage = unit => {
         this.api.registrarUltimaPaginaAcessada(unit, PaginationUtils.getPath())
+    }
+
+    getGenericData = (id, callback) => {
+        window.addEventListener(AvaMECApiEvents.GET_GENERIC_DATA, callback, false)
+
+        this.api.obterDadosGenericos(id)
+    }
+
+    closeGenericDataListener = (callback) => {
+        window.removeEventListener(AvaMECApiEvents.GET_GENERIC_DATA, callback, false)
+    }
+
+    saveGenericData = (id, data) => {
+        this.api.registrarDadosGenericos(id, JSON.stringify(data))
     }
 }
 
