@@ -3,7 +3,7 @@ import ConteudoGenerico from '../../generics/conteudo_generico'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
 import Recomendacoes from './recomendacoes'
-import AtividadeAvaliativa1 from './atividade_avaliativa_1'
+import IntegralActivityOne from './integral_activity_one'
 import Problemas from './problemas'
 import ComplementaryActivityOne from './complementary_activity_one'
 
@@ -27,7 +27,7 @@ class Decomposicao extends ConteudoGenerico {
 
     /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
     carregarPaginaAtual = () => {
-        switch (this.state.paginaAberta){
+        switch (this.state.openPage){
             case "1":
                 return (
                     <div>
@@ -38,12 +38,12 @@ class Decomposicao extends ConteudoGenerico {
                 ) 
             case "2":
                 return (
-                    <AtividadeAvaliativa1 idUnidade={this.props.id} />
+                    <IntegralActivityOne unitId={this.props.id} />
                 )
             case "3":
                 return (
                     <div>
-                        <Problemas />
+                        <Problemas unitId={this.props.id}/>
                         <ComplementaryActivityOne unitId={this.props.id} />
                     </div>
                 )

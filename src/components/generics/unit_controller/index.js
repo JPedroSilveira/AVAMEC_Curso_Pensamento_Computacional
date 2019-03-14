@@ -1,6 +1,6 @@
 import React from 'react'
-import AvaMecApi from '../../../services/AvaMecApi'
-import BasicButton from '../../generics/basic_button'
+import AvaMecApi from '../../../services/avaMecApi.js'
+import BasicButton from '../../generics/buttons/basic_button'
 
 import './styles.css'
 
@@ -59,10 +59,10 @@ class UnitController extends React.Component {
     }
 
     nextUnit = () => {
-        AvaMecApi.getUnitProgress(this.props.unit, this.nextUnitReturn)
+        AvaMecApi.getUnitConclusionData(this.props.unit, this.nextUnitCallback)
     }
 
-    nextUnitReturn = info => {
+    nextUnitCallback = info => {
         if (info.detail.status === 200) {
             if (info.detail.data.unidade.permitePorcentagem) {
                 if (String(info.detail.data.porcentagemConclusao) < "100"){
@@ -71,7 +71,7 @@ class UnitController extends React.Component {
             }
         }
 
-        AvaMecApi.closeGetUnitProgressListener(this.nextUnitReturn)
+        AvaMecApi.closeGetUnitConclusionDataListener(this.nextUnitReturn)
 
         AvaMecApi.getNextUnit()
     }

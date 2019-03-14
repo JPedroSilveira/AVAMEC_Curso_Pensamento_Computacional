@@ -8,24 +8,26 @@ import ActivityConstants from '../../../../constants/activityConstants'
 import ActivityState from '../../../../constants/activityState'
 import UnitState from '../../../../constants/unitState' 
 import QuestionState from '../../../../constants/questionState'
-import OptionValues from '../../../../constants/OptionValues'
+import OptionValues from '../../../../constants/optionValues.js'
 
 import BaseActivity from '../baseActivity'
 
-import BasicButton from '../basic_button'
+import BasicButton from '../../buttons/basic_button'
 import AlgorithmLevel from '../../algorithm_level'
-import CenterBox from '../../center-box'
-import AlgorithmBox from '../../algorithm_box'
+import CenterBox from '../../center_box'
+import AlgorithmBox from '../../activity/algorithm_box'
 import InlineBox from '../../inline_box'
-import ActivityOption from '../../activity-option'
+import ActivityOption from '../../activity_option'
 import InputRadioButton from '../../buttons/input_radio_button'
-import GradeBox from '../../grade-box'
+import GradeBox from '../../grade_box'
 
 import ReactHtmlParser from 'react-html-parser'
 
 import LoadImage from '../../../../images/load-image.png'
 import PressedLoadImage from '../../../../images/pressed-load-image.png'
 import './styles.css'
+
+import AvaMECApiConstants from '../../../../constants/avaMECApiConstants';
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETIVO "atividade" DO TIPO:
     activity: um objetivo com os atributos:
@@ -82,18 +84,18 @@ class IntegralActivity extends BaseActivity {
                     if (question.id > ActivityConstants.MAX_LENGTH_ID){
                         throw Error("Property 'question.id' of 'activity.question' is greater than the limit of " + MAX_CARACTERES_ID + " characters!")
                     }
-                    question.alternatives.forEach(alternative => {
-                        if (alternative.value === undefined){
-                            throw Error("Property 'alternative.value' can't be undefined!")
+                    question.options.forEach(option => {
+                        if (option.value === undefined){
+                            throw Error("Property 'option.value' can't be undefined!")
                         }
-                        if (alternative.key === undefined) {
-                            throw Error("Property 'alternative.key' can't be undefined!")
+                        if (option.key === undefined) {
+                            throw Error("Property 'option.key' can't be undefined!")
                         }
-                        if (alternative.text === undefined || alternative.text.length === 0) {
-                            throw Error("Property 'alternative.text' can't be undefined or empty!")
+                        if (option.text === undefined || option.text.length === 0) {
+                            throw Error("Property 'option.text' can't be undefined or empty!")
                         }
-                        if (alternative.tip === undefined) {
-                            throw Error("Property 'alternative.tip' can't be undefined!")
+                        if (option.tip === undefined) {
+                            throw Error("Property 'option.tip' can't be undefined!")
                         }
                     })
                 })
@@ -127,7 +129,7 @@ class IntegralActivity extends BaseActivity {
                 let selectedOptions = []
 
                 this.props.activity.questions.forEach(question => {
-                    let answer = null
+                    let resposta = null
     
                     let respostas = data.questoesUsuario.find(questaoUsuario =>
                         questaoUsuario.questao.identificador === question.id
@@ -137,26 +139,26 @@ class IntegralActivity extends BaseActivity {
 
                     if (hasAnswers) {
 
-                        answer = respostas.find(resposta =>
-                            resposta.valor === OptionValues.RIGHT
+                        resposta = respostas.find(resposta =>
+                            resposta.valor === AvaMECApiConstants.SELECTED_OPTION_VALUE
                         )
 
-                        let hasSelectedOption = answer !== undefined
+                        let hasSelectedOption = resposta !== undefined
 
                         if (hasSelectedOption){
 
-                            let option = this.getOptionByQuestionIdAndKey(answer.idQuestao, answer.chave)
+                            let option = this.getOptionByQuestionIdAndKey(resposta.idQuestao, resposta.chave)
 
                             if (option.value === OptionValues.RIGHT) {
                                 selectedOptions.push({
                                     questionId: question.id,
-                                    key: selectedOption.chave,
+                                    key: resposta.chave,
                                     state: QuestionState.ANSWERED_RIGHT
                                 })
                             } else {
                                 selectedOptions.push({
                                     questionId: question.id,
-                                    key: selectedOption.chave,
+                                    key: resposta.chave,
                                     state: QuestionState.ANSWERED_WRONG
                                 })
                             }
@@ -205,8 +207,7 @@ class IntegralActivity extends BaseActivity {
 
                 apiQuestion.gabaritos.push(apiTemplate)
             })
-
-            apiActivity.questoes.push(questaoAPI)
+            apiActivity.questoes.push(apiQuestion)
         })
 
         AvaMecApi.saveActivity(apiActivity, this.saveActivityCallback)
@@ -320,13 +321,13 @@ class IntegralActivity extends BaseActivity {
                     {selectedOption.state === QuestionState.ANSWERED_RIGHT &&
                         <div className="hint right">
                             <strong>Resposta Certa: </strong>
-                            {alternativa.dica}
+                            {option.tip}
                         </div>
                     }
                     {selectedOption.state === QuestionState.ANSWERED_WRONG &&
                         <div className="hint wrong">
                             <strong>Resposta Errada: </strong>
-                            {alternativa.dica}
+                            {option.tip}
                         </div>
                     }
                 </div>
@@ -457,7 +458,7 @@ class IntegralActivity extends BaseActivity {
     renderRetryButton = () => {
         if (this.state.unitState !== UnitState.COMPLETED) {
             if (this.state.activityState === ActivityState.ANSWERED) {
-                let hasWrongOption = selectedOptions
+                let hasWrongOption = this.state.selectedOptions
                     .some(selectedOption => selectedOption.state === QuestionState.ANSWERED_WRONG)
 
                 if (hasWrongOption) {
@@ -477,7 +478,7 @@ class IntegralActivity extends BaseActivity {
 
     render() {
         return (
-            <div className="container">
+            <div className="container-integral-activity">
                 {this.renderTitle()}
 
                 {this.renderQuestions()}<br/>

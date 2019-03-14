@@ -5,10 +5,6 @@ import DeleteIcon from '@material-ui/icons/Delete'
 import './styles.css'
 
 class DeleteButton extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return (
             <IconButton id={this.props.id}

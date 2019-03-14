@@ -2,7 +2,7 @@ import React from 'react'
 import ProblemasGenerico from '../../../generics/problemas_generico'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
-    idUnidade: String, representa o id da unidade em que a atividade se encontra
+    unitId: String, representa o id da unidade em que a atividade se encontra
 .*/
 class ProblemasPropostos extends React.Component{
     constructor(props) {
@@ -12,14 +12,14 @@ class ProblemasPropostos extends React.Component{
     }
 
     validarPropriedades = () => {
-        if (this.props.idUnidade === undefined) {
-            throw Error("Propriedade idUnidade não passada como parâmetro!")
+        if (this.props.unitId === undefined) {
+            throw Error("Property 'unitId' can't be undefined!")
         }
     }
 
     montarProblemas = () => {
         return {
-            idUnidade: this.props.idUnidade,
+            idUnidade: this.props.unitId,
             titulo: "Elabore um algoritmo para cada um dos problemas a seguir descritos:",
             problemas: [
                 {

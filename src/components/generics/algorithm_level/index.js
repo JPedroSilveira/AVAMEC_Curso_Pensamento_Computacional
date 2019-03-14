@@ -7,16 +7,16 @@ class AlgorithmLevel extends React.Component {
 
         this.class = "level "
 
-        if (this.props.showStyle) {
+        if (!this.props.showStyle) {
             this.class += "none-style "
         }
     }
 
     render() {
         return (
-            <div id={this.props.id} className={this.class}>
+            <ol id={this.props.id} className={this.class}>
                 {this.props.children}
-            </div>
+            </ol>
         )
     }
 }

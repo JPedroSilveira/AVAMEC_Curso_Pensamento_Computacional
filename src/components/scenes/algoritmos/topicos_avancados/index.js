@@ -1,7 +1,9 @@
 import React from 'react'
-import CenterBox from '../../../generics/center-box'
-import YouTubePlayer from '../../../generics/youtube-player'
+import CenterBox from '../../../generics/center_box'
+import YouTubePlayer from '../../../generics/youtube_player'
 import Alg12Simulacao from '../../../../images/alg_12_simulacao.png'
+import AlgorithmLevel from '../../../generics/algorithm_level'
+import AlgorithmBox from '../../../generics/algorithm_box'
 
 const TopicosAvancados = () => (
     <div>
@@ -12,63 +14,56 @@ const TopicosAvancados = () => (
         <h4>SOLUCIONANDO - CONSIDERAÇÕES INICIAIS</h4>
         <p>Dado que temos um limite de tempo para fazer o transporte dos cilindros, desejamos transportá-los levando primeiro os mais pesados.</p>
         <CenterBox>
-            <div className="boxed algorithms bg-orange">
+            <AlgorithmBox>
                 <p className="title">ALG 10:  ALGORITMO PRINCIPAL</p>
-                <div className="nivel-1">
-                    <ol>
-                        <li>Coloque os cilindros em uma fila, considerando que os mais pesados devem vir primeiro, </li>
-                        <li>Preencha o compartimento de cargas com os cilindros que estão na fila de “cilindros ordenados”.</li>
-                    </ol>
-                </div>
-            </div>
+                <AlgorithmLevel showStyle={true}>
+                    <li>Coloque os cilindros em uma fila, considerando que os mais pesados devem vir primeiro, </li>
+                    <li>Preencha o compartimento de cargas com os cilindros que estão na fila de “cilindros ordenados”.</li>
+                </AlgorithmLevel>
+            </AlgorithmBox>
         </CenterBox>
         <CenterBox>
-            <div className="boxed algorithms bg-orange">
+            <AlgorithmBox>
                 <p className="title">ALG 11: ORDENAÇÃO DOS CILINDROS POR PESO</p>
-                <div className="nivel-1">
-                    <ol>
-                        <li><span className="textred">Enquanto</span> houver cilindros na coleção “cilindros desordenados” <span className="textred">faça</span>
-                            <div className="subnivel">
+                <AlgorithmLevel showStyle={true}>
+                        <li>
+                            <span className="textred">Enquanto</span> houver cilindros na coleção “cilindros desordenados” <span className="textred">faça</span>
+                            <AlgorithmLevel>
                                 a.  escolha o cilindro de maior peso na coleção de “cilindros desordenados”;<br />
                                 b.  coloque-o no final da fila de “cilindros ordenados”.
-                    </div>
+                            </AlgorithmLevel>
                         </li>
                         <li><span className="textred">Divulgue</span> a lista “cilindros ordenados”</li>
-                    </ol>
-                </div>
-            </div>
+                </AlgorithmLevel>
+            </AlgorithmBox>
         </CenterBox>
         <CenterBox>
-            <div className="boxed algorithms bg-orange">
+            <AlgorithmBox>
                 <p className="title">ALG 12: ESCOLHER O CILINDRO MAIS PESADO DE UMA COLEÇÃO</p>
-                <div className="nivel-1">
-                    <ol>
-                        <li>Coloque um cilindro da coleção "cilindros desordenados"  em um prato qualquer da balança.</li>
-                        <li><span className="textred">Enquanto</span> houver cilindros na coleção “cilindros desordenados” <span className="textred">faça</span>
-                            <div className="subnivel">
-                                a.  pegue um cilindro qualquer da “cilindros desordenados” e coloque no prato livre da balança;<br />
-                                b.  esvazie o prato mais leve deixando na balança o cilindro mais pesado até o momento.
-                    </div>
-                        </li>
-                        <li>Divulgue o cilindro que está na balança.</li>
-                    </ol>
-                </div>
-            </div>
+                <AlgorithmLevel showStyle={true}>
+                    <li>Coloque um cilindro da coleção "cilindros desordenados"  em um prato qualquer da balança.</li>
+                    <li><span className="textred">Enquanto</span> houver cilindros na coleção “cilindros desordenados” <span className="textred">faça</span>
+                        <AlgorithmLevel>
+                            a.  pegue um cilindro qualquer da “cilindros desordenados” e coloque no prato livre da balança;<br />
+                            b.  esvazie o prato mais leve deixando na balança o cilindro mais pesado até o momento.
+                        </AlgorithmLevel>
+                    </li>
+                    <li>Divulgue o cilindro que está na balança.</li>
+                </AlgorithmLevel>
+            </AlgorithmBox>
         </CenterBox>
         <CenterBox>
-            <div className="boxed algorithms bg-orange">
+            <AlgorithmBox>
                 <p className="title">ALG 13: PREENCHER O COMPARTILHAMENTO DE CARGAS</p>
-                <div className="nivel-1">
-                    <ol>
-                        <li><span className="textred">Enquanto</span> houver espaço no compartimento de cargas e cilindros na fila “cilindros ordenados” <span className="textred">faça</span>
-                            <div className="subnivel">
-                                a.  pegue o primeiro cilindro da fila;<br />
-                                b.  coloque o cilindro no espaço livre no chão do porta carga.
-                    </div>
-                        </li>
-                    </ol>
-                </div>
-            </div>
+                <AlgorithmLevel showStyle={true}>
+                    <li><span className="textred">Enquanto</span> houver espaço no compartimento de cargas e cilindros na fila “cilindros ordenados” <span className="textred">faça</span>
+                        <AlgorithmLevel>
+                            a.  pegue o primeiro cilindro da fila;<br />
+                            b.  coloque o cilindro no espaço livre no chão do porta carga.
+                        </AlgorithmLevel>
+                    </li>
+                </AlgorithmLevel>
+            </AlgorithmBox>
         </CenterBox>
         <h4>SIMULANDO A EXECUÇÃO DO ALG 12</h4>
         <p>Na simulação a seguir temos uma lista de 15 cilindros, desordenada por pesos. Para facilitar a compreensão colocamos rótulos indicando os pesos anteriormente medidos.  Dispomos de uma balança que, quando seus dois pratos estão com pesos, ela indica o mais pesado acendendo uma luz vermelha. Os pesos foram sendo usados aleatoriamente. Quando a luz acende, retornamos o cilindro menor para a posição de onde foi retirado e pegamos um outro.</p>

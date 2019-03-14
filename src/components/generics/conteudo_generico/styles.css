@@ -8,7 +8,7 @@ h1{
 h2{
     font-weight: 700;
     font-size: 1.2em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     margin-bottom: 1.5em;
     margin-top: 2em;
 }
@@ -16,7 +16,7 @@ h2{
 h3{
     font-weight: 700;
     font-size: 1.1em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     margin-bottom: 1.5em;
     margin-top: 2em;
 }
@@ -24,7 +24,7 @@ h3{
 h4{
     font-weight: 700;
     font-size: 1em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     margin-bottom: 1.5em;
     margin-top: 2em;
 }
@@ -46,52 +46,6 @@ a{
     margin-top: 1em;
 }
 
-.boxed{
-    border: 0.05em solid #000000;
-}
-
-.boxed{
-    width: 70%;
-    text-align: justify;
-    padding: 2em;
-}
-
-.boxed.algorithm{
-    background-color: rgb(241, 239, 198);
-    margin-bottom: 2em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    text-align: left;
-}
-
-.boxed.algorithm .nivel-1{
-    padding-left: 2em;
-}
-
-.boxed.algorithm .subnivel{
-    padding-left: 2em;
-    padding-top: 0.3em;
-    color: #585858;
-}
-
-.boxed.algorithm .subnivel li{
-    padding-bottom: 0.3em;
-    color: #585858;
-}
-
-.boxed.algorithm .subnivel .sublista{
-    list-style-type: none;
-}
-
-.boxed.algorithm.bg-orange{
-    background-color: rgb(249, 203, 156);
-}
-
-.boxed.algorithm .title{
-    text-align: center;
-    font-weight: 700;
-}
-
 .textblue{
     color: blue;
 }
@@ -104,7 +58,7 @@ a{
     color: #4d8404;
 }
 
-.boxed.problema{
+.boxed.problem{
     background-color: rgb(251, 229, 205);
     margin-bottom: 0.3em;
     text-align: left;

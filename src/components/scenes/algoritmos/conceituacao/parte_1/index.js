@@ -1,5 +1,8 @@
 import React from 'react'
-import CenterBox from '../../../../generics/center-box'
+import CenterBox from '../../../../generics/center_box'
+import AlgorithmLevel from '../../../../generics/algorithm_level'
+import AlgorithmBox from '../../../../generics/algorithm_box'
+
 
 const ConceituacaoParte1 = () => (
     <div>
@@ -8,35 +11,35 @@ const ConceituacaoParte1 = () => (
         <p>Muitas atividades que fazemos, individualmente ou em grupo, são chamadas de rotinas. Desde quando acordamos até o deitar, realizamos em grande número desse tipo de atividade ao longo do dia. É bem verdade que não necessariamente as realizamos de forma igual todos os dias. Em geral as fazemos com ligeiras variações, em função das estações do ano, do dia da semana, de nossas ocupações etc. </p>
         <p>No quadro a seguir, apresentamos um algoritmo executado por uma grande quantidade de pessoas, em diferentes locais do planeta.</p>
         <CenterBox>
-            <div className="boxed algorithms">
+            <AlgorithmBox>
                 <p className="title"><strong>Algoritmo 01 <br/> Iniciação - Do acordar até chegar no local de trabalho </strong> </p>
-                <div className="nivel-1">
+                <AlgorithmLevel showStyle>
                     <span className="textdarkgreen">Após o barulho do despertador:</span>
-                    <div className="subnivel">
-                        <ol>
-                            <li>Despertar.</li>
-                            <li>Calçar um chinelo.</li>
-                            <li>Vestir uma roupa.</li>
-                            <li>Escovar os dentes.</li>
-                            <li>Tomar banho.</li>
-                            <li>Trocar de roupa.</li>
-                            <li>Ir à padaria.</li>
-                            <li>Pegar os pães.</li>
-                            <li>Pagar a conta.</li>
-                            <li>Voltar para casa.</li>
-                            <li>Fazer o café.</li>
-                            <li>Escovar os dentes.</li>
-                            <li>Fazer o desjejum.</li>
-                            <li>Pegar a pasta de trabalho.</li>
-                            <li>Sair de casa.</li>
-                            <li>Pegar o veículo.</li>
-                            <li>Deslocar-se para o trabalho.</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
+                    <AlgorithmLevel showStyle={true}>
+                       <li>Despertar.</li>
+                       <li>Calçar um chinelo.</li>
+                       <li>Vestir uma roupa.</li>
+                       <li>Escovar os dentes.</li>
+                       <li>Tomar banho.</li>
+                       <li>Trocar de roupa.</li>
+                       <li>Ir à padaria.</li>
+                       <li>Pegar os pães.</li>
+                       <li>Pagar a conta.</li>
+                       <li>Voltar para casa.</li>
+                       <li>Fazer o café.</li>
+                       <li>Escovar os dentes.</li>
+                       <li>Fazer o desjejum.</li>
+                       <li>Pegar a pasta de trabalho.</li>
+                       <li>Sair de casa.</li>
+                       <li>Pegar o veículo.</li>
+                       <li>Deslocar-se para o trabalho.</li>
+                    </AlgorithmLevel>
+                </AlgorithmLevel>
+            </AlgorithmBox>
         </CenterBox>
-        <h3 className="centralizado">QUADRO 1: CONCEITUANDO ALGORITMO</h3>
+        <CenterBox>
+            <h3>QUADRO 1: CONCEITUANDO ALGORITMO</h3>
+        </CenterBox>
         <CenterBox>
             <div className="boxed quadro">
                 <p>Esse é um exemplo de algo muito importante no campo da computação, um “Algoritmo”, ou seja, uma sequência finita de etapas (passos), para serem executadas por um agente, natural (os humanos) ou sintético (os computadores), em uma quantidade  finita de tempo. Isto implica que cada uma das suas etapas precisam ser executadas em um tempo finito. Estas duas propriedades são importante e precisam ser garantidas para que uma rotina possa ser chamada de algoritmo. Quantidade finita de passos e quantidade finita de tempo para a execução.</p>

@@ -15,7 +15,8 @@ class Abstracao extends ConteudoGenerico {
         super(props)
         
         this.state = {
-            availablePages: 5
+            availablePages: 5,
+            openPage: null
         }
     }
 
@@ -26,7 +27,7 @@ class Abstracao extends ConteudoGenerico {
 
     /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
     carregarPaginaAtual = () => {
-        switch(this.state.paginaAberta){
+        switch (this.state.openPage){
             case "1":
                 return (
                     <Conceituacao />
@@ -44,7 +45,7 @@ class Abstracao extends ConteudoGenerico {
                 )
             case "4":
                 return (
-                    <Problemas1 idUnidade={this.props.id}/>
+                    <Problemas1 unitId={this.props.id}/>
                 )
             case "5":
                 return (

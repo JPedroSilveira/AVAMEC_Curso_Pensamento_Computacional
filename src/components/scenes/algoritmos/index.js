@@ -29,7 +29,7 @@ class Algoritmos extends ConteudoGenerico {
 
     /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
     carregarPaginaAtual = () => {
-        switch (this.state.paginaAberta) {
+        switch (this.state.openPage) {
             case "1":
                 return (
                     <ConceituacaoParte1/>
@@ -60,7 +60,7 @@ class Algoritmos extends ConteudoGenerico {
                 )
             case "8":
                 return (
-                    <ProblemasPropostos idUnidade={this.props.id}/>
+                    <ProblemasPropostos unitId={this.props.id}/>
                 )
             case "9":
                 return (

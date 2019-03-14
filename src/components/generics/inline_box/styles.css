@@ -1,3 +1,5 @@
-.container{
+.container-inline-box{
     display: inline-block;
+    width: 95%;
+    text-align: left;
 }

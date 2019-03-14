@@ -1,5 +1,5 @@
 import React from 'react'
-import CenterBox from '../../../generics/center-box'
+import CenterBox from '../../../generics/center_box'
 
 const Texto1 = () => (
     <div>

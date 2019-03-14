@@ -2,7 +2,7 @@ import React from 'react'
 import AvaMecApi from '../../../services/avaMecApi'
 import Pagination from '../pagination'
 import UnitController from '../unit_controller'
-import LocalStorageUtils from '../../../utils/LocalStorageUtils'
+import LocalStorageUtils from '../../../utils/localStorageUtils.js'
 import './styles.css'
 
 class ConteudoGenerico extends React.Component {

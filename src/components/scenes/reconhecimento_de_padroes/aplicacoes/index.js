@@ -1,5 +1,5 @@
 import React from 'react'
-import YouTubePlayer from '../../../generics/youtube-player'
+import YouTubePlayer from '../../../generics/youtube_player'
 
 const Aplicacoes = () => (
     <div>

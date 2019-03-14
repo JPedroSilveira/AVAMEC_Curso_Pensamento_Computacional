@@ -1,5 +1,10 @@
-.centralizado{
-    text-align: center;
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.unit{
+    width: 80%;
 }
 
 .aprc-container{

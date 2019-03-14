@@ -1,6 +1,5 @@
-import EventNames from '../constants/AvaMECApiEvents'
 import PaginationUtils from '../utils/paginationUtils'
-import AvaMECApiEvents from '../constants/AvaMECApiEvents';
+import AvaMecApiEvents from '../constants/avaMECApiConstants.js';
 
 class AvaMecApi {   
     constructor(){
@@ -8,107 +7,125 @@ class AvaMecApi {
     }
 
     getUnitConclusionData = (unit, callback) => {
-        window.addEventListener(EventNames.GET_UNIT_CONCLUSION_DATA, callback, false)
+        if (unit !== undefined) {
+            window.addEventListener(AvaMecApiEvents.GET_UNIT_CONCLUSION_DATA, callback, false)
 
-        this.api.obterDadosConclusaoUnidade(unit)
+            this.api.obterDadosConclusaoUnidade(unit)
+        }
     }
 
     closeGetUnitConclusionDataListener = callback => {
-        window.removeEventListener(EventNames.GET_UNIT_CONCLUSION_DATA, callback, false)
+        window.removeEventListener(AvaMecApiEvents.GET_UNIT_CONCLUSION_DATA, callback, false)
     }
     
     getCourseData = callback => {
-        window.addEventListener(EventNames.COURSE_DATA, callback, false)
+        window.addEventListener(AvaMecApiEvents.COURSE_DATA, callback, false)
 
         this.api.obterDadosCurso()  
     }
 
     closeGetCourseDataListener = callback => {
-        window.removeEventListener(EventNames.COURSE_DATA, callback, false)
+        window.removeEventListener(AvaMecApiEvents.COURSE_DATA, callback, false)
     }
 
-    changeUnit = unitId => {
-        this.api.obterUnidade(unitId)  
+    changeUnit = unit => {
+        if (unit !== undefined) {
+            this.api.obterUnidade(unit)  
+        }
     }
     
-    getIfNextUnitExist = (unit, callback) => {        
-        window.addEventListener(EventNames.GET_IF_NEXT_UNIT_EXIST, callback, false)
+    getIfNextUnitExist = (unit, callback) => {   
+        if (unit !== undefined) {
+            window.addEventListener(AvaMecApiEvents.GET_IF_NEXT_UNIT_EXIST, callback, false)
 
-        this.api.obterSeExisteUnidadeAnterior(unit)
+            this.api.obterSeExisteUnidadeAnterior(unit)
+        }     
     }
 
     closeGetIfNextUnitExistListener = callback => {
-        window.removeEventListener(EventNames.GET_IF_NEXT_UNIT_EXIST, callback, false)
+        window.removeEventListener(AvaMecApiEvents.GET_IF_NEXT_UNIT_EXIST, callback, false)
     }
 
     getIfPreviousUnitExist = (unit, callback) => {
-        window.addEventListener(EventNames.GET_IF_PREVIOUS_UNIT_EXIST, callback, false)
+        if (unit !== undefined) {
+            window.addEventListener(AvaMecApiEvents.GET_IF_PREVIOUS_UNIT_EXIST, callback, false)
 
-        this.api.obterSeExisteProximaUnidade(unit)
+            this.api.obterSeExisteProximaUnidade(unit)
+        }
     }
 
     closeGetIfPreviousUnitExistListener = callback => {
-        window.removeEventListener(EventNames.GET_IF_PREVIOUS_UNIT_EXIST, callback, false)
+        window.removeEventListener(AvaMecApiEvents.GET_IF_PREVIOUS_UNIT_EXIST, callback, false)
     }
 
     getPreviousUnit = unit => {
-        this.api.obterUnidadeAnterior(unit)
+        if (unit !== undefined) {
+            this.api.obterUnidadeAnterior(unit)
+        }
     }
 
     getNextUnit = unit => {
-        this.api.obterProximaUnidade(unit)
+        if (unit !== undefined) {
+            this.api.obterProximaUnidade(unit)
+        }
     }
 
     saveUnitProgress = (unit, percentage) => {
-        this.api.registrarPorcentagemConclusaoUnidade(unit, String(percentage))
-    }
-
-    getUnitProgress = (unit, callback) => {
-        window.addEventListener(EventNames.UNIT_PROGRESS, callback, false)
-
-        this.api.obterDadosConclusaoUnidade(unit, callback)
+        if (unit !== undefined) {
+            this.api.registrarPorcentagemConclusaoUnidade(unit, String(percentage))
+        }
     }
 
     closeGetUnitProgressListener = (callback) => {
-        window.removeEventListener(EventNames.UNIT_PROGRESS, callback, false)
+        window.removeEventListener(AvaMecApiEvents.UNIT_PROGRESS, callback, false)
     }
 
     saveLastPage = unit => {
-        this.api.registrarUltimaPaginaAcessada(unit, PaginationUtils.getPath())
+        if (unit !== undefined) {
+            this.api.registrarUltimaPaginaAcessada(unit, PaginationUtils.getPath())
+        }
     }
 
     getGenericData = (id, callback) => {
-        window.addEventListener(AvaMECApiEvents.GET_GENERIC_DATA, callback, false)
+        if (id !== undefined) {
+            window.addEventListener(AvaMecApiEvents.GET_GENERIC_DATA, callback, false)
 
-        this.api.obterDadosGenericos(id)
+            this.api.obterDadosGenericos(id)
+        }
     }
 
     closeGenericDataListener = (callback) => {
-        window.removeEventListener(AvaMECApiEvents.GET_GENERIC_DATA, callback, false)
+        window.removeEventListener(AvaMecApiEvents.GET_GENERIC_DATA, callback, false)
     }
 
     saveGenericData = (id, data) => {
-        this.api.registrarDadosGenericos(id, JSON.stringify(data))
+        if (id !== undefined) {
+            this.api.registrarDadosGenericos(id, JSON.stringify(data))
+        }
     }
 
     getActivity = (id, callback) => {
-        window.addEventListener(AvaMECApiEvents.GET_ACTIVITY, callback, false)
+        if (id !== undefined) {
+            window.addEventListener(AvaMecApiEvents.GET_ACTIVITY, callback, false)
 
-        this.api.obterRespostaAtividade(id)
+            this.api.obterRespostaAtividade(id)
+        }
     }
 
     closeGetActivity = (callback) => {
-        window.removeEventListener(AvaMECApiEvents.GET_ACTIVITY, callback, false)
+        window.removeEventListener(AvaMecApiEvents.GET_ACTIVITY, callback, false)
     }
 
     saveActivity = (activity, callback) => {
-        window.addEventListener(AvaMECApiEvents.REGISTER_ACTIVITY, callback, false)
+        if (activity !== undefined) {
+            window.addEventListener(AvaMecApiEvents.REGISTER_ACTIVITY, callback, false)
 
-        this.api.registrarRespostaAtividade(activity)
+            this.api.registrarRespostaAtividade(activity)
+        }
     }
 
     closeSaveActivity = (callback) => {
-        window.removeEventListener(AvaMECApiEvents.REGISTER_ACTIVITY, callback, false)
+        window.removeEventListener(AvaMecApiEvents.REGISTER_ACTIVITY, callback, false)
     }
 }
 

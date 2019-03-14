@@ -2,7 +2,7 @@ import React from 'react'
 import Menu from '../generics/menu'
 import Header from '../generics/header'
 import localStorageUtils from '../../utils/localStorageUtils'
-import unitIds from '../../constants/unitIds'
+import unitId from '../../constants/unitId'
 
 import ApresentacaoDoCurso from '../scenes/aprensetacao_do_curso'
 import IntroducaoAoPensamentoComputacional from '../scenes/introducao_ao_pensamento_computacional'
@@ -23,18 +23,18 @@ class Conteudo extends React.Component {
 
     LoadUnit = () => {
         switch (this.state.openUnitId){
-            case unitIds.APRESENTACAO_CURSO:
-                return (<ApresentacaoDoCurso id={unitIds.APRESENTACAO_CURSO} />)
-            case unitIds.INTRO_PENSAMENTO_COMP:
-                return (<IntroducaoAoPensamentoComputacional id={unitIds.INTRO_PENSAMENTO_COMP} />)
-            case unitIds.DECOMPOSICAO:
-                return (<Decomposicao id={unitIds.DECOMPOSICAO} />)
-            case unitIds.ABSTRACAO:
-                return (<Abstracao id={unitIds.ABSTRACAO} />)
-            case unitIds.RECONHECIMENTO_DE_PADROES:
-                return (<ReconhecimentoDePadroes id={unitIds.RECONHECIMENTO_DE_PADROES}/>)
-            case unitIds.ALGORITMOS:
-                return (<Algoritmos id={unitIds.ALGORITMOS}/>)
+            case unitId.APRESENTACAO_CURSO:
+                return (<ApresentacaoDoCurso id={unitId.APRESENTACAO_CURSO} />)
+            case unitId.INTRO_PENSAMENTO_COMP:
+                return (<IntroducaoAoPensamentoComputacional id={unitId.INTRO_PENSAMENTO_COMP} />)
+            case unitId.DECOMPOSICAO:
+                return (<Decomposicao id={unitId.DECOMPOSICAO} />)
+            case unitId.ABSTRACAO:
+                return (<Abstracao id={unitId.ABSTRACAO} />)
+            case unitId.RECONHECIMENTO_DE_PADROES:
+                return (<ReconhecimentoDePadroes id={unitId.RECONHECIMENTO_DE_PADROES}/>)
+            case unitId.ALGORITMOS:
+                return (<Algoritmos id={unitId.ALGORITMOS}/>)
             default:
                 return null
         }  
@@ -45,7 +45,11 @@ class Conteudo extends React.Component {
             <div>
                 <Menu/>
                 <Header/>
-                {this.LoadUnit()}
+                <div className="content">
+                    <div className="unit">
+                        {this.LoadUnit()}
+                    </div>
+                </div>
             </div>
         )
     }

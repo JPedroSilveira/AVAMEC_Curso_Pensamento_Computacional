@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactPaginate from 'react-paginate'
-import LocalStorageUtils from '../../../utils/LocalStorageUtils'
+import LocalStorageUtils from '../../../utils/localStorageUtils.js'
 import PaginationConstants from '../../../constants/paginationConstants'
 import './styles.css'
 

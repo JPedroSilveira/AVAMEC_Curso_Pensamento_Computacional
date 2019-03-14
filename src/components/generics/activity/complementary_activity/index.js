@@ -4,7 +4,7 @@ import BasicButton from '../../buttons/basic_button'
 import AddButton from '../../buttons/add_button'
 import DeleteButton from '../../buttons/delete_button'
 import BaseActivity from '../baseActivity'
-import CenterBox from '../../center-box'
+import CenterBox from '../../center_box'
 
 import ActivityConstants from '../../../../constants/activityConstants'
 import UnitState from '../../../../constants/unitState'
@@ -35,7 +35,6 @@ class ComplementaryActivity extends BaseActivity {
 
         this.state = {
             unitState: UnitState.NOT_COMPLETED,
-            activity: null,
             answersAmount: 0,
             ApiLoadedAnswers: [],
             activity: this.generateEmptyActivity()
@@ -83,7 +82,7 @@ class ComplementaryActivity extends BaseActivity {
                     if (question.maxAnswerLength === undefined || question.maxAnswerLength === 0) {
                         throw Error("Property \"question.maxAnswerLength\" of index question " + index + " of list \"activity.questions\" is empty!")
                     } else {
-                        asnwerLengthSum += questao.maxAnswerLength
+                        asnwerLengthSum += question.maxAnswerLength
                     }
                 })
 
@@ -109,7 +108,7 @@ class ComplementaryActivity extends BaseActivity {
             && !this.wasLoaded(info.detail.data[0].chave)
 
         if (canUpdateAnswer) { 
-            let data = detail.data[0]
+            let data = info.detail.data[0]
 
             let savedExample = JSON.parse(data.valor)
 
@@ -178,7 +177,7 @@ class ComplementaryActivity extends BaseActivity {
             questions.push({
                 id: index,
                 answer: "",
-                title: questao.titulo,
+                title: question.titulo,
                 maxAnswerLength: question.maxAnswerLength
             })
         })
@@ -187,9 +186,9 @@ class ComplementaryActivity extends BaseActivity {
     }
 
     updateAnswersAmount = () => {
-        this.setState(
-            answersAmount = this.state.activity.examples.filter(example => example.show).length
-        )
+        this.setState({
+            answersAmount: this.state.activity.examples.filter(example => example.show).length
+        })
     }
 
     saveAnswers = () => {

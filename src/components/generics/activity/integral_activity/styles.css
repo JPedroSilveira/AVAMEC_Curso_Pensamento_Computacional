@@ -1,15 +1,12 @@
-.container{
+.container-integral-activity{
     margin-bottom: 5em;
+    text-align: left;
 }
 
 .activity-statement{
     margin-top: 3em;
     margin-bottom: 2em;
     font-weight: 700;
-}
-
-.options-box{
-    display: inline-block;
 }
 
 .hint{

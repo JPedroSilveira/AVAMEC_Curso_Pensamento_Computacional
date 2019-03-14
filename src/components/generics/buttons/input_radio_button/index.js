@@ -2,10 +2,6 @@ import React from 'react'
 import './styles.css'
 
 class InputRadioButton extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return (
             <label className="radio-label" id={this.props.id} key={this.props.key}>

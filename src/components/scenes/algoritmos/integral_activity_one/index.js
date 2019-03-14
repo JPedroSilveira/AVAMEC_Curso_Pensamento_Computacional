@@ -8,18 +8,18 @@ class IntegralActivityOne extends React.Component {
     constructor(props) {
         super(props)
 
-        this.validarPropriedades()
+        this.validateProps()
     }
 
-    validarPropriedades = () => {
-        if (this.props.idUnidade === undefined) {
-            throw Error("Propriedade idUnidade não passada como parâmetro!")
+    validateProps = () => {
+        if (this.props.unitId === undefined) {
+            throw Error("Property 'unitId' can't be undefined!")
         }
     }
 
     getActivity = () => {
         return {
-            unitId: this.props.idUnidade,
+            unitId: this.props.unitId,
             id: "atividade_1_algorithms",
             statement: "Considere os procedimentos P01 a P05 a seguir. Sobre cada um deles fazemos algumas afirmações. Identifique a que parece menos apropriada para aquele procedimento específico.",
             questions: [

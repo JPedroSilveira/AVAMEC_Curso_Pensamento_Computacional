@@ -22,7 +22,7 @@ class ApresentacaoDoCurso extends ConteudoGenerico {
     }
 
     renderPage = () => {
-        switch(this.state.paginaAberta){
+        switch(this.state.openPage){
             case "1":
                 return (
                     <Texto1 />

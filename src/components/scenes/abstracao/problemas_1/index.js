@@ -12,14 +12,14 @@ class Problemas extends React.Component {
     }
 
     validarPropriedades = () => {
-        if (this.props.idUnidade === undefined) {
-            throw Error("Propriedade idUnidade não passada como parâmetro!")
+        if (this.props.unitId === undefined) {
+            throw Error("Property 'unitId' can't be undefined!")
         }
     }
 
     montarProblemas = () => {
         return {
-            idUnidade: this.props.idUnidade,
+            idUnidade: this.props.unitId,
             problemas: [
                 {
                     id: "problema_um_abstracao",

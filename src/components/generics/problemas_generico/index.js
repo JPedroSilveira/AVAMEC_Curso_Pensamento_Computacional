@@ -1,11 +1,11 @@
 import React from 'react'
 
-import BasicButton from '../basic_button'
-import CenterBox from '../center-box'
+import BasicButton from '../buttons/basic_button'
+import CenterBox from '../center_box'
 
 import ReactHtmlParser from 'react-html-parser'
 
-import AtividadeGenerica from '../atividade_generica'
+import BaseActivity from '../activity/baseActivity'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETO atividade do tipo:
     atividade: um objetivo com os atributos:
@@ -20,7 +20,7 @@ import AtividadeGenerica from '../atividade_generica'
 const QUANTIDADE_LETRAS_POR_LINHA = 180
 const SEPARADOR_ID = "_sep%ger_"
 
-class ProblemasGenerico extends AtividadeGenerica {
+class ProblemasGenerico extends BaseActivity {
     constructor(props) {
         super(props)
 
@@ -34,8 +34,7 @@ class ProblemasGenerico extends AtividadeGenerica {
         /*Obtem e carrega as respostas da atividade caso o usuário já tenha as respondido.*/
         this.obterRespostas()
 
-        /*Descobre se a unidade já foi concluída, permitindo ou não uma nova tentativa nas atividades.*/
-        this.obterDadosConclusaoUnidade()
+        this.getUnitConclusionData()
     }
 
     /*Válida se todas as propriedades necessárias foram passadas.*/
