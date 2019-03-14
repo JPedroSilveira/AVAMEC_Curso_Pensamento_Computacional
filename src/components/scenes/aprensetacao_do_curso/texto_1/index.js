@@ -1,4 +1,5 @@
 import React from 'react'
+import CenterBox from '../../../generics/center-box'
 
 const Texto1 = () => (
     <div>
@@ -8,7 +9,7 @@ const Texto1 = () => (
         <p>A aplicação prática desses conhecimentos pode ser observada tanto nos problemas básicos do cotidiano, como por exemplo no planejamento das compras de uma família  quanto na resolução de problemas em maior escala, como na concepção de um sistema escolar, em uma rede de abastecimento, na economia de uma país, na elaboração de um sistema de prevenção e erradicação de epidemias  ou no envio de uma nave espacial para a lua.   </p>
         <p>No Quadro 1  apresentamos uma situação que pode acontecer com qualquer pessoa que resolve fazer compras em um supermercado sem tomar as devidas  precauções.</p>
         <h2>QUADRO 1</h2>
-        <div className="box">
+        <CenterBox>
             <div className="boxed">
                 <h3>UMA IDA NÃO PLANEJADA AO SUPERMERCADO</h3>
                 <p>O Sr. José saiu do trabalho por volta das 19 horas. O dia foi longo, muitas reuniões, muitos processos para despachar, muito clientes pra atender, um dia cansativo.  À noite ainda pretendia concluir a leitura de alguns processos que deveria despachar no dia seguinte.</p>
@@ -17,7 +18,7 @@ const Texto1 = () => (
                 <p>De onde estava o Sr. José começou a percorrer para a direita, todas as gôndolas do supermercado, tentando identificar produtos que poderiam lhe fazer falta. Pegou um aqui, outro ali, o carrinho enchendo, o tempo passando e de repente nosso amigo percebeu que já tinha passado uma hora, e isto já estava indo além do tempo que tinha imaginado. Resolveu dirigir para o caixa. Entretanto, pensou, “já gastei muito tempo e não vi as demais prateleiras. Pode ser que algo importante tenho sido esquecido” e assim, resolveu percorrer as que haviam faltado. Ao final, o Sr. José dirigiu-se para o caixa, pagou a conta e foi pra casa com suas compras.</p>
                 <p>Quando terminou de guardar as compras eram 21:30hs e ainda não havia jantado e ainda pretendia trabalhar um pouco. Sobre a mesa da cozinha, algumas compras que não consegui guardar na geladeira, por falta de espaço. Observava ainda que alguns itens importantes, até mesmo imprescindíveis para o resto da semana, não haviam sido comprados. Itens que tinha em boa quantidade em casa foram também comprados. Bom, o mais difícil mesmo era guardar os perecíveis que não couberam no refrigerador.</p>
             </div>
-        </div>
+        </CenterBox>
     </div>
 )
    

@@ -1,4 +1,5 @@
 import React from 'react'
+import CenterBox from '../../../generics/center-box'
 
 const Texto1 = () => (
     <div>
@@ -18,7 +19,7 @@ const Texto1 = () => (
             <strong> O fazendeiro, o lobo, a ovelha e a caixa de repolho. </strong>
         </p>
         <h2>QUADRO 1</h2>
-        <div className="box">
+        <CenterBox>
             <div className="boxed">
                 <h3>O FAZENDEIRO, O LOBO, A OVELHA E A CAIXA DE REPOLHO</h3>
                 <p>
@@ -41,7 +42,7 @@ const Texto1 = () => (
                     por seu predador?
                 </p>
             </div>
-        </div>
+        </CenterBox>
         <p>Se quiser tentar um pouco, entre no endereço: <a href="http://www.plastelina.net/game1.html" target="_blank" rel="nofollow noopener noreferrer">http://www.plastelina.net/game1.html</a></p>
         <p>Se quiser ver uma animação, clique no endereço: <a href="https://youtu.be/WmQCcBj_ROQ" target="_blank" rel="nofollow noopener noreferrer">https://youtu.be/WmQCcBj_ROQ</a></p>
         <p>Para uma discussão pedagógica deste problema, recomendamos a leitura do texto “Piaget e nossa Inteligência” do professor Lino Macedo.</p>

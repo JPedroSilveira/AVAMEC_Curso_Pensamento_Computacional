@@ -3,7 +3,7 @@ import ConteudoGenerico from '../../generics/conteudo_generico'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
 import AssuntosCorrelatos from './assuntos_correlatos'
-import AtividadeAvaliativa1 from './atividade_avaliativa_1'
+import IntegralActivityOne from './integral_activity_one'
 import Problemas1 from './problemas_1'
 import ComplementaryActivityOne from './complementary_activity_one'
 
@@ -39,7 +39,7 @@ class Abstracao extends ConteudoGenerico {
                 return (
                     <div>
                         <AssuntosCorrelatos />
-                        <AtividadeAvaliativa1 idUnidade={this.props.id}/>
+                        <IntegralActivityOne unitId={this.props.id}/>
                     </div>
                 )
             case "4":

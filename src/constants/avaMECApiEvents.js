@@ -4,5 +4,7 @@ export default {
     GET_IF_NEXT_UNIT_EXIST: 'evObtemSeExisteProximaUnidade',
     UNIT_PROGRESS: 'evObtemDadosConclusaoUnidade',
     GET_UNIT_CONCLUSION_DATA: 'evObtemDadosConclusaoUnidade',
-    GET_GENERIC_DATA: 'evObtemDadosGenericos'
+    GET_GENERIC_DATA: 'evObtemDadosGenericos',
+    GET_ACTIVITY: 'evObtemDadosRespostaAtividade',
+    REGISTER_ACTIVITY: 'evRegistraRespostaAtividade'
 }

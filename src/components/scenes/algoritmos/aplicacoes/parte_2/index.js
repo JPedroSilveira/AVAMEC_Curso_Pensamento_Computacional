@@ -1,12 +1,13 @@
 import React from 'react'
+import CenterBox from '../../../../generics/center-box'
 import Alg08 from '../../../../../images/alg_08.png'
 
 const AplicacoesParte2 = () => (
     <div>
         <h3>PREPARANDO O ALMOÇO DE DOMINGO</h3>
-        <div className="box">
-            <div className="boxed algoritmos bg-orange">
-                <p className="titulo">ALG 07 - Preparando o almoço de domingo</p>
+        <CenterBox>
+            <div className="boxed algorithms bg-orange">
+                <p className="title">ALG 07 - Preparando o almoço de domingo</p>
                 <div className="nivel-1">
                     <span className="textdarkgreen">Salmão assado com molho parisiense acompanhado de risoto de alho poró:</span><br/>
                     <div className="subnivel">
@@ -17,7 +18,7 @@ const AplicacoesParte2 = () => (
                             <li>Sirva o almoço</li>
                         </ol>
                     </div>
-                    <p className="titulo">ALG 07.1 - Preparando o salmão</p>
+                    <p className="title">ALG 07.1 - Preparando o salmão</p>
                     <div className="subnivel">
                         <ol>
                             <li>Obtenha um kilo de filé de salmão;</li>
@@ -30,7 +31,7 @@ const AplicacoesParte2 = () => (
                             <li>Leve o prato ao forno de deixe assar por trinta minutos.</li>
                         </ol>
                     </div>
-                    <p className="titulo">ALG 07.2 - Preparando o molho</p>
+                    <p className="title">ALG 07.2 - Preparando o molho</p>
                     <div className="subnivel">
                         <ol>
                             <li>Corte uma cebola média bem picada;</li>
@@ -46,15 +47,15 @@ const AplicacoesParte2 = () => (
                     </div>
 			    </div>										
 		    </div>
-        </div>
+        </CenterBox>
         <h3>MESCLAGEM DE DUAS LISTAS ORDENADAS</h3>
         <p>Suponhamos que temos duas listas ordenadas de cilindros de recipientes cilíndricos de mesmo volume, cada um deles com um conteúdo diferente os que os faz ter pesos diferentes. começando pelo cilindros mais pesado e terminado pelo cilindro mais leve. Como podemos obter uma lista totalmente ordenada com todos os cilindros das duas listas?</p>
         <div className="imagem-centralizada">
             <img src={Alg08} alt="Representação de três listas ordenadas de números em ordem decrescente" />
         </div>
-        <div className="box">
-            <div className="boxed algoritmos bg-orange">
-                <p className="titulo">ALG 08 - Mesclagem de duas listas ordenadas</p>
+        <CenterBox>
+            <div className="boxed algorithms bg-orange">
+                <p className="title">ALG 08 - Mesclagem de duas listas ordenadas</p>
                 <div className="nivel-1">
                     <span className="textdarkgreen">Vamos chamar de  L1 e L2 as duas listas ordenadas e de L3 a lista a ser construída, com  os elementos de L1 e L2, garantindo que os elementos de L3 também estarão ordenados. A lista L3 inicialmente estará sem elementos.</span><br/>
                     <div className="subnivel">
@@ -79,7 +80,7 @@ const AplicacoesParte2 = () => (
                     </div>
                 </div>
             </div>
-        </div>
+        </CenterBox>
     </div>
 )
 

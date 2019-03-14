@@ -1,12 +1,4 @@
-.atividadeAvaliativa{
-    margin-bottom: 5em;
-}
-
-.optionRadio:hover{
-    cursor: pointer;
-}
-
-.radioLabel{
+.radio-label{
     display: block;
     position: relative;
     padding-left: 35px;
@@ -19,8 +11,13 @@
     user-select: none;
 }
 
+.radio-label:hover{
+    color:rgb(245, 0, 87);
+    cursor: pointer;
+}
+
 /* Hide the browser's default radio button .*/
-.radioLabel input{
+.radio-label input{
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -38,22 +35,6 @@
   border: 3px solid #eee;
 }
 
-.radioLabel:hover{
-    color:rgb(245, 0, 87);
-    cursor: pointer;
-}
-
-/* On mouse-over, add a grey background color .*/
-.radioLabel:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the radio button is checked, add a blue background .*/
-.radioLabel input:checked ~ .checkmark {
-  background-color: white;
-  border-color: rgb(245, 0, 87);
-}
-
 /* Create the indicator (the dot/circle - hidden when not checked) .*/
 .checkmark:after {
   content: "";
@@ -61,13 +42,24 @@
   display: none;
 }
 
- /* Show the indicator (dot/circle) when checked .*/
-.radioLabel input:checked ~ .checkmark:after {
+/* On mouse-over, add a grey background color .*/
+.radio-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background .*/
+.radio-label input:checked ~ .checkmark {
+  background-color: white;
+  border-color: rgb(245, 0, 87);
+}
+
+/* Show the indicator (dot/circle) when checked .*/
+.radio-label input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) .*/
-.radioLabel .checkmark:after {
+.radio-label .checkmark:after {
  	top: 4px;
 	left: 4px;
 	width: 14px;
@@ -76,27 +68,6 @@
 	background: rgb(245, 0, 87);
 }
 
-.options-box{
-    display: inline-block;
-}
-
-.option{
-    margin-top: 1em;
-}
-
-.hint{
-    border: 0.05em solid;
-    border-color: #000000;
-    padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: whitesmoke;
-}
-
-.hint.wrong{
-    background-color: rgb(255, 94, 36);
-}
-
-.hint.right{
-    background-color: green;
+.option-radio:hover{
+    cursor: pointer;
 }

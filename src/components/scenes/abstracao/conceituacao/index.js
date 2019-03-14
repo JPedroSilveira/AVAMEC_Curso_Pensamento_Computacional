@@ -1,4 +1,5 @@
 import React from 'react'
+import CenterBox from '../../../generics/center-box'
 
 const Conceituacao = () => (
     <div>
@@ -8,11 +9,11 @@ const Conceituacao = () => (
 
 
         <h3>Quadro 1: Conceituando abstração</h3>
-        <div className="box">
+        <CenterBox>
             <div className="boxed quadro">
                 <p>Abstração é uma ferramenta conceitual importantíssima na organização da realidade, segundo um determinado interesse. Denominamos de abstração o processo de selecionar os aspectos que nos interessa considerar para satisfazer um determinado objetivo, ocultando os detalhes irrelevantes para compreendê-lo; </p>
             </div>
-        </div>
+        </CenterBox>
     </div>
 )
 

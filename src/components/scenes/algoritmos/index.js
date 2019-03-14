@@ -6,7 +6,7 @@ import ConceituacaoParte3 from './conceituacao/parte_3'
 import AplicacoesParte1 from './aplicacoes/parte_1'
 import AplicacoesParte2 from './aplicacoes/parte_2'
 import Recomendacoes from './recomendacoes'
-import AtividadeAvaliativa1 from './atividade_avaliativa_1'
+import IntegralActivityOne from './integral_activity_one'
 import ProblemasPropostos from './problemas_propostos'
 import TopicosAvancados from './topicos_avancados'
 
@@ -56,7 +56,7 @@ class Algoritmos extends ConteudoGenerico {
                 )
             case "7":
                 return (
-                    <AtividadeAvaliativa1 idUnidade={this.props.id}/>
+                    <IntegralActivityOne unitId={this.props.id}/>
                 )
             case "8":
                 return (

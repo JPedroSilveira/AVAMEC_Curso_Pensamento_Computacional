@@ -1,11 +1,18 @@
 import React from 'react'
+
 import BasicButton from '../../buttons/basic_button'
 import AddButton from '../../buttons/add_button'
 import DeleteButton from '../../buttons/delete_button'
 import BaseActivity from '../baseActivity'
+import CenterBox from '../../center-box'
+
 import ActivityConstants from '../../../../constants/activityConstants'
+import UnitState from '../../../../constants/unitState'
+
 import AvaMecApi from '../../../../services/avaMecApi'
+
 import AvaMecUtils from '../../../../utils/avaMecUtils'
+
 import './styles.css'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETO atividade do tipo:
@@ -27,7 +34,7 @@ class ComplementaryActivity extends BaseActivity {
         this.validateProps()
 
         this.state = {
-            unitComplete: false,
+            unitState: UnitState.NOT_COMPLETED,
             activity: null,
             answersAmount: 0,
             ApiLoadedAnswers: [],
@@ -301,13 +308,13 @@ class ComplementaryActivity extends BaseActivity {
     renderExample = (example, key) => {
         if(example.show) {
             return (
-                <div className="box" key={key}>
+                <CenterBox key={key}>
                     <div className="algorithms">
                         {this.renderDeleteButton(example)}
                         <h4>EXEMPLO {example.number}</h4>
                         {this.renderQuestions(example.number, example.questions)}
                     </div>
-                </div>
+                </CenterBox>
             )
         }
     }

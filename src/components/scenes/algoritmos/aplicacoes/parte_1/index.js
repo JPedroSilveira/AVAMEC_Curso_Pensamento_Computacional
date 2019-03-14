@@ -1,13 +1,14 @@
 import React from 'react'
+import CenterBox from '../../../../generics/center-box'
 
 const AplicacoesParte1 = () => (
     <div>
         <h3>APLICAÇÕES</h3>
         <p>Na seção anterior apresentamos um algoritmo específico para introduzir os conceitos básicos da construção de algoritmo. Neste ponto apresentamos alguns outros relacionados com a vida cotidiana. A intenção é criar uma familiaridade com o conceito, buscando a desmistificar o clima de tecnicismo que envolve algo tão comum em nossas vidas.									</p>
         <h3>SUBINDO ESCADAS</h3>
-        <div className="box">
-            <div className="boxed algoritmos bg-orange">
-                <p className="titulo">ALG 05 - Subir uma escada</p>
+        <CenterBox>
+            <div className="boxed algorithms bg-orange">
+                <p className="title">ALG 05 - Subir uma escada</p>
                 <div className="subnivel">
                     <ol>
                         <li><span className="textred">Enquanto</span> houver degrau à sua frente <span className="textred">faça</span>
@@ -18,11 +19,11 @@ const AplicacoesParte1 = () => (
                     </ol>
                 </div>
             </div>
-		</div>
+		</CenterBox>
         <h3>TROCANDO UM PNEU DO CARRO</h3>
-        <div className="box">
-            <div className="boxed algoritmos bg-orange">
-                <p className="titulo">ALG 06 - Trocando um pneu</p>
+        <CenterBox>
+            <div className="boxed algorithms bg-orange">
+                <p className="title">ALG 06 - Trocando um pneu</p>
                 <div className="subnivel">
                     <ol>
                         <li>Estacione o carro junto à margem da via;</li>
@@ -48,7 +49,7 @@ const AplicacoesParte1 = () => (
                     </ol>
                 </div>
             </div>
-        </div>
+        </CenterBox>
     </div>
 )
 

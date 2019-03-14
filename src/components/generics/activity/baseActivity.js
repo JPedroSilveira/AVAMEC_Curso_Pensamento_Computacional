@@ -1,5 +1,6 @@
 import React from 'react'
 import AvaMecApi from '../../../services/avaMecApi'
+import UnitState from '../../../constants/unitState'
 
 class BaseActivity extends React.Component {
 
@@ -11,7 +12,7 @@ class BaseActivity extends React.Component {
         if (info.detail.status === 200) {
             if (info.detail.data.concluido) {
                 this.setState({
-                    unitComplete: true
+                    unitState: UnitState.COMPLETED
                 })
             }
         }

@@ -90,6 +90,26 @@ class AvaMecApi {
     saveGenericData = (id, data) => {
         this.api.registrarDadosGenericos(id, JSON.stringify(data))
     }
+
+    getActivity = (id, callback) => {
+        window.addEventListener(AvaMECApiEvents.GET_ACTIVITY, callback, false)
+
+        this.api.obterRespostaAtividade(id)
+    }
+
+    closeGetActivity = (callback) => {
+        window.removeEventListener(AvaMECApiEvents.GET_ACTIVITY, callback, false)
+    }
+
+    saveActivity = (activity, callback) => {
+        window.addEventListener(AvaMECApiEvents.REGISTER_ACTIVITY, callback, false)
+
+        this.api.registrarRespostaAtividade(activity)
+    }
+
+    closeSaveActivity = (callback) => {
+        window.removeEventListener(AvaMECApiEvents.REGISTER_ACTIVITY, callback, false)
+    }
 }
 
 const avaMecApi = new AvaMecApi()

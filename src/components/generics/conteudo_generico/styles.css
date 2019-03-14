@@ -46,29 +46,8 @@ a{
     margin-top: 1em;
 }
 
-.boxed, .box-alg-question{
+.boxed{
     border: 0.05em solid #000000;
-}
-
-.box-alg-question{
-    width: 100%;
-    text-align: left;
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
-    margin-top: 1em;
-}
-
-.box-alg-question .head{
-    background-color: rgba(144, 144, 144, 0.075);
-    border-bottom: 0.05em solid #000000;
-    padding-top: 0.3em;
-    padding-bottom: 0.5em;
-}
-
-.box-alg-question .head .titulo{
-    font-weight: 700;
-    color: rgb(77, 132, 4);
-    padding-left: 1em;
 }
 
 .boxed{
@@ -77,7 +56,7 @@ a{
     padding: 2em;
 }
 
-.boxed.algoritmos{
+.boxed.algorithm{
     background-color: rgb(241, 239, 198);
     margin-bottom: 2em;
     padding-top: 1em;
@@ -85,30 +64,30 @@ a{
     text-align: left;
 }
 
-.boxed.algoritmos .nivel-1, .box-alg-question .nivel-1{
+.boxed.algorithm .nivel-1{
     padding-left: 2em;
 }
 
-.boxed.algoritmos .subnivel, .box-alg-question .subnivel{
+.boxed.algorithm .subnivel{
     padding-left: 2em;
     padding-top: 0.3em;
     color: #585858;
 }
 
-.boxed.algoritmos .subnivel li, .box-alg-question .subnivel li{
+.boxed.algorithm .subnivel li{
     padding-bottom: 0.3em;
     color: #585858;
 }
 
-.boxed.algoritmos .subnivel .sublista, .box-alg-question .subnivel .sublista{
+.boxed.algorithm .subnivel .sublista{
     list-style-type: none;
 }
 
-.boxed.algoritmos.bg-orange{
+.boxed.algorithm.bg-orange{
     background-color: rgb(249, 203, 156);
 }
 
-.boxed.algoritmos .titulo{
+.boxed.algorithm .title{
     text-align: center;
     font-weight: 700;
 }
@@ -131,7 +110,7 @@ a{
     text-align: left;
 }
 
-.boxed.problema textarea{
+.boxed.problem textarea{
     width: 100%;
     font-size: 1em;
     font-family: 'Source Sans Pro', sans-serif;
@@ -141,10 +120,6 @@ a{
 
 .span-referencia{
     color:red;
-}
-
-#nota{
-    margin-top: 1em;
 }
 
 .imagem-centralizada {
@@ -189,12 +164,6 @@ a{
 
 .quadro{
     background-color:rgb(207, 226, 243)
-}
-
-.enunciado-atividade{
-    margin-top: 3em;
-    margin-bottom: 2em;
-    font-weight: 700;
 }
 
 .negrito{

@@ -2,9 +2,9 @@ import React from 'react'
 import ConteudoGenerico from '../../generics/conteudo_generico'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
-import AtividadeAvaliativa1 from './atividade_avaliativa_1'
+import IntegralActivityOne from './integral_activity_one'
 import Problemas1 from './problemas_1'
-import AtividadeComplementar1 from './atividade_complementar_1'
+import ComplementaryActivityOne from './complementary_activity_one'
 import AssuntosCorrelatos from './assuntos_correlatos'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -37,7 +37,7 @@ class ReconhecimentoDePadroes extends ConteudoGenerico {
                 )
             case "3":
                 return (
-                    <AtividadeAvaliativa1 idUnidade={this.props.id} />
+                    <IntegralActivityOne unitId={this.props.id} />
                 )
             case "4":
                 return (
@@ -45,7 +45,7 @@ class ReconhecimentoDePadroes extends ConteudoGenerico {
                 )
             case "5":
                 return (
-                    <AtividadeComplementar1 idUnidade={this.props.id} />
+                    <ComplementaryActivityOne unitId={this.props.id} />
                 )
             case "6":
                 return (

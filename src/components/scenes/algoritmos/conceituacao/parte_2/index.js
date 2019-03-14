@@ -1,12 +1,13 @@
 import React from 'react'
+import CenterBox from '../../../../generics/center-box'
 
 const ConceituacaoParte2 = () => (
     <div>
         <h3>TOMANDO DECISÕES</h3>
         <p>No <strong>Algoritmo 01</strong>, não precisamos tomar nenhuma decisão para avançar para o próximo passo. Isso parece estranho para nós humanos, que passamos o tempo todo tomando decisões, muitas vezes, sobre coisas simples, mas, de vez em quando, sobre coisas de maior complexidade. Por exemplo, é bem comum que, ao ir à padaria, podemos ter em mente comprar um tipo de pão específico, mas, chegando lá, podemos não encontrá-lo e então escolhemos um outro. Façamos de conta que a padaria que frequentamos só venda dois tipos de pão: “pão  francês comum”  e “pão francês integral”. Podemos ainda supor que ela tenha sempre um deles e que a nossa preferência seja pelo “pão francês integral”. Vamos reescrever nosso algoritmo, apresentando uma nova versão, no quadro a seguir.</p>
         <p>Nessa nova versão podemos observar que a operação “pegar os pães” ganhou um detalhamento, considerando que, de fato, a nova ação a ser realizada depende da disponibilidade do tipo de pão na padaria que estamos visitando. Isto precisa ser observado por nosso agente computacional, introduzindo-se o que costumamos chamar de uma <strong>"seleção"</strong>. Nesse caso estamos ilustrando com uma seleção básica, que considera apenas duas possibilidades, ou seja, há uma pergunta a ser respondida cuja resposta só pode ser <strong>"verdadeiro"</strong> ou <strong>"falso"</strong>. </p>
-        <div className="box">
-            <div className="boxed algoritmos">
+        <CenterBox>
+            <div className="boxed algorithms">
                 <p className="centralizado"><strong>Algoritmo 02 <br/> Iniciação - Do acordar até chegar no local de trabalho </strong> </p>
                 <div className="nivel-1">
                     <span className="textdarkgreen">Após o barulho do despertador:</span>
@@ -41,12 +42,12 @@ const ConceituacaoParte2 = () => (
                     </div>
                 </div>
 			</div>
-        </div>
+        </CenterBox>
         <p>No momento da execução do Passo 8 do algoritmo, se a pergunta feita pelo “agente” tiver resultado verdadeiro, a ação precedida pelo termo <strong>"então"</strong>  será realizada e, se a resposta à pergunta tiver como resposta <strong>"falso"</strong>, a ação precedida pelo termo <strong>"senão"</strong> será realizada.</p>
         <h3>REFINAMENTOS SUCESSIVOS</h3>
         <p>No <strong>Algoritmo 02</strong>, a atividade “pegar os pães” do <strong>Algoritmo 01</strong> foi detalhada a partir da criação de uma definição, indicada aqui pelo símbolo da igualdade (“=”):</p>
-        <div className="box">
-            <div className="boxed algoritmos">
+        <CenterBox>
+            <div className="boxed algorithms">
                 <div className="subnivel">
                     8.<span className="textblue"> pegar os pães =</span>
                     <div className="subnivel">
@@ -58,7 +59,7 @@ const ConceituacaoParte2 = () => (
                     </div>
                 </div>
             </div>
-        </div>
+        </CenterBox>
         <p>Essa ação que acabamos de realizar, ou seja, detalhar uma determinada atividade, é conhecida no contexto da escrita de algoritmos por “refinamento”. Essa é uma técnica muito importante do ponto de vista do Pensamento Computacional, pois oferece ao autor de algoritmos a possibilidade de ir acrescentando detalhes progressivamente. Com isso podemos, em cada momento do processo de elaboração, dosar o nível da preocupação com detalhes. </p>
         <p>É importante observar que essa técnica, como todas as demais que exploraremos neste curso, é apropriada à elaboração de qualquer obra, seja ela  técnica, literária, gráfica, científica, etc. </p>
     </div>

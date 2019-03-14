@@ -1,6 +1,10 @@
 import React from 'react'
+
 import BasicButton from '../basic_button'
-import ReactHtmlParser from 'react-html-parser';
+import CenterBox from '../center-box'
+
+import ReactHtmlParser from 'react-html-parser'
+
 import AtividadeGenerica from '../atividade_generica'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETO atividade do tipo:
@@ -161,8 +165,8 @@ class ProblemasGenerico extends AtividadeGenerica {
             <div>
                 {problemas.map((problema, key) => {
                         return (
-                            <div className="box" key={key}>
-                                <div className="boxed problema">
+                            <CenterBox key={key}>
+                                <div className="boxed problem">
                                     <strong>{problema.titulo}.</strong> {ReactHtmlParser(problema.texto)}
                                     <br /><br />
                                     {ReactHtmlParser(problema.subtitulo)}
@@ -173,7 +177,7 @@ class ProblemasGenerico extends AtividadeGenerica {
                                         cols="120"
                                         rows={Math.round(problema.tamanhoMaximoResposta / QUANTIDADE_LETRAS_POR_LINHA)} />
                                 </div>
-                            </div>
+                            </CenterBox>
                         )
                     })
                 }
