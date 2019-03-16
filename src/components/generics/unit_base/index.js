@@ -5,7 +5,7 @@ import UnitController from '../unit_controller'
 import LocalStorageUtils from '../../../utils/localStorageUtils.js'
 import './styles.css'
 
-class ConteudoGenerico extends React.Component {
+class UnitBase extends React.Component {
     componentDidMount() {
         this.setState({
             openPage: LocalStorageUtils.getOpenPage()
@@ -16,7 +16,7 @@ class ConteudoGenerico extends React.Component {
 
     validateProperties = () => {
         if(this.props.id === undefined || this.props.id === ""){
-            throw Error("error in property \"id\"!")
+            throw Error("Error in property \"id\", this value can't be undefined or empty!")
         }
     }
 
@@ -25,7 +25,6 @@ class ConteudoGenerico extends React.Component {
             openPage: LocalStorageUtils.getOpenPage()
         })
 
-        /*PageUp on update*/
         window.scrollTo(0, 0)
 
         AvaMecApi.saveLastPage(this.props.id)
@@ -47,4 +46,4 @@ class ConteudoGenerico extends React.Component {
     }
 }
 
-export default ConteudoGenerico
+export default UnitBase

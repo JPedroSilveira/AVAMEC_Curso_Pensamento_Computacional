@@ -1,5 +1,5 @@
 import React from 'react'
-import ConteudoGenerico from '../../generics/conteudo_generico'
+import UnitBase from '../../generics/unit_base'
 import ConceituacaoParte1 from './conceituacao/parte_1'
 import ConceituacaoParte2 from './conceituacao/parte_2'
 import ConceituacaoParte3 from './conceituacao/parte_3'
@@ -7,13 +7,13 @@ import AplicacoesParte1 from './aplicacoes/parte_1'
 import AplicacoesParte2 from './aplicacoes/parte_2'
 import Recomendacoes from './recomendacoes'
 import IntegralActivityOne from './integral_activity_one'
-import ProblemasPropostos from './problemas_propostos'
+import ProblemsOne from './problems_one'
 import TopicosAvancados from './topicos_avancados'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
-class Algoritmos extends ConteudoGenerico {
+class Algoritmos extends UnitBase {
     constructor(props) {
         super(props)
 
@@ -22,13 +22,11 @@ class Algoritmos extends ConteudoGenerico {
         }
     }
 
-    /*Retorna o título da unidade.*/
-    carregarTitulo = () => {
+    renderTitle = () => {
         return (<h1>6. Algoritmos</h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
-    carregarPaginaAtual = () => {
+    renderPage = () => {
         switch (this.state.openPage) {
             case "1":
                 return (
@@ -60,7 +58,7 @@ class Algoritmos extends ConteudoGenerico {
                 )
             case "8":
                 return (
-                    <ProblemasPropostos unitId={this.props.id}/>
+                    <ProblemsOne unitId={this.props.id}/>
                 )
             case "9":
                 return (
@@ -73,9 +71,9 @@ class Algoritmos extends ConteudoGenerico {
 
     render() {
         return (
-            <div className="aprc-container">
-                {this.carregarTitulo()}
-                {this.carregarPaginaAtual()}
+            <div>
+                {this.renderTitle()}
+                {this.renderPage()}
                 {this.loadPagination()}
                 {this.loadUnitController()}
             </div>

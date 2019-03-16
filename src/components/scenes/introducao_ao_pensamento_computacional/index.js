@@ -1,5 +1,5 @@
 import React from 'react'
-import ConteudoGenerico from '../../generics/conteudo_generico'
+import UnitBase from '../../generics/unit_base'
 import Texto1 from './texto_1'
 import Desafios from './desafios'
 
@@ -7,7 +7,7 @@ import Desafios from './desafios'
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
-class IntroducaoAoPensamentoComputacional extends ConteudoGenerico {
+class IntroducaoAoPensamentoComputacional extends UnitBase {
     constructor(props) {
         super(props)
 
@@ -16,13 +16,11 @@ class IntroducaoAoPensamentoComputacional extends ConteudoGenerico {
         }
     }
 
-    /*Retorna o título da unidade.*/
-    carregarTitulo = () => {
+    renderTitle = () => {
         return (<h1>2. Introdução ao Pensamento Computacional</h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
-    carregarPaginaAtual = () => {
+    loadPage = () => {
         return(
             <div>
                 <Texto1 />
@@ -33,9 +31,9 @@ class IntroducaoAoPensamentoComputacional extends ConteudoGenerico {
 
     render() {
         return (
-            <div className="aprc-container">
-                {this.carregarTitulo()}
-                {this.carregarPaginaAtual()}
+            <div>
+                {this.renderTitle()}
+                {this.loadPage()}
                 {this.loadPagination()}
                 {this.loadUnitController()}
             </div>

@@ -82,7 +82,7 @@ class UnitController extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="unit-controller-container">
                 {this.loadPreviousButton()}
                 {this.loadNextButton()}
             </div>

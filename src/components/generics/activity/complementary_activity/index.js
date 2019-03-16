@@ -1,10 +1,11 @@
 import React from 'react'
 
+import Box from '../../../generics/box'
 import BasicButton from '../../buttons/basic_button'
 import AddButton from '../../buttons/add_button'
 import DeleteButton from '../../buttons/delete_button'
 import BaseActivity from '../baseActivity'
-import CenterBox from '../../center_box'
+import CenterBoxContainer from '../../center_box_container'
 
 import ActivityConstants from '../../../../constants/activityConstants'
 import UnitState from '../../../../constants/unitState'
@@ -36,7 +37,7 @@ class ComplementaryActivity extends BaseActivity {
         this.state = {
             unitState: UnitState.NOT_COMPLETED,
             answersAmount: 0,
-            ApiLoadedAnswers: [],
+            apiLoadedAnswers: [],
             activity: this.generateEmptyActivity()
         }
 
@@ -120,12 +121,18 @@ class ComplementaryActivity extends BaseActivity {
 
             this.updateAnswersAmount()
 
-            let shouldCloseApiListener = this.state.ApiLoadedAnswers.length === this.state.activity.examplas.length
+            let shouldCloseApiListener = this.state.apiLoadedAnswers.length === this.state.activity.examplas.length
 
             if (shouldCloseApiListener) {
-                AvaMecApi.closeGenericDataListener()
+                AvaMecApi.closeGenericDataListener(this.callbackGetSavedAnswers)
             }
         }
+    }
+
+    saveAnswers = () => {
+        this.state.activity.examples.forEach(example => {
+            this.AvaMecApi.saveGenericData(this.getGenericId(example.number), example)
+        })
     }
 
     getGenericId = (number) => {
@@ -137,13 +144,11 @@ class ComplementaryActivity extends BaseActivity {
     }
 
     addToLoadedAnswers = (key) => {
-        if (!this.wasLoaded(key)){
-            this.state.ApiLoadedAnswers.push(key)
-        }
+        this.state.apiLoadedAnswers.push(key)
     }
 
     wasLoaded = (key) => {
-        return this.state.ApiLoadedAnswers.find(loadedKey => loadedKey === key) !== undefined
+        return this.state.apiLoadedAnswers.find(loadedKey => loadedKey === key) !== undefined
     }
 
     generateEmptyActivityData = () => {
@@ -188,12 +193,6 @@ class ComplementaryActivity extends BaseActivity {
     updateAnswersAmount = () => {
         this.setState({
             answersAmount: this.state.activity.examples.filter(example => example.show).length
-        })
-    }
-
-    saveAnswers = () => {
-        this.state.activity.examples.forEach(example => {
-            this.AvaMecApi.saveGenericData(this.getGenericId(example.numero), example)
         })
     }
 
@@ -307,13 +306,13 @@ class ComplementaryActivity extends BaseActivity {
     renderExample = (example, key) => {
         if(example.show) {
             return (
-                <CenterBox key={key}>
-                    <div className="algorithms">
+                <CenterBoxContainer key={key}>
+                    <Box className="algorithms">
                         {this.renderDeleteButton(example)}
                         <h4>EXEMPLO {example.number}</h4>
                         {this.renderQuestions(example.number, example.questions)}
-                    </div>
-                </CenterBox>
+                    </Box>
+                </CenterBoxContainer>
             )
         }
     }

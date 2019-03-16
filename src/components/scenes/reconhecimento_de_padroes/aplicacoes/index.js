@@ -1,5 +1,6 @@
 import React from 'react'
 import YouTubePlayer from '../../../generics/youtube_player'
+import ExternalLink from '../../../generics/external_link'
 
 const Aplicacoes = () => (
     <div>
@@ -10,7 +11,7 @@ const Aplicacoes = () => (
 
         <h3>Epidemia de Cólera</h3>
         <p>No ano de 1854, em Londres, ocorreu uma grande epidemia de cólera que foi solucionada pelo médico John Snow. Dr. Snow mapeou os locais onde moravam os doentes e identificou que todos eram servidos por água oriunda de uma determinada bomba pública. Após algumas averiguações comprovou-se que a água bombeada era de origem contaminada pela lavagem de uma fralda de um bebê que havia contraído a doença em outro local. Com este trabalho contestou também a ideia que prevalecia na época da transmissão por correntes de ar que espalhava contaminações originadas de matéria orgânica em decomposição. A hipótese de Snow era de que a cólera era provocada por uma bactéria. A hipótese de Snow foi posteriormente verificada.</p>
-        <p>(Fonte:<a href="https://www.pastmedicalhistory.co.uk/john-snow-and-the-1854-cholera-outbreak/" target="_blank" rel="nofollow noopener noreferrer">https://www.pastmedicalhistory.co.uk/john-snow-and-the-1854-cholera-outbreak/</a> )</p>
+        <p>(Fonte:<ExternalLink href="https://www.pastmedicalhistory.co.uk/john-snow-and-the-1854-cholera-outbreak/">https://www.pastmedicalhistory.co.uk/john-snow-and-the-1854-cholera-outbreak/</ExternalLink> )</p>
 
         <h3>A Mediação da Aprendizagem</h3>
         <p>Nos parágrafos anteriores, apresentamos várias situações que podem ser encontradas no cotidiano de qualquer cidadão e citamos também algumas típicas de certas profissões. Não poderíamos deixar de citar o importante papel que o reconhecimento de padrões tem no processo de mediação da aprendizagem, desde os primeiros momentos até os níveis mais avançados da escolarização. Certamente aprendemos muito pela imitação, pela análise, pelas tentativas e erros, individualmente ou em grupo mas, para atingir níveis superiores, precisamos de mediadores com conhecimento mais avançado, que nos ajudem a identificar situações onde ainda temos dificuldades de compreensão, onde ainda precisamos construir níveis mais avançados de “padrões”. Este é um dos papéis importantes nas atividades de um professor, identificar as situações para as quais o estudante ainda não está preparado e oferecer propostas de trabalho que lhe permitam ir além. </p>

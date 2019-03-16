@@ -57,7 +57,6 @@ class IntegralActivityOne extends React.Component {
         }
     }
 
-
     render() {
         return (
             <IntegralActivity activity={this.getActivity()}/>

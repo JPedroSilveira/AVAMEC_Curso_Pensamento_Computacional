@@ -12,10 +12,5 @@
     border-bottom: 0.05em solid #000000;
     padding-top: 0.3em;
     padding-bottom: 0.5em;
-}
-
-.alg-box .head .title{
-    font-weight: 700;
     color: rgb(77, 132, 4);
-    padding-left: 1em;
 }

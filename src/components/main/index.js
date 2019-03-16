@@ -12,7 +12,7 @@ import ReconhecimentoDePadroes from '../scenes/reconhecimento_de_padroes'
 import Algoritmos from '../scenes/algoritmos'
 import './styles.css'
 
-class Conteudo extends React.Component {
+class Main extends React.Component {
     constructor() {
         super()
 
@@ -45,8 +45,8 @@ class Conteudo extends React.Component {
             <div>
                 <Menu/>
                 <Header/>
-                <div className="content">
-                    <div className="unit">
+                <div className="main-content">
+                    <div className="unit-container">
                         {this.LoadUnit()}
                     </div>
                 </div>
@@ -55,4 +55,4 @@ class Conteudo extends React.Component {
     }
 }
 
-export default Conteudo
+export default Main

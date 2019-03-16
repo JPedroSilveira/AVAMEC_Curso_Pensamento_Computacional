@@ -1,5 +1,8 @@
 import React from 'react'
-import CenterBox from '../../../generics/center_box'
+import CenterBoxContainer from '../../../generics/center_box_container'
+import Box from '../../../generics/box'
+import Color from '../../../../constants/color'
+import ExternalLink from '../../../generics/external_link'
 
 const Texto1 = () => (
     <div>
@@ -19,8 +22,8 @@ const Texto1 = () => (
             <strong> O fazendeiro, o lobo, a ovelha e a caixa de repolho. </strong>
         </p>
         <h2>QUADRO 1</h2>
-        <CenterBox>
-            <div className="boxed">
+        <CenterBoxContainer>
+            <Box backgroundColor={Color.GRAY_BOX}>
                 <h3>O FAZENDEIRO, O LOBO, A OVELHA E A CAIXA DE REPOLHO</h3>
                 <p>
                     Um fazendeiro foi às compras à aldeia e lá comprou um <strong>lobo</strong>, 
@@ -41,10 +44,10 @@ const Texto1 = () => (
                     que lhe permita transportar todas as suas compras, sem que nenhuma delas seja comida 
                     por seu predador?
                 </p>
-            </div>
-        </CenterBox>
-        <p>Se quiser tentar um pouco, entre no endereço: <a href="http://www.plastelina.net/game1.html" target="_blank" rel="nofollow noopener noreferrer">http://www.plastelina.net/game1.html</a></p>
-        <p>Se quiser ver uma animação, clique no endereço: <a href="https://youtu.be/WmQCcBj_ROQ" target="_blank" rel="nofollow noopener noreferrer">https://youtu.be/WmQCcBj_ROQ</a></p>
+            </Box>
+        </CenterBoxContainer>
+        <p>Se quiser tentar um pouco, entre no endereço: <ExternalLink href="http://www.plastelina.net/game1.html">http://www.plastelina.net/game1.html</ExternalLink></p>
+        <p>Se quiser ver uma animação, clique no endereço: <ExternalLink href="https://youtu.be/WmQCcBj_ROQ">https://youtu.be/WmQCcBj_ROQ</ExternalLink></p>
         <p>Para uma discussão pedagógica deste problema, recomendamos a leitura do texto “Piaget e nossa Inteligência” do professor Lino Macedo.</p>
         <p>Alguns problemas podem ser simples, enquanto outros são de natureza mais complexa. Os primeiros podem ser resolvidos diretamente, ou com o uso de estratégias simples e outros, mais complexos, podem requerer o uso de várias estratégias combinadas para sua solução.</p>
         <p>Independente dos elementos envolvidos nos problemas, por estarem em campos diferentes, podemos identificar um conjunto de estratégias similares, cuja aplicação isolada ou combinada pode contribuir para a resolução sistemática de problemas nos mais diversos âmbitos da atividade humana, sejam eles no transporte, na agricultura, na medicina, nas diversas engenharias, na logística e nas tarefas cotidianas. </p>

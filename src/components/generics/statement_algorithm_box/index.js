@@ -1,12 +1,13 @@
 import React from 'react'
+import Title from '../title'
 import './styles.css'
 
-class AlgorithmBox extends React.Component {
+class StatementAlgorithmBox extends React.Component {
     render() {
         return (
             <div id={this.props.id} key={this.props.key} className="alg-box">
                 <div className="head">
-                    <span className="title">{this.props.title}</span>
+                    <Title>{this.props.title}</Title>
                 </div>
                 {this.props.children}
             </div>
@@ -14,4 +15,4 @@ class AlgorithmBox extends React.Component {
     }
 }
 
-export default AlgorithmBox
+export default StatementAlgorithmBox

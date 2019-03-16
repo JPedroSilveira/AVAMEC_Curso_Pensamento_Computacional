@@ -4,20 +4,23 @@ import ComplementaryActivity from '../../../generics/activity/complementary_acti
 const MIN_EXAMPLES_AMOUNT = 0
 const MAX_EXAMPLES_AMOUNT = 3
 
+/*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
+    unitId: String, representa o id da unidade em que a atividade se encontra
+.*/
 class ComplementaryActivityOne extends React.Component {
     constructor(props) {
         super(props)
 
-        this.validarPropriedades()
+        this.validateProps()
     }
 
-    validarPropriedades = () => {
+    validateProps = () => {
         if (this.props.unitId === undefined) {
             throw Error("Property 'unitId' can't be undefined!")
         }
     }
 
-    generateActivity = () => {
+    getActivity = () => {
         return {
             id: "atividade_completamentar_exemplos_reconhecimento_de_padroes_um",
             unitId: this.props.unitId,
@@ -47,7 +50,7 @@ class ComplementaryActivityOne extends React.Component {
 
     render() {
         return (
-            <ComplementaryActivity activity={this.generateActivity()} />
+            <ComplementaryActivity activity={this.getActivity()} />
         )
     }
 }

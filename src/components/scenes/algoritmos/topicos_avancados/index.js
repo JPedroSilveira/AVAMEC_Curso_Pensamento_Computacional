@@ -1,9 +1,11 @@
 import React from 'react'
-import CenterBox from '../../../generics/center_box'
+import Title from '../../../generics/title'
+import CenterBoxContainer from '../../../generics/center_box_container'
 import YouTubePlayer from '../../../generics/youtube_player'
 import Alg12Simulacao from '../../../../images/alg_12_simulacao.png'
 import AlgorithmLevel from '../../../generics/algorithm_level'
 import AlgorithmBox from '../../../generics/algorithm_box'
+import Image from '../../../generics/image'
 
 const TopicosAvancados = () => (
     <div>
@@ -13,18 +15,18 @@ const TopicosAvancados = () => (
         <p>Suponha ainda que temos uma balança de dois pratos, mas que não possuímos pesos padronizados, para medir o peso de cada cilindro isoladamente. Essa balança consegue comparar o peso do que estiver nos dois pratos, acendendo uma luz para indicar qual o lado que está mais pesado.</p>
         <h4>SOLUCIONANDO - CONSIDERAÇÕES INICIAIS</h4>
         <p>Dado que temos um limite de tempo para fazer o transporte dos cilindros, desejamos transportá-los levando primeiro os mais pesados.</p>
-        <CenterBox>
+        <CenterBoxContainer>
             <AlgorithmBox>
-                <p className="title">ALG 10:  ALGORITMO PRINCIPAL</p>
+                <Title>ALG 10:  ALGORITMO PRINCIPAL</Title>
                 <AlgorithmLevel showStyle={true}>
                     <li>Coloque os cilindros em uma fila, considerando que os mais pesados devem vir primeiro, </li>
                     <li>Preencha o compartimento de cargas com os cilindros que estão na fila de “cilindros ordenados”.</li>
                 </AlgorithmLevel>
             </AlgorithmBox>
-        </CenterBox>
-        <CenterBox>
+        </CenterBoxContainer>
+        <CenterBoxContainer>
             <AlgorithmBox>
-                <p className="title">ALG 11: ORDENAÇÃO DOS CILINDROS POR PESO</p>
+                <Title>ALG 11: ORDENAÇÃO DOS CILINDROS POR PESO</Title>
                 <AlgorithmLevel showStyle={true}>
                         <li>
                             <span className="textred">Enquanto</span> houver cilindros na coleção “cilindros desordenados” <span className="textred">faça</span>
@@ -36,10 +38,10 @@ const TopicosAvancados = () => (
                         <li><span className="textred">Divulgue</span> a lista “cilindros ordenados”</li>
                 </AlgorithmLevel>
             </AlgorithmBox>
-        </CenterBox>
-        <CenterBox>
+        </CenterBoxContainer>
+        <CenterBoxContainer>
             <AlgorithmBox>
-                <p className="title">ALG 12: ESCOLHER O CILINDRO MAIS PESADO DE UMA COLEÇÃO</p>
+                <Title>ALG 12: ESCOLHER O CILINDRO MAIS PESADO DE UMA COLEÇÃO</Title>
                 <AlgorithmLevel showStyle={true}>
                     <li>Coloque um cilindro da coleção "cilindros desordenados"  em um prato qualquer da balança.</li>
                     <li><span className="textred">Enquanto</span> houver cilindros na coleção “cilindros desordenados” <span className="textred">faça</span>
@@ -51,10 +53,10 @@ const TopicosAvancados = () => (
                     <li>Divulgue o cilindro que está na balança.</li>
                 </AlgorithmLevel>
             </AlgorithmBox>
-        </CenterBox>
-        <CenterBox>
+        </CenterBoxContainer>
+        <CenterBoxContainer>
             <AlgorithmBox>
-                <p className="title">ALG 13: PREENCHER O COMPARTILHAMENTO DE CARGAS</p>
+                <Title>ALG 13: PREENCHER O COMPARTILHAMENTO DE CARGAS</Title>
                 <AlgorithmLevel showStyle={true}>
                     <li><span className="textred">Enquanto</span> houver espaço no compartimento de cargas e cilindros na fila “cilindros ordenados” <span className="textred">faça</span>
                         <AlgorithmLevel>
@@ -64,13 +66,11 @@ const TopicosAvancados = () => (
                     </li>
                 </AlgorithmLevel>
             </AlgorithmBox>
-        </CenterBox>
+        </CenterBoxContainer>
         <h4>SIMULANDO A EXECUÇÃO DO ALG 12</h4>
         <p>Na simulação a seguir temos uma lista de 15 cilindros, desordenada por pesos. Para facilitar a compreensão colocamos rótulos indicando os pesos anteriormente medidos.  Dispomos de uma balança que, quando seus dois pratos estão com pesos, ela indica o mais pesado acendendo uma luz vermelha. Os pesos foram sendo usados aleatoriamente. Quando a luz acende, retornamos o cilindro menor para a posição de onde foi retirado e pegamos um outro.</p>
         <p>Os cilindros foram usados na seguinte ordem 38, <span className="textred">67</span>, <span className="textred">75</span>, 58, 37, 17, 67, <span className="textred">79</span>, 39, 60, 63, 56, <span className="textred">97</span>. </p>
-        <div className="imagem-centralizada">
-            <img src={Alg12Simulacao} alt="Representação ilustrativa da execução do algoritmo 12" />
-        </div>
+        <Image src={Alg12Simulacao} alt="Representação ilustrativa da execução do algoritmo 12"/>
         <p>Para executar a 1a. rodada do algoritmo, com os 12 cilindros, realizamos 11 comparações;</p>
         <p>Para executar a 2a. rodada do algoritmo, com 11 cilindros, realizaremos 10 comparações;</p>
         <p>Para executar a 3a. rodada do algoritmo, com 10 cilindros, realizaremos 9 comparações;</p>

@@ -69,19 +69,31 @@
         "topicos": [
             {
                 "identificador": "topico_1",
-                "nome": "Conceituação"
+                "nome": "Aplicação Interativa"
             },
             {
                 "identificador": "topico_2",
-                "nome": "Aplicações"
+                "nome": "Conceituação"
             },
             {
                 "identificador": "topico_3",
-                "nome": "Recomendações"
+                "nome": "Aplicações"
             },
             {
                 "identificador": "topico_4",
+                "nome": "Recomendações"
+            },
+            {
+                "identificador": "topico_5",
                 "nome": "Problemas"
+            },
+            {
+                "identificador": "topico_6",
+                "nome": "Atividade Cooperativa"
+            },
+            {
+                "identificador": "topico_7",
+                "nome": "Para saber mais"
             }
         ],
         "atividades": [{
@@ -228,19 +240,31 @@
         "topicos": [
             {
                 "identificador": "topico_1",
-                "nome": "Conceituação"
+                "nome": "Aplicação Interativa"
             },
             {
                 "identificador": "topico_2",
-                "nome": "Aplicações"
+                "nome": "Conceituação"
             },
             {
                 "identificador": "topico_3",
-                "nome": "Recomendações"
+                "nome": "Aplicações"
             },
             {
                 "identificador": "topico_4",
-                "nome": "Assuntos correlatos"
+                "nome": "Recomendações"
+            },
+            {
+                "identificador": "topico_5",
+                "nome": "Problemas"
+            },
+            {
+                "identificador": "topico_6",
+                "nome": "Atividade Cooperativa"
+            },
+            {
+                "identificador": "topico_7",
+                "nome": "Para saber mais"
             }
         ],
         "atividades": [
@@ -396,27 +420,31 @@
         "topicos": [
             {
                 "identificador": "topico_1",
-                "nome": "Conceituação"
+                "nome": "Aplicação Interativa"
             },
             {
                 "identificador": "topico_2",
-                "nome": "Aplicações"
+                "nome": "Conceituação"
             },
             {
                 "identificador": "topico_3",
-                "nome": "Atividades Avaliativas"
+                "nome": "Aplicações"
             },
             {
                 "identificador": "topico_4",
-                "nome": "Problemas"
+                "nome": "Recomendações"
             },
             {
                 "identificador": "topico_5",
-                "nome": "Atividades Complementares"
+                "nome": "Problemas"
             },
             {
                 "identificador": "topico_6",
-                "nome": "Assuntos Correlatos"
+                "nome": "Atividade Cooperativa"
+            },
+            {
+                "identificador": "topico_7",
+                "nome": "Para saber mais"
             }
         ],
         "atividades": [
@@ -597,11 +625,15 @@
         "topicos": [
             {
                 "identificador": "topico_1",
-                "nome": "Conceituação"
+                "nome": "Aplicação Interativa"
             },
             {
                 "identificador": "topico_2",
-                "nome": "Tomando Decisões"
+                "nome": "Conceituação"
+            },
+            {
+                "identificador": "topico_3",
+                "nome": "Aplicações"
             },
             {
                 "identificador": "topico_3",
@@ -609,27 +641,19 @@
             },
             {
                 "identificador": "topico_4",
-                "nome": "Repetição de Atividades"
-            },
-            {
-                "identificador": "topico_5",
-                "nome": "Aplicações"
-            },
-            {
-                "identificador": "topico_6",
                 "nome": "Recomendações"
             },
             {
+                "identificador": "topico_5",
+                "nome": "Problemas"
+            },
+            {
+                "identificador": "topico_6",
+                "nome": "Atividade Cooperativa"
+            },
+            {
                 "identificador": "topico_7",
-                "nome": "Atividades Avaliativas"
-            },
-            {
-                "identificador": "topico_8",
-                "nome": "Problemas Propostos"
-            },
-            {
-                "identificador": "topico_9",
-                "nome": "Tópicos Avançados"
+                "nome": " Para saber mais"
             }
         ],
         "atividades": [

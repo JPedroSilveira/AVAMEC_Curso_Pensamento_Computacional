@@ -1,15 +1,17 @@
 import React from 'react'
-import CenterBox from '../../../../generics/center_box'
+import Title from '../../../../generics/title'
+import CenterBoxContainer from '../../../../generics/center_box_container'
 import Alg08 from '../../../../../images/alg_08.png'
 import AlgorithmLevel from '../../../../generics/algorithm_level'
 import AlgorithmBox from '../../../../generics/algorithm_box'
+import Image from '../../../../generics/image'
 
 const AplicacoesParte2 = () => (
     <div>
         <h3>PREPARANDO O ALMOÇO DE DOMINGO</h3>
-        <CenterBox>
+        <CenterBoxContainer>
             <AlgorithmBox>
-                <p className="title">ALG 07 - Preparando o almoço de domingo</p>
+                <Title>ALG 07 - Preparando o almoço de domingo</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Salmão assado com molho parisiense acompanhado de risoto de alho poró:</span><br/>
                     <AlgorithmLevel showStyle={true}>
@@ -18,7 +20,7 @@ const AplicacoesParte2 = () => (
                         <li>Prepare o risoto;</li>
                         <li>Sirva o almoço</li>
                     </AlgorithmLevel>
-                    <p className="title">ALG 07.1 - Preparando o salmão</p>
+                    <Title>ALG 07.1 - Preparando o salmão</Title>
                     <AlgorithmLevel showStyle={true}>
                         <li>Obtenha um kilo de filé de salmão;</li>
                         <li>Lave com água de um limão;</li>
@@ -29,7 +31,7 @@ const AplicacoesParte2 = () => (
                         <li>Coloque o peixe no prato e cubra com uma colher de azeite de oliva;</li>
                         <li>Leve o prato ao forno de deixe assar por trinta minutos.</li>
                     </AlgorithmLevel>
-                    <p className="title">ALG 07.2 - Preparando o molho</p>
+                    <Title>ALG 07.2 - Preparando o molho</Title>
                     <AlgorithmLevel showStyle={true}>
                         <li>Corte uma cebola média bem picada;</li>
                         <li>Corte um tomate médio, bem picado</li>
@@ -43,15 +45,13 @@ const AplicacoesParte2 = () => (
                     </AlgorithmLevel>
                 </AlgorithmLevel>										
 		    </AlgorithmBox>
-        </CenterBox>
+        </CenterBoxContainer>
         <h3>MESCLAGEM DE DUAS LISTAS ORDENADAS</h3>
         <p>Suponhamos que temos duas listas ordenadas de cilindros de recipientes cilíndricos de mesmo volume, cada um deles com um conteúdo diferente os que os faz ter pesos diferentes. começando pelo cilindros mais pesado e terminado pelo cilindro mais leve. Como podemos obter uma lista totalmente ordenada com todos os cilindros das duas listas?</p>
-        <div className="imagem-centralizada">
-            <img src={Alg08} alt="Representação de três listas ordenadas de números em ordem decrescente" />
-        </div>
-        <CenterBox>
+        <Image src={Alg08} alt="Representação de três listas ordenadas de números em ordem decrescente"/>
+        <CenterBoxContainer>
             <AlgorithmBox>
-                <p className="title">ALG 08 - Mesclagem de duas listas ordenadas</p>
+                <Title>ALG 08 - Mesclagem de duas listas ordenadas</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Vamos chamar de  L1 e L2 as duas listas ordenadas e de L3 a lista a ser construída, com  os elementos de L1 e L2, garantindo que os elementos de L3 também estarão ordenados. A lista L3 inicialmente estará sem elementos.</span><br/>
                     <AlgorithmLevel showStyle={true}>
@@ -74,7 +74,7 @@ const AplicacoesParte2 = () => (
                     </AlgorithmLevel>
                 </AlgorithmLevel>
             </AlgorithmBox>
-        </CenterBox>
+        </CenterBoxContainer>
     </div>
 )
 

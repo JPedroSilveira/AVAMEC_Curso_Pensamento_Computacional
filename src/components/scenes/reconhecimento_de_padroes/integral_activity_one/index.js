@@ -4,14 +4,14 @@ import IntegralActivity from '../../../generics/activity/integral_activity'
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     unitId: String, representa o id da unidade em que a atividade se encontra
 .*/
-class AtividadeAvaliativa1 extends React.Component {
+class IntegralActivityOne extends React.Component {
     constructor(props) {
         super(props)
 
-        this.validarPropriedades()
+        this.validateProps()
     }
 
-    validarPropriedades = () => {
+    validateProps = () => {
         if (this.props.unitId === undefined) {
             throw Error("Property 'unitId' can't be undefined!")
         }
@@ -218,4 +218,4 @@ class AtividadeAvaliativa1 extends React.Component {
     }
 }
 
-export default AtividadeAvaliativa1
+export default IntegralActivityOne

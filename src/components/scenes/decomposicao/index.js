@@ -1,5 +1,5 @@
 import React from 'react'
-import ConteudoGenerico from '../../generics/conteudo_generico'
+import UnitBase from '../../generics/unit_base'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
 import Recomendacoes from './recomendacoes'
@@ -11,7 +11,7 @@ import ComplementaryActivityOne from './complementary_activity_one'
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
-class Decomposicao extends ConteudoGenerico {
+class Decomposicao extends UnitBase {
     constructor(props) {
         super(props)
 
@@ -20,13 +20,11 @@ class Decomposicao extends ConteudoGenerico {
         }
     }
 
-    /*Retorna o título da unidade.*/
-    carregarTitulo = () => {
+    renderTitle = () => {
         return (<h1>3. Decomposição </h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
-    carregarPaginaAtual = () => {
+    renderPage = () => {
         switch (this.state.openPage){
             case "1":
                 return (
@@ -54,9 +52,9 @@ class Decomposicao extends ConteudoGenerico {
 
     render() {
         return (
-            <div className="aprc-container">
-                {this.carregarTitulo()}
-                {this.carregarPaginaAtual()}
+            <div>
+                {this.renderTitle()}
+                {this.renderPage()}
                 {this.loadPagination()}
                 {this.loadUnitController()}
             </div>

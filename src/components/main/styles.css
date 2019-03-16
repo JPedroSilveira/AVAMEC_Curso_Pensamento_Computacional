@@ -1,14 +1,23 @@
-.content{
+.main-content{
     display: flex;
     justify-content: center;
 }
 
-.unit{
+.unit-container{
     width: 80%;
-}
-
-.aprc-container{
     font-family: 'Source Sans Pro', sans-serif;
     color: #585858;
     font-weight: 100;
+}
+
+@media only screen and (max-width: 768px){
+    .unit-container {
+        width: 94%;
+    }
+}
+
+@media screen and (orientation: portrait) {
+   .unit-container{
+       padding-bottom: 30%;
+   }
 }

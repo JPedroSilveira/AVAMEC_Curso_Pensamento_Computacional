@@ -14,12 +14,14 @@ import BaseActivity from '../baseActivity'
 
 import BasicButton from '../../buttons/basic_button'
 import AlgorithmLevel from '../../algorithm_level'
-import CenterBox from '../../center_box'
-import AlgorithmBox from '../../activity/algorithm_box'
+import CenterBoxContainer from '../../center_box_container'
+import StatementAlgorithmBox from '../../statement_algorithm_box'
 import InlineBox from '../../inline_box'
 import ActivityOption from '../../activity_option'
 import InputRadioButton from '../../buttons/input_radio_button'
 import GradeBox from '../../grade_box'
+import Box from '../../box'
+import Color from '../../../../constants/color'
 
 import ReactHtmlParser from 'react-html-parser'
 
@@ -234,10 +236,11 @@ class IntegralActivity extends BaseActivity {
 
     onChangeSelectedOption = data => {
         if (this.state.unitState !== UnitState.COMPLETED && this.state.activityState !== ActivityState.ANSWERED) {
-
             let index = this.getIndexSelectedOptionByQuestionId(data.currentTarget.name)
 
-            if (this.state.selectedOptions[index].state !== QuestionState.NOT_ANSWERED) {
+            console.log(this.state.selectedOptions[index].state)
+
+            if (this.state.selectedOptions[index].state === QuestionState.NOT_ANSWERED) {
                 this.state.selectedOptions[index].key = data.currentTarget.value
 
                 this.forceUpdate()
@@ -273,6 +276,30 @@ class IntegralActivity extends BaseActivity {
         this.forceUpdate()
     }
 
+    isSelectedOption = (question, option) => {
+        let index = this.getIndexSelectedOptionByQuestionId(question.id) 
+
+        return this.state.selectedOptions[index].key === option.key
+    }
+
+    retry = () => {
+        this.shuffleOptions()
+
+        let selectedOptions = this.state.selectedOptions
+
+        selectedOptions.forEach(selectedOption => {
+            if (selectedOption.state === QuestionState.ANSWERED_WRONG) {
+                selectedOption.key = null
+                selectedOption.state = QuestionState.NOT_ANSWERED
+            }
+        })
+
+        this.setState({
+            activityState: ActivityState.RETRY,
+            selectedOptions: selectedOptions
+        })
+    }
+
     renderOptions = (question) => {
         return (
             <div>
@@ -286,12 +313,6 @@ class IntegralActivity extends BaseActivity {
                 })}
             </div>
         )
-    }
-
-    isSelectedOption = (question, option) => {
-        let index = this.getIndexSelectedOptionByQuestionId(question.id) 
-
-        return this.state.selectedOptions[index].key === option.key
     }
 
     renderOptionText = (question, option) => {
@@ -319,16 +340,16 @@ class IntegralActivity extends BaseActivity {
             return (
                 <div>
                     {selectedOption.state === QuestionState.ANSWERED_RIGHT &&
-                        <div className="hint right">
+                        <Box backgroundColor={Color.HINT_RIGHT_BG}>
                             <strong>Resposta Certa: </strong>
                             {option.tip}
-                        </div>
+                        </Box>
                     }
                     {selectedOption.state === QuestionState.ANSWERED_WRONG &&
-                        <div className="hint wrong">
+                        <Box backgroundColor={Color.HINT_WRONG_BG}> 
                             <strong>Resposta Errada: </strong>
                             {option.tip}
-                        </div>
+                        </Box>
                     }
                 </div>
             ) 
@@ -371,13 +392,11 @@ class IntegralActivity extends BaseActivity {
 
     renderAlgorithmStatement = (question) => {
         return (
-            <CenterBox>
-                <AlgorithmBox title={question.title}>
-                    <ol>
-                        {this.renderInstructions(question.instructions, true)}
-                    </ol>
-                </AlgorithmBox>
-            </CenterBox>
+            <CenterBoxContainer>
+                <StatementAlgorithmBox title={question.title}>
+                    {this.renderInstructions(question.instructions, true)}
+                </StatementAlgorithmBox>
+            </CenterBoxContainer>
         )
     }
     
@@ -400,24 +419,6 @@ class IntegralActivity extends BaseActivity {
                 {this.renderInstructions(instruction.instructions, false)}
             </li>
         )
-    }
-
-    retry = () => {
-        this.shuffleOptions()
-
-        let selectedOptions = this.state.selectedOptions
-        
-        selectedOptions.forEach(selectedOption => {
-            if (selectedOption.state === QuestionState.ANSWERED_WRONG) {
-                selectedOption.key = null
-                selectedOption.state = QuestionState.NOT_ANSWERED
-            }
-        })
-
-        this.setState({
-            activityState: ActivityState.RETRY,
-            selectedOptions: selectedOptions
-        })
     }
 
     renderTitle = () => {

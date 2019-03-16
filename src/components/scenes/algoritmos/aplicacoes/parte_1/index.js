@@ -1,5 +1,6 @@
 import React from 'react'
-import CenterBox from '../../../../generics/center_box'
+import Title from '../../../../generics/title'
+import CenterBoxContainer from '../../../../generics/center_box_container'
 import AlgorithmLevel from '../../../../generics/algorithm_level'
 import AlgorithmBox from '../../../../generics/algorithm_box'
 
@@ -8,24 +9,22 @@ const AplicacoesParte1 = () => (
         <h3>APLICAÇÕES</h3>
         <p>Na seção anterior apresentamos um algoritmo específico para introduzir os conceitos básicos da construção de algoritmo. Neste ponto apresentamos alguns outros relacionados com a vida cotidiana. A intenção é criar uma familiaridade com o conceito, buscando a desmistificar o clima de tecnicismo que envolve algo tão comum em nossas vidas.									</p>
         <h3>SUBINDO ESCADAS</h3>
-        <CenterBox>
+        <CenterBoxContainer>
             <AlgorithmBox>
-                <p className="title">ALG 05 - Subir uma escada</p>
-                <div className="subnivel">
-                    <ol>
-                        <li><span className="textred">Enquanto</span> houver degrau à sua frente <span className="textred">faça</span>
-                            <div className="subnivel">
-                                Suba o degrau à sua frente.
-                            </div>
-                        </li>
-                    </ol>
-                </div>
+                <Title>ALG 05 - Subir uma escada</Title>
+                <AlgorithmLevel>
+                    <li><span className="textred">Enquanto</span> houver degrau à sua frente <span className="textred">faça</span>
+                        <AlgorithmLevel>
+                            Suba o degrau à sua frente.
+                        </AlgorithmLevel>
+                    </li>
+                </AlgorithmLevel>
             </AlgorithmBox>
-		</CenterBox>
+		</CenterBoxContainer>
         <h3>TROCANDO UM PNEU DO CARRO</h3>
-        <CenterBox>
+        <CenterBoxContainer>
             <AlgorithmBox>
-                <p className="title">ALG 06 - Trocando um pneu</p>
+                <Title>ALG 06 - Trocando um pneu</Title>
                 <AlgorithmLevel showStyle={true}>
                    <li>Estacione o carro junto à margem da via;</li>
                    <li>Coloque o triângulo sinalizador na posição apropriada;</li>
@@ -49,7 +48,7 @@ const AplicacoesParte1 = () => (
                    <li>Prossiga a viagem.</li>
                 </AlgorithmLevel>
             </AlgorithmBox>
-        </CenterBox>
+        </CenterBoxContainer>
     </div>
 )
 

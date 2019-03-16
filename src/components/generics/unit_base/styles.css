@@ -1,8 +1,8 @@
 h1{
     font-weight: 700;
     font-size: 2em;
-    margin-bottom: 1.5em;
-    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-top: 0em;
 }
  
 h2{
@@ -32,18 +32,11 @@ h4{
 p{
     margin-bottom: 1.5em;
     line-height: 1.7em;
-    font-size: 1.3em;
+    font-size: 1.15em;
 }
 
 a{
     color: inherit;
-}
-
-.box{ /*To-Do: Modificar o flex para compatibilidade com IE.*/
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
 }
 
 .textblue{
@@ -58,39 +51,8 @@ a{
     color: #4d8404;
 }
 
-.boxed.problem{
-    background-color: rgb(251, 229, 205);
-    margin-bottom: 0.3em;
-    text-align: left;
-}
-
-.boxed.problem textarea{
-    width: 100%;
-    font-size: 1em;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #585858;
-    margin-top: 0.3em;
-}
-
 .span-referencia{
     color:red;
-}
-
-.imagem-centralizada {
-    text-align: center;
-    width: 100%;
-}
-
-.imagem-centralizada a{
-    font-size: 0.9em;
-}
-
-.imagem-centralizada a:link{
-    text-decoration: none;
-}
-
-.figura{
-    width:50%;
 }
 
 .algoritmos{
@@ -114,10 +76,6 @@ a{
     font-size: 1em;
     font-family: 'Source Sans Pro', sans-serif;
     color: #585858;
-}
-
-.quadro{
-    background-color:rgb(207, 226, 243)
 }
 
 .negrito{

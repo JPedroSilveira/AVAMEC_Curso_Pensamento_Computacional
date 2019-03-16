@@ -1,0 +1,7 @@
+.external-link-container a{
+    font-size: 0.9em;
+}
+
+.external-link-container a:link{
+    text-decoration: none;
+}

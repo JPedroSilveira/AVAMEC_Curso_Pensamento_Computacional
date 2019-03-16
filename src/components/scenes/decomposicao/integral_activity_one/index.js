@@ -2,7 +2,7 @@ import React from 'react'
 import IntegralActivity from '../../../generics/activity/integral_activity'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
-    idUnidade: String, representa o id da unidade em que a atividade se encontra
+    unitId: String, representa o id da unidade em que a atividade se encontra
 .*/
 class IntegralActivityOne extends React.Component {
     constructor(props) {
