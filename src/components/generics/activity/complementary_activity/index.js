@@ -137,7 +137,7 @@ class ComplementaryActivity extends BaseActivity {
 
     getGenericId = (number) => {
         return AvaMecUtils.getGenericId(
-            this.props.activity.idUnidade,
+            this.props.activity.unitId,
             this.props.activity.id,
             number
         )

@@ -1,14 +1,16 @@
 import React from 'react'
 import './styles.css'
 
-const ExternalLink = () => (
-    <div className="external-link-container">
-        <a href={this.props.href} 
-                target="_blank" 
+class ExternalLink extends React.Component {
+    render() {
+        return (
+            <a className="external-link-container" href={this.props.href}
+                target="_blank"
                 rel="nofollow noopener noreferrer">
                 {this.props.children}
-        </a>
-    </div>
-)
+            </a>
+        )
+    }
+}
 
 export default ExternalLink

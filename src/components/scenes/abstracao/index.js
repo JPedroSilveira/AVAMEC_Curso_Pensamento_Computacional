@@ -1,11 +1,15 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
+import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
 import AssuntosCorrelatos from './assuntos_correlatos'
-import IntegralActivityOne from './integral_activity_one'
-import ProblemsOne from './problems_one'
-import ComplementaryActivityOne from './complementary_activity_one'
+import AtividadeAvaliativa from './atividade_avaliativa'
+import Problemas from './problemas'
+import AtividadeComplementar from './atividade_complementar'
+import Recomendacoes from './recomendacoes'
+import AtividadeCooperativa from './atividade_cooperativa'
+import ParaSaberMais from './para_saber_mais'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -28,26 +32,39 @@ class Abstracao extends UnitBase {
         switch (this.state.openPage){
             case "1":
                 return (
-                    <Conceituacao />
+                    <AplicacaoInterativa />
                 )
             case "2":
                 return (
-                    <Aplicacoes />
+                    <Conceituacao />
                 )
             case "3":
                 return (
-                    <div>
-                        <AssuntosCorrelatos />
-                        <IntegralActivityOne unitId={this.props.id}/>
-                    </div>
+                    <Aplicacoes />
                 )
             case "4":
                 return (
-                    <ProblemsOne unitId={this.props.id}/>
+                    <div>
+                        <Recomendacoes />
+                        <AtividadeComplementar unitId={this.props.id} />
+                        <AssuntosCorrelatos />
+                    </div>
                 )
             case "5":
                 return (
-                    <ComplementaryActivityOne unitId={this.props.id}/>
+                    <AtividadeAvaliativa unitId={this.props.id} />
+                )
+            case "6":
+                return (
+                    <Problemas />
+                )
+            case "7":
+                return (
+                    <AtividadeCooperativa />
+                )
+            case "8":
+                return (
+                    <ParaSaberMais />
                 )
             default: 
                 return null

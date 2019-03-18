@@ -35,6 +35,11 @@ p{
     font-size: 1.15em;
 }
 
+li{
+    line-height: 1.7em;
+    font-size: 1.15em;
+}
+
 a{
     color: inherit;
 }

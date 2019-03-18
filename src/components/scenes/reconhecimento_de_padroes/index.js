@@ -1,10 +1,12 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
+import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
-import IntegralActivityOne from './integral_activity_one'
-import ProblemsOne from './problems_one'
-import ComplementaryActivityOne from './complementary_activity_one'
+import AtividadeAvaliativa from './atividade_avaliativa'
+import Recomendacoes from './recomendacoes'
+import Problemas from './problemas'
+import AtividadeComplementar from './atividade_complementar'
 import AssuntosCorrelatos from './assuntos_correlatos'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -27,27 +29,34 @@ class ReconhecimentoDePadroes extends UnitBase {
         switch (this.state.openPage) {
             case "1":
                 return (
-                    <Conceituacao />
+                    <AplicacaoInterativa />
                 )
             case "2":
                 return (
-                    <Aplicacoes />
+                    <Conceituacao />
                 )
             case "3":
                 return (
-                    <IntegralActivityOne unitId={this.props.id} />
+                    <Aplicacoes />
                 )
             case "4":
                 return (
-                    <ProblemsOne unitId={this.props.id}/>
+                    <AtividadeAvaliativa />
                 )
             case "5":
                 return (
-                    <ComplementaryActivityOne unitId={this.props.id} />
+                    <Recomendacoes />
                 )
             case "6":
                 return (
-                    <AssuntosCorrelatos/>
+                    <Problemas />
+                )
+            case "7":
+                return (
+                    <div>
+                        <AtividadeComplementar />
+                        <AssuntosCorrelatos />
+                    </div>
                 )
             default:
                 return null

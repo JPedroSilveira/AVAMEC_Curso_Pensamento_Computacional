@@ -51,7 +51,7 @@ const Texto1 = () => (
         <p>Para uma discussão pedagógica deste problema, recomendamos a leitura do texto “Piaget e nossa Inteligência” do professor Lino Macedo.</p>
         <p>Alguns problemas podem ser simples, enquanto outros são de natureza mais complexa. Os primeiros podem ser resolvidos diretamente, ou com o uso de estratégias simples e outros, mais complexos, podem requerer o uso de várias estratégias combinadas para sua solução.</p>
         <p>Independente dos elementos envolvidos nos problemas, por estarem em campos diferentes, podemos identificar um conjunto de estratégias similares, cuja aplicação isolada ou combinada pode contribuir para a resolução sistemática de problemas nos mais diversos âmbitos da atividade humana, sejam eles no transporte, na agricultura, na medicina, nas diversas engenharias, na logística e nas tarefas cotidianas. </p>
-        <p> Apesar de existirem diferentes propostas para o agrupamento dessas estratégias, iremos tratar neste curso do que tem sido chamado os 4 Pilares do Pensamento computacional (<span className="span-referencia">referência</span>), a saber: a <strong>Abstração</strong>, a <strong>Decomposição</strong>, o <strong>Reconhecimento de Padrões</strong> e os <strong>Algoritmos</strong>.</p>
+        <p> Apesar de existirem diferentes propostas para o agrupamento dessas estratégias, iremos tratar neste curso do que tem sido chamado os 4 pilares do Pensamento Computacional (<span className="span-referencia">referência</span>), a saber: a <strong>Abstração</strong>, a <strong>Decomposição</strong>, o <strong>Reconhecimento de Padrões</strong> e os <strong>Algoritmos</strong>.</p>
         <p>Na sequência de nosso curso exploraremos cada um desses pilares. </p>
     </div>
 )

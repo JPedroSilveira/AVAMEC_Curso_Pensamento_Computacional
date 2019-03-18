@@ -1,14 +1,17 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
+import AplicacaoInterativa from './aplicacao_interativa'
 import ConceituacaoParte1 from './conceituacao/parte_1'
 import ConceituacaoParte2 from './conceituacao/parte_2'
 import ConceituacaoParte3 from './conceituacao/parte_3'
 import AplicacoesParte1 from './aplicacoes/parte_1'
 import AplicacoesParte2 from './aplicacoes/parte_2'
 import Recomendacoes from './recomendacoes'
-import IntegralActivityOne from './integral_activity_one'
-import ProblemsOne from './problems_one'
+import AtividadeAvaliativa from './atividade_avaliativa'
+import AtividadeCooperativa from './atividade_cooperativa'
+import Problemas from './problemas'
 import TopicosAvancados from './topicos_avancados'
+import ParaSaberMais from './para_saber_mais'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -30,39 +33,46 @@ class Algoritmos extends UnitBase {
         switch (this.state.openPage) {
             case "1":
                 return (
-                    <ConceituacaoParte1/>
+                    <AplicacaoInterativa />
                 )
             case "2":
                 return (
-                    <ConceituacaoParte2/>
+                    <div>
+                        <ConceituacaoParte1 />
+                        <ConceituacaoParte2 />
+                        <ConceituacaoParte3 />
+                    </div>
                 )
             case "3":
                 return (
-                    <ConceituacaoParte3/>
+                    <div>
+                        <AplicacoesParte1 />
+                        <AplicacoesParte2 />
+                    </div>
                 )
             case "4":
                 return (
-                    <AplicacoesParte1/>
+                    <Recomendacoes />
                 )
             case "5":
                 return (
-                    <AplicacoesParte2/>
-                )
+                    <AtividadeAvaliativa unitId={this.props.id} />
+                )    
             case "6":
                 return (
-                    <Recomendacoes/>
+                    <Problemas unitId={this.props.id} />
                 )
             case "7":
                 return (
-                    <IntegralActivityOne unitId={this.props.id}/>
+                    <TopicosAvancados />
                 )
             case "8":
                 return (
-                    <ProblemsOne unitId={this.props.id}/>
+                    <AtividadeCooperativa />
                 )
             case "9":
                 return (
-                    <TopicosAvancados/>
+                    <ParaSaberMais />
                 )
             default:
                 return null
