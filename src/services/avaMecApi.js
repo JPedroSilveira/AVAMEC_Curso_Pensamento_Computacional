@@ -65,7 +65,6 @@ class AvaMecApi {
     }
 
     getNextUnit = unit => {
-        console.log(unit)
         if (unit !== undefined) {
             this.api.obterProximaUnidade(unit)
         }
@@ -77,7 +76,7 @@ class AvaMecApi {
         }
     }
 
-    closeGetUnitProgressListener = (callback) => {
+    closeGetUnitProgressListener = callback => {
         window.removeEventListener(AvaMecApiEvents.UNIT_PROGRESS, callback, false)
     }
 
@@ -95,7 +94,7 @@ class AvaMecApi {
         }
     }
 
-    closeGenericDataListener = (callback) => {
+    closeGenericDataListener = callback => {
         window.removeEventListener(AvaMecApiEvents.GET_GENERIC_DATA, callback, false)
     }
 
@@ -113,7 +112,7 @@ class AvaMecApi {
         }
     }
 
-    closeGetActivity = (callback) => {
+    closeGetActivity = callback => {
         window.removeEventListener(AvaMecApiEvents.GET_ACTIVITY, callback, false)
     }
 
@@ -125,7 +124,7 @@ class AvaMecApi {
         }
     }
 
-    closeSaveActivity = (callback) => {
+    closeSaveActivity = callback => {
         window.removeEventListener(AvaMecApiEvents.REGISTER_ACTIVITY, callback, false)
     }
 }

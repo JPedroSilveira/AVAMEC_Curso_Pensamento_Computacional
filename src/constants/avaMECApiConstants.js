@@ -3,5 +3,6 @@ export default {
     FIRST_PATH: 'unit/',
     SECOND_PATH: '/page_',
     FINISH_OF_PATH: '.html',
-    SELECTED_OPTION_VALUE: '1'
+    SELECTED_OPTION_VALUE: '1',
+    NOT_SELECTED_OPTION_VALUE: '0'
 }

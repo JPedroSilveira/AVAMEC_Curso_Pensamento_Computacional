@@ -38,7 +38,7 @@ class ComplementaryActivity extends BaseActivity {
             unitState: UnitState.NOT_COMPLETED,
             answersAmount: 0,
             apiLoadedAnswers: [],
-            activity: this.generateEmptyActivity()
+            activity: this.generateEmptyActivityData()
         }
 
         this.updateAnswersAmount() 
@@ -121,7 +121,7 @@ class ComplementaryActivity extends BaseActivity {
 
             this.updateAnswersAmount()
 
-            let shouldCloseApiListener = this.state.apiLoadedAnswers.length === this.state.activity.examplas.length
+            let shouldCloseApiListener = this.state.apiLoadedAnswers.length === this.state.activity.examples.length
 
             if (shouldCloseApiListener) {
                 AvaMecApi.closeGenericDataListener(this.callbackGetSavedAnswers)
@@ -131,7 +131,7 @@ class ComplementaryActivity extends BaseActivity {
 
     saveAnswers = () => {
         this.state.activity.examples.forEach(example => {
-            this.AvaMecApi.saveGenericData(this.getGenericId(example.number), example)
+            AvaMecApi.saveGenericData(this.getGenericId(example.number), example)
         })
     }
 
@@ -167,7 +167,7 @@ class ComplementaryActivity extends BaseActivity {
         for (let x = 1; x <= this.props.activity.maxExamplesAmount; x++){
             examples.push({
                 number: x, 
-                show: x <= this.state.activity.minExamplesAmount,
+                show: x <= this.props.activity.minExamplesAmount,
                 questions: this.generateEmptyQuestions()
             })
         }
@@ -182,7 +182,7 @@ class ComplementaryActivity extends BaseActivity {
             questions.push({
                 id: index,
                 answer: "",
-                title: question.titulo,
+                title: question.title,
                 maxAnswerLength: question.maxAnswerLength
             })
         })
@@ -209,8 +209,8 @@ class ComplementaryActivity extends BaseActivity {
         }
     }
 
-    onClickDelete = (number) => {
-        let index = this.getExampleIndexByNumber(number)
+    onClickDelete = data => {
+        let index = this.getExampleIndexByNumber(parseInt(data.currentTarget.id))
 
         this.state.activity.examples[index].show = false
 
@@ -219,6 +219,8 @@ class ComplementaryActivity extends BaseActivity {
         this.sortExamples()
 
         this.updateAnswersAmount()
+
+        this.saveAnswers()
     }
 
     sortExamples = () => {
@@ -234,7 +236,7 @@ class ComplementaryActivity extends BaseActivity {
 
         let index = this.getExampleIndexByNumber(number)
 
-        activity.exemplos[index]
+        activity.examples[index]
             .questions[questionId]
             .answer = data.currentTarget.value.substr(0, maxLength) 
 
@@ -243,12 +245,13 @@ class ComplementaryActivity extends BaseActivity {
         })
     }
 
-    getExampleIndexByNumber = (number) => {
+    getExampleIndexByNumber = number => {
         return this.state.activity.examples.findIndex(example => example.number === number)
     }
 
     renderAddButton = () => {
-        let canAddNewExample = !this.state.completeUnit && this.state.answersAmount < this.state.activity.maxExamplesAmount
+        let canAddNewExample = !this.state.completeUnit 
+            && this.state.answersAmount < this.state.activity.maxExamplesAmount
         
         if (canAddNewExample){
             return (
@@ -259,17 +262,17 @@ class ComplementaryActivity extends BaseActivity {
 
     renderDeleteButton = (example) => {
         let canDelete = !this.state.completeUnit
-            && this.state.answersAmount > this.state.activity.quantidadeMinimaExemplos
+            && this.state.answersAmount > this.state.activity.minExamplesAmount
 
         if (canDelete){
             return (
-                <DeleteButton id={example.number} onClick={this.onClickDelete}/>
+                <DeleteButton id={example.number} onClick={this.onClickDelete.bind(example.number)}/>
             )
         }
     }
 
     renderSaveButton = () => {
-        if (!this.state.completeUnit){
+        if (!this.state.completeUnit && this.state.answersAmount > 0){
             return (
                 <BasicButton onClick={this.saveAnswers} centralize={true}>
                     SALVAR RESPOSTAS
@@ -329,9 +332,12 @@ class ComplementaryActivity extends BaseActivity {
 
     render(){
         return(
-            <div>
+            <div className="complementary-activity-container">
                 <h2>ATIVIDADE COMPLEMENTAR</h2>
-                <p>{this.state.activity.statement}</p>
+                <p>
+                    {this.state.activity.statement} <br /> 
+                    Pressione o botão "+" para salvar uma resposta e a "lixeira" para remover uma resposta.
+                </p>
                 {this.renderExamples()}
                 {this.renderAddButton()}
                 {this.renderSaveButton()}

@@ -8,7 +8,7 @@ class Box extends React.Component {
         this.boxStyle = {
             borderColor: this.props.borderColor !== undefined ? this.props.borderColor : "black",
             width: this.props.width !== undefined ? this.props.width : "80%",
-            backgroundColor: this.props.backgroundColor !== null ? this.props.backgroundColor : "rgb(241, 239, 198)"
+            backgroundColor: this.props.backgroundColor !== undefined ? this.props.backgroundColor : "rgb(241, 239, 198)"
         }
     }
 

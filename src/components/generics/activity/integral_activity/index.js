@@ -204,7 +204,9 @@ class IntegralActivity extends BaseActivity {
             question.options.forEach(option => {
                 let apiTemplate = {
                     "chave": option.key,
-                    "valor": option.key === selectedOption.key ? OptionValues.RIGHT : OptionValues.WRONG
+                    "valor": option.key === selectedOption.key ? 
+                        AvaMECApiConstants.SELECTED_OPTION_VALUE : 
+                        AvaMECApiConstants.NOT_SELECTED_OPTION_VALUE
                 }
 
                 apiQuestion.gabaritos.push(apiTemplate)
@@ -217,9 +219,6 @@ class IntegralActivity extends BaseActivity {
 
     saveActivityCallback = info => {
         if (info.detail.status === 200) {
-
-            let answers = info.detail.data
-
             this.setState({
                 activityState: ActivityState.ANSWERED,
                 grade: info.detail.data.notaAtividade

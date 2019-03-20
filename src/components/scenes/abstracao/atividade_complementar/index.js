@@ -24,7 +24,7 @@ class AtividadeComplementar extends React.Component {
             statement: "Apresente até 3 exemplos, preferencialmente de sua área de interesse, onde você identifica a utilização deste pilar do pensamento computacional. Em cada exemplo, justifique o uso e argumente sobre a importância.",
             minExamplesAmount: MIN_EXAMPLES_AMOUNT,
             maxExamplesAmount: MAX_EXAMPLES_AMOUNT,
-            question: [
+            questions: [
                 {
                     title: "Área de interesse",
                     maxAnswerLength: 200

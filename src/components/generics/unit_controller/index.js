@@ -37,20 +37,20 @@ class UnitController extends React.Component {
         AvaMecApi.closeGetIfPreviousUnitExistListener(this.previousUnitCallback)
     }
 
-    loadNextButton = () => {
+    renderNextButton = () => {
         if (this.state.hasNextUnit){
             return (
-                <BasicButton bigger={true} onClick={this.nextUnit}>
+                <BasicButton bigger={true} marginLeft={true} onClick={this.nextUnit}>
                     CONCLUIR E AVANÇAR PARA A PRÓXIMA UNIDADE
                 </BasicButton>
             )
         }
     }
 
-    loadPreviousButton = () => {
+    renderPreviousButton = () => {
         if (this.state.hasPreviousUnit){
             return (
-                <BasicButton onClick={this.previousUnit}>
+                <BasicButton bigger={true} marginRight={true} onClick={this.previousUnit}>
                     VOLTAR PARA A UNIDADE ANTERIOR
                 </BasicButton>
             )
@@ -82,8 +82,8 @@ class UnitController extends React.Component {
     render() {
         return (
             <div className="unit-controller-container">
-                {this.loadPreviousButton()}
-                {this.loadNextButton()}
+                {this.renderPreviousButton()}
+                {this.renderNextButton()}
             </div>
         )
     }

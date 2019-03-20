@@ -11,12 +11,19 @@ class BasicButton extends React.Component {
             this.class = this.class.concat(this.props.class)
         }
         
-        this.containerClass = "button-container "
+        this.containerClass = ""
+
+        if (this.props.marginLeft){
+            this.containerClass = this.containerClass.concat("button-container-left ")
+        } else if (this.props.marginRight){
+            this.containerClass = this.containerClass.concat("button-container-right ")
+        }
 
         if (this.props.bigger){
             this.class = this.class.concat(" bigger-button ")
             this.containerClass = this.containerClass.concat("button-container-bigger ")
         }
+        
         if (this.props.centralize) {
             this.containerClass = this.containerClass.concat("center-button-container ")
         }

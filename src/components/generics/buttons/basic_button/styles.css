@@ -27,8 +27,12 @@
     margin-top: -0.5em;
 }
 
-.button-container{
+.button-container-right{
     margin-right: 2em;
+}
+
+.button-container-left{
+    margin-left: 2em;
 }
 
 .button-container-bigger{
