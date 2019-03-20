@@ -1,5 +1,5 @@
 import PaginationUtils from '../utils/paginationUtils'
-import AvaMecApiEvents from '../constants/avaMECApiConstants.js';
+import AvaMecApiEvents from '../constants/avaMECApiEvents';
 
 class AvaMecApi {   
     constructor(){
@@ -65,6 +65,7 @@ class AvaMecApi {
     }
 
     getNextUnit = unit => {
+        console.log(unit)
         if (unit !== undefined) {
             this.api.obterProximaUnidade(unit)
         }

@@ -10,11 +10,15 @@ class BasicButton extends React.Component {
         if (this.props.class !== undefined) {
             this.class = this.class.concat(this.props.class)
         }
-
+        
         this.containerClass = "button-container "
 
+        if (this.props.bigger){
+            this.class = this.class.concat(" bigger-button ")
+            this.containerClass = this.containerClass.concat("button-container-bigger ")
+        }
         if (this.props.centralize) {
-            this.containerClass = "center-button-container "
+            this.containerClass = this.containerClass.concat("center-button-container ")
         }
 
         if (this.props.containerClass !== undefined) {

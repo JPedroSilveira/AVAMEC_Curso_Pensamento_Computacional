@@ -39,6 +39,8 @@ class Menu extends React.Component {
         }
 
         AvaMecApi.closeGetCourseDataListener(this.getCourseDataReturn)
+
+        this.forceUpdate()
     }
 
     openMenu = () => {

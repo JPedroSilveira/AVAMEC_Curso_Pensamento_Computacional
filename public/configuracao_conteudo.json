@@ -18,7 +18,7 @@
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_apresentacao_do_curso",
-                        "enunciado": "Assinale a alternativa que lhe parece mais apropriada com respeito à afirmação a seguir, considerado o quadro \"Uma ida não planejada ao supermercado\".",
+                        "enunciado": "Assinale a alternativa que lhe parece mais apropriada com respeito à afirmação a seguir, considerado o quadro 'Uma ida não planejada ao supermercado'.",
                         "gabaritos": [
                             {
                                 "alternativa": "Não, pois ele sempre segue a mesma rotina e já faz o melhor aproveitamento do seu tempo!",
@@ -36,7 +36,7 @@
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Sim, José deve obrigatoriamnte comprar um \"smartphone\" e instalar um aplicativo para ajudá-lo a planejar suas compras e otimizar seu tempo.",
+                                "alternativa": "Sim, José deve obrigatoriamnte comprar um 'smartphone' e instalar um aplicativo para ajudá-lo a planejar suas compras e otimizar seu tempo.",
                                 "chave": "4",
                                 "valor": "0"
                             }
@@ -612,12 +612,12 @@
                             }
                         ]
                     }
-                ]
+                ]   
             }
         ]
     },
     {
-        "identificador": "algoritmos",
+        "identificador": "algoritmos", 
         "nome": "Algoritmos",
         "descricao": "",
         "permitePorcentagem": "true",
@@ -636,24 +636,24 @@
                 "nome": "Aplicações"
             },
             {
-                "identificador": "topico_3",
+                "identificador": "topico_4",
                 "nome": "Refinamentos Sucessivos"
             },
             {
-                "identificador": "topico_4",
+                "identificador": "topico_5",
                 "nome": "Recomendações"
             },
             {
-                "identificador": "topico_5",
+                "identificador": "topico_6",
                 "nome": "Problemas"
             },
             {
-                "identificador": "topico_6",
+                "identificador": "topico_7",
                 "nome": "Atividade Cooperativa"
             },
             {
-                "identificador": "topico_7",
-                "nome": " Para saber mais"
+                "identificador": "topico_8",
+                "nome": "Para saber mais"
             }
         ],
         "atividades": [
@@ -699,12 +699,12 @@
                         "enunciado": "Considere o procedimento a seguir. Identifique a afirmação que parece menos apropriada para este procedimento específico.",
                         "gabaritos": [
                             {
-                                "alternativa": "Se a operação 2.b for substituida por \"procure o produto em cada banca da feira\", o procedimento descreve uma sequência de operações para a realização de compras em uma feira;",
+                                "alternativa": "Se a operação 2.b for substituida por 'procure o produto em cada banca da feira', o procedimento descreve uma sequência de operações para a realização de compras em uma feira;",
                                 "chave": "1",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Algumas vezes a operação \"procure o produto …\", não será bem sucedida.",
+                                "alternativa": "Algumas vezes a operação 'procure o produto …', não será bem sucedida.",
                                 "chave": "2",
                                 "valor": "0"
                             },
@@ -825,5 +825,4 @@
             }
         ]
     }
-
 ]

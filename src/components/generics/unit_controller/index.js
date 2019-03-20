@@ -13,19 +13,18 @@ class UnitController extends React.Component {
             hasPreviousUnit: false
         }
 
-        AvaMecApi.getIfNextUnitExist(this.props.unit, this.nextUnitCallback)
+        AvaMecApi.getIfNextUnitExist(this.props.unit, this.hasNextUnitCallback)
         AvaMecApi.getIfPreviousUnitExist(this.props.unit, this.previousUnitCallback)
     }
 
-    nextUnitCallback = info => {
+    hasNextUnitCallback = info => {
         if (info.detail.status === 200) { 
             this.setState({
                 hasNextUnit: info.detail.data
             })
         }
-        /*To-Do: Tratar erro caso o serviço não retorne uma resposta com sucesso (200).*/
 
-        AvaMecApi.closeGetIfNextUnitExistListener(this.nextUnitCallback)
+        AvaMecApi.closeGetIfNextUnitExistListener(this.hasNextUnitCallback)
     }
 
     previousUnitCallback = info => {
@@ -41,7 +40,7 @@ class UnitController extends React.Component {
     loadNextButton = () => {
         if (this.state.hasNextUnit){
             return (
-                <BasicButton onClick={this.nextUnit}>
+                <BasicButton bigger={true} onClick={this.nextUnit}>
                     CONCLUIR E AVANÇAR PARA A PRÓXIMA UNIDADE
                 </BasicButton>
             )
@@ -71,9 +70,9 @@ class UnitController extends React.Component {
             }
         }
 
-        AvaMecApi.closeGetUnitConclusionDataListener(this.nextUnitReturn)
+        AvaMecApi.closeGetUnitConclusionDataListener(this.nextUnitCallback)
 
-        AvaMecApi.getNextUnit()
+        AvaMecApi.getNextUnit(this.props.unit)
     }
 
     previousUnit = () => {

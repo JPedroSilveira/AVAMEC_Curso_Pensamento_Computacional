@@ -149,7 +149,7 @@ class IntegralActivity extends BaseActivity {
 
                         if (hasSelectedOption){
 
-                            let option = this.getOptionByQuestionIdAndKey(resposta.idQuestao, resposta.chave)
+                            let option = this.getOptionByQuestionIdAndKey(question.id, resposta.chave)
 
                             if (option.value === OptionValues.RIGHT) {
                                 selectedOptions.push({
@@ -215,21 +215,18 @@ class IntegralActivity extends BaseActivity {
         AvaMecApi.saveActivity(apiActivity, this.saveActivityCallback)
     }
 
-    saveActivityCallback = (info) => {
+    saveActivityCallback = info => {
         if (info.detail.status === 200) {
 
             let answers = info.detail.data
-
-            console.log("Terminar aqui!, fazer com que as respostas sejam carregadas no selectedOption com certo e errado")
-            console.log(answers)
 
             this.setState({
                 activityState: ActivityState.ANSWERED,
                 grade: info.detail.data.notaAtividade
             })
 
+            this.getSavedAnswer()
         }
-        /*TO-DO Tratar erros caso não seja possível salvar a resposta.*/
 
         AvaMecApi.closeSaveActivity(this.saveActivityCallback)
     }
@@ -237,8 +234,6 @@ class IntegralActivity extends BaseActivity {
     onChangeSelectedOption = data => {
         if (this.state.unitState !== UnitState.COMPLETED && this.state.activityState !== ActivityState.ANSWERED) {
             let index = this.getIndexSelectedOptionByQuestionId(data.currentTarget.name)
-
-            console.log(this.state.selectedOptions[index].state)
 
             if (this.state.selectedOptions[index].state === QuestionState.NOT_ANSWERED) {
                 this.state.selectedOptions[index].key = data.currentTarget.value

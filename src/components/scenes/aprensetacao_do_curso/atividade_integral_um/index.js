@@ -31,7 +31,7 @@ class AtividadeIntegralUm extends React.Component {
                             value: "0",
                             key: "1",
                             text: "Não, pois ele sempre segue a mesma rotina e já faz o melhor aproveitamento do seu tempo!",
-                            tip: "Podemos verificar que o próprio text descreve a experiência do Sr. José no mercado como não sendo a ideal."
+                            tip: "Podemos verificar que o próprio texto descreve a experiência do Sr. José no mercado como não sendo a ideal."
                         },
                         {
                             value: "1",

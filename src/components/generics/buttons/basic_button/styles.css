@@ -9,6 +9,10 @@
     padding: 1em 2em;
 }
 
+.bigger-button{
+    width: 100%;
+}
+
 .button:hover{
     color:rgb(245, 0, 87);
     border-color: rgb(245, 0, 87);
@@ -21,6 +25,14 @@
     margin-right: 1em;
     margin-left: -1em;
     margin-top: -0.5em;
+}
+
+.button-container{
+    margin-right: 2em;
+}
+
+.button-container-bigger{
+    width: 50%;
 }
 
 .center-button-container{
