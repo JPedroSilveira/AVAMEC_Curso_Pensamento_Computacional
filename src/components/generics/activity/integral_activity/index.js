@@ -453,10 +453,12 @@ class IntegralActivity extends BaseActivity {
     renderRetryButton = () => {
         if (this.state.unitState !== UnitState.COMPLETED) {
             if (this.state.activityState === ActivityState.ANSWERED) {
-                let hasWrongOption = this.state.selectedOptions
-                    .some(selectedOption => selectedOption.state === QuestionState.ANSWERED_WRONG)
 
-                if (hasWrongOption) {
+                let hasWrongOrEmptyOption = this.state.selectedOptions
+                    .some(selectedOption => selectedOption.state === QuestionState.ANSWERED_WRONG
+                            || selectedOption.state === QuestionState.NOT_ANSWERED)
+
+                if (hasWrongOrEmptyOption) {
                     return (
                         <BasicButton
                             onClick={this.retry}

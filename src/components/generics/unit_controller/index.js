@@ -41,7 +41,7 @@ class UnitController extends React.Component {
         if (this.state.hasNextUnit){
             return (
                 <BasicButton bigger={true} marginLeft={true} onClick={this.nextUnit}>
-                    CONCLUIR E AVANÇAR PARA A PRÓXIMA UNIDADE
+                    AVANÇAR PARA A PRÓXIMA UNIDADE
                 </BasicButton>
             )
         }
@@ -71,7 +71,7 @@ class UnitController extends React.Component {
         }
 
         AvaMecApi.closeGetUnitConclusionDataListener(this.nextUnitCallback)
-
+        
         AvaMecApi.getNextUnit(this.props.unit)
     }
 

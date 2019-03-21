@@ -20,11 +20,11 @@ class AtividadeAvaliativa extends React.Component {
     getActivity = () => {
         return {
             unitId: this.props.unitId,
-            id: "atividade_1_algorithms",
+            id: "atividade_1_algoritmos",
             statement: "Considere os procedimentos P01 a P05 a seguir. Sobre cada um deles fazemos algumas afirmações. Identifique a que parece menos apropriada para aquele procedimento específico.",
             questions: [
                 {
-                    id: "q1_a1_algorithms",
+                    id: "q1_a1_algoritmos",
                     title: "P01",
                     statement: "",
                     algorithm: true,
@@ -81,7 +81,7 @@ class AtividadeAvaliativa extends React.Component {
                     ]
                 },
                 {
-                    id: "q2_a1_algorithms",
+                    id: "q2_a1_algoritmos",
                     title: "P02",
                     statement: "",
                     algorithm: true,
@@ -165,7 +165,7 @@ class AtividadeAvaliativa extends React.Component {
                     ]
                 },
                 {
-                    id: "q3_a1_algorithms",
+                    id: "q3_a1_algoritmos",
                     title: "P03",
                     statement: "",
                     algorithm: true,
@@ -219,7 +219,7 @@ class AtividadeAvaliativa extends React.Component {
                     ]
                 },
                 {
-                    id: "q4_a1_algorithms",
+                    id: "q4_a1_algoritmos",
                     title: "P04",
                     statement: "",
                     algorithm: true,
@@ -291,7 +291,7 @@ class AtividadeAvaliativa extends React.Component {
                     ]
                 },
                 {
-                    id: "q5_a1_algorithms",
+                    id: "q5_a1_algoritmos",
                     title: "P05",
                     statement: "",
                     algorithm: true,

@@ -41,7 +41,7 @@ class ReconhecimentoDePadroes extends UnitBase {
                 )
             case "4":
                 return (
-                    <AtividadeAvaliativa />
+                    <AtividadeAvaliativa unitId={this.props.id}/>
                 )
             case "5":
                 return (
@@ -54,7 +54,7 @@ class ReconhecimentoDePadroes extends UnitBase {
             case "7":
                 return (
                     <div>
-                        <AtividadeComplementar />
+                        <AtividadeComplementar unitId={this.props.id}/>
                         <AssuntosCorrelatos />
                     </div>
                 )

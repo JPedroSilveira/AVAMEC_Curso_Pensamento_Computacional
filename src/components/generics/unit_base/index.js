@@ -2,7 +2,7 @@ import React from 'react'
 import AvaMecApi from '../../../services/avaMecApi'
 import Pagination from '../pagination'
 import UnitController from '../unit_controller'
-import LocalStorageUtils from '../../../utils/localStorageUtils.js'
+import LocalStorageUtils from '../../../utils/localStorageUtils'
 import './styles.css'
 
 class UnitBase extends React.Component {
