@@ -1,0 +1,10 @@
+.unit-data-container{
+    position: fixed;
+    display: -webkit-inline-box;
+    width: auto;
+    top: 0.5em;
+    left: 0.5em;
+    padding-left: 0.5em;
+    color: #8fa38f;
+    font-weight: 900;
+}

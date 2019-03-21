@@ -2,7 +2,8 @@ import React from 'react'
 import Menu from '../generics/menu'
 import Header from '../generics/header'
 import localStorageUtils from '../../utils/localStorageUtils'
-import unitId from '../../constants/unitId'
+import UnitId from '../../constants/UnitId'
+import UnitData from '../generics/unit_data'
 
 import ApresentacaoDoCurso from '../scenes/aprensetacao_do_curso'
 import IntroducaoAoPensamentoComputacional from '../scenes/introducao_ao_pensamento_computacional'
@@ -23,18 +24,18 @@ class Main extends React.Component {
 
     LoadUnit = () => {
         switch (this.state.openUnitId){
-            case unitId.APRESENTACAO_CURSO:
-                return (<ApresentacaoDoCurso id={unitId.APRESENTACAO_CURSO} />)
-            case unitId.INTRO_PENSAMENTO_COMP:
-                return (<IntroducaoAoPensamentoComputacional id={unitId.INTRO_PENSAMENTO_COMP} />)
-            case unitId.DECOMPOSICAO:
-                return (<Decomposicao id={unitId.DECOMPOSICAO} />)
-            case unitId.ABSTRACAO:
-                return (<Abstracao id={unitId.ABSTRACAO} />)
-            case unitId.RECONHECIMENTO_DE_PADROES:
-                return (<ReconhecimentoDePadroes id={unitId.RECONHECIMENTO_DE_PADROES}/>)
-            case unitId.ALGORITMOS:
-                return (<Algoritmos id={unitId.ALGORITMOS}/>)
+            case UnitId.APRESENTACAO_CURSO:
+                return (<ApresentacaoDoCurso id={UnitId.APRESENTACAO_CURSO} />)
+            case UnitId.INTRO_PENSAMENTO_COMP:
+                return (<IntroducaoAoPensamentoComputacional id={UnitId.INTRO_PENSAMENTO_COMP} />)
+            case UnitId.DECOMPOSICAO:
+                return (<Decomposicao id={UnitId.DECOMPOSICAO} />)
+            case UnitId.ABSTRACAO:
+                return (<Abstracao id={UnitId.ABSTRACAO} />)
+            case UnitId.RECONHECIMENTO_DE_PADROES:
+                return (<ReconhecimentoDePadroes id={UnitId.RECONHECIMENTO_DE_PADROES}/>)
+            case UnitId.ALGORITMOS:
+                return (<Algoritmos id={UnitId.ALGORITMOS}/>)
             default:
                 return null
         }  
@@ -43,8 +44,9 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <Menu/>
-                <Header/>
+                <Menu />
+                <Header />
+                <UnitData unitId={this.state.openUnitId}/>
                 <div className="main-content">
                     <div className="unit-container">
                         {this.LoadUnit()}
