@@ -9,7 +9,7 @@ import Color from '../../../../../constants/color'
 const ConceituacaoParte1 = () => (
     <div>
         <h2>CONCEITUAÇÃO</h2>
-        <p>Habitamos um planeta repleto de diversidades, das quais podemos citar: solos, relevos, climas, acidentes geográficos, fauna e flora. Cada um desses elementos em si são, por sua vez,  repletos de outras diversidades. Além dos objetos naturais, ainda temos os artificiais, ou seja, aqueles construídos pelo homem. Vivemos pois, em espaços populados por objetos, naturais e artificiais (artefatos) de cores, tamanhos, constituição física, formas, comportamento e funcionalidades bem diferentes.</p>
+        <p>Habitamos um planeta repleto de diversidades, das quais podemos citar: solos, relevos, climas, acidentes geográficos, fauna e flora. Cada um desses elementos em si é, por sua vez, repleto de outras diversidades. Além dos objetos naturais, ainda temos os artificiais, ou seja, aqueles construídos pelo homem. Vivemos, pois, em espaços populados por objetos, naturais e artificiais (artefatos) de cores, tamanhos, constituição física, formas, comportamento e funcionalidades bem diferentes.</p>
         <p>Muitas atividades que fazemos, individualmente ou em grupo, são chamadas de rotinas. Desde quando acordamos até o deitar, realizamos em grande número desse tipo de atividade ao longo do dia. É bem verdade que não necessariamente as realizamos de forma igual todos os dias. Em geral as fazemos com ligeiras variações, em função das estações do ano, do dia da semana, de nossas ocupações etc. </p>
         <p>No quadro a seguir, apresentamos um algoritmo executado por uma grande quantidade de pessoas, em diferentes locais do planeta.</p>
         <CenterBoxContainer>

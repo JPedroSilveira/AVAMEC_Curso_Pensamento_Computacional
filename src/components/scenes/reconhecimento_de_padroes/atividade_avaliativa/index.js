@@ -25,7 +25,7 @@ class AtividadeAvaliativa extends React.Component {
                 {
                     id: "q1_a1_reconhecimento_de_padroes",
                     title: "",
-                    statement: "<span class=\"negrito\">A1.</span> Passeando pelo centro de uma cidade conhecida, digamos que no Rio de Janeiro, você se depara com um aglomerado de pessoas. De repente um desconhecido estabelece uma conversa buscando também entender o que está acontecendo. Nessa conversa, levantando hipóteses e trocando opiniões quando percebem já se passaram uns 30 minutos e se despedem sem descobrirem o motivo da aglomeração. Pensando na conversa com o estranho, você se dá conta que o mesmo não parecia ser carioca nato ou criado naquela cidade. Motivado pela curiosidade, você tenta reconhecer em qual estado aquela pessoa teria nascido e/ou sido criada. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?",
+                    statement: "<span class=\"negrito\">A1.</span> Passeando pelo centro de uma cidade conhecida, digamos que no Rio de Janeiro, você se depara com um aglomerado de pessoas. De repente um desconhecido estabelece uma conversa, quando percebem buscando também entender o que está acontecendo. Nessa conversa, levantando hipóteses e trocando opiniões, quando percebem já se passaram uns 30 minutos e acabam se despedindo sem descobrirem o motivo da aglomeração. Pensando na conversa com o estranho, você se dá conta que o mesmo não parecia ser carioca nato ou criado na cidade. Motivado pela curiosidade, você tenta reconhecer em qual estado aquela pessoa teria nascido e/ou sido criada. Qual, dentre os elementos a seguir, seria o menos provável para estabelecer um padrão adequado a tal propósito?",
                     options: [
                         {
                             value: "0",
@@ -62,7 +62,7 @@ class AtividadeAvaliativa extends React.Component {
                 {
                     id: "q2_a1_reconhecimento_de_padroes",
                     title: "",
-                    statement: "<span class=\"negrito\">A2.</span> Pense em alguma vez que você ou alguém próximo adoeceu e a natureza da enfermidade foi sugerida por alguém e confirmada posteriormente por diagnóstico médico. Em contexto similar, diga qual, dentre os elementos a seguir, seria o menos provável de auxiliar a estabelecer um padrão adequado a tal propósito?",
+                    statement: "<span class=\"negrito\">A2.</span> Pense em alguma vez que você ou alguém próximo adoeceu e a natureza da enfermidade foi sugerida por alguém e confirmada posteriormente por diagnóstico médico. Em contexto similar, diga qual, dentre os elementos a seguir, seria o menos provável para auxiliar a estabelecer um padrão adequado a tal propósito?",
                     options: [
                         {
                             value: "0",
@@ -99,7 +99,7 @@ class AtividadeAvaliativa extends React.Component {
                 {
                     id: "q3_a1_reconhecimento_de_padroes",
                     title: "",
-                    statement: "<span class=\"negrito\">A3.</span> Considere que uma telenovela que você acompanha aproxima-se dos capítulos finais e você, como vários de seus conhecidos, tentam prever como será o final da mesma e discutem entre si, as possibilidades de desfecho baseado nos acontecimentos dos capítulos anteriores. Considere qual, dentre os acontecimentos de capítulos recentes, seria o menos provável de ter impacto direto no final da novela.",
+                    statement: "<span class=\"negrito\">A3.</span> Considere que uma telenovela que você acompanha aproxima-se dos capítulos finais e você e vários de seus conhecidos tentam prever como será o final da mesma e discutem entre si as possibilidades de desfecho baseados nos acontecimentos dos capítulos anteriores. Considere qual, dentre os acontecimentos de capítulos recentes, seria o menos provável de ter impacto direto no final da novela.",
                     options: [
                         {
                             value: "0",
@@ -136,7 +136,7 @@ class AtividadeAvaliativa extends React.Component {
                 {
                     id: "q4_a1_reconhecimento_de_padroes",
                     title: "",
-                    statement: "<span class=\"negrito\">A4.</span> Retomando ao cenário da questão 1, considere o propósito de identificar a profissão do desconhecido. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?",
+                    statement: "<span class=\"negrito\">A4.</span> Retomando ao cenário da Questão 1, considere o propósito de identificar a profissão do desconhecido. Qual, dentre os elementos a seguir, seria o menos provável para estabelecer um padrão adequado a tal propósito?",
                     options: [
                         {
                             value: "0",
@@ -173,7 +173,7 @@ class AtividadeAvaliativa extends React.Component {
                 {
                     id: "q5_a1_reconhecimento_de_padroes",
                     title: "",
-                    statement: "<span class=\"negrito\">A5.</span> Num mercado, determinar se o peixe está de fato fresco envolve analisar se cada exemplar está em conformidade com certos elementos, como os mencionados a seguir. Qual, dentre os aspectos abaixo, parece menos provável de caracterizar a frescura de um certo pescado?",
+                    statement: "<span class=\"negrito\">A5.</span> Num mercado, determinar se o peixe está de fato fresco envolve analisar se cada exemplar está em conformidade com certos elementos, como os mencionados a seguir. Qual, dentre os aspectos abaixo, parece menos provável para caracterizar a frescura de um certo pescado?",
                     options: [
                         {
                             value: "0",
