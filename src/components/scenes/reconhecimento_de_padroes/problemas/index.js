@@ -4,7 +4,6 @@ import Tangram2 from '../../../../images/tangram2.jpg'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 import ItalicText from '../../../generics/italic_text'
-import UnderlinedText from '../../../generics/underlined_text'
 
 const Problemas = () => (
     <div>
@@ -20,7 +19,7 @@ const Problemas = () => (
         <h4>Problema 2:</h4>
         <p>Fazer a cobertura de uma imagem com as peças de um Tangram, conforme o molde na imagem a seguir.</p>
         <Image src={Tangram2} alt="Tangram desmontado feito com sete peças coloridas.">
-            <p><strong>Figura 02: Proposta para cobertura de um fundo com as peças de um Tangram: <br />(Fazer <ItalicText>online</ItalicText> no <ExternalLink href="https://rachacuca.com.br/raciocinio/tangram/1/"><ItalicText><UnderlinedText>site</UnderlinedText></ItalicText></ExternalLink>, salvar a imagem em arquivo de postar no <ItalicText>site</ItalicText> do PC)</strong></p>
+            <p><strong>Figura 02: Proposta para cobertura de um fundo com as peças de um Tangram: <br />(Fazer <ItalicText>online</ItalicText> no <ExternalLink href="https://rachacuca.com.br/raciocinio/tangram/1/"><ItalicText>site</ItalicText></ExternalLink>, salvar a imagem em arquivo de postar no <ItalicText>site</ItalicText> do PC)</strong></p>
         </Image>
     </div>
 )

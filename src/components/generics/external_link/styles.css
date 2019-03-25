@@ -1,5 +1,6 @@
 .external-link-container a{
     font-size: 0.9em;
+    text-decoration: underline;
 }
 
 .external-link-container a:link{
