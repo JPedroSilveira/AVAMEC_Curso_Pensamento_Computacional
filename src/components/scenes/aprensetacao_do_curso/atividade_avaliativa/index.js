@@ -4,7 +4,7 @@ import IntegralActivity from '../../../generics/activity/integral_activity'
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     unitId: String, representa o id da unidade em que a atividade se encontra
 .*/
-class AtividadeIntegralUm extends React.Component {
+class AtividadeAvaliativa extends React.Component {
     constructor(props){
         super(props)
 
@@ -36,7 +36,7 @@ class AtividadeIntegralUm extends React.Component {
                         {
                             value: "1",
                             key: "2",
-                            text: "Sim, pois José poderia por exemplo aprender um pouco sobre algoritmos e criar um para sempre buscar o menor caminho no mercado otimizando seu tempo.",
+                            text: "Sim, pois José poderia por exemplo aprender um pouco sobre algoritmos e criar um para sempre buscar o menor caminho no mercado, otimizando seu tempo.",
                             tip: "Pensar neste algoritmo levaria José a criar uma lista de compras \"enxuta\" e que pouparia a ele seu precioso tempo!"
                         },
                         {
@@ -64,4 +64,4 @@ class AtividadeIntegralUm extends React.Component {
     }
 }
 
-export default AtividadeIntegralUm
+export default AtividadeAvaliativa

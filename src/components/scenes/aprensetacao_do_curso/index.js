@@ -1,7 +1,7 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import Texto1 from './texto_1'
-import AtividadeIntegralUm from './atividade_integral_um'
+import AtividadeAvaliativa from './atividade_avaliativa'
 import Texto2 from './texto_2'
 import Desafio from './desafio'
 
@@ -30,7 +30,7 @@ class ApresentacaoDoCurso extends UnitBase {
             case "2":
                 return (
                     <div>
-                        <AtividadeIntegralUm unitId={this.props.id} />
+                        <AtividadeAvaliativa unitId={this.props.id} />
                         <Texto2 />
                         <Desafio />
                     </div>
