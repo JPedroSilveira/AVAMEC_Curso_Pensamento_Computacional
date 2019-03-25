@@ -14,7 +14,7 @@ const Texto1 = () => (
             <li>Planejar a mudança da família para uma nova cidade;</li>
             <li>Organizar a feira de ciências de sua escola;</li>
             <li>Organizar uma rede de abastecimento de alimentos;</li>
-            <li>Organizar um evento esportivo, como por exemplo as olimpíadas;</li>
+            <li>Organizar um evento esportivo, como por exemplo as olimpíadas.</li>
         </ul>
         <p>
             Antes de prosseguir, completamos a seção com um problema que há séculos entretém 
@@ -33,7 +33,7 @@ const Texto1 = () => (
                     que o fazendeiro atravessasse de uma só vez como todos os seus pertences. 
                     O barco só era capaz de suportar ele e mais um dos itens em cada viagem. 
                     Já estava pronto para começar a travessia, levando primeiramente o 
-                    <strong> lobo</strong>, quando se deu conta que se deixasse a ovelha sozinha com 
+                    <strong> lobo</strong>, quando se deu conta que se deixasse a <strong>ovelha</strong> sozinha com 
                     a <strong>caixa de repolho</strong>, quando voltasse a <strong>caixa de repolho </strong> 
                     teria sido comida pela <strong>ovelha</strong>. Então pensou em levar primeiro o 
                     <strong> repolho</strong> e daí lembrou que a <strong>ovelha </strong> 
@@ -48,7 +48,7 @@ const Texto1 = () => (
         </CenterBoxContainer>
         <p>Se quiser tentar um pouco, entre no endereço: <ExternalLink href="http://www.plastelina.net/game1.html">http://www.plastelina.net/game1.html</ExternalLink></p>
         <p>Se quiser ver uma animação, clique no endereço: <ExternalLink href="https://youtu.be/WmQCcBj_ROQ">https://youtu.be/WmQCcBj_ROQ</ExternalLink></p>
-        <p>Para uma discussão pedagógica deste problema, recomendamos a leitura do texto “Piaget e nossa Inteligência” do professor Lino Macedo.</p>
+        <p>Para uma discussão pedagógica desse problema, recomendamos a leitura do texto “Piaget e nossa Inteligência” do professor Lino Macedo.</p>
         <p>Alguns problemas podem ser simples, enquanto outros são de natureza mais complexa. Os primeiros podem ser resolvidos diretamente, ou com o uso de estratégias simples e outros, mais complexos, podem requerer o uso de várias estratégias combinadas para sua solução.</p>
         <p>Independente dos elementos envolvidos nos problemas, por estarem em campos diferentes, podemos identificar um conjunto de estratégias similares, cuja aplicação isolada ou combinada pode contribuir para a resolução sistemática de problemas nos mais diversos âmbitos da atividade humana, sejam eles no transporte, na agricultura, na medicina, nas diversas engenharias, na logística e nas tarefas cotidianas. </p>
         <p> Apesar de existirem diferentes propostas para o agrupamento dessas estratégias, iremos tratar neste curso do que tem sido chamado os 4 pilares do Pensamento Computacional (<span className="span-referencia">referência</span>), a saber: a <strong>Abstração</strong>, a <strong>Decomposição</strong>, o <strong>Reconhecimento de Padrões</strong> e os <strong>Algoritmos</strong>.</p>
