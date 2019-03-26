@@ -14,7 +14,7 @@ const AplicacoesParte1 = () => (
                 <Title>ALG 05 - Subir uma escada</Title>
                 <AlgorithmLevel>
                     <li><span className="textred">Enquanto</span> houver degrau à sua frente <span className="textred">faça</span>
-                        <AlgorithmLevel>
+                        <AlgorithmLevel child={true}>
                             Suba o degrau à sua frente.
                         </AlgorithmLevel>
                     </li>

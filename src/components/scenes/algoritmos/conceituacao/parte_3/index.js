@@ -14,7 +14,7 @@ const ConceituacaoParte3 = () => (
                 <Title>Algoritmo 03 <br /> Iniciação - Do acordar até chegar no local de trabalho</Title>
                 <AlgorithmLevel> 
                     <span className="textdarkgreen">Após o barulho do despertador:</span>
-                    <AlgorithmLevel showStyle={true}>
+                    <AlgorithmLevel showStyle={true} child={true}>
                        <li>Despertar.</li>
                        <li>Calçar um chinelo</li>
                        <li>Vestir uma roupa </li>
@@ -23,11 +23,11 @@ const ConceituacaoParte3 = () => (
                        <li>Trocar de roupa</li>
                        <li>Ir à padaria</li>
                        <li><span className="textblue">Pegar os pães =</span> <br/>
-                            <AlgorithmLevel>
+                            <AlgorithmLevel child={true}>
                                 <span className="textred">Se </span>encontrar pão integral<br/>
-                                <AlgorithmLevel>
+                                <AlgorithmLevel child={true}>
                                     <span className="textred">então </span> <span className="textblue">pegar os pães integrais =</span><br/>
-                                    <AlgorithmLevel>
+                                    <AlgorithmLevel child={true}>
                                         <li>pegar um pão integral</li>
                                         <li>pegar um pão integral</li>
                                         <li>pegar um pão integral</li>
@@ -57,11 +57,11 @@ const ConceituacaoParte3 = () => (
             <AlgorithmBox>
                 <AlgorithmLevel>
                     8.<span className="textblue"> pegar os pães =</span>
-                    <AlgorithmLevel>   
+                    <AlgorithmLevel child={true}>   
                         <span className="textred">Se </span>encontrar pão integral<br/>
-                        <AlgorithmLevel>
+                        <AlgorithmLevel child={true}>
                             <span className="textred">então </span><span className="textblue">pegar os pães integrais = </span><br/>
-                            <AlgorithmLevel>
+                            <AlgorithmLevel child={true}>
                                 <span className="textred">Repita 5 </span><span className="textblue">vezes</span> pegar um pão integral;<br/>
                             </AlgorithmLevel>
                             <span className="textred">senão </span>pegar os pães comuns
@@ -76,7 +76,7 @@ const ConceituacaoParte3 = () => (
                 <Title>Algoritmo 04 <br /> Iniciação - Do acordar até chegar no local de trabalho</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Após o barulho do despertador: </span>
-                    <AlgorithmLevel showStyle={true}>
+                    <AlgorithmLevel showStyle={true} child={true}>
                         <li>Despertar.</li>
                         <li>Calçar um chinelo.</li>
                         <li>Vestir uma roupa.</li>
@@ -85,15 +85,15 @@ const ConceituacaoParte3 = () => (
                         <li>Trocar de roupa.</li>
                         <li>Ir à padaria.</li>
                         <li><span className="textblue">pegar os pães =</span> <br/>
-                            <AlgorithmLevel>
+                            <AlgorithmLevel child={true}>
                                 <span className="textred">Se </span>encontrar pão integral<br/>
-                                <AlgorithmLevel>
+                                <AlgorithmLevel child={true}>
                                     <span className="textred">então </span> <span className="textblue">pegar os pães integrais =</span> <br/>
-                                    <AlgorithmLevel>
+                                    <AlgorithmLevel child={true}>
                                         <span className="textred">Repita 5 vezes:</span> pegar um pão integral.<br/>
                                     </AlgorithmLevel>
                                     <span className="textred">senão </span>pegar os pães comuns <br/>
-                                    <AlgorithmLevel>
+                                    <AlgorithmLevel child={true}>
                                         <span className="textred">Repita 5 vezes:</span> pegar um pão comum.<br/>
                                     </AlgorithmLevel>
                                 </AlgorithmLevel>

@@ -9,6 +9,10 @@
     color: #585858;
 }
 
+.level .sublevel li{
+    font-size: inherit;
+}
+
 .level.none-style{
     list-style-type: none;
 }

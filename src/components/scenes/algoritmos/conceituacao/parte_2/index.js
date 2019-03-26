@@ -14,7 +14,7 @@ const ConceituacaoParte2 = () => (
                 <Title>Algoritmo 02 <br /> Iniciação - Do acordar até chegar no local de trabalho</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Após o barulho do despertador:</span>
-                    <AlgorithmLevel showStyle={true}>
+                    <AlgorithmLevel showStyle={true} child={true}>
                         <li>Despertar.</li>
                         <li>Calçar um chinelo.</li>
                         <li>Vestir uma roupa.</li>
@@ -23,9 +23,9 @@ const ConceituacaoParte2 = () => (
                         <li>Trocar de roupa.</li>
                         <li>Ir à padaria.</li>
                         <li><span className="textblue">Pegar os pães =</span><br/>
-                            <AlgorithmLevel>
+                            <AlgorithmLevel child={true}>
                                 <span className="textred">Se </span>encontrar pão integral<br/>
-                                <AlgorithmLevel>
+                                <AlgorithmLevel child={true}>
                                     <span className="textred">então </span>pegar os pães integrais.<br/>
                                     <span className="textred">senão </span>pegar os pães comuns.
                                 </AlgorithmLevel>
@@ -51,11 +51,11 @@ const ConceituacaoParte2 = () => (
             <AlgorithmBox>
                 <AlgorithmLevel>
                         <li>8. <span className="textblue"> pegar os pães =</span>
-                            <AlgorithmLevel>
-                                <span className="textred">Se </span>encontrar pão integral<br/>
-                                <AlgorithmLevel>
-                                    <span className="textred">então </span>pegar os pães integrais.<br/>
-                                    <span className="textred">senão </span>pegar os pães comuns.
+                            <AlgorithmLevel child={true}>
+                                <li><span className="textred">Se </span>encontrar pão integral</li>
+                                <AlgorithmLevel child={true}>
+                                    <li><span className="textred">então </span>pegar os pães integrais.</li>
+                                    <li><span className="textred">senão </span>pegar os pães comuns.</li>
                                 </AlgorithmLevel>
                             </AlgorithmLevel>
                         </li>

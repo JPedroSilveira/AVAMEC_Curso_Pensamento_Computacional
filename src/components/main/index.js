@@ -2,7 +2,7 @@ import React from 'react'
 import Menu from '../generics/menu'
 import Header from '../generics/header'
 import localStorageUtils from '../../utils/localStorageUtils'
-import UnitId from '../../constants/UnitId'
+import UnitId from '../../constants/unitId'
 import UnitData from '../generics/unit_data'
 
 import ApresentacaoDoCurso from '../scenes/aprensetacao_do_curso'

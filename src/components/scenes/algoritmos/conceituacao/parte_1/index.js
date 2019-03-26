@@ -15,7 +15,7 @@ const ConceituacaoParte1 = () => (
         <CenterBoxContainer>
             <AlgorithmBox>
                 <Title>Algoritmo 01 <br/> Iniciação - Do acordar até chegar no local de trabalho</Title>
-                <AlgorithmLevel showStyle>
+                <AlgorithmLevel>
                     <span className="textdarkgreen">Após o barulho do despertador:</span>
                     <AlgorithmLevel showStyle={true}>
                        <li>Despertar.</li>

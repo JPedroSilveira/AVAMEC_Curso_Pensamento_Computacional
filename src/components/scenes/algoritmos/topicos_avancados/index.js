@@ -30,9 +30,9 @@ const TopicosAvancados = () => (
                 <AlgorithmLevel showStyle={true}>
                         <li>
                             <span className="textred">Enquanto</span> houver cilindros na coleção “cilindros desordenados” <span className="textred">faça</span>
-                            <AlgorithmLevel>
-                                a.  escolha o cilindro de maior peso na coleção de “cilindros desordenados”;<br />
-                                b.  coloque-o no final da fila de “cilindros ordenados”.
+                            <AlgorithmLevel child={true}>
+                                <li>a.  escolha o cilindro de maior peso na coleção de “cilindros desordenados”;</li>
+                                <li>b.  coloque-o no final da fila de “cilindros ordenados”.</li> 
                             </AlgorithmLevel>
                         </li>
                         <li><span className="textred">Divulgue</span> a lista “cilindros ordenados”</li>
@@ -46,8 +46,8 @@ const TopicosAvancados = () => (
                     <li>Coloque um cilindro da coleção "cilindros desordenados"  em um prato qualquer da balança.</li>
                     <li><span className="textred">Enquanto</span> houver cilindros na coleção “cilindros desordenados” <span className="textred">faça</span>
                         <AlgorithmLevel>
-                            a.  pegue um cilindro qualquer da “cilindros desordenados” e coloque no prato livre da balança;<br />
-                            b.  esvazie o prato mais leve deixando na balança o cilindro mais pesado até o momento.
+                            <li>a.  pegue um cilindro qualquer da “cilindros desordenados” e coloque no prato livre da balança;</li>
+                            <li>b.  esvazie o prato mais leve deixando na balança o cilindro mais pesado até o momento.</li>
                         </AlgorithmLevel>
                     </li>
                     <li>Divulgue o cilindro que está na balança.</li>
@@ -60,8 +60,8 @@ const TopicosAvancados = () => (
                 <AlgorithmLevel showStyle={true}>
                     <li><span className="textred">Enquanto</span> houver espaço no compartimento de cargas e cilindros na fila “cilindros ordenados” <span className="textred">faça</span>
                         <AlgorithmLevel>
-                            a.  pegue o primeiro cilindro da fila;<br />
-                            b.  coloque o cilindro no espaço livre no chão do porta carga.
+                            <li>a.  pegue o primeiro cilindro da fila;</li>
+                            <li>b.  coloque o cilindro no espaço livre no chão do porta carga.</li>
                         </AlgorithmLevel>
                     </li>
                 </AlgorithmLevel>

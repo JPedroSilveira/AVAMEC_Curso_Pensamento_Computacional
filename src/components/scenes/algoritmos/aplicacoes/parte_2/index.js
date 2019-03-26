@@ -14,14 +14,14 @@ const AplicacoesParte2 = () => (
                 <Title>ALG 07 - Preparando o almoço de domingo</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Salmão assado com molho parisiense acompanhado de risoto de alho poró:</span><br/>
-                    <AlgorithmLevel showStyle={true}>
+                    <AlgorithmLevel showStyle={true} child={true}>
                         <li>Prepare o salmão;</li>
                         <li>Prepare o molho;</li>
                         <li>Prepare o risoto;</li>
                         <li>Sirva o almoço</li>
                     </AlgorithmLevel>
                     <Title>ALG 07.1 - Preparando o salmão</Title>
-                    <AlgorithmLevel showStyle={true}>
+                    <AlgorithmLevel showStyle={true} child={true}>
                         <li>Obtenha um kilo de filé de salmão;</li>
                         <li>Lave com água de um limão;</li>
                         <li>Cubra com 4 dentes de alho amassado;</li>
@@ -32,7 +32,7 @@ const AplicacoesParte2 = () => (
                         <li>Leve o prato ao forno de deixe assar por trinta minutos.</li>
                     </AlgorithmLevel>
                     <Title>ALG 07.2 - Preparando o molho</Title>
-                    <AlgorithmLevel showStyle={true}>
+                    <AlgorithmLevel showStyle={true} child={true}>
                         <li>Corte uma cebola média bem picada;</li>
                         <li>Corte um tomate médio, bem picado</li>
                         <li>Corte em tiras 7 azeitonas pequena descadoraças</li>
@@ -54,18 +54,18 @@ const AplicacoesParte2 = () => (
                 <Title>ALG 08 - Mesclagem de duas listas ordenadas</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Vamos chamar de  L1 e L2 as duas listas ordenadas e de L3 a lista a ser construída, com  os elementos de L1 e L2, garantindo que os elementos de L3 também estarão ordenados. A lista L3 inicialmente estará sem elementos.</span><br/>
-                    <AlgorithmLevel showStyle={true}>
+                    <AlgorithmLevel showStyle={true} child={true}>
                         <li><span className="textred">Enquanto</span> L1 tem elementos e L2 tem elementos <span className="textred">faça</span> <br/>
-                            <AlgorithmLevel>
+                            <AlgorithmLevel child={true}>
                                 <span className="textred"> Se</span> primeiro da lista L1 é maior que primeiro da lista 2<br/>
-                                <AlgorithmLevel> 
+                                <AlgorithmLevel child={true}> 
                                     <span className="textred"> então </span> passe o primeiro da lista L1 para o final da lista L3<br/>
                                     <span className="textred"> senão </span> passe o primeiro da lista L2 para o final da lista L3<br/>
                                 </AlgorithmLevel>
                             </AlgorithmLevel>
                         </li>
                         <li><span className="textred">Se</span> L1 possui elementos <br/>
-                            <AlgorithmLevel>
+                            <AlgorithmLevel child={true}>
                                 <span className="textred"> então </span> passe todos os elementos de L1 para o final de L3<br/>
                                 <span className="textred"> senão </span> passe todos os elementos de L2 para o final de L3<br/>
                             </AlgorithmLevel>                                    

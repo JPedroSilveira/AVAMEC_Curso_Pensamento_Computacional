@@ -394,10 +394,10 @@ class IntegralActivity extends BaseActivity {
         )
     }
     
-    renderInstructions = (instructions, showStyle) => {
+    renderInstructions = (instructions, first) => {
         if (instructions !== undefined && instructions.length > 0){
             return (
-                <AlgorithmLevel showStyle={showStyle}>
+                <AlgorithmLevel showStyle={first} child={!first}>
                     {instructions.map((instruction, key) => {
                         return this.renderInstruction(instruction, key)
                     })}
