@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import ActivityConstants from '../../../../constants/activityConstants'
 import ActivityState from '../../../../constants/activityState'
@@ -135,7 +135,7 @@ class ProblemActivity extends BaseActivity {
 
     renderProblems = (problems) => {
         return(
-            <div>
+            <Fragment>
                 {problems.map((problem, key) => {
                         return (
                             <CenterBoxContainer key={key}>
@@ -154,7 +154,7 @@ class ProblemActivity extends BaseActivity {
                         )
                     })
                 }
-            </div>
+            </Fragment>
         )
     }
 

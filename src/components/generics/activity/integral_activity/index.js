@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import ListUtils from '../../../../utils/listUtils'
 
@@ -296,7 +296,7 @@ class IntegralActivity extends BaseActivity {
 
     renderOptions = (question) => {
         return (
-            <div>
+            <Fragment>
                 {question.options.map((option, key) => {
                     return (
                         <ActivityOption key={key}>
@@ -305,7 +305,7 @@ class IntegralActivity extends BaseActivity {
                         </ActivityOption>
                     )
                 })}
-            </div>
+            </Fragment>
         )
     }
 
@@ -331,28 +331,27 @@ class IntegralActivity extends BaseActivity {
 
             let selectedOption = this.state.selectedOptions[indexSelectedOption]
             
-            return (
-                <div>
-                    {selectedOption.state === QuestionState.ANSWERED_RIGHT &&
-                        <Box backgroundColor={Color.HINT_RIGHT_BG}>
-                            <strong>Resposta Certa: </strong>
-                            {option.tip}
-                        </Box>
-                    }
-                    {selectedOption.state === QuestionState.ANSWERED_WRONG &&
-                        <Box backgroundColor={Color.HINT_WRONG_BG}> 
-                            <strong>Resposta Errada: </strong>
-                            {option.tip}
-                        </Box>
-                    }
-                </div>
-            ) 
+            if (selectedOption.state === QuestionState.ANSWERED_RIGHT) {
+                return (
+                    <Box backgroundColor={Color.HINT_RIGHT_BG}>
+                        <strong>Resposta Certa: </strong>
+                        {option.tip}
+                    </Box>
+                )
+            } else if (selectedOption.state === QuestionState.ANSWERED_WRONG) {
+                return (
+                    <Box backgroundColor={Color.HINT_WRONG_BG}>
+                        <strong>Resposta Errada: </strong>
+                        {option.tip}
+                    </Box>
+                )
+            }
         }
     }
 
     renderQuestions = () => {
         return (
-            <div>
+            <Fragment>
                 {this.props.activity.questions.map((question, key) => {
                     return (
                         <div key={key}>
@@ -363,7 +362,7 @@ class IntegralActivity extends BaseActivity {
                         </div>
                     )
                 })}
-            </div>
+            </Fragment>
         )
     }
 
@@ -372,14 +371,14 @@ class IntegralActivity extends BaseActivity {
             return this.renderAlgorithmStatement(question)
         } else {
             return (
-                <div>
-                    {question.title !== undefined && question.title !== "" &&
+                <Fragment>
+                    {question.title !== undefined && question.title !== "" && 
                         <h4>{ReactHtmlParser(question.title)}</h4>
                     }
-                    {question.statement !== undefined && question.statement !== "" &&
+                    {question.statement !== undefined && question.statement !== "" && 
                         <p>{ReactHtmlParser(question.statement)}</p>
                     }
-                </div>
+                </Fragment>
             )
         }
     }
@@ -417,7 +416,7 @@ class IntegralActivity extends BaseActivity {
 
     renderTitle = () => {
         return (
-            <div>
+            <Fragment>
                 {this.props.activity.questions.length > 1 ?
                     <h3>ATIVIDADES AVALIATIVAS</h3> : <h3>ATIVIDADE AVALIATIVA</h3>
                 }
@@ -426,7 +425,7 @@ class IntegralActivity extends BaseActivity {
                         <p>{this.props.activity.statement}</p>
                     </div>
                 }
-            </div>
+            </Fragment>
         )
     }
 

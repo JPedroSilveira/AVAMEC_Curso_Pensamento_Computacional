@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Box from '../../../generics/box'
 import BasicButton from '../../buttons/basic_button'
@@ -298,11 +298,11 @@ class ComplementaryActivity extends BaseActivity {
 
     renderQuestions = (number, questions) => {
         return (
-            <div>
+            <Fragment>
                 {questions.map((question, key) => {
                     return (this.renderQuestion(number, question, key) )
                 })}
-            </div>
+            </Fragment>
         )
     }
 
