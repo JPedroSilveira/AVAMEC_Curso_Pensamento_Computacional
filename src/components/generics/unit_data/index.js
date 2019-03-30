@@ -1,6 +1,6 @@
 import React from 'react'
 import UnitDataServices from '../../../services/unitDataServices'
-import AvaMecApi from '../../../services/avaMecApi'
+import AvaMecApiServices from '../../../services/avaMecApi'
 
 import './styles.css'
 
@@ -14,7 +14,7 @@ class UnitData extends React.Component {
 
         this.validateProps()
 
-        AvaMecApi.getUnitConclusionData(this.props.unitId, this.updateUnitDataCallback)
+        AvaMecApiServices.getUnitConclusionData(this.props.unitId, this.updateUnitDataCallback)
     }
 
     validateProps = () => {

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import ActivityConstants from '../../../../constants/activityConstants'
 import ActivityState from '../../../../constants/activityState'
-import AvaMecApi from '../../../../services/avaMecApi'
+import AvaMecApiServices from '../../../../services/avaMecApiServices'
 import BaseActivity from '../../activity/baseActivity'
 import BasicButton from '../../buttons/basic_button'
 import CenterBoxContainer from '../../center_box_container'
@@ -70,7 +70,7 @@ class ProblemActivity extends BaseActivity {
 
     getSavedAnswers = () => {
         this.props.activity.problems.forEach(problem => {
-            AvaMecApi.getGenericData(
+            AvaMecApiServices.getGenericData(
                 this.getGenericProblemId(problem),
                 this.callbackGetSavedAnswers
             )
@@ -98,7 +98,7 @@ class ProblemActivity extends BaseActivity {
             let shouldCloseApiListener = this.state.apiLoadedAnswers.length === this.state.activity.examplas.length
 
             if (shouldCloseApiListener) {
-                AvaMecApi.closeGenericDataListener(this.callbackGetSavedAnswers)
+                AvaMecApiServices.closeGenericDataListener(this.callbackGetSavedAnswers)
             }
         }
     }
@@ -109,7 +109,7 @@ class ProblemActivity extends BaseActivity {
     
     saveAnswers = () => {
         this.state.activity.problems.forEach(problem => {
-            this.AvaMecApi.saveGenericData(this.getGenericProblemId(problem), problem)
+            this.AvaMecApiServices.saveGenericData(this.getGenericProblemId(problem), problem)
         })
     }
 

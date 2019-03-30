@@ -1,5 +1,5 @@
 import React from 'react'
-import AvaMecApi from '../../../services/avaMecApi.js'
+import AvaMecApiServices from '../../../services/avaMecApi.js'
 import BasicButton from '../../generics/buttons/basic_button'
 
 import './styles.css'
@@ -13,8 +13,8 @@ class UnitController extends React.Component {
             hasPreviousUnit: false
         }
 
-        AvaMecApi.getIfNextUnitExist(this.props.unit, this.hasNextUnitCallback)
-        AvaMecApi.getIfPreviousUnitExist(this.props.unit, this.previousUnitCallback)
+        AvaMecApiServices.getIfNextUnitExist(this.props.unit, this.hasNextUnitCallback)
+        AvaMecApiServices.getIfPreviousUnitExist(this.props.unit, this.previousUnitCallback)
     }
 
     hasNextUnitCallback = info => {
@@ -24,7 +24,7 @@ class UnitController extends React.Component {
             })
         }
 
-        AvaMecApi.closeGetIfNextUnitExistListener(this.hasNextUnitCallback)
+        AvaMecApiServices.closeGetIfNextUnitExistListener(this.hasNextUnitCallback)
     }
 
     previousUnitCallback = info => {
@@ -34,7 +34,7 @@ class UnitController extends React.Component {
             })
         }
         
-        AvaMecApi.closeGetIfPreviousUnitExistListener(this.previousUnitCallback)
+        AvaMecApiServices.closeGetIfPreviousUnitExistListener(this.previousUnitCallback)
     }
 
     renderNextButton = () => {
@@ -58,7 +58,7 @@ class UnitController extends React.Component {
     }
 
     nextUnit = () => {
-        AvaMecApi.getUnitConclusionData(this.props.unit, this.nextUnitCallback)
+        AvaMecApiServices.getUnitConclusionData(this.props.unit, this.nextUnitCallback)
     }
 
     nextUnitCallback = info => {
@@ -70,13 +70,13 @@ class UnitController extends React.Component {
             }
         }
 
-        AvaMecApi.closeGetUnitConclusionDataListener(this.nextUnitCallback)
+        AvaMecApiServices.closeGetUnitConclusionDataListener(this.nextUnitCallback)
         
-        AvaMecApi.getNextUnit(this.props.unit)
+        AvaMecApiServices.getNextUnit(this.props.unit)
     }
 
     previousUnit = () => {
-        AvaMecApi.getPreviousUnit(this.props.unit)
+        AvaMecApiServices.getPreviousUnit(this.props.unit)
     }
 
     render() {

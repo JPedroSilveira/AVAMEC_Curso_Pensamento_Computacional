@@ -1,5 +1,5 @@
 import React from 'react'
-import AvaMecApi from '../../../services/avaMecApi.js'
+import AvaMecApiServices from '../../../services/avaMecApi.js'
 import avaMecConstants from '../../../constants/avaMECApiConstants'
 
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
@@ -24,7 +24,7 @@ class Menu extends React.Component {
             units: []
         } 
 
-        AvaMecApi.getCourseData(this.getCourseDataReturn)
+        AvaMecApiServices.getCourseData(this.getCourseDataReturn)
     }
 
     getCourseDataReturn = eventReturn => {
@@ -38,7 +38,7 @@ class Menu extends React.Component {
             })
         }
 
-        AvaMecApi.closeGetCourseDataListener(this.getCourseDataReturn)
+        AvaMecApiServices.closeGetCourseDataListener(this.getCourseDataReturn)
 
         this.forceUpdate()
     }
@@ -115,7 +115,7 @@ class Menu extends React.Component {
     }
 
     changeUnit = data => {
-        AvaMecApi.changeUnit(data.currentTarget.id)
+        AvaMecApiServices.changeUnit(data.currentTarget.id)
     }
 
     render() {

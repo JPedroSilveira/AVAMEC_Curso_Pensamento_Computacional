@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import ListUtils from '../../../../utils/listUtils'
 
-import AvaMecApi from '../../../../services/avaMecApi'
+import AvaMecApiServices from '../../../../services/avaMecApiServices'
 
 import ActivityConstants from '../../../../constants/activityConstants'
 import ActivityState from '../../../../constants/activityState'
@@ -120,7 +120,7 @@ class IntegralActivity extends BaseActivity {
     }
 
     getSavedAnswer = () => {
-        AvaMecApi.getActivity(this.props.activity.id, this.getSavedAnswerCallback)
+        AvaMecApiServices.getActivity(this.props.activity.id, this.getSavedAnswerCallback)
     }
 
     getSavedAnswerCallback = (info) => {
@@ -184,7 +184,7 @@ class IntegralActivity extends BaseActivity {
 
         this.shuffleOptions()
 
-        AvaMecApi.closeGetActivity(this.getSavedAnswerCallback)
+        AvaMecApiServices.closeGetActivity(this.getSavedAnswerCallback)
     }
 
     saveActivityAnswer = () => {
@@ -214,7 +214,7 @@ class IntegralActivity extends BaseActivity {
             apiActivity.questoes.push(apiQuestion)
         })
 
-        AvaMecApi.saveActivity(apiActivity, this.saveActivityCallback)
+        AvaMecApiServices.saveActivity(apiActivity, this.saveActivityCallback)
     }
 
     saveActivityCallback = info => {
@@ -227,7 +227,7 @@ class IntegralActivity extends BaseActivity {
             this.getSavedAnswer()
         }
 
-        AvaMecApi.closeSaveActivity(this.saveActivityCallback)
+        AvaMecApiServices.closeSaveActivity(this.saveActivityCallback)
     }
 
     onChangeSelectedOption = data => {

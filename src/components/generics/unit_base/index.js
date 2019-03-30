@@ -1,5 +1,5 @@
 import React from 'react'
-import AvaMecApi from '../../../services/avaMecApi'
+import AvaMecApiServices from '../../../services/avaMecApi'
 import Pagination from '../pagination'
 import UnitController from '../unit_controller'
 import LocalStorageUtils from '../../../utils/localStorageUtils'
@@ -27,7 +27,7 @@ class UnitBase extends React.Component {
 
         window.scrollTo(0, 0)
 
-        AvaMecApi.saveLastPage(this.props.id)
+        AvaMecApiServices.saveLastPage(this.props.id)
     }
     
     loadPagination = () => {

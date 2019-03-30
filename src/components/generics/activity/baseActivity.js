@@ -1,11 +1,11 @@
 import React from 'react'
-import AvaMecApi from '../../../services/avaMecApi'
+import AvaMecApiServices from '../../../services/avaMecApiServices'
 import UnitState from '../../../constants/unitState'
 
 class BaseActivity extends React.Component {
 
     getUnitConclusionData = () => {
-        AvaMecApi.getUnitConclusionData(this.props.unitId, this.callbackUnitConclusionData)
+        AvaMecApiServices.getUnitConclusionData(this.props.unitId, this.callbackUnitConclusionData)
     }
 
     callbackUnitConclusionData = info => {
@@ -17,7 +17,7 @@ class BaseActivity extends React.Component {
             }
         }
         
-        AvaMecApi.closeGetUnitConclusionDataListener(this.callbackUnitConclusionData)
+        AvaMecApiServices.closeGetUnitConclusionDataListener(this.callbackUnitConclusionData)
     }
 }
 

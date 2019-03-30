@@ -10,7 +10,7 @@ import CenterBoxContainer from '../../center_box_container'
 import ActivityConstants from '../../../../constants/activityConstants'
 import UnitState from '../../../../constants/unitState'
 
-import AvaMecApi from '../../../../services/avaMecApi'
+import AvaMecApiServices from '../../../../services/avaMecApiServices'
 
 import AvaMecUtils from '../../../../utils/avaMecUtils'
 
@@ -96,7 +96,7 @@ class ComplementaryActivity extends BaseActivity {
 
     getSavedAnswers = () => {
         this.state.activity.examples.forEach(example => {
-            AvaMecApi.getGenericData(
+            AvaMAvaMecApiServicesecApi.getGenericData(
                 this.getGenericId(example.number), 
                 this.callbackGetSavedAnswers
             )
@@ -124,14 +124,14 @@ class ComplementaryActivity extends BaseActivity {
             let shouldCloseApiListener = this.state.apiLoadedAnswers.length === this.state.activity.examples.length
 
             if (shouldCloseApiListener) {
-                AvaMecApi.closeGenericDataListener(this.callbackGetSavedAnswers)
+                AvaMecApiServices.closeGenericDataListener(this.callbackGetSavedAnswers)
             }
         }
     }
 
     saveAnswers = () => {
         this.state.activity.examples.forEach(example => {
-            AvaMecApi.saveGenericData(this.getGenericId(example.number), example)
+            AvaMecApiServices.saveGenericData(this.getGenericId(example.number), example)
         })
     }
 
