@@ -42,13 +42,13 @@ class AtividadeAvaliativa extends React.Component {
                         {
                             value: "0",
                             key: "3",
-                            text: "Sim, José deve obrigatoriamnte comprar um notebook e instalar um programa para ajudá-lo a planejar suas compras e otimizar seu tempo.",
+                            text: "Sim, José deve obrigatoriamente comprar um notebook e instalar um programa para ajudá-lo a planejar suas compras e otimizar seu tempo.",
                             tip: "Não é uma má ideia utilizar um software para planejar suas compras, mas podemos resolver esta questão de uma forma mais simples, assim como nossos antepassados faziam antes do advento do computador! E mesmo muita gente ainda faz hoje. Uma simples lista de compra e uma ideia das gôndolas que devem ser visitadas já podem resolver esta questão."
                         },
                         {
                             value: "0",
                             key: "4",
-                            text: "Sim, José deve obrigatoriamnte comprar um \"smartphone\" e instalar um aplicativo para ajudá-lo a planejar suas compras e otimizar seu tempo.",
+                            text: "Sim, José deve obrigatoriamente comprar um \"smartphone\" e instalar um aplicativo para ajudá-lo a planejar suas compras e otimizar seu tempo.",
                             tip: "Não é uma má ideia utilizar um software para planejar suas compras, mas podemos resolver esta questão de uma forma mais simples, assim como nossos antepassados faziam antes do advento do computador! E mesmo muita gente ainda faz hoje. Uma simples lista de compra e uma ideia das gôndolas que devem ser visitadas já podem resolver esta questão."
                         },
                     ]
