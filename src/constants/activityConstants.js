@@ -1,0 +1,7 @@
+export default {
+    NUMBER_OF_LETTERS_PER_LINE_TEXTBOX: 180,
+    SEPARADOR: '_sep%ger_',
+    MAX_LENGTH_ID: 100,
+    MAX_LENGTH_UNIT_ID: 125,
+    MAX_ANSWER_LENGTH: 2000
+}

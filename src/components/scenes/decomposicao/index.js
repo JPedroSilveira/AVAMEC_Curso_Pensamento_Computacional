@@ -1,51 +1,68 @@
 import React from 'react'
-import ConteudoGenerico from '../../generics/conteudo_generico'
+import UnitBase from '../../generics/unit_base'
+import AplicacaoInterativa from './aplicacao_interativa'
+import AtividadeCooperativa from './atividade_cooperativa'
+import ParaSaberMais from './para_saber_mais'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
 import Recomendacoes from './recomendacoes'
-import AtividadeAvaliativa1 from './atividade_avaliativa_1'
 import Problemas from './problemas'
-import AtividadeComplementar1 from './atividade_complementar_1'
+import AtividadeAvaliativa from './atividade_avaliativa'
+import AtividadeComplementar from './atividade_complementar'
 
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
-class Decomposicao extends ConteudoGenerico {
+class Decomposicao extends UnitBase {
     constructor(props) {
         super(props)
 
         this.state = {
-            paginasDisponiveis: 3
+            availablePages: 3
         }
     }
 
-    /*Retorna o título da unidade.*/
-    carregarTitulo = () => {
+    renderTitle = () => {
         return (<h1>3. Decomposição </h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
-    carregarPaginaAtual = () => {
-        switch (this.state.paginaAberta){
+    renderPage = () => {
+        switch (this.state.openPage){
             case "1":
                 return (
-                    <div>
-                        <Conceituacao />
-                        <Aplicacoes />
-                        <Recomendacoes />
-                    </div>
+                    <AplicacaoInterativa />
                 ) 
             case "2":
                 return (
-                    <AtividadeAvaliativa1 idUnidade={this.props.id} />
+                    <Conceituacao />
                 )
             case "3":
                 return (
+                    <Aplicacoes />
+                )
+            case "4":
+                return (
+                    <Recomendacoes />
+                )
+            case "5":
+                return (
+                    <AtividadeAvaliativa unitId={this.props.id} />
+                )
+            case "6":
+                return (
                     <div>
-                        <Problemas />
-                        <AtividadeComplementar1 idUnidade={this.props.id} />
+                        <Problemas unitId={this.props.id} />
+                        <AtividadeComplementar unitId={this.props.id} />
                     </div>
+                )
+            case "7":
+                return (
+                    <AtividadeCooperativa />
+                )
+            case "8":
+                return (
+                    <ParaSaberMais />
                 )
             default:
                 return null
@@ -54,11 +71,11 @@ class Decomposicao extends ConteudoGenerico {
 
     render() {
         return (
-            <div className="aprc-container">
-                {this.carregarTitulo()}
-                {this.carregarPaginaAtual()}
-                {this.carregarPaginacao()}
-                {this.carregarMudarUnidade()}
+            <div>
+                {this.renderTitle()}
+                {this.renderPage()}
+                {this.loadPagination()}
+                {this.loadUnitController()}
             </div>
         )
     }

@@ -1,9 +1,24 @@
-.centralizado{
-    text-align: center;
+.main-content{
+    display: flex;
+    justify-content: center;
 }
 
-.aprc-container{
+.unit-container{
+    width: 80%;
     font-family: 'Source Sans Pro', sans-serif;
     color: #585858;
     font-weight: 100;
+    margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 768px){
+    .unit-container {
+        width: 94%;
+    }
+}
+
+@media screen and (orientation: portrait) {
+   .unit-container{
+       padding-bottom: 30%;
+   }
 }

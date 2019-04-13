@@ -1,0 +1,48 @@
+.pagination{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    list-style: none;
+    background-color: inherit;
+    text-align: center;
+    margin-top: 3em;
+    padding-left: 0;
+}
+
+@media only screen and (max-width: 520px) {
+  .pagination{
+      font-size: 0.7em;
+  }
+}
+
+.pagination li{
+    display: inline-block;
+}
+
+.pagination li a {
+    padding: 0.7em 1.3em;
+    margin: 0.7em 0.7em;
+    display: inline-block;
+    background-color:#f9f7f7;
+    border: 0.1em solid #f9f7f7;
+    color: #585858;
+    border-radius: 50%;
+}
+
+.pagination li a:hover{
+    border: 0.1em solid rgb(242, 132, 158);
+    font-size: 1.2em;
+    margin: 0.4em 0.5em;
+    padding: 0.6em 1.1em;
+}
+
+.pagination li a:active{
+    border: 0.1em solid rgb(242, 132, 158);
+    color: rgb(242, 132, 158);
+    font-size: 1.4em;
+    margin: 0em 0.1em;
+}
+
+.pagination .selected-page a{
+    color: rgb(242, 132, 158);
+}

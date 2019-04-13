@@ -3,20 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "1-liners": "^0.4.0",
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
     "react": "^16.7.0",
-    "react-burger-menu": "^2.6.3",
     "react-dom": "^16.7.0",
-    "react-hamburger-menu": "^1.1.1",
-    "react-hammerjs": "^1.0.1",
     "react-html-parser": "^2.0.2",
-    "react-motion": "^0.5.2",
-    "react-motion-drawer": "^3.1.0",
     "react-paginate": "^6.2.1",
     "react-scripts": "^2.1.8",
-    "react-select": "^2.3.0",
+    "react-toastify": "^5.0.0-rc.3",
     "react-youtube": "^7.9.0"
   },
   "scripts": {
@@ -34,5 +28,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "http://hmg.labtime.ufg.br/ava-mec-ws/instituicao/ufrgs/conteudo/modulo/1641/"
+  "homepage": "http://hmg.labtime.ufg.br/ava-mec-ws/instituicao/ufrgs/conteudo/modulo/1721/",
+  "devDependencies": {}
 }

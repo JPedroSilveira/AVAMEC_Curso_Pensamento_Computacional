@@ -1,0 +1,17 @@
+.boxed{
+    border: 0.05em solid #000000;
+}
+
+.boxed{
+    width: 70%;
+    text-align: justify;
+    padding: 2em;
+}
+
+.boxed.algorithm{
+    background-color: rgb(241, 239, 198);
+    margin-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: left;
+}

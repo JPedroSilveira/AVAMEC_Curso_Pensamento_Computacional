@@ -2,7 +2,8 @@ import React from 'react'
 import Menu from '../generics/menu'
 import Header from '../generics/header'
 import localStorageUtils from '../../utils/localStorageUtils'
-import unitIds from '../../constants/unitIds'
+import UnitId from '../../constants/unitId'
+import UnitData from '../generics/unit_data'
 
 import ApresentacaoDoCurso from '../scenes/aprensetacao_do_curso'
 import IntroducaoAoPensamentoComputacional from '../scenes/introducao_ao_pensamento_computacional'
@@ -12,31 +13,29 @@ import ReconhecimentoDePadroes from '../scenes/reconhecimento_de_padroes'
 import Algoritmos from '../scenes/algoritmos'
 import './styles.css'
 
-class Conteudo extends React.Component {
+class Main extends React.Component {
     constructor() {
         super()
 
-        /*Recupera a unidade aberta no localStorage e salva no state.*/
         this.state = {
-            unidadeAberta: localStorageUtils.getOpenUnit()
+            openUnitId: localStorageUtils.getOpenUnit()
         }
     }
 
-    /*Seleciona a unidade que deve ser carregada conforme o identificador da unidadeAberta.*/
-    CarregarUnidadeAtual = () => {
-        switch(this.state.unidadeAberta){
-            case unitIds.APRESENTACAO_CURSO:
-                return (<ApresentacaoDoCurso id={unitIds.APRESENTACAO_CURSO} />)
-            case unitIds.INTRO_PENSAMENTO_COMP:
-                return (<IntroducaoAoPensamentoComputacional id={unitIds.INTRO_PENSAMENTO_COMP} />)
-            case unitIds.DECOMPOSICAO:
-                return (<Decomposicao id={unitIds.DECOMPOSICAO} />)
-            case unitIds.ABSTRACAO:
-                return (<Abstracao id={unitIds.ABSTRACAO} />)
-            case unitIds.RECONHECIMENTO_DE_PADROES:
-                return (<ReconhecimentoDePadroes id={unitIds.RECONHECIMENTO_DE_PADROES}/>)
-            case unitIds.ALGORITMOS:
-                return (<Algoritmos id={unitIds.ALGORITMOS}/>)
+    LoadUnit = () => {
+        switch (this.state.openUnitId){
+            case UnitId.APRESENTACAO_CURSO:
+                return (<ApresentacaoDoCurso id={UnitId.APRESENTACAO_CURSO} />)
+            case UnitId.INTRO_PENSAMENTO_COMP:
+                return (<IntroducaoAoPensamentoComputacional id={UnitId.INTRO_PENSAMENTO_COMP} />)
+            case UnitId.DECOMPOSICAO:
+                return (<Decomposicao id={UnitId.DECOMPOSICAO} />)
+            case UnitId.ABSTRACAO:
+                return (<Abstracao id={UnitId.ABSTRACAO} />)
+            case UnitId.RECONHECIMENTO_DE_PADROES:
+                return (<ReconhecimentoDePadroes id={UnitId.RECONHECIMENTO_DE_PADROES}/>)
+            case UnitId.ALGORITMOS:
+                return (<Algoritmos id={UnitId.ALGORITMOS}/>)
             default:
                 return null
         }  
@@ -45,12 +44,17 @@ class Conteudo extends React.Component {
     render() {
         return (
             <div>
-                <Menu/>
-                <Header/>
-                {this.CarregarUnidadeAtual()}
+                <Menu />
+                <Header />
+                <UnitData unitId={this.state.openUnitId}/>
+                <div className="main-content">
+                    <div className="unit-container">
+                        {this.LoadUnit()}
+                    </div>
+                </div>
             </div>
         )
     }
 }
 
-export default Conteudo
+export default Main

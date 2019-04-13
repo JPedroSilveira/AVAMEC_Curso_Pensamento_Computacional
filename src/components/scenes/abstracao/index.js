@@ -1,54 +1,70 @@
 import React from 'react'
-import ConteudoGenerico from '../../generics/conteudo_generico'
+import UnitBase from '../../generics/unit_base'
+import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
 import AssuntosCorrelatos from './assuntos_correlatos'
-import AtividadeAvaliativa1 from './atividade_avaliativa_1'
-import Problemas1 from './problemas_1'
-import AtividadeComplementar1 from './atividade_complementar_1'
+import AtividadeAvaliativa from './atividade_avaliativa'
+import Problemas from './problemas'
+import AtividadeComplementar from './atividade_complementar'
+import Recomendacoes from './recomendacoes'
+import AtividadeCooperativa from './atividade_cooperativa'
+import ParaSaberMais from './para_saber_mais'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
-class Abstracao extends ConteudoGenerico {
+class Abstracao extends UnitBase {
     constructor(props) {
         super(props)
         
         this.state = {
-            paginasDisponiveis: 5
+            availablePages: 5,
+            openPage: null
         }
     }
 
-    /*Retorna o título da unidade.*/
-    carregarTitulo = () => {
+    renderTitle = () => {
         return (<h1>4. Abstração</h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
-    carregarPaginaAtual = () => {
-        switch(this.state.paginaAberta){
+    renderPage = () => {
+        switch (this.state.openPage){
             case "1":
                 return (
-                    <Conceituacao />
+                    <AplicacaoInterativa />
                 )
             case "2":
                 return (
-                    <Aplicacoes />
+                    <Conceituacao />
                 )
             case "3":
                 return (
-                    <div>
-                        <AssuntosCorrelatos />
-                        <AtividadeAvaliativa1 idUnidade={this.props.id}/>
-                    </div>
+                    <Aplicacoes />
                 )
             case "4":
                 return (
-                    <Problemas1 idUnidade={this.props.id}/>
+                    <div>
+                        <Recomendacoes />
+                        <AtividadeComplementar unitId={this.props.id} />
+                        <AssuntosCorrelatos />
+                    </div>
                 )
             case "5":
                 return (
-                    <AtividadeComplementar1 idUnidade={this.props.id}/>
+                    <AtividadeAvaliativa unitId={this.props.id} />
+                )
+            case "6":
+                return (
+                    <Problemas />
+                )
+            case "7":
+                return (
+                    <AtividadeCooperativa />
+                )
+            case "8":
+                return (
+                    <ParaSaberMais />
                 )
             default: 
                 return null
@@ -57,11 +73,11 @@ class Abstracao extends ConteudoGenerico {
 
     render() {
         return (
-            <div className="aprc-container">
-                {this.carregarTitulo()}
-                {this.carregarPaginaAtual()}
-                {this.carregarPaginacao()}
-                {this.carregarMudarUnidade()}
+            <div>
+                {this.renderTitle()}
+                {this.renderPage()}
+                {this.loadPagination()}
+                {this.loadUnitController()}
             </div>
         )
     }

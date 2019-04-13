@@ -1,55 +1,62 @@
 import React from 'react'
-import ConteudoGenerico from '../../generics/conteudo_generico'
+import UnitBase from '../../generics/unit_base'
+import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
-import AtividadeAvaliativa1 from './atividade_avaliativa_1'
-import Problemas1 from './problemas_1'
-import AtividadeComplementar1 from './atividade_complementar_1'
+import AtividadeAvaliativa from './atividade_avaliativa'
+import Recomendacoes from './recomendacoes'
+import Problemas from './problemas'
+import AtividadeComplementar from './atividade_complementar'
 import AssuntosCorrelatos from './assuntos_correlatos'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
-class ReconhecimentoDePadroes extends ConteudoGenerico {
+class ReconhecimentoDePadroes extends UnitBase {
     constructor(props) {
         super(props)
 
         this.state = {
-            paginasDisponiveis: 6
+            availablePages: 6
         }
     }
 
-    /*Retorna o título da unidade.*/
-    carregarTitulo = () => {
+    renderTitle = () => {
         return (<h1>5. Reconhecimento de Padrões</h1>)
     }
 
-    /*Carrega o conteúdo que deve ser exibido na unidade atual.*/
-    carregarPaginaAtual = () => {
-        switch (this.state.paginaAberta) {
+    renderPage = () => {
+        switch (this.state.openPage) {
             case "1":
                 return (
-                    <Conceituacao />
+                    <AplicacaoInterativa />
                 )
             case "2":
                 return (
-                    <Aplicacoes />
+                    <Conceituacao />
                 )
             case "3":
                 return (
-                    <AtividadeAvaliativa1 idUnidade={this.props.id} />
+                    <Aplicacoes />
                 )
             case "4":
                 return (
-                    <Problemas1/>
+                    <AtividadeAvaliativa unitId={this.props.id}/>
                 )
             case "5":
                 return (
-                    <AtividadeComplementar1 idUnidade={this.props.id} />
+                    <Recomendacoes />
                 )
             case "6":
                 return (
-                    <AssuntosCorrelatos/>
+                    <Problemas />
+                )
+            case "7":
+                return (
+                    <div>
+                        <AtividadeComplementar unitId={this.props.id}/>
+                        <AssuntosCorrelatos />
+                    </div>
                 )
             default:
                 return null
@@ -58,11 +65,11 @@ class ReconhecimentoDePadroes extends ConteudoGenerico {
 
     render() {
         return (
-            <div className="aprc-container">
-                {this.carregarTitulo()}
-                {this.carregarPaginaAtual()}
-                {this.carregarPaginacao()}
-                {this.carregarMudarUnidade()}
+            <div>
+                {this.renderTitle()}
+                {this.renderPage()}
+                {this.loadPagination()}
+                {this.loadUnitController()}
             </div>
         )
     }
