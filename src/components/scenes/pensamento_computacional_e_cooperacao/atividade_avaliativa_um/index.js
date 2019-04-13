@@ -25,7 +25,7 @@ class AtividadeAvaliativaUm extends React.Component {
                 {
                     id: "q1_a1_pensamento_computacional_e_cooperacao",
                     title: "<span className=\"negrito\">A1</span>: Definição de critérios para formação de grupos cooperativos",
-                    statement: "A formação do grupo é ponto crucial para o sucesso de uma ação cooperativa, qualquer que seja seu objetivo. Dentre os critérios a seguir, indique o que parece menos adequado:",
+                    statement: "<span className=\"negrito\">A formação do grupo é ponto crucial para o sucesso de uma ação cooperativa, qualquer que seja seu objetivo. Dentre os critérios a seguir, indique o que parece menos adequado:</span>",
                     options: [
                         {
                             value: "1",
@@ -62,7 +62,7 @@ class AtividadeAvaliativaUm extends React.Component {
                 {
                     id: "q2_a1_pensamento_computacional_e_cooperacao",
                     title: "<span className=\"negrito\">A2</span>: Aprendizagem ativa - o método JIGSAW II (Slavin, 1955) (Pereira, 2003)",
-                    statement: "A lista de ações apresentada descreve um método de aprendizagem cooperativa, denominado JIGSAW II. Qual das afirmativas parece mais adequada para descrever o método:",
+                    statement: "<span className=\"negrito\">A lista de ações apresentada descreve um método de aprendizagem cooperativa, denominado JIGSAW II. Qual das afirmativas parece mais adequada para descrever o método:</span>",
                     algorithm: true,
                     instructions: [
                         {

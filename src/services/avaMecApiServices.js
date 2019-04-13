@@ -1,7 +1,6 @@
 import PaginationUtils from '../utils/paginationUtils'
 import AvaMecApiEvents from '../constants/avaMECApiEvents'
-import toastNotificationServices from './toastNotificationServices'
-import apiErrorMessages from '../constants/apiErrorMessages'
+//import apiErrorMessages from '../constants/apiErrorMessages'
 
 class AvaMecApiServices {
     constructor() {
@@ -15,7 +14,7 @@ class AvaMecApiServices {
             try {
                 this.api.obterDadosConclusaoUnidade(unit)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.GET_UNIT_CONCLUSION_DATA)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.GET_UNIT_CONCLUSION_DATA)
             }
         }
     }
@@ -30,7 +29,7 @@ class AvaMecApiServices {
         try {
             this.api.obterDadosCurso()
         } catch {
-            toastNotificationServices.error(apiErrorMessages.COURSE_DATA)
+            //To-Do: toastNotificationServices.error(apiErrorMessages.COURSE_DATA)
         }
     }
 
@@ -43,7 +42,7 @@ class AvaMecApiServices {
             try {
                 this.api.obterUnidade(unit)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.NEXT_UNIT)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.NEXT_UNIT)
             }
         }
     }
@@ -55,7 +54,7 @@ class AvaMecApiServices {
             try {
                 this.api.obterSeExisteUnidadeAnterior(unit)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.GET_IF_NEXT_UNIT_EXIST)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.GET_IF_NEXT_UNIT_EXIST)
             }
         }
     }
@@ -71,7 +70,7 @@ class AvaMecApiServices {
             try {
                 this.api.obterSeExisteProximaUnidade(unit)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.GET_IF_PREVIOUS_UNIT_EXIST)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.GET_IF_PREVIOUS_UNIT_EXIST)
             }
         }
     }
@@ -85,7 +84,7 @@ class AvaMecApiServices {
             try {
                 this.api.obterUnidadeAnterior(unit)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.GET_PREVIOUS_UNIT)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.GET_PREVIOUS_UNIT)
             }
         }
     }
@@ -95,7 +94,7 @@ class AvaMecApiServices {
             try {
                 this.api.obterProximaUnidade(unit)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.GET_NEXT_UNIT)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.GET_NEXT_UNIT)
             }
         }
     }
@@ -105,7 +104,7 @@ class AvaMecApiServices {
             try {
                 this.api.registrarPorcentagemConclusaoUnidade(unit, String(percentage))
             } catch {
-                toastNotificationServices.error(apiErrorMessages.SAVE_UNIT_PROGRESS)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.SAVE_UNIT_PROGRESS)
             }
         }
     }
@@ -119,7 +118,7 @@ class AvaMecApiServices {
             try {
                 this.api.registrarUltimaPaginaAcessada(unit, PaginationUtils.getPath())
             } catch {
-                toastNotificationServices.info(apiErrorMessages.SAVE_LAST_PAGE)
+                //To-Do: toastNotificationServices.info(apiErrorMessages.SAVE_LAST_PAGE)
             }
         }
     }
@@ -131,7 +130,7 @@ class AvaMecApiServices {
             try {
                 this.api.obterDadosGenericos(id)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.GET_GENERIC_DATA)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.GET_GENERIC_DATA)
             }
         }
     }
@@ -144,9 +143,9 @@ class AvaMecApiServices {
         if (id !== undefined) {
             try {
                 this.api.registrarDadosGenericos(id, JSON.stringify(data))
-                toastNotificationServices.success(apiErrorMessages.SAVE_GENERIC_DATA_SUCCESS)
+                //To-Do: toastNotificationServices.success(apiErrorMessages.SAVE_GENERIC_DATA_SUCCESS)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.SAVE_GENERIC_DATA)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.SAVE_GENERIC_DATA)
             }
         }
     }
@@ -171,9 +170,9 @@ class AvaMecApiServices {
 
             try {
                 this.api.registrarRespostaAtividade(activity)
-                toastNotificationServices.success(apiErrorMessages.SAVE_ACTIVITY_SUCCESS)
+                //To-Do: toastNotificationServices.success(apiErrorMessages.SAVE_ACTIVITY_SUCCESS)
             } catch {
-                toastNotificationServices.error(apiErrorMessages.SAVE_ACTIVITY)
+                //To-Do: toastNotificationServices.error(apiErrorMessages.SAVE_ACTIVITY)
             }
         }
     }

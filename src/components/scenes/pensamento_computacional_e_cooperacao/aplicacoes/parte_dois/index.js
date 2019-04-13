@@ -18,15 +18,15 @@ const AplicacoesParteDois = () => (
                 <Title>Algoritmo [A1]: Constru&ccedil;&atilde;o de v&iacute;deos com atra&ccedil;&otilde;es candidatas</Title>
                 <AlgorithmLevel showStyle={true}>
                     <li>Enquanto n&atilde;o atingido o limite _1 de tempo fa&ccedil;a:
-                        <AlgorithmLevel showStyle={true} child={true}>
+                        <AlgorithmLevel child={true}>
                             <li>a. Receber sugest&atilde;o de atra&ccedil;&atilde;o.</li>
                         </AlgorithmLevel>
                     </li>
                     <li>Escolher "n" melhores candidatos.</li>
                     <li>Para cada candidato fa&ccedil;a:
-                        <AlgorithmLevel showStyle={true} child={true}>
+                        <AlgorithmLevel child={true}>
                             <li>a. Enquanto n&atilde;o atingido o limite _2 de tempo fa&ccedil;a:
-                                <AlgorithmLevel showStyle={true} child={true}>
+                                <AlgorithmLevel child={true}>
                                     <li>i. Receber contribui&ccedil;&otilde;es com imagens, filmagens, texto, m&uacute;sica de fundo.</li>
                                 </AlgorithmLevel>
                             </li>

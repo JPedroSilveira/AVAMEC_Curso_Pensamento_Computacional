@@ -32,9 +32,9 @@ const AplicacoesParteDois = () => (
                     <li>Defina o conjunto de elementos da aventura.</li>
                     <li>Defina o nível de intensidade (n).</li>
                     <li>Enquanto houver elementos não percorridos faça:
-                        <AlgorithmLevel showStyle={true} child={true}>
+                        <AlgorithmLevel child={true}>
                             <li>Repita n vezes.
-                                <AlgorithmLevel showStyle={true} child={true}>
+                                <AlgorithmLevel child={true}>
                                     <li>i. Faça o percurso do elemento.</li>
                                     <li>ii. Registre o tempo do percurso.</li>
                                 </AlgorithmLevel>
