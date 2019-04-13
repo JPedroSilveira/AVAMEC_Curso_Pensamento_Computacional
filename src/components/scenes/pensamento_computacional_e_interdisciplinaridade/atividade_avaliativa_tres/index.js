@@ -92,7 +92,7 @@ class AtividadeAvaliativaTres extends React.Component {
                             tip: ""
                         }
                     ]
-                },
+                }
             ]
         }
     }
