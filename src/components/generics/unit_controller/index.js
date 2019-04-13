@@ -1,5 +1,5 @@
 import React from 'react'
-import AvaMecApiServices from '../../../services/avaMecApi.js'
+import AvaMecApiServices from '../../../services/avaMecApiServices'
 import BasicButton from '../../generics/buttons/basic_button'
 
 import './styles.css'
@@ -65,7 +65,7 @@ class UnitController extends React.Component {
         if (info.detail.status === 200) {
             if (info.detail.data.unidade.permitePorcentagem) {
                 if (String(info.detail.data.porcentagemConclusao) < "100"){
-                    AvaMecApi.saveUnitProgress(this.props.unit, 100)
+                    AvaMecApiServices.saveUnitProgress(this.props.unit, 100)
                 }
             }
         }

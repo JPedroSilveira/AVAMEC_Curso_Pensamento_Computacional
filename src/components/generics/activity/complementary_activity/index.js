@@ -96,7 +96,7 @@ class ComplementaryActivity extends BaseActivity {
 
     getSavedAnswers = () => {
         this.state.activity.examples.forEach(example => {
-            AvaMAvaMecApiServicesecApi.getGenericData(
+            AvaMecApiServices.getGenericData(
                 this.getGenericId(example.number), 
                 this.callbackGetSavedAnswers
             )

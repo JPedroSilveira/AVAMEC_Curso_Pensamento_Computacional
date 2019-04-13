@@ -1,5 +1,5 @@
 import React from 'react'
-import AvaMecApiServices from '../../../services/avaMecApi'
+import AvaMecApiServices from '../../../services/avaMecApiServices'
 import Pagination from '../pagination'
 import UnitController from '../unit_controller'
 import LocalStorageUtils from '../../../utils/localStorageUtils'

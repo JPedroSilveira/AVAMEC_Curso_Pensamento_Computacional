@@ -1,3 +1,4 @@
+import MobileServices from './mobileServices'
 import { toast } from 'react-toastify';
 
 class ToastNotificationServices {
@@ -11,23 +12,23 @@ class ToastNotificationServices {
     }
 
     warning = (message) => {
-        show(message, toast.TYPE.WARNING)
+        this.show(message, toast.TYPE.WARNING)
     }
 
     error = (message) => {
-        show(message, toast.TYPE.ERROR)
+        this.show(message, toast.TYPE.ERROR)
     }
 
     info = (message) => {
-        show(message, toast.TYPE.INFO)
+        this.show(message, toast.TYPE.INFO)
     }
 
     success = (message) => {
-        show(message, toast.TYPE.SUCCESS)
+        this.show(message, toast.TYPE.SUCCESS)
     }
 
     default = (message) => {
-        show(message, toast.TYPE.DEFAULT)
+        this.show(message, toast.TYPE.DEFAULT)
     }
 }
 

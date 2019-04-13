@@ -1,5 +1,5 @@
 import React from 'react'
-import AvaMecApiServices from '../../../services/avaMecApi.js'
+import AvaMecApiServices from '../../../services/avaMecApiServices'
 import avaMecConstants from '../../../constants/avaMECApiConstants'
 
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
