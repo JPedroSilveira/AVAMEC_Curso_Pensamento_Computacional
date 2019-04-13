@@ -2,4 +2,25 @@
     position: relative;
     background: white;
     font-size: 18px;
+    height: 100vh;
+}
+
+.wrapper{
+    min-height: 100%;
+    margin-bottom: -7.8em;
+}
+
+.footer,
+.push {
+    height: 6em;
+}
+
+@media screen and (orientation: portrait) {
+    .wrapper{
+        margin-bottom: -5.8em;
+    }
+   .footer,
+    .push {
+        height: 0em;
+    }
 }
