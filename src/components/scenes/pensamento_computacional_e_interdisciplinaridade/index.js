@@ -1,30 +1,20 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
-import AplicacaoInterativa from './aplicacao_interativa'
-import Conceituacao from './conceituacao'
-import Aplicacoes from './aplicacoes'
-import AtividadeAvaliativa from './atividade_avaliativa'
-import Recomendacoes from './recomendacoes'
-import Problemas from './problemas'
-import AtividadeComplementar from './atividade_complementar'
-import AssuntosCorrelatos from './assuntos_correlatos'
-import AtividadeCooperativa from '../pensamento_computacional_e_interdisciplinaridade/atividade_cooperativa';
-import ParaSaberMais from '../pensamento_computacional_e_interdisciplinaridade/para_saber_mais';
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
-class ReconhecimentoDePadroes extends UnitBase {
+class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
     constructor(props) {
         super(props)
 
         this.state = {
-            availablePages: 9
+            availablePages: 7
         }
     }
 
     renderTitle = () => {
-        return (<h1>5. Reconhecimento de Padrões</h1>)
+        return (<h1>7. Pensamento Computacional e Interdisciplinaridade</h1>)
     }
 
     renderPage = () => {
@@ -43,30 +33,19 @@ class ReconhecimentoDePadroes extends UnitBase {
                 )
             case "4":
                 return (
-                    <AtividadeAvaliativa unitId={this.props.id}/>
+                    <Recomendacoes />
                 )
             case "5":
                 return (
-                    <Recomendacoes />
+                    <Problemas />
                 )
             case "6":
                 return (
-                    <Problemas />
+                    <AtividadeCooperativa />
                 )
             case "7":
                 return (
-                    <AtividadeCooperativa />
-                )
-            case "8":
-                return (
-                    <div>
-                        <AtividadeComplementar unitId={this.props.id}/>
-                        <AssuntosCorrelatos />
-                    </div>
-                )
-            case "9":
-                return (
-                    <ParaSaberMais />
+                   <ParaSaberMais />
                 )
             default:
                 return null
@@ -85,4 +64,4 @@ class ReconhecimentoDePadroes extends UnitBase {
     }
 }
 
-export default ReconhecimentoDePadroes
+export default PensamentoComputacionalEInterdisciplinidade
