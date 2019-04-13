@@ -10,7 +10,7 @@ import AplicacoesParteDois from './aplicacoes/parte_dois'
 import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
 import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
 import Problemas from './problemas'
-import AtividadeCooperativa from './atividade_cooperativa';
+import AtividadeCooperativa from './atividade_cooperativa'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
