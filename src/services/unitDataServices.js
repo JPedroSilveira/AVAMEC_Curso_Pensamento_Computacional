@@ -1,6 +1,7 @@
 import UnidId from '../constants/unitId'
 import UnitName from '../constants/unitName';
 import UnitState from '../constants/unitState'
+import unitId from '../constants/unitId';
 
 class UnitDataServices {
 
@@ -36,6 +37,8 @@ class UnitDataServices {
                 return UnitName.RECONHECIMENTO_DE_PADROES
             case UnidId.ALGORITMOS:
                 return UnitName.ALGORITMOS
+            case unitId.PENSAMENTO_COMPUTACIONAL_E_INTERDISCIPLINARIDADE:
+                return UnitName.PENSAMENTO_COMPUTACIONAL_E_INTERDISCIPLINARIDADE
             default:
                 throw Error("Unit not defined!")
         }

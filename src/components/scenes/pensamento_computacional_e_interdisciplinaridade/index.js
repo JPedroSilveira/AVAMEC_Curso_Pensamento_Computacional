@@ -1,6 +1,17 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
 
+import AplicacaoInterativa from './aplicacao_interativa'
+import ConceituacaoParteUm from './conceituacao/parte_um'
+import AtividadeAvaliativaUm from './atividade_avaliativa_um'
+import ConceituacaoParteDois from './conceituacao/parte_dois'
+import AplicacoesParteUm from './aplicacoes/parte_um'
+import AplicacoesParteDois from './aplicacoes/parte_dois'
+import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
+import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
+import Problemas from './problemas'
+import AtividadeCooperativa from './atividade_cooperativa';
+
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
@@ -9,7 +20,7 @@ class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 7
+            availablePages: 10
         }
     }
 
@@ -25,27 +36,39 @@ class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
                 )
             case "2":
                 return (
-                    <Conceituacao />
+                    <ConceituacaoParteUm />
                 )
             case "3":
                 return (
-                    <Aplicacoes />
+                    <AtividadeAvaliativaUm unitId={this.props.id} />
                 )
             case "4":
                 return (
-                    <Recomendacoes />
+                    <ConceituacaoParteDois />
                 )
             case "5":
                 return (
-                    <Problemas />
+                    <AplicacoesParteUm />
                 )
             case "6":
                 return (
-                    <AtividadeCooperativa />
+                    <AtividadeAvaliativaDois unitId={this.props.id} />
                 )
             case "7":
                 return (
-                   <ParaSaberMais />
+                    <AplicacoesParteDois />
+                )
+            case "8":
+                return (
+                    <AtividadeAvaliativaTres unitId={this.props.id} />
+                )
+            case "9":
+                return (
+                    <Problemas />
+                )
+            case "10":
+                return (
+                    <AtividadeCooperativa unitId={this.props.id} />
                 )
             default:
                 return null

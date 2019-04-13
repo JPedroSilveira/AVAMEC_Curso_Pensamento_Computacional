@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../title'
+import ReactHtmlParser from 'react-html-parser'
 import './styles.css'
 
 class StatementAlgorithmBox extends React.Component {
@@ -7,7 +8,7 @@ class StatementAlgorithmBox extends React.Component {
         return (
             <div id={this.props.id} key={this.props.key} className="alg-box">
                 <div className="head">
-                    <Title>{this.props.title}</Title>
+                    <Title>{ReactHtmlParser(this.props.title)}</Title>
                 </div>
                 {this.props.children}
             </div>

@@ -8,8 +8,8 @@ import Recomendacoes from './recomendacoes'
 import Problemas from './problemas'
 import AtividadeComplementar from './atividade_complementar'
 import AssuntosCorrelatos from './assuntos_correlatos'
-import AtividadeCooperativa from '../pensamento_computacional_e_interdisciplinaridade/atividade_cooperativa';
-import ParaSaberMais from '../pensamento_computacional_e_interdisciplinaridade/para_saber_mais';
+import AtividadeCooperativa from './atividade_cooperativa'
+import ParaSaberMais from './para_saber_mais'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade

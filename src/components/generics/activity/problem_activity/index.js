@@ -26,13 +26,15 @@ class ProblemActivity extends BaseActivity {
     constructor(props) {
         super(props)
 
+        this.validateProps()
+        
         this.state = {
             activityState: ActivityState.EMPTY,
             apiLoadedAnswers: []
         }
+    }
 
-        this.validateProps()
-
+    componentDidMount(){
         this.getSavedAnswers()
 
         this.getUnitConclusionData()
