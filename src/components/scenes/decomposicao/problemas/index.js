@@ -1,6 +1,6 @@
 import React from 'react'
 import CenterBoxContainer from '../../../generics/center_box_container'
-import IMGDecomposicao5 from '../../../../images/decomposicao_5.jpg'
+import IMGDecomposicao5 from '../../../../images/decomposicao-5.jpg'
 import Image from '../../../generics/image'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color'

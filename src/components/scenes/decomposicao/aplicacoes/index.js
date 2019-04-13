@@ -1,8 +1,8 @@
 import React from 'react'
-import IMGDecomposicao1 from '../../../../images/decomposicao_1.jpg'
-import IMGDecomposicao2 from '../../../../images/decomposicao_2.png'
-import IMGDecomposicao3 from '../../../../images/decomposicao_3.png'
-import IMGDecomposicao4 from '../../../../images/decomposicao_4.png'
+import IMGDecomposicao1 from '../../../../images/decomposicao-1.jpg'
+import IMGDecomposicao2 from '../../../../images/decomposicao-2.png'
+import IMGDecomposicao3 from '../../../../images/decomposicao-3.png'
+import IMGDecomposicao4 from '../../../../images/decomposicao-4.png'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 
