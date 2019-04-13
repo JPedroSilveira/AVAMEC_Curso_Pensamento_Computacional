@@ -336,7 +336,7 @@ class ComplementaryActivity extends BaseActivity {
     render(){
         return(
             <div className="complementary-activity-container">
-                <h2>ATIVIDADE COMPLEMENTAR</h2>
+                <h2>ATIVIDADE COOPERATIVA</h2>
                 <p>
                     {ReactHtmlParser(this.state.activity.statement)} <br /> 
                     Pressione o botão "+" para salvar uma resposta e a "lixeira" para remover uma resposta.

@@ -1,8 +1,8 @@
 import MobileServices from './mobileServices'
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 
 class ToastNotificationServices {
-
+    /*
     show = (message, type) => {
         toast(message, {
             autoClose: 5000,
@@ -31,6 +31,7 @@ class ToastNotificationServices {
     default = (message) => {
         this.show(message, toast.TYPE.DEFAULT)
     }
+    */
 }
 
 const toastNotificationServices = new ToastNotificationServices()

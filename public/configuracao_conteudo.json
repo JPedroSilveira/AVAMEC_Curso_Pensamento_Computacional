@@ -972,5 +972,177 @@
                 ]
             }
         ]
-    }
+    },
+        {
+            "identificador": "pensamento_computacional_e_cooperacao",
+            "nome": "Pensamento Computacional e Cooperação",
+            "descricao": "",
+            "permitePorcentagem": "true",
+            "identificadorPai": "",
+            "topicos": [
+                {
+                    "identificador": "topico_1",
+                    "nome": "Conceituação"
+                },
+                {
+                    "identificador": "topico_2",
+                    "nome": "Cooperação e o Pensamento Computacional"
+                },
+                {
+                    "identificador": "topico_3",
+                    "nome": "Aplicações"
+                },
+                {
+                    "identificador": "topico_5",
+                    "nome": "Resolução Problema"
+                },
+                {
+                    "identificador": "topico_6",
+                    "nome": "Atividade Cooperativa"
+                }
+            ],
+            "atividades": [
+                {
+                    "identificador": "atividade_1_pensamento_computacional_e_cooperacao",
+                    "nomeAtividade": "Atividade Avaliativa 1",
+                    "questoes": [
+                        {
+                            "tipoQuestaoString": "INTEGRAL",
+                            "identificador": "q1_a1_pensamento_computacional_e_cooperacao",
+                            "enunciado": "Definição de critérios para formação de grupos cooperativos. A formação do grupo é ponto crucial para o sucesso de uma ação cooperativa, qualquer que seja seu objetivo. Dentre os critérios a seguir, indique o que parece menos adequado:",
+                            "gabaritos": [
+                                {
+                                    "alternativa": "Aleatoriamente.",
+                                    "chave": "1",
+                                    "valor": "1"
+                                },
+                                {
+                                    "alternativa": "Segundo faixa etária (agrupando idades similares).",
+                                    "chave": "2",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Segundo interesses comuns (agrupando tópicos de interesse similares).",
+                                    "chave": "3",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Segundo desempenho escolar (agrupando notas próximas).",
+                                    "chave": "4",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Segundo local de residência (agrupado locais diferentes).",
+                                    "chave": "5",
+                                    "valor": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "tipoQuestaoString": "INTEGRAL",
+                            "identificador": "q2_a1_pensamento_computacional_e_cooperacao",
+                            "enunciado": "Qual das afirmativas parece mais adequada para descrever o método:",
+                            "gabaritos": [
+                                {
+                                    "alternativa": "Há uma clara interdependência entre os membros do grupo.",
+                                    "chave": "1",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "É possível perceber (e cobrar) responsabilidades individuais.",
+                                    "chave": "2",
+                                    "valor": "1"
+                                },
+                                {
+                                    "alternativa": "A negociação de significados é contemplada.",
+                                    "chave": "3",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Um único entendimento sobre o assunto resulta do método.",
+                                    "chave": "4",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Há \"fases\" ou \"estágios\" bem definidos.",
+                                    "chave": "5",
+                                    "valor": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "identificador": "atividade_2_pensamento_computacional_e_cooperacao",
+                    "nomeAtividade": "Atividade Avaliativa 2",
+                    "questoes": [
+                        {
+                            "tipoQuestaoString": "INTEGRAL",
+                            "identificador": "q1_a2_pensamento_computacional_e_cooperacao",
+                            "enunciado": "Um dos elementos na realização de um evento diz respeito à disponibilização de equipamentos e demais recursos compartilhados entre os diferentes atores e subeventos. Um \"protocolo\" para o uso desses recursos precisa ser definido e é essencial para o sucesso do evento como um todo. A seguir apresentamos alguns exemplos de protocolos em contextos diversos. Selecione o que parece menos apropriado ao propósito.",
+                            "gabaritos": [
+                                {
+                                    "alternativa": "Corredor estreito: o acesso entre dois pontos é através de um corredor que permite a passagem de pessoas em fila indiana, uma placa com as inscrições SIGA de um lado e PARE no verso indica se o movimento em certa direção está liberado. Na existência de uma fila, o último em direção a um dos lados muda a face da placa indicando que o deslocamento na direção oposta está liberado.",
+                                    "chave": "1",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Um jogo de palavras: iniciando no sentido horário, cada criança em uma roda pega um cartão em uma pilha de cartões e diz uma palavra que atenda a um requisito escrito no verso do cartão. Quando não consegue cumprir a tarefa, o sentido muda e a criança sai da roda e ajuda uma das crianças ainda na roda a responder às próximas perguntas. Ao final vence a criança à frente do último grupo na roda.",
+                                    "chave": "2",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Faixa de pedestres: de modo a evitar o bloqueio de uma avenida movimentada, um semáforo foi incorporado a uma faixa para a travessia de pedestres e o deslocamento só ocorre em um sentido por vez. O indivíduo ao chegar do outro lado da avenida, aciona o semáforo e libera a travessia no sentido oposto.",
+                                    "chave": "3",
+                                    "valor": "1"
+                                },
+                                {
+                                    "alternativa": "Pedidos de músicas: uma banda que anima certo evento coleta pedidos dos participantes através dos garçons durante a confraternização. Cada garçom recolhe pedidos até que certa quantidade seja atingida ou certo tempo seja decorrido.",
+                                    "chave": "4",
+                                    "valor": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "identificador": "atividade_3_pensamento_computacional_e_cooperacao",
+                    "nomeAtividade": "Atividade Avaliativa 3",
+                    "questoes": [
+                        {
+                            "tipoQuestaoString": "INTEGRAL",
+                            "identificador": "q1_a3_pensamento_computacional_e_cooperacao",
+                            "enunciado": "Uma das etapas no cenário apresentado é a escolha dos vídeos parciais que irão compor o vídeo final representado a escola e suas diferentes perspectivas. Dentre os critérios apresentados a seguir, selecione o que parece menos adequado: <<< explicar/incluir negociação neste processo >>>",
+                            "gabaritos": [
+                                {
+                                    "alternativa": "Sorteio.",
+                                    "chave": "1",
+                                    "valor": "1"
+                                },
+                                {
+                                    "alternativa": "Representativo - faixa etária.",
+                                    "chave": "2",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Representativo - grupo de interesses.",
+                                    "chave": "3",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Representativo - pontuação em critérios.",
+                                    "chave": "4",
+                                    "valor": "0"
+                                },
+                                {
+                                    "alternativa": "Representativo - indicações positivas X negativas em redes sociais.",
+                                    "chave": "5",
+                                    "valor": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
 ]

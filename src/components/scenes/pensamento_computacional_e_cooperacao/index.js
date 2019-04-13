@@ -1,21 +1,21 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
 
-import AplicacaoInterativa from './aplicacao_interativa'
-import ConceituacaoParteUm from './conceituacao/parte_um'
+import Conceituacao from './conceituacao'
+import CooperacaoEOPensamentoComputacional from './cooperacao_e_o_pensamento_computacional'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'
-import ConceituacaoParteDois from './conceituacao/parte_dois'
+import ParaSaberMais from './para_saber_mais'
 import AplicacoesParteUm from './aplicacoes/parte_um'
-import AplicacoesParteDois from './aplicacoes/parte_dois'
 import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
+import AplicacoesParteDois from './aplicacoes/parte_dois'
 import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
-import Problemas from './problemas'
-import AtividadeCooperativa from './atividade_cooperativa'
+import ResolucaoProblema from './resolucao_de_problema'
+import AtividadeCooperativa from '../pensamento_computacional_e_interdisciplinaridade/atividade_cooperativa';
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
 .*/
-class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
+class PensamentoComputacionalECooperacao extends UnitBase {
     constructor(props) {
         super(props)
 
@@ -25,18 +25,18 @@ class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
     }
 
     renderTitle = () => {
-        return (<h1>7. Pensamento Computacional e Interdisciplinaridade</h1>)
+        return (<h1>8. Pensamento Computacional e Cooperação</h1>)
     }
 
     renderPage = () => {
         switch (this.state.openPage) {
             case "1":
                 return (
-                    <AplicacaoInterativa />
+                    <Conceituacao />
                 )
             case "2":
                 return (
-                    <ConceituacaoParteUm />
+                    <CooperacaoEOPensamentoComputacional />
                 )
             case "3":
                 return (
@@ -44,7 +44,7 @@ class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
                 )
             case "4":
                 return (
-                    <ConceituacaoParteDois />
+                    <ParaSaberMais />
                 )
             case "5":
                 return (
@@ -64,7 +64,7 @@ class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
                 )
             case "9":
                 return (
-                    <Problemas />
+                    <ResolucaoProblema />
                 )
             case "10":
                 return (
@@ -87,4 +87,4 @@ class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
     }
 }
 
-export default PensamentoComputacionalEInterdisciplinidade
+export default PensamentoComputacionalECooperacao
