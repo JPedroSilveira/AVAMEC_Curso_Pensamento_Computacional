@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import ReactHtmlParser from 'react-html-parser'
 
 import Box from '../../../generics/box'
 import BasicButton from '../../buttons/basic_button'
@@ -39,11 +40,13 @@ class ComplementaryActivity extends BaseActivity {
             answersAmount: 0,
             apiLoadedAnswers: [],
             activity: this.generateEmptyActivityData()
-        }
+        } 
+    }
 
-        this.updateAnswersAmount() 
-
-        this.getSavedAnswers()                                            
+    componentDidMount(){
+        this.updateAnswersAmount()
+        
+        this.getSavedAnswers()
 
         this.getUnitConclusionData()
     }
@@ -284,7 +287,7 @@ class ComplementaryActivity extends BaseActivity {
     renderQuestion = (number, question, key) => {
         return (
             <p key={key}>
-                {question.title}:
+                {ReactHtmlParser(question.title)}:
                 <textarea
                     id={number}
                     value={question.answer}
@@ -335,7 +338,7 @@ class ComplementaryActivity extends BaseActivity {
             <div className="complementary-activity-container">
                 <h2>ATIVIDADE COMPLEMENTAR</h2>
                 <p>
-                    {this.state.activity.statement} <br /> 
+                    {ReactHtmlParser(this.state.activity.statement)} <br /> 
                     Pressione o botão "+" para salvar uma resposta e a "lixeira" para remover uma resposta.
                 </p>
                 {this.renderExamples()}

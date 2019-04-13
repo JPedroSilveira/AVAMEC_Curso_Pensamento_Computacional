@@ -824,5 +824,153 @@
                 ]
             }
         ]
+    },
+    {
+        "identificador": "pensamento_computacional_e_interdisciplinaridade",
+        "nome": "Pensamento Computacional e Interdisciplinaridade",
+        "descricao": "",
+        "permitePorcentagem": "true",
+        "identificadorPai": "",
+        "topicos": [
+            {
+                "identificador": "topico_1",
+                "nome": "Aplicação Interativa"
+            },
+            {
+                "identificador": "topico_2",
+                "nome": "Conceituação"
+            },
+            {
+                "identificador": "topico_3",
+                "nome": "Aplicações"
+            },
+            {
+                "identificador": "topico_4",
+                "nome": "Recomendações"
+            },
+            {
+                "identificador": "topico_5",
+                "nome": "Problemas"
+            },
+            {
+                "identificador": "topico_6",
+                "nome": "Atividade Cooperativa"
+            },
+            {
+                "identificador": "topico_7",
+                "nome": "Para saber mais"
+            }
+        ],
+        "atividades": [
+            {
+                "identificador": "atividade_1_pensamento_computacional_e_interdisciplinaridade",
+                "nomeAtividade": "Atividade Avaliativa 1",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a1_pensamento_computacional_e_interdisciplinaridade",
+                        "enunciado": "Considere o cenário sugerido no item 5 da lista de exemplos. O objeto em questão (Campanha sobre cuidados na compra de alimentos) dificilmente poderia ser tratado sob apenas uma perspectiva, sendo necessárias várias contribuições a partir de conhecimento de diferentes especialidades, competências e experiências. Escolha dentre as opções abaixo, a lista de profissionais que parece mais adequada para apoiar na elaboração das recomendações.",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Vendedor, médico pediatra, dono de mercado, engenheiro sanitário, advogado.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Dono de mercado, economista, médico cardiologista, nutricionista, jornalista.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Nutrólogo, jornalista, dono de mercado, economista, publicitário.",
+                                "chave": "3",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Dona de casa, transportador, advogado, publicitário, engenheiro sanitário.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Organizador de eventos, advogado, dona de casa, transportador, vendedor.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "identificador": "atividade_2_pensamento_computacional_e_interdisciplinaridade",
+                "nomeAtividade": "Atividade Avaliativa 2",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a2_pensamento_computacional_e_interdisciplinaridade",
+                        "enunciado": "Considere o documento indicado no quadro \"Para saber mais...\". Aquele documento discute diversas ações e resultados na prevenção e tratamento de problemas decorrentes da obesidade. As afirmações abaixo foram construídas associando trechos do documento aos pilares do PC. Escolha a opção com a associação menos adequada.",
+                        "gabaritos": [
+                            {
+                                "alternativa": "O peso corporal saudável depende de gatilhos culturais ou ambientais que produzem efeitos sobre a saúde individual [abstração], tais como as condições de segurança, as características do comércio local e global de alimentos, a qualidade e acesso ao transporte coletivo, acesso à recreação, serviços e apoio social e educacional, entre outros aspectos do contexto que modulam as práticas e estilos de vida atual… [decomposição]",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Hoje, o desafio é superar o modelo biomédico que vê o indivíduo e organiza o cuidado de maneira fragmentada, propondo inovações e um novo olhar aos indivíduos dentro da atenção à saúde no SUS. [abstração].",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "... oficina faz referência a lugar de trabalho coletivo e a uma experiência de atividade realizada em um encontro de pessoas, no qual se procurará construir juntos, uma vivência coletiva e um saber. [reconhecimento de padrões]",
+                                "chave": "3",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Intercalado aos encontros, ocorre uma oficina denominada “Saúde no Prato”, com o intuito de desenvolver receitas, desmitificar mitos sobre a alimentação e despertar o interesse por uma alimentação saudável, a fim de auxiliar nas escolhas saudáveis e na mudança de hábitos. [algoritmos]",
+                                "chave": "4",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "identificador": "atividade_3_pensamento_computacional_e_interdisciplinaridade",
+                "nomeAtividade": "Atividade Avaliativa 3",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a3_pensamento_computacional_e_interdisciplinaridade",
+                        "enunciado": "O Algoritmo [I2] acima representa uma outra forma de definir um Circuito de Aventura. Selecione a opção que melhor descreve esse algoritmo:",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Similar ao Algoritmo [I1], exceto que na ordem inversa (do final para o início.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Similar ao Algoritmo [I1], exceto que com o dobro de repetições em cada elemento.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Similar ao Algoritmo [I1], exceto que percorre todos os elementos selecionados n vezes.",
+                                "chave": "3",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Similar ao Algoritmo [I1], exceto que a quantidade de repetições em cada elemento é multiplicada por n.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "O mesmo que o Algoritmo [I1], apenas em outra ordem.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]

@@ -2,6 +2,7 @@ import MobileServices from './mobileServices'
 import { toast } from 'react-toastify';
 
 class ToastNotificationServices {
+
     show = (message, type) => {
         toast(message, {
             autoClose: 5000,

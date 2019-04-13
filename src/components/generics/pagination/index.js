@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactPaginate from 'react-paginate'
 import LocalStorageUtils from '../../../utils/localStorageUtils.js'
-import PaginationConstants from '../../../constants/paginationConstants'
 import './styles.css'
 
 class Pagination extends React.Component {
@@ -12,7 +11,9 @@ class Pagination extends React.Component {
 
         this.state = {
             availablePages: this.props.availablePages,
-            page: page
+            page: page,
+            marginPagesDisplayed: 1,
+            pageRangeDisplayed: 0
         }
     }
 
@@ -32,8 +33,8 @@ class Pagination extends React.Component {
                 pageCount={this.state.availablePages}
                 initialPage={this.state.page - 1}
                 activeClassName={'selected-page'}
-                marginPagesDisplayed={PaginationConstants.MARGIN_PAGES_DISPLAYED}
-                pageRangeDisplayed={PaginationConstants.PAGE_RANGE_DISPLAYED}
+                marginPagesDisplayed={this.marginPagesDisplayed}
+                pageRangeDisplayed={this.pageRangeDisplayed}
                 onPageChange={this.onPageChange}
                 containerClassName={'pagination'}
             />

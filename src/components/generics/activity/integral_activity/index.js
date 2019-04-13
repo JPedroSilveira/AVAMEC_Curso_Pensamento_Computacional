@@ -59,7 +59,9 @@ class IntegralActivity extends BaseActivity {
             selectedOptions: this.generateSelectedOptionsInitialData(), 
             unitState: UnitState.NOT_COMPLETED
         }
+    }
 
+    componentDidMount() {
         this.getSavedAnswer()
 
         this.getUnitConclusionData()
@@ -368,7 +370,14 @@ class IntegralActivity extends BaseActivity {
 
     renderActivityStatement = (question) => {
         if (question.algorithm){
-            return this.renderAlgorithmStatement(question)
+            return (
+                <div>
+                    {this.renderAlgorithmStatement(question)}
+                    {question.statement !== undefined && question.statement !== "" &&
+                        <p>{ReactHtmlParser(question.statement)}</p>
+                    }
+                </div>
+            )
         } else {
             return (
                 <Fragment>

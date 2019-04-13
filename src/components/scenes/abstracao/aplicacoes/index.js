@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
-import IMGMapaLolla2015 from '../../../../images/mapa_lolla2015.jpg'
+import IMGMapaLolla2015 from '../../../../images/mapa-lolla-2015.jpg'
 import ItalicText from '../../../generics/italic_text'
 
 const Aplicacoes = () => (
