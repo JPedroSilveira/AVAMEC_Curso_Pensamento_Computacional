@@ -10,7 +10,7 @@ const Texto1 = () => (
             <li>Decomposi&ccedil;&atilde;o &ndash; decompor um problema em subproblemas, para solucion&aacute;-lo de uma forma mais f&aacute;cil;</li>
             <li>Abstra&ccedil;&atilde;o &ndash; Capacidade de abstrair as informa&ccedil;&otilde;es que s&atilde;o relevantes para a compreens&atilde;o e solu&ccedil;&atilde;o de um problema;</li>
             <li>Reconhecimento de Padr&otilde;es &ndash; identificar etapas que se repetem dentro de um mesmo problema, ou que j&aacute; foram solucionadas em problemas similares;</li>
-            <li>Algoritmos &ndash; desenvolver sequ&ecirc;ncias de passos para solucionar um problema.</p>
+            <li>Algoritmos &ndash; desenvolver sequ&ecirc;ncias de passos para solucionar um problema.</li>
         </ul>
 
         <p>Na sequ&ecirc;ncia, s&atilde;o discutidos interdisciplinaridade e coopera&ccedil;&atilde;o no contexto do PC. Os conceitos que ser&atilde;o trabalhados ser&atilde;o apresentados em detalhes e discutidos atrav&eacute;s de:</p>
