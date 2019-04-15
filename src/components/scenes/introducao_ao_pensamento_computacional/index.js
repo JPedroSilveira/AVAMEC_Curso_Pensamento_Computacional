@@ -1,8 +1,6 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import Texto1 from './texto_1'
-import Desafios from './desafios'
-
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -24,7 +22,6 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         return(
             <div>
                 <Texto1 />
-                <Desafios />
             </div>
         )
     }
