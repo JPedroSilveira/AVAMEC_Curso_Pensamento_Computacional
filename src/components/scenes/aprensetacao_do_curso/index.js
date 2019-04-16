@@ -13,7 +13,7 @@ class ApresentacaoDoCurso extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 2
+            availablePages: 1
         }
     }
 
@@ -26,14 +26,6 @@ class ApresentacaoDoCurso extends UnitBase {
             case "1":
                 return (
                     <Texto1 />
-                )
-            case "2":
-                return (
-                    <div>
-                        <AtividadeAvaliativa unitId={this.props.id} />
-                        <Texto2 />
-                        <Desafio />
-                    </div>
                 )
             default:
                 return null

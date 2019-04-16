@@ -2,47 +2,12 @@
     {
         "identificador": "apresentacao_do_curso",
         "nome": "Apresentação do Curso",
-        "descricao": "Unidade de introdução ao conteúdo.",
+        "descricao": "Unidade de introdução ao curso.",
         "permitePorcentagem": "true",
         "topicos": [
             {
                 "identificador": "topico_1",
                 "nome": "Apresentação do Curso"
-            }
-        ],
-        "atividades": [
-            {
-                "identificador": "atividade_1_apresentacao_do_curso",
-                "nomeAtividade": "Atividade 1 - Apresentação do Curso",
-                "questoes": [
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q1_a1_apresentacao_do_curso",
-                        "enunciado": "Assinale a alternativa que lhe parece mais apropriada com respeito à afirmação a seguir, considerado o quadro 'Uma ida não planejada ao supermercado'.",
-                        "gabaritos": [
-                            {
-                                "alternativa": "Não, pois ele sempre segue a mesma rotina e já faz o melhor aproveitamento do seu tempo!",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa":  "Sim, pois José poderia por exemplo aprender um pouco sobre algoritmos e criar um para sempre buscar o menor caminho no mercado otimizando seu tempo.",
-                                "chave": "2",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Sim, José deve obrigatoriamnte comprar um notebook e instalar um programa para ajudá-lo a planejar suas compras e otimizar seu tempo.",
-                                "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Sim, José deve obrigatoriamnte comprar um 'smartphone' e instalar um aplicativo para ajudá-lo a planejar suas compras e otimizar seu tempo.",
-                                "chave": "4",
-                                "valor": "0"
-                            }
-                        ]
-                    }
-                ]
             }
         ]
     },
