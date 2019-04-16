@@ -1,3 +1,7 @@
 .game-container{
     text-align: center;
 }
+
+.game-iframe{
+    border: 0px;
+}
