@@ -1,9 +1,6 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import Texto1 from './texto_1'
-import AtividadeAvaliativa from './atividade_avaliativa'
-import Texto2 from './texto_2'
-import Desafio from './desafio'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
