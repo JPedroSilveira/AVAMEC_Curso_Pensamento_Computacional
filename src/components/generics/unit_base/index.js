@@ -31,12 +31,14 @@ class UnitBase extends React.Component {
     }
     
     loadPagination = () => {
-        return (
-            <Pagination
-                availablePages={this.state.availablePages}
-                onPageChange={this.updatePage}
-                unit={this.props.id} />
-        )
+        if(this.state.availablePages > 1){
+            return (
+                <Pagination
+                    availablePages={this.state.availablePages}
+                    onPageChange={this.updatePage}
+                    unit={this.props.id} />
+            )
+        }
     }
 
     loadUnitController = () => {
