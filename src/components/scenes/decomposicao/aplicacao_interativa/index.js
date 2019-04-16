@@ -1,9 +1,14 @@
 import React from 'react'
+import MiniGameNames from '../../../../constants/miniGameNames'
+import MiniGameLoader from '../../../generics/mini-game-loader'
 
 class AplicacaoInterativa extends React.Component {
     render() {
         return (
-            <h1>Em construção.</h1>
+            <div>
+                <h2>Mini-jogo: Conceitos Interativos</h2>
+                <MiniGameLoader miniGameUnitName={MiniGameNames.DECOMPOSICAO} />
+            </div>
         )
     }
 }

@@ -1,11 +1,13 @@
 import React from "react"
 import Unity, { UnityContent } from "react-unity-webgl"
-import Image from "../../components/generics/image"
-import Logo from "../../images/logo.png"
-import LoaderBar from '../../components/generics/loader_bar'
-import '../styles.css'
+import Image from "../image"
+import Logo from "../../../images/logo.png"
+import LoaderBar from '../loader_bar'
+import './styles.css'
 
-class ConceitosInterativos extends React.Component {
+/*Recebe uma propriedade: props.miniGameUnitName que corresponde ao nome da pasta onde o jogo esta 
+armazenado em ./public/mini-games/{miniGameUnitName}*/
+class MiniGameLoader extends React.Component {
     constructor(props) {
         super(props);
 
@@ -15,8 +17,8 @@ class ConceitosInterativos extends React.Component {
         }
 
         this.unityContent = new UnityContent(
-            "./mini_games/conceitos_interativos/Build/Introdução.json",
-            "./mini_games/conceitos_interativos/Build/UnityLoader.js"
+            "./mini-games/" + this.props.miniGameUnitName + "/" + this.props.miniGameUnitName + ".json",
+            "./mini-games/" + this.props.miniGameUnitName + "/UnityLoader.js"
         );
 
         this.unityContent.on("progress", progress => {
@@ -50,4 +52,4 @@ class ConceitosInterativos extends React.Component {
     }
 }
 
-export default ConceitosInterativos
+export default MiniGameLoader
