@@ -2,7 +2,7 @@ import React from "react"
 import Unity, { UnityContent } from "react-unity-webgl"
 import Image from "../image"
 import Logo from "../../../images/logo.png"
-import LoaderBar from '../components/generics/loader_bar'
+import LoaderBar from '../loader_bar'
 import './styles.css'
 
 /*Recebe uma propriedade: props.miniGameUnitName que corresponde ao nome da pasta onde o jogo esta 
