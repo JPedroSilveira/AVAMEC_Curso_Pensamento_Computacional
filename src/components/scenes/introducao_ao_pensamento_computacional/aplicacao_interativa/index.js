@@ -1,5 +1,5 @@
 import React from 'react'
-import MiniGameConceitosInterativos from '../../../../game-iframes/conceitos_interativos'
+import MiniGameConceitosInterativos from '../../../../mini-games/conceitos_interativos'
 
 class AplicacaoInterativa extends React.Component {
     render() {

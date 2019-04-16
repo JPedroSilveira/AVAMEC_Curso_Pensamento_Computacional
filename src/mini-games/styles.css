@@ -1,0 +1,25 @@
+.mini-game-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-game-box{
+    width: 960px; 
+    height: 540px;
+    text-align: center;
+}
+
+.mini-game-box-hidden{
+    width: 0px;
+    height: 0px;
+}
+
+.loader-game{
+    background-color: rgb(40, 40, 40);
+}
+
+.mini-game-box.loader-game .image-container{
+    padding-top: 4em;
+}
