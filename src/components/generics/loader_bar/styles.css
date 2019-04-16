@@ -1,0 +1,31 @@
+.loader-bar{
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    border: 1px solid #CBCCCB;
+    width: 50%;
+    color: black;
+    font-weight: 900;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: show-hidden;
+}
+
+.loaded{
+    position: absolute;
+    background-color: #CBCCCB;
+    height: 100%;
+    opacity: 0.3;
+}
+
+@keyframes show-hidden{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}

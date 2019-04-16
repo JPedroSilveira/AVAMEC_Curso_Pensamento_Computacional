@@ -2,6 +2,7 @@ import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import Texto1 from './texto_1'
 import Desafios from './desafios'
+import AplicacaoInterativa from './aplicacao_interativa'
 
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -12,7 +13,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 1
+            availablePages: 2
         }
     }
 
@@ -20,20 +21,29 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         return (<h1>2. Introdução ao Pensamento Computacional</h1>)
     }
 
-    loadPage = () => {
-        return(
-            <div>
-                <Texto1 />
-                <Desafios />
-            </div>
-        )
+    renderPage = () => {
+        switch (this.state.openPage) {
+            case "1":
+                return (
+                    <AplicacaoInterativa />
+                )
+            case "2":
+                return (
+                    <div>
+                        <Texto1 />
+                        <Desafios />
+                    </div>
+                )
+            default:
+                return null
+        }
     }
 
     render() {
         return (
             <div>
                 {this.renderTitle()}
-                {this.loadPage()}
+                {this.renderPage()}
                 {this.loadPagination()}
                 {this.loadUnitController()}
             </div>
