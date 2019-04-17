@@ -1,7 +1,7 @@
 export default {
-    INTRODUCAO: 'Introdução',
-    DECOMPOSICAO: 'Decomposição',
+    INTRODUCAO: 'Introducao',
+    DECOMPOSICAO: 'Decomposicao',
     ALGORITMOS: 'Algoritmos',
-    ABSTRACAO: 'Abstração',
-    PADROES: 'Padrões'
+    ABSTRACAO: 'Abstracao',
+    PADROES: 'Padroes'
 }
