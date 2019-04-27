@@ -1,14 +1,14 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import AplicacaoInterativa from './aplicacao_interativa'
-import AtividadeCooperativa from './atividade_cooperativa'
-import ParaSaberMais from './para_saber_mais'
 import Conceituacao from './conceituacao'
 import Aplicacoes from './aplicacoes'
 import Recomendacoes from './recomendacoes'
 import Problemas from './problemas'
-import AtividadeAvaliativa from './atividade_avaliativa'
-import AtividadeComplementar from './atividade_complementar'
+import AtividadeAvaliativaUm from './atividade_avaliativa_um'
+import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
+import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
+import AtividadeCooperativa from './atividade_cooperativa'
 
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -39,30 +39,31 @@ class Decomposicao extends UnitBase {
                 )
             case "3":
                 return (
-                    <Aplicacoes />
+                    <AtividadeAvaliativaUm unitId={this.props.id} />
                 )
             case "4":
                 return (
-                    <Recomendacoes />
+                    <Aplicacoes />
                 )
             case "5":
                 return (
-                    <AtividadeAvaliativa unitId={this.props.id} />
+                    <AtividadeAvaliativaDois unitId={this.props.id} />
                 )
             case "6":
                 return (
-                    <div>
-                        <Problemas unitId={this.props.id} />
-                        <AtividadeComplementar unitId={this.props.id} />
-                    </div>
+                    <Recomendacoes />
                 )
             case "7":
                 return (
-                    <AtividadeCooperativa />
+                    <AtividadeAvaliativaTres unitId={this.props.id} />
+                )
+            case "7":
+                return (
+                    <Problemas unitId={this.props.id} />
                 )
             case "8":
                 return (
-                    <ParaSaberMais />
+                    <AtividadeCooperativa unitId={this.props.id} />
                 )
             default:
                 return null
