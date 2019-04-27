@@ -1,6 +1,9 @@
 .image-container{
-    text-align: center;
     width: 100%;
+}
+
+.image-container p{
+    text-align: center;
 }
 
 .image-style{

@@ -19,12 +19,12 @@ class Decomposicao extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 3
+            availablePages: 8
         }
     }
 
     renderTitle = () => {
-        return (<h1>3. Decomposição </h1>)
+        return (<h1>2. Decomposição </h1>)
     }
 
     renderPage = () => {
