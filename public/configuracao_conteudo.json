@@ -55,84 +55,82 @@
             {
                 "identificador": "topico_6",
                 "nome": "Atividade Cooperativa"
-            },
-            {
-                "identificador": "topico_7",
-                "nome": "Para saber mais"
             }
         ],
-        "atividades": [{
+        "atividades": [
+            {
                 "identificador": "atividade_1_decomposicao",
                 "nomeAtividade": "Atividades Avaliativas",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_decomposicao",
-                        "enunciado": "Avaliando um festival folclórico",
+                        "enunciado": "Qual das afirmativas abaixo lhe parece menos apropriada para se falar sobre o Pilar “Decomposição”?",
                         "gabaritos": [
                             {
-                                "alternativa": "Tempo da apresentação.",
+                                "alternativa": "É uma atividade totalmente subjetiva, pois uma boa decomposição independe do objeto ou sistema que desejamos decompor e das finalidades às quais ela servirá.",
                                 "chave": "1",
-                                "valor": "0"
+                                "valor": "1"
                             },
                             {
-                                "alternativa": "Sincronia.",
+                                "alternativa": "O resultado de uma decomposição são partes ou sistemas mais simples os quais, entretanto, podem serem adequados a novas  decomposições.",
                                 "chave": "2",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Precisão de movimentos.",
+                                "alternativa": "Quando um mesmo sistema é decomposto isoladamente por duas ou mais pessoas, é  possível que tenhamos decomposições diferentes.",
                                 "chave": "3",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Participação da audiência.",
+                                "alternativa": "É possível comparar duas decomposições de um mesmo sistema ou objeto e com isso identificar entre elas a que parece mais adequada aos propósitos do problema a ser resolvido.",
                                 "chave": "4",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "identificador": "atividade_2_decomposicao",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a2_decomposicao",
+                        "enunciado": "Qualquer evento, seja no âmbito pessoal (aniversários, casamentos, festas religiosas, etc.) quanto no profissional (congressos, seminários, premiações, etc.), requer, para sua realização, a execução de um conjunto de atividades que podem, dependendo da dimensão do evento em questão, envolver várias pessoas ou equipes, responsáveis pelos diferentes aspectos que constituem o evento. Considere a realização do seminário \"O Pensamento Computacional na Escola\", e dentre as diferentes listas apresentadas nas alternativas , indique qual lhe parece uma decomposição adequada de elementos envolvidos nesse evento.",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Convidados; local; refrigeração; mídia/transmissão; comissão julgadora.",
+                                "chave": "1",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Figurino.",
-                                "chave": "5",
+                                "alternativa": "Divulgação; patrocínio; local; atrações; licenciamento; ingressos; segurança.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Local; convites; figurino; sonorização; apresentação.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Inscrições; data; patrocínio; comitês; local; transporte; programação.",
+                                "chave": "4",
                                 "valor": "1"
+                            },
+                            {
+                                "alternativa": "Convites; cardápio; música; bolo decorado; doces; salgados; bebidas; lembranças.",
+                                "chave": "5",
+                                "valor": "0"
                             }
                         ]
                     },
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q2_a1_decomposicao",
-                        "enunciado": "Organizando um evento",
-                        "gabaritos": [
-                            {
-                                "alternativa": "Convidados; Local; Refrigeração; Mídia/Transmissão; Comissão julgadora.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Divulgação; Patrocínio; Local; Atrações; Licenciamento; Ingressos; Segurança.",
-                                "chave": "2",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Local; Convites; Figurino; Sonorização; Apresentação.",
-                                "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Inscrições; Data; Patrocínio; Comitês; Local; Transporte; Programação.",
-                                "chave": "4",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Convites; Cardápio; Música; Bolo decorado; Doces; Salgados; Bebidas; Lembranças.",
-                                "chave": "5",
-                                "valor": "0"
-                            }
-                        ]
-                    },
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q3_a1_decomposicao",
-                        "enunciado": "Entendendo o corpo humano",
+                        "identificador": "q2_a2_decomposicao",
+                        "enunciado": "Com o propósito de diagnosticar a origem de um problema de saúde, a partir de sintomas diversos, um médico usualmente analisa o corpo humano segundo seus sistemas ou elementos constituintes. Em tal cenário, qual dos seguintes conjuntos lhe parece menos adequado.",
                         "gabaritos": [
                             {
                                 "alternativa": "Cardiovascular, respiratório, digestivo, nervoso, sensorial, endócrino, excretor, urinário, reprodutor, esquelético, muscular, imunológico, linfático, tegumentar.",
@@ -160,41 +158,48 @@
                                 "valor": "0"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "identificador": "atividade_3_decomposicao",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q4_a1_decomposicao",
-                        "enunciado": "Planejando as próximas férias",
+                        "identificador": "q1_a3_decomposicao",
+                        "enunciado": "Considere que você precisa definir como deve ser realizada a avaliação das danças apresentadas por grupos em um festival folclórico. Considere ainda que esse festival seja realizado pela comunidade de uma escola, de um bairro ou até de uma cidade inteira. Reflita sobre como a avaliação poderia ser decomposta em elementos e indique qual, dentre os seguintes, seria menos adequado para esse fim.",
                         "gabaritos": [
                             {
-                                "alternativa": "Transporte; hospedagem; alimentação; atrações.",
+                                "alternativa": "Tempo da apresentação.",
                                 "chave": "1",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Caminhar; pescar; jogar futebol; nadar; cochilar, ir ao teatro.",
+                                "alternativa": "Sincronia.",
                                 "chave": "2",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Armários abastecidos; acendimento de luzes; retirada de correspondência.",
+                                "alternativa": "Precisão de movimentos.",
                                 "chave": "3",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Compra de passagem de avião, reserva de hotel, aluguel de carro.",
-                                "chave": "4",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Atividades na primeira cidade visitada, atividades na segunda cidade visitada, atividades na última cidade.",
+                                "alternativa": "Participação da audiência.",
+                                "chave": "4",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Figurino.",
                                 "chave": "5",
                                 "valor": "0"
                             }
                         ]
                     }
                 ]
-            }]
+            }
+        ]
     },
     {
         "identificador": "abstracao",
