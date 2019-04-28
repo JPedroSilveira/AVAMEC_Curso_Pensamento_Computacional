@@ -19,7 +19,7 @@ class Decomposicao extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 8
+            availablePages: 9
         }
     }
 
@@ -57,11 +57,11 @@ class Decomposicao extends UnitBase {
                 return (
                     <AtividadeAvaliativaTres unitId={this.props.id} />
                 )
-            case "7":
+            case "8":
                 return (
                     <Problemas unitId={this.props.id} />
                 )
-            case "8":
+            case "9":
                 return (
                     <AtividadeCooperativa unitId={this.props.id} />
                 )
