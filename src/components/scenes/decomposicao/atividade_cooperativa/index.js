@@ -49,7 +49,7 @@ class AtividadeCooperativa extends React.Component {
         return (
             <Fragment>
                 <ComplementaryActivity activity={this.generateActivity()} />
-                <p><strong>AC2:</strong> Revisar propostas de dois ou mais colegas, indicando poss&iacute;veis equ&iacute;vocos e/ou sugerindo mudan&ccedil;as e amplia&ccedil;&otilde;es</p>
+                <p><strong>AC2:</strong> Revisar propostas de dois ou mais colegas, indicando poss&iacute;veis equ&iacute;vocos e/ou sugerindo mudan&ccedil;as e amplia&ccedil;&otilde;es.</p>
             </Fragment>
         )
     }

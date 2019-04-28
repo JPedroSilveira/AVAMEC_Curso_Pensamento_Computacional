@@ -24,7 +24,7 @@ class Problemas extends React.Component {
                 {
                     id: "problema_um_abstracao",
                     title: "Problema 1",
-                    text: "Imagine que você é o gerente de um supermercado, ou simplesmente o encarregado pelo salão de vendas. Como você poderia organizar os produtos de um supermercado para facilitar a vida dos clientes ao tentar encontrar os itens de suas listas de compras? Imagine o que aconteceria aos clientes de seu supermercado se tiverem que fazer suas compras em uma loja na qual os produtos estão dispersos, sem qualquer agrupamento para facilitar a localização.",
+                    text: "Imagine que você é o gerente de um supermercado, ou simplesmente o encarregado pelo salão de vendas. Como você poderia organizar os produtos de um supermercado para facilitar a vida dos clientes ao tentar encontrar os itens de suas listas de compras? Imagine o que aconteceria aos clientes de seu supermercado se tiverem que fazer suas compras em uma loja na qual os produtos estão dispersos, sem qualquer agrupamento para facilitar a localização?",
                     maxAnswerLength: 500
                 },
                 {
