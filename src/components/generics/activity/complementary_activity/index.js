@@ -234,18 +234,16 @@ class ComplementaryActivity extends BaseActivity {
             })
     }
 
-    onChangeAnswer = (maxLength, number, questionId, data) => {
+    onChangeAnswer = (number, questionId, maxAnswerLength, data) => {
         let activity = this.state.activity
 
         let index = this.getExampleIndexByNumber(number)
 
         activity.examples[index]
             .questions[questionId]
-            .answer = data.currentTarget.value.substr(0, maxLength) 
+            .answer = data.currentTarget.value.substr(0, maxAnswerLength) 
 
-        this.setState({
-            activity: activity
-        })
+        this.forceUpdate()
     }
 
     getExampleIndexByNumber = number => {
@@ -269,7 +267,7 @@ class ComplementaryActivity extends BaseActivity {
 
         if (canDelete){
             return (
-                <DeleteButton id={example.number} onClick={this.onClickDelete.bind(example.number)}/>
+                <DeleteButton id={example.number} onClick={this.onClickDelete}/>
             )
         }
     }
@@ -291,7 +289,7 @@ class ComplementaryActivity extends BaseActivity {
                 <textarea
                     id={number}
                     value={question.answer}
-                    onChange={this.onChangeAnswer.bind(this, question.maxAnswerLength, number, question.id)}
+                    onChange={this.onChangeAnswer.bind(this, number, question.id, question.maxAnswerLength)}
                     cols="30"
                     rows={Math.round(question.maxAnswerLength/ActivityConstants.NUMBER_OF_LETTERS_PER_LINE_TEXTBOX)}
                 /><br/>

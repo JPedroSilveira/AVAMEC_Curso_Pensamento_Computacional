@@ -3,7 +3,6 @@ import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 import IMGMapaParqueFarroupilha from '../../../../images/mapa-farroupilha.png'
 import IMGParqueFarroupilha from '../../../../images/parque-farroupilha.png'
-import ItalicText from '../../../generics/italic_text'
 
 const Aplicacoes = () => (
     <div>

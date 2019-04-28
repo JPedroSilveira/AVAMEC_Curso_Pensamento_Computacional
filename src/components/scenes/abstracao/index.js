@@ -59,7 +59,7 @@ class Abstracao extends UnitBase {
                 )
             case "8":
                 return (
-                    <Problemas />
+                    <Problemas unitId={this.props.id} />
                 )
             case "9":
                 return (

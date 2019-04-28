@@ -1,13 +1,13 @@
 import React from 'react'
 import MiniGameNames from '../../../../constants/miniGameNames'
-import MiniGameLoader from '../../../generics/mini-game-loader'
+import MiniGameLoader from '../../../generics/mini_game_loader'
 
 class AplicacaoInterativa extends React.Component {
     render() {
         return (
             <div>
                 <h2>Mini-jogo: Conceitos Interativos</h2>
-                <MiniGameLoader miniGameUnitName={MiniGameNames.ALGORITMOS} />
+                <MiniGameLoader miniGameName={MiniGameNames.ALGORITMOS} />
             </div>
         )
     }
