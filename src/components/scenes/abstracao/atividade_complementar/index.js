@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ComplementaryActivity from '../../../generics/activity/complementary_activity'
 
 const MIN_EXAMPLES_AMOUNT = 0
@@ -21,7 +21,7 @@ class AtividadeComplementar extends React.Component {
         return {
             id: "atividade_completamentar_exemplos_abstracao_um",
             unitId: this.props.unitId,
-            statement: "Apresente até 3 exemplos, preferencialmente de sua área de interesse, onde você identifica a utilização deste pilar do pensamento computacional. Em cada exemplo, justifique o uso e argumente sobre a importância.",
+            statement: "AC1: Apresente até 3 situações-problema, preferencialmente de sua área de interesse, onde você identifica a possibilidade de utilização deste pilar do pensamento  computacional, para apoiar a elaboração de soluções. Em cada caso, justifique o uso e argumente sobre sua importância.",
             minExamplesAmount: MIN_EXAMPLES_AMOUNT,
             maxExamplesAmount: MAX_EXAMPLES_AMOUNT,
             questions: [
@@ -47,7 +47,10 @@ class AtividadeComplementar extends React.Component {
 
     render() {
         return (
-            <ComplementaryActivity activity={this.generateActivity()}/>
+            <Fragment>
+                <ComplementaryActivity activity={this.generateActivity()}/>
+                <p><strong>AC2:</strong> Revisar propostas de dois ou mais colegas, indicando poss&iacute;veis equ&iacute;vocos e/ou sugerindo mudan&ccedil;as e amplia&ccedil;&otilde;es.</p>
+            </Fragment>
         )
     }
 }  
