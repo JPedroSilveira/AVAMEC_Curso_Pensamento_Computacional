@@ -1,6 +1,8 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import Texto1 from './texto_1'
+import Texto2 from './texto_2'
+import Texto3 from './texto_3'
 import Desafios from './desafios'
 import AplicacaoInterativa from './aplicacao_interativa'
 
@@ -13,7 +15,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 2
+            availablePages: 5
         }
     }
 
@@ -29,10 +31,19 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
                 )
             case "2":
                 return (
-                    <div>
-                        <Texto1 />
-                        <Desafios />
-                    </div>
+                    <Texto1 />
+                )
+            case "3":
+                return (
+                    <Texto2 />
+                )
+            case "4":
+                return (
+                    <Texto3 />
+                )
+            case "5":
+                return (
+                    <Desafios />
                 )
             default:
                 return null
