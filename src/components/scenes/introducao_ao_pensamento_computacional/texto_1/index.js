@@ -1,58 +1,16 @@
 import React from 'react'
-import CenterBoxContainer from '../../../generics/center_box_container'
-import Box from '../../../generics/box'
-import Color from '../../../../constants/color'
-import ExternalLink from '../../../generics/external_link'
 
 const Texto1 = () => (
     <div>
-        <p>Em todas as áreas da atividade humana, nos deparamos com situações que apresentam problemas para os quais precisamos elaborar uma solução. O que em geral caracteriza um problema é a existência de um determinado objetivo que pretendemos alcançar, a partir de uma combinação adequada de recursos disponíveis. As situações podem ser bem simples e corriqueiras, como organizar um piquenique com a família em um determinado final de semana, de porte um pouco maior, como planejar a festa de final de ano da nossa escola, ou como elaborar  o planejamento anual de uma escola e, até mesmo, bem complexas, como  organizar o sistema escolar de um município. Esses problemas, regra geral, admitem mais de uma solução e, naturalmente, estamos interessados não apenas em uma solução qualquer, mas, sim, em uma boa solução.</p>
-        <p>Alguns exemplos interessantes:</p>
-        <ul>
-            <li>Preparar um sanduíche;</li>
-            <li>Organizar e guardar a roupa da família , que acabou de sair da secadora:</li>
-            <li>Planejar a mudança da família para uma nova cidade;</li>
-            <li>Organizar a feira de ciências de sua escola;</li>
-            <li>Organizar uma rede de abastecimento de alimentos;</li>
-            <li>Organizar um evento esportivo, como por exemplo as olimpíadas.</li>
-        </ul>
-        <p>
-            Antes de prosseguir, completamos a seção com um problema que há séculos entretém 
-            crianças e adultos: 
-            <strong> O fazendeiro, o lobo, a ovelha e a caixa de repolho. </strong>
-        </p>
-        <h2>QUADRO 1</h2>
-        <CenterBoxContainer>
-            <Box backgroundColor={Color.GRAY_BOX}>
-                <h3>O FAZENDEIRO, O LOBO, A OVELHA E A CAIXA DE REPOLHO</h3>
-                <p>
-                    Um fazendeiro foi às compras à aldeia e lá comprou um <strong>lobo</strong>, 
-                    uma <strong>caixa de repolho</strong> e uma <strong>ovelha</strong>. 
-                    Na volta pra casa precisava atravessar um riacho, com todos os itens adquiridos e 
-                    precisou alugar um barco. O que conseguiu era muito pequeno, o que não permitia 
-                    que o fazendeiro atravessasse de uma só vez como todos os seus pertences. 
-                    O barco só era capaz de suportar ele e mais um dos itens em cada viagem. 
-                    Já estava pronto para começar a travessia, levando primeiramente o 
-                    <strong> lobo</strong>, quando se deu conta que se deixasse a <strong>ovelha</strong> sozinha com 
-                    a <strong>caixa de repolho</strong>, quando voltasse a <strong>caixa de repolho </strong> 
-                    teria sido comida pela <strong>ovelha</strong>. Então pensou em levar primeiro o 
-                    <strong> repolho</strong> e daí lembrou que a <strong>ovelha </strong> 
-                    seria uma bela refeição para o<strong> lobo</strong>. 
-                    Sentou um pouco e então começou a pensar como poderia fazer a travessia. 
-                    Demorou um pouquinho, mas conseguiu. E você, quer tentar resolver o problema? 
-                    Qual será uma possível sequência de travessias, idas e voltas do fazendeiro, 
-                    que lhe permita transportar todas as suas compras, sem que nenhuma delas seja comida 
-                    por seu predador?
-                </p>
-            </Box>
-        </CenterBoxContainer>
-        <p>Se quiser tentar um pouco, entre no endereço: <ExternalLink href="http://www.plastelina.net/game1.html">http://www.plastelina.net/game1.html</ExternalLink></p>
-        <p>Se quiser ver uma animação, clique no endereço: <ExternalLink href="https://youtu.be/WmQCcBj_ROQ">https://youtu.be/WmQCcBj_ROQ</ExternalLink></p>
-        <p>Para uma discussão pedagógica desse problema, recomendamos a leitura do texto “Piaget e nossa Inteligência” do professor Lino Macedo.</p>
-        <p>Alguns problemas podem ser simples, enquanto outros são de natureza mais complexa. Os primeiros podem ser resolvidos diretamente, ou com o uso de estratégias simples e outros, mais complexos, podem requerer o uso de várias estratégias combinadas para sua solução.</p>
-        <p>Independente dos elementos envolvidos nos problemas, por estarem em campos diferentes, podemos identificar um conjunto de estratégias similares, cuja aplicação isolada ou combinada pode contribuir para a resolução sistemática de problemas nos mais diversos âmbitos da atividade humana, sejam eles no transporte, na agricultura, na medicina, nas diversas engenharias, na logística e nas tarefas cotidianas. </p>
-        <p> Apesar de existirem diferentes propostas para o agrupamento dessas estratégias, iremos tratar neste curso do que tem sido chamado os 4 pilares do Pensamento Computacional (<span className="span-referencia">referência</span>), a saber: a <strong>Abstração</strong>, a <strong>Decomposição</strong>, o <strong>Reconhecimento de Padrões</strong> e os <strong>Algoritmos</strong>.</p>
-        <p>Na sequência de nosso curso exploraremos cada um desses pilares. </p>
+        <p>Desde os prim&oacute;rdios de sua hist&oacute;ria, a humanidade busca construir <strong>tecnologias para apoiar a resolu&ccedil;&atilde;o dos problemas</strong> com os quais se depara, inicialmente para sobreviver &agrave;s intemp&eacute;ries da natureza e para garantia da alimenta&ccedil;&atilde;o, nos dias atuais, para garantia da qualidade de vida individual e coletiva, o conv&iacute;vio pac&iacute;fico e o respeito &agrave; natureza. Para tal, al&eacute;m da inven&ccedil;&atilde;o das tecnologias f&iacute;sicas, passou a conceber tamb&eacute;m tecnologias intelectuais.</p>        <p>Alguns exemplos interessantes:</p>
+        <p>Muito j&aacute; foi descoberto e inventado, em favor de melhores dias, no campo da alimenta&ccedil;&atilde;o, da sa&uacute;de, da preven&ccedil;&atilde;o e supera&ccedil;&atilde;o dos desastres naturais, dos transportes etc. Todas essas descobertas compartilham um princ&iacute;pio importante, a busca pelo uso econ&ocirc;mico (evitando desperd&iacute;cio, principalmente do que for escasso) do tempo, do espa&ccedil;o, dos recursos naturais (principalmente os n&atilde;o-renov&aacute;veis) e, at&eacute; mesmo, dos recursos financeiros, individuais e coletivos.</p>
+        <p>Diversas metodologias que s&atilde;o usadas para apoiar a resolu&ccedil;&atilde;o de problemas compartilham um conjunto de elementos importantes que est&atilde;o sistematizados no que veio a ser conhecido como <strong>Pensamento Computacional</strong>.</p>
+        <p><strong>Pensamento Computacional</strong> pode ser visto como sendo um processo de pensamento para encontrar e especificar solu&ccedil;&otilde;es para problemas, de tal forma que seres humanos ou computadores possam resolv&ecirc;-los.</p>
+        <p>A aplica&ccedil;&atilde;o pr&aacute;tica de Pensamento Computacional pode ser observada tanto na resolu&ccedil;&atilde;o de problemas b&aacute;sicos do cotidiano, como no planejamento das compras de uma fam&iacute;lia, quanto na resolu&ccedil;&atilde;o de problemas mais complexos, como na concep&ccedil;&atilde;o de um sistema escolar, na log&iacute;stica de uma rede de abastecimento, na elabora&ccedil;&atilde;o de um sistema de preven&ccedil;&atilde;o e erradica&ccedil;&atilde;o de epidemias ou no envio de uma nave espacial para a Lua.</p>
+        <p>No decorrer da hist&oacute;ria da humanidade, alguns momentos importantes introduziram grandes transforma&ccedil;&otilde;es com fortes influ&ecirc;ncias em nosso modo de viver. No s&eacute;culo XX, o forte desenvolvimento de Ci&ecirc;ncia e Tecnologia deu origem a atividades relacionadas com a coleta, processamento e an&aacute;lise de informa&ccedil;&atilde;o, requerendo novas compet&ecirc;ncias e dando origem ao termo &ldquo;Sociedade do Conhecimento&rdquo;, que se caracteriza por uma maior preocupa&ccedil;&atilde;o com o capital intelectual dos cidad&atilde;os.</p>
+        <p>Embora as preocupa&ccedil;&otilde;es com o uso econ&ocirc;mico de recursos j&aacute; estejam presente h&aacute; muito tempo em nossa hist&oacute;ria, s&oacute; mais recentemente ganharam destaque em nosso cotidiano, em consequ&ecirc;ncia do deslocamento do tipo de atividades que passamos a exercer em um mundo onde o trabalho mec&acirc;nico est&aacute; cada vez mais sendo transferido para as m&aacute;quinas.</p>
+        <p>Desde a d&eacute;cada de 50 do s&eacute;culo passado, as preocupa&ccedil;&otilde;es com pensamento computacional j&aacute; estavam presente nos trabalhos de George Polya (&ldquo;A Arte de Resolver Problemas&rdquo;) e mais tarde com Seymour Papert, em seu livro &ldquo;Mindstorm&rdquo;. Mais recentemente, no in&iacute;cio do s&eacute;culo XXI, teve origem um movimento internacional pela inclus&atilde;o nos sistemas escolares da prepara&ccedil;&atilde;o dos cidad&atilde;os para a resolu&ccedil;&atilde;o de problemas com o uso de Pensamento Computacional. Um artigo da pesquisadora norte-americana Jannete Wing &eacute; um marco nesse movimento.</p>
+        <p>Neste curso iremos tratar do que tem sido chamado os 4 Pilares do Pensamento Computacional, a saber: <strong>Abstra&ccedil;&atilde;o</strong>, <strong>Decomposi&ccedil;&atilde;o</strong>, <strong>Reconhecimento de Padr&otilde;es</strong> e <strong>Algoritmos</strong>. Antes de prosseguirmos, vamos examinar dois exemplos de problemas cujo processo de busca de solu&ccedil;&otilde;es pode beneficiar-se enormemento do Pensamento Computacional.</p>
     </div>
 )
 
