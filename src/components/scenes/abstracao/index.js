@@ -24,7 +24,7 @@ class Abstracao extends UnitBase {
     }
 
     renderTitle = () => {
-        return (<h1>4. Abstração</h1>)
+        return (<h1>3. Abstração</h1>)
     }
 
     renderPage = () => {

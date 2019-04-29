@@ -20,7 +20,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     }
 
     renderTitle = () => {
-        return (<h1>2. Introdução ao Pensamento Computacional</h1>)
+        return (<h1>1. Introdução ao Pensamento Computacional</h1>)
     }
 
     renderPage = () => {
