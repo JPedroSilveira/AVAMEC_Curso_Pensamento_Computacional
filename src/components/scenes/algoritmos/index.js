@@ -26,7 +26,7 @@ class Algoritmos extends UnitBase {
     }
 
     renderTitle = () => {
-        return (<h1>6. Algoritmos</h1>)
+        return (<h1>5. Algoritmos</h1>)
     }
 
     renderPage = () => {

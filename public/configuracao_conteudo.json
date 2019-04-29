@@ -1,17 +1,5 @@
 [
     {
-        "identificador": "apresentacao_do_curso",
-        "nome": "Apresentação do Curso",
-        "descricao": "Unidade de introdução ao curso.",
-        "permitePorcentagem": "true",
-        "topicos": [
-            {
-                "identificador": "topico_1",
-                "nome": "Apresentação do Curso"
-            }
-        ]
-    },
-    {
         "identificador": "introducao_ao_pensamento_computacional",
         "nome": "Introdução ao Pensamento Computacional",
         "descricao": "",
@@ -21,6 +9,10 @@
             {
                 "identificador": "topico_1",
                 "nome": "Introdução ao Pensamento Computacional"
+            },
+            {
+                "identificador": "topico_2",
+                "nome": "Desafios"
             }
         ],
         "atividades": []

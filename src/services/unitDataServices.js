@@ -25,8 +25,6 @@ class UnitDataServices {
 
     getUnitNameById = unit => {
         switch(unit){
-            case UnidId.APRESENTACAO_CURSO:
-                return UnitName.APRESENTACAO_CURSO
             case UnidId.INTRO_PENSAMENTO_COMP:
                 return UnitName.INTRO_PENSAMENTO_COMP
             case UnidId.DECOMPOSICAO:

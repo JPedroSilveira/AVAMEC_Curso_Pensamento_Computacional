@@ -2,6 +2,7 @@ import React from 'react'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color'
+import ExternalLink from '../../../generics/external_link'
 
 const Texto3 = () => (
     <div>

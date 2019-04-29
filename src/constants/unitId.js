@@ -1,5 +1,4 @@
 export default {
-    APRESENTACAO_CURSO: 'apresentacao_do_curso',
     INTRO_PENSAMENTO_COMP: 'introducao_ao_pensamento_computacional',
     DECOMPOSICAO: 'decomposicao',
     ABSTRACAO: 'abstracao',

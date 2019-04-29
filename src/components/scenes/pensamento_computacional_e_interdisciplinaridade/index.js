@@ -25,7 +25,7 @@ class PensamentoComputacionalEInterdisciplinidade extends UnitBase {
     }
 
     renderTitle = () => {
-        return (<h1>7. Pensamento Computacional e Interdisciplinaridade</h1>)
+        return (<h1>6. Pensamento Computacional e Interdisciplinaridade</h1>)
     }
 
     renderPage = () => {

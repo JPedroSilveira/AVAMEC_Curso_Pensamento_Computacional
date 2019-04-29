@@ -4,7 +4,6 @@ import Header from '../generics/header'
 import localStorageUtils from '../../utils/localStorageUtils'
 import UnitId from '../../constants/unitId'
 
-import ApresentacaoDoCurso from '../scenes/aprensetacao_do_curso'
 import IntroducaoAoPensamentoComputacional from '../scenes/introducao_ao_pensamento_computacional'
 import Decomposicao from '../scenes/decomposicao'
 import Abstracao from '../scenes/abstracao'
@@ -25,8 +24,6 @@ class Main extends React.Component {
 
     LoadUnit = () => {
         switch (this.state.openUnitId){
-            case UnitId.APRESENTACAO_CURSO:
-                return (<ApresentacaoDoCurso id={UnitId.APRESENTACAO_CURSO} />)
             case UnitId.INTRO_PENSAMENTO_COMP:
                 return (<IntroducaoAoPensamentoComputacional id={UnitId.INTRO_PENSAMENTO_COMP} />)
             case UnitId.DECOMPOSICAO:
