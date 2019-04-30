@@ -25,7 +25,7 @@ class PensamentoComputacionalECooperacao extends UnitBase {
     }
 
     renderTitle = () => {
-        return (<h1>8. Pensamento Computacional e Cooperação</h1>)
+        return (<h1>7. Pensamento Computacional e Cooperação</h1>)
     }
 
     renderPage = () => {

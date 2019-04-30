@@ -2,14 +2,13 @@ import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
+import AtividadeAvaliativaUm from './atividade_avaliativa_um'
+import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
+import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
 import Aplicacoes from './aplicacoes'
-import AssuntosCorrelatos from './assuntos_correlatos'
-import AtividadeAvaliativa from './atividade_avaliativa'
 import Problemas from './problemas'
 import AtividadeComplementar from './atividade_complementar'
 import Recomendacoes from './recomendacoes'
-import AtividadeCooperativa from './atividade_cooperativa'
-import ParaSaberMais from './para_saber_mais'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -19,13 +18,13 @@ class Abstracao extends UnitBase {
         super(props)
         
         this.state = {
-            availablePages: 5,
+            availablePages: 9,
             openPage: null
         }
     }
 
     renderTitle = () => {
-        return (<h1>4. Abstração</h1>)
+        return (<h1>3. Abstração</h1>)
     }
 
     renderPage = () => {
@@ -40,31 +39,31 @@ class Abstracao extends UnitBase {
                 )
             case "3":
                 return (
-                    <Aplicacoes />
+                    <AtividadeAvaliativaUm unitId={this.props.id} />
                 )
             case "4":
                 return (
-                    <div>
-                        <Recomendacoes />
-                        <AtividadeComplementar unitId={this.props.id} />
-                        <AssuntosCorrelatos />
-                    </div>
+                    <Aplicacoes />
                 )
             case "5":
                 return (
-                    <AtividadeAvaliativa unitId={this.props.id} />
+                    <AtividadeAvaliativaDois unitId={this.props.id} />
                 )
             case "6":
                 return (
-                    <Problemas />
+                    <Recomendacoes />
                 )
             case "7":
                 return (
-                    <AtividadeCooperativa />
+                    <AtividadeAvaliativaTres unitId={this.props.id} />
                 )
             case "8":
                 return (
-                    <ParaSaberMais />
+                    <Problemas unitId={this.props.id} />
+                )
+            case "9":
+                return (
+                    <AtividadeComplementar unitId={this.props.id} />
                 )
             default: 
                 return null

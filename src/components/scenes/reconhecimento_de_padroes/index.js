@@ -24,7 +24,7 @@ class ReconhecimentoDePadroes extends UnitBase {
     }
 
     renderTitle = () => {
-        return (<h1>5. Reconhecimento de Padrões</h1>)
+        return (<h1>4. Reconhecimento de Padrões</h1>)
     }
 
     renderPage = () => {
