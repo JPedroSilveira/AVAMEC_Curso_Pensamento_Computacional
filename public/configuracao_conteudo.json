@@ -406,19 +406,11 @@
             },
             {
                 "identificador": "topico_4",
-                "nome": "Recomendações"
-            },
-            {
-                "identificador": "topico_5",
                 "nome": "Problemas"
             },
             {
-                "identificador": "topico_6",
+                "identificador": "topico_5",
                 "nome": "Atividade Cooperativa"
-            },
-            {
-                "identificador": "topico_7",
-                "nome": "Para saber mais"
             }
         ],
         "atividades": [
