@@ -396,10 +396,21 @@ class IntegralActivity extends BaseActivity {
         return (
             <CenterBoxContainer>
                 <StatementAlgorithmBox title={question.title}>
+                    {this.renderPreInstructions(question.preInstructions)}
                     {this.renderInstructions(question.instructions, true)}
                 </StatementAlgorithmBox>
             </CenterBoxContainer>
         )
+    }
+
+    renderPreInstructions = (preInstructions) => {
+        if (preInstructions !== undefined && preInstructions !== ""){
+            return (
+                <Fragment className="textdarkgreen">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ReactHtmlParser(preInstructions)}
+                </Fragment>
+            )
+        }
     }
     
     renderInstructions = (instructions, first) => {

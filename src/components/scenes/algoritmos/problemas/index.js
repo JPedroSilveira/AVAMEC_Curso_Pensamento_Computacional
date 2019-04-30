@@ -20,32 +20,30 @@ class Problemas extends React.Component{
     getProblems = () => {
         return {
             unitId: this.props.unitId,
-            title: "Elabore um algoritmo para cada um dos problemas a seguir descritos:",
+            title: "Elabore um algoritmo para cada um dos problemas a seguir descritos.",
             problems: [
                 {
                     id: "problema_um_algoritmos",
                     title: "Problema 1",
-                    text: "Preparando o peru assado para a ceia de natal.",
+                    text: "Elaboração de uma história, produzida de forma  cooperativa por um grupo de no máximo 5 alunos: considere que a história será escrita por todos os 5 alunos, mas que cada um deverá escrever parágrafos individualmente (sem conversar com os seus pares), tomando por base apenas o texto que já está escrito e dando continuidade ao mesmo. Os participantes devem estar separados, sem contato direto, e o texto deverá circular em uma determinada ordem. Cada um terá sua vez para escrever e, para tanto, terá em mãos o que foi escrito até o momento, e com base nesse material deverá produzir um novo parágrafo de até 5 linhas. O título, o gênero e o primeiro parágrafo da história devem ser produzidos a partir de uma conversa inicial entre os participantes. A escrita deverá ser completada em até 5 rodadas.",
                     maxAnswerLength: 1000
                 },
                 {
                     id: "problema_dois_algoritmos",
                     title: "Problema 2",
-                    text: "Escrevendo o nome de um filme em uma Smart TV para buscar um filme no YouTube.",
+                    text: "Descreva a construção de um círculo, dividido em 8 partes iguais, usando um compasso, uma régua e um lápis.",
                     maxAnswerLength: 1000
                 },
                 {
                     id: "problema_tres_algoritmos",
                     title: "Problema 3",
-                    subtitle: "Como sabemos, para preservar a qualidade dos pneus de seu carros, é recomendado que, a cada 10.000 km, se faça um rodízio dos pneus. Existem diferentes recomendações. Procurem uma na internet e a seguir elabore um algoritmo para realizá-la.",
-                    text: "Fazendo rotação de pneus.",
+                    text: "Descreva o algoritmo para determinação do máximo divisor comum entre dois números.",
                     maxAnswerLength: 1000
                 },
                 {
                     id: "problema_quatro_algoritmos",
                     title: "Problema 4",
-                    text: "Prepare uma simulação da execução do algoritmo <strong>ALG 08</strong> para Mesclagem de Listas de cilindros, apresentado anteriormente.",
-                    subtitle: "<span class=\"textred\">Dica:</span> veja o problema da ordenação de cilindros nos Tópicos avançados e inspire-se na simulação apresentada para aquele algoritmo. ",
+                    text: "Descreva a preparação de uma sopa de legumes. Considere seus ingredientes prediletos.",
                     maxAnswerLength: 1000
                 }
             ]

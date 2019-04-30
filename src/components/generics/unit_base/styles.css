@@ -36,6 +36,10 @@ p{
     text-align: justify;
 }
 
+.pcenter{
+    text-align: center;
+}
+
 li{
     line-height: 1.7em;
     font-size: 1.15em;

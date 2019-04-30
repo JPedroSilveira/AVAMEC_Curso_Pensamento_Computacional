@@ -607,26 +607,30 @@
             },
             {
                 "identificador": "topico_3",
-                "nome": "Aplicações"
+                "nome": "Tomando decisões"
             },
             {
                 "identificador": "topico_4",
-                "nome": "Refinamentos Sucessivos"
+                "nome": "Repetição de atividades"
             },
             {
                 "identificador": "topico_5",
-                "nome": "Recomendações"
+                "nome": "Aplicações"
             },
             {
                 "identificador": "topico_6",
-                "nome": "Problemas"
+                "nome": "Recomendações"
             },
             {
-                "identificador": "topico_7",
-                "nome": "Atividade Cooperativa"
+                "identificador":"topico_7",
+                "nome":"Problemas Propostos"   
             },
             {
                 "identificador": "topico_8",
+                "nome": "Atividade Cooperativa"
+            },
+            {
+                "identificador": "topico_9",
                 "nome": "Para saber mais"
             }
         ],
@@ -638,160 +642,126 @@
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_algoritmos",
-                        "enunciado": "Considere o procedimento a seguir. Identifique a afirmação que parece menos apropriada para este procedimento específico.",
+                        "enunciado": "A1. Considere o Algoritmo 02, a seguir, sobre o qual fazemos algumas afirmações. Identifique a alternativa que parece menos apropriada para se referir a este algoritmo.",
                         "gabaritos": [
                             {
-                                "alternativa": "Descreve uma sequência de operações para a leitura completa de um determinado livro;",
+                                "alternativa": "O algoritmo descreve uma sequência de operações cuja execução completa nos permite obter exatos 4 litros de água no recipiente R5.",
                                 "chave": "1",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Todas as suas operações podem ser realizadas em um tempo finito;",
+                                "alternativa": "Se retirarmos a Operação 7, o algoritmo passa a descrever uma solução para se obter 7 litros de água.",
                                 "chave": "2",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Não pode ser usado para a leitura completa mas intercalada de dois livros;",
+                                "alternativa": "Para obter 7 litros de água podemos retirar as duas últimas operações do Algoritmo 02.",
                                 "chave": "3",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Pode ser usado mesmo quando o livro é um e-book;",
+                                "alternativa": "A execução do algoritmo resultará em 4 litros de água no recipiente R3.",
                                 "chave": "4",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Não poderia ser usado se o livro estivesse escrito em um papiro.",
-                                "chave": "5",
                                 "valor": "1"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "identificador": "atividade_2_algoritmos",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q2_a1_algoritmos",
-                        "enunciado": "Considere o procedimento a seguir. Identifique a afirmação que parece menos apropriada para este procedimento específico.",
+                        "identificador": "q1_a2_algoritmos",
+                        "enunciado": "A02. Considere a sequência de operações denominada de Algoritmo 07. Selecione a afirmação a seguir que lhe parece ser a menos indicada para se referir ao Algoritmo 07.",
                         "gabaritos": [
                             {
-                                "alternativa": "Se a operação 2.b for substituida por 'procure o produto em cada banca da feira', o procedimento descreve uma sequência de operações para a realização de compras em uma feira;",
+                                "alternativa": "Se a operação 2.1 for substituída por \"procure o produto em cada banca da feira\", o algoritmo descreve uma sequência de operações para a realização de compras em uma feira.",
                                 "chave": "1",
-                                "valor": "0"
+                                "valor": "1"
                             },
                             {
-                                "alternativa": "Algumas vezes a operação 'procure o produto …', não será bem sucedida.",
+                                "alternativa": "Algumas vezes a operação “procure o produto …” não será bem sucedida.",
                                 "chave": "2",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Só pode ser usada para compra de produtos alimentícios;",
+                                "alternativa": " Podemos dividir a lista de compras em duas ou mais partes, obtendo outras listas, que podem ser atribuídas a compradores diferentes. Se solicitarmos que cada um execute o Algoritmo 07, cada comprador terá que pagar a conta relativa a sua própria compra.",
                                 "chave": "3",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Se a lista de compras for dividida em 2 partes, é possível dar uma parte cada pessoa e cada uma pode usar o mesmo procedimento reduzindo com isso o tempo no supermercado;",
-                                "chave": "4",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "A divisão da lista de compras em duas ou mais partes, deixando que diferentes pessoas realizem a compra para sua lista espedífica,  implica que cada comprador tenha que pagar a conta relativa a sua própria compra.",
-                                "chave": "5",
+                                "alternativa": "Se nenhum dos produtos de sua lista forem encontrados no supermercado, você chegará ao caixa com seu carrinho vazio e, portanto, nada terá que pagar. Ou seja, as ações “dirija-se ao caixa”  e “pague a conta”  são desnecessárias para esse caso e os Passos 3 e 4 do nosso algoritmo poderiam ser substituídos pelo trecho a seguir.",
+                                "chave": "4",
                                 "valor": "0"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "identificador": "atividade_3_algoritmos",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q3_a1_algoritmos",
-                        "enunciado": "Considere o procedimento a seguir. Identifique a afirmação que parece menos apropriada para este procedimento específico.",
+                        "identificador": "q1_a3_algoritmos",
+                        "enunciado": "A03. Considere o Algoritmo 12, sobre o qual se fazem algumas afirmações. Selecione aquela que lhe parece com menos possibilidade de estar correta.",
                         "gabaritos": [
                             {
-                                "alternativa": "Descreve uma sequência de operações para a realização da tarefa de lavar pratos.",
+                                "alternativa": "A execução do algoritmo certamente produzirá uma pilha vazia de pratos sujos e uma pilha de pratos limpos com a mesma quantidade de pratos que existia na pilha de pratos sujos.",
                                 "chave": "1",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Funciona para uma pilha de pratos de qualquer tamanho.",
+                                "alternativa": "O algoritmo funciona para qualquer pilha de pratos sujos, independentemente da quantidade de pratos.",
                                 "chave": "2",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Funciona com outros tipos de louças, desde que organizadas de modo análogo.",
+                                "alternativa": "O tempo necessário para executar o Algoritmo 12, do início ao fim, é  proporcional à quantidade de pratos sujos e depende ainda do tempo médio necessário para lavar 1 prato.",
                                 "chave": "3",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "No caso de quebra de um prato, P03 falharia.",
+                                "alternativa": "Se ao executarmos a Operação 1.b, quebrarmos o prato, a execução pode prosseguir sem qualquer problema.",
                                 "chave": "4",
                                 "valor": "1"
-                            },
-                            {
-                                "alternativa": "O resultado é uma pilha de pratos limpos.",
-                                "chave": "5",
-                                "valor": "0"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "identificador": "atividade_4_algoritmos",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q4_a1_algoritmos",
-                        "enunciado": "Considere o procedimento a seguir. Identifique a afirmação que parece menos apropriada para este procedimento específico.",
+                        "identificador": "q1_a4_algoritmos",
+                        "enunciado": "A04. O Algoritmo 14 abaixo descreve o processo de retirada de um dos 4 pneus de um automóvel. Fazemos a seguir algumas afirmações sobre ele. Selecione a afirmação que você considera menos apropriada para se referir a este algoritmo.",
                         "gabaritos": [
                             {
-                                "alternativa": "Ao excluir a operação 6.c., o algorotimo descreve uma sequência de operações para a retirada de uma roda de um carro.",
+                                "alternativa": "A Operação 7 descreve uma repetição que nunca termina, pois a Operação 7.c tem efeito contrário ao que é realizado na Operação 7.a.",
                                 "chave": "1",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "O acionamento do macaco precisa ser precisamente detalhado.",
+                                "alternativa": "Pela Operação 7 é possível que, a cada vez,  o parafuso a ser  retirado seja diferente do parafuso retirado na repetição anterior.",
                                 "chave": "2",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Excluindo-se a operação 6.c., o algoritmo pode ser usado como base para definir a colocação de uma roda invertendo-se a ordem (7-6-5-4-3-2-1) e as ações originais (retirar/colocar; levantar/abaixar; afrouxar/apertar, etc).",
+                                "alternativa": "No mesmo ciclo, é possível que o parafuso retirado seja diferente do colocado.",
                                 "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Todas as ações serão, em algum momento, concluídas.",
-                                "chave": "4",
                                 "valor": "1"
                             },
                             {
-                                "alternativa": "Descreve uma ação que nunca é concluída.",
-                                "chave": "5",
-                                "valor": "0"
-                            }
-                        ]
-                    },
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q5_a1_algoritmos",
-                        "enunciado": "Considere o procedimento a seguir. Identifique a afirmação que parece menos apropriada para este procedimento específico.",
-                        "gabaritos": [
-                            {
-                                "alternativa": "Descreve uma sequência de operações para obter exatos 4 litros de água em R5.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "O volume de água desejado está contido em R5.",
-                                "chave": "2",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "O objetivo poderia ser obtido através de uma sequência diferente.",
-                                "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Obter exatos 4 litros de água poderia ser alcançado usando recipientes de 7 e 5 litros e outra sequência.",
+                                "alternativa": "A exclusão da Operação 7.c torna o algoritmo correto para os objetivos pretendido.",
                                 "chave": "4",
                                 "valor": "0"
-                            },
-                            {
-                                "alternativa": "O volume de água desejado está contido em R3.",
-                                "chave": "5",
-                                "valor": "1"
                             }
                         ]
                     }
