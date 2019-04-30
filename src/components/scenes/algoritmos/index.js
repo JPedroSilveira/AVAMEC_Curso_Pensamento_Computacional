@@ -1,16 +1,20 @@
 import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import AplicacaoInterativa from './aplicacao_interativa'
-import ConceituacaoParte1 from './conceituacao/parte_1'
-import ConceituacaoParte2 from './conceituacao/parte_2'
-import ConceituacaoParte3 from './conceituacao/parte_3'
+import Conceituacao from './conceituacao'
+import AtividadeAvaliativaUm from './atividade_avaliativa_um'
+import TomandoDecisoes from './tomando_decisoes'
+import RepeticoesDeAtividades from './repeticoes_de_atividades'
+import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
 import AplicacoesParte1 from './aplicacoes/parte_1'
 import AplicacoesParte2 from './aplicacoes/parte_2'
+import AplicacoesParte3 from './aplicacoes/parte_3'
+import AplicacoesParte4 from './aplicacoes/parte_4'
+import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
 import Recomendacoes from './recomendacoes'
-import AtividadeAvaliativa from './atividade_avaliativa'
-import AtividadeCooperativa from './atividade_cooperativa'
+import AtividadeAvaliativaQuatro from './atividade_avaliativa_quatro'
 import Problemas from './problemas'
-import TopicosAvancados from './topicos_avancados'
+import AtividadeComplementar from './atividade_complementar'
 import ParaSaberMais from './para_saber_mais'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -21,7 +25,7 @@ class Algoritmos extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 9
+            availablePages: 16
         }
     }
 
@@ -37,41 +41,62 @@ class Algoritmos extends UnitBase {
                 )
             case "2":
                 return (
-                    <div>
-                        <ConceituacaoParte1 />
-                        <ConceituacaoParte2 />
-                        <ConceituacaoParte3 />
-                    </div>
+                    <Conceituacao />
                 )
             case "3":
                 return (
-                    <div>
-                        <AplicacoesParte1 />
-                        <AplicacoesParte2 />
-                    </div>
+                    <AtividadeAvaliativaUm unitId={this.props.id}/>
                 )
             case "4":
                 return (
-                    <Recomendacoes />
+                    <TomandoDecisoes />
                 )
             case "5":
                 return (
-                    <AtividadeAvaliativa unitId={this.props.id} />
+                    <RepeticoesDeAtividades  />
                 )    
             case "6":
                 return (
-                    <Problemas unitId={this.props.id} />
+                    <AtividadeAvaliativaDois unitId={this.props.id} />
                 )
             case "7":
                 return (
-                    <TopicosAvancados />
+                    <AplicacoesParte1 />
                 )
             case "8":
                 return (
-                    <AtividadeCooperativa />
+                    <AplicacoesParte2 />
                 )
             case "9":
                 return (
+                    <AplicacoesParte3 />
+                )
+            case "10":
+                return (
+                    <AplicacoesParte4 />
+                )
+            case "11":
+                return (
+                    <AtividadeAvaliativaTres unitId={this.props.id} />
+                )
+            case "12":
+                return (
+                    <Recomendacoes />
+                )
+            case "13":
+                return (
+                    <AtividadeAvaliativaQuatro unitId={this.props.id} />
+                )
+            case "14":
+                return (
+                    <Problemas unitId={this.props.id} />
+                )
+            case "15":
+                return (
+                    <AtividadeComplementar unitId={this.props.id} />
+                )
+            case "16":
+                return(
                     <ParaSaberMais />
                 )
             default:

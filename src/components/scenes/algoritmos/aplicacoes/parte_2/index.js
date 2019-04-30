@@ -1,77 +1,37 @@
 import React from 'react'
 import Title from '../../../../generics/title'
 import CenterBoxContainer from '../../../../generics/center_box_container'
-import Alg08 from '../../../../../images/alg-08.png'
 import AlgorithmLevel from '../../../../generics/algorithm_level'
 import AlgorithmBox from '../../../../generics/algorithm_box'
-import Image from '../../../../generics/image'
 
 const AplicacoesParte2 = () => (
     <div>
-        <h3>PREPARANDO O ALMOÇO DE DOMINGO</h3>
+        <h3>Trocando um pneu do carro</h3>
+        <p>Essa tamb&eacute;m &eacute; uma rotina bem corriqueira, mas alguns motoristas precisam recorrer ao manual, enquanto outros chamam o socorro do seguro ou algu&eacute;m com experi&ecirc;ncia no assunto. Seja como for, quem for trocar o pneu de um carro precisa executar essa rotina.</p>
         <CenterBoxContainer>
             <AlgorithmBox>
-                <Title>ALG 07 - Preparando o almoço de domingo</Title>
-                <AlgorithmLevel>
-                    <span className="textdarkgreen">Salmão assado com molho parisiense acompanhado de risoto de alho poró:</span><br/>
-                    <AlgorithmLevel showStyle={true} child={true}>
-                        <li>Prepare o salmão;</li>
-                        <li>Prepare o molho;</li>
-                        <li>Prepare o risoto;</li>
-                        <li>Sirva o almoço</li>
-                    </AlgorithmLevel>
-                    <Title>ALG 07.1 - Preparando o salmão</Title>
-                    <AlgorithmLevel showStyle={true} child={true}>
-                        <li>Obtenha um kilo de filé de salmão;</li>
-                        <li>Lave com água de um limão;</li>
-                        <li>Cubra com 4 dentes de alho amassado;</li>
-                        <li>Deixe pegar o tempero por 30 minutos;</li>
-                        <li>Pré aqueca o forno por 15 minutos a uma temperatua de 200 graus;</li>
-                        <li>Unte com azeite de oliva  uma prato de vidro próprio par ir ao forno;</li>
-                        <li>Coloque o peixe no prato e cubra com uma colher de azeite de oliva;</li>
-                        <li>Leve o prato ao forno de deixe assar por trinta minutos.</li>
-                    </AlgorithmLevel>
-                    <Title>ALG 07.2 - Preparando o molho</Title>
-                    <AlgorithmLevel showStyle={true} child={true}>
-                        <li>Corte uma cebola média bem picada;</li>
-                        <li>Corte um tomate médio, bem picado</li>
-                        <li>Corte em tiras 7 azeitonas pequena descadoraças</li>
-                        <li>Corte em tiras 7 cogumelos paris médios.</li>
-                        <li>Doure a cebola em duas colheres de azeite de oliva;</li>
-                        <li>Junte a azeitona e o cogumelo</li>
-                        <li>Refogue por 5 minutos</li>
-                        <li>Coloque uma xícara de água quente;</li>
-                        <li>Mantenha no fogo até reduzir a água, danto a textura de molho.</li>
-                    </AlgorithmLevel>
-                </AlgorithmLevel>										
-		    </AlgorithmBox>
-        </CenterBoxContainer>
-        <h3>MESCLAGEM DE DUAS LISTAS ORDENADAS</h3>
-        <p>Suponhamos que temos duas listas ordenadas de cilindros de recipientes cilíndricos de mesmo volume, cada um deles com um conteúdo diferente os que os faz ter pesos diferentes. começando pelo cilindros mais pesado e terminado pelo cilindro mais leve. Como podemos obter uma lista totalmente ordenada com todos os cilindros das duas listas?</p>
-        <Image src={Alg08} alt="Representação de três listas ordenadas de números em ordem decrescente"/>
-        <CenterBoxContainer>
-            <AlgorithmBox>
-                <Title>ALG 08 - Mesclagem de duas listas ordenadas</Title>
-                <AlgorithmLevel>
-                    <span className="textdarkgreen">Vamos chamar de  L1 e L2 as duas listas ordenadas e de L3 a lista a ser construída, com  os elementos de L1 e L2, garantindo que os elementos de L3 também estarão ordenados. A lista L3 inicialmente estará sem elementos.</span><br/>
-                    <AlgorithmLevel showStyle={true} child={true}>
-                        <li><span className="textred">Enquanto</span> L1 tem elementos e L2 tem elementos <span className="textred">faça</span> <br/>
-                            <AlgorithmLevel child={true}>
-                                <span className="textred"> Se</span> primeiro da lista L1 é maior que primeiro da lista 2<br/>
-                                <AlgorithmLevel child={true}> 
-                                    <span className="textred"> então </span> passe o primeiro da lista L1 para o final da lista L3<br/>
-                                    <span className="textred"> senão </span> passe o primeiro da lista L2 para o final da lista L3<br/>
-                                </AlgorithmLevel>
-                            </AlgorithmLevel>
-                        </li>
-                        <li><span className="textred">Se</span> L1 possui elementos <br/>
-                            <AlgorithmLevel child={true}>
-                                <span className="textred"> então </span> passe todos os elementos de L1 para o final de L3<br/>
-                                <span className="textred"> senão </span> passe todos os elementos de L2 para o final de L3<br/>
-                            </AlgorithmLevel>                                    
-                        </li>
-                        <li><span className="textred">Divulgue </span> L3 </li>
-                    </AlgorithmLevel>
+                <Title>Algoritmo 09 - Trocando um pneu</Title>
+                <AlgorithmLevel showStyle={true}>
+                    <li>Estacione o carro junto à margem da via;</li>
+                    <li>Coloque o triângulo sinalizador na posição apropriada;</li>
+                    <li>Identifique a posição do pneu furado;</li>
+                    <li>Pegue o macaco;</li>
+                    <li>Coloque o macaco na posição adequada para retirada do pneu furado;</li>
+                    <li>Levante o macaco até a posição que o peso do carro esteja sob o macaco, sem levantá-lo;</li>
+                    <li>Afrouxe cada parafuso da roda, usando a chave de roda;</li>
+                    <li>Levante o carro até uma altura que possibilite a colocação de um pneu nas condições de uso;</li>
+                    <li>Retire os parafusos, um por um, usando a chave de roda;</li>
+                    <li>Retire o pneu furado;</li>
+                    <li>Pegue o pneu sobressalente;</li>
+                    <li>Coloque o pneu sobressalente, na posição do pneu furado;</li>
+                    <li>Coloque os parafusos um por um, sem dar o aperto final;</li>
+                    <li>Baixe o carro;</li>
+                    <li>Retire o macaco;</li>
+                    <li>Dê um aperto final em cada parafuso;</li>
+                    <li>Guarde o pneu furado no local para pneu reserva;</li>
+                    <li>Tire o triângulo;</li>
+                    <li>Guarde o triângulo;</li>
+                    <li>Prossiga a viagem.</li>
                 </AlgorithmLevel>
             </AlgorithmBox>
         </CenterBoxContainer>
