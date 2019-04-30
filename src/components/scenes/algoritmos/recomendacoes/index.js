@@ -13,7 +13,9 @@ const Recomendacoes = () => (
         <h3>Construção de Algoritmos</h3>
         <p>A constru&ccedil;&atilde;o de algoritmos mais sofisticados requer um pouco mais de cuidado na sua elabora&ccedil;&atilde;o. A seguir apresentamos dois bem importantes.</p>
         <p><strong>Refinamentos sucessivos</strong> - Uma t&eacute;cnica muito usada &eacute; a que chamamos de Refinamentos Sucessivos. Um exemplo disso foi apresentado no <strong>Algoritmo 02</strong>, ao substituirmos o Passo 8 do <strong>Algoritmo 01</strong>.</p>
-        <h3>Quadro 5.2 – Substituição do Passo 8 do Algoritmo 01 no Algoritmo 03</h3>
+        <CenterBoxContainer>
+            <h3>Quadro 5.2 – Substituição do Passo 8 do Algoritmo 01 no Algoritmo 03</h3>
+        </CenterBoxContainer>
         <CenterBoxContainer>
             <Box backgroundColor={Color.BLUE_BOX}>
                 <strong>Passo 8 do Algoritmo 01</strong>
@@ -28,8 +30,8 @@ const Recomendacoes = () => (
             </Box>
             <Box backgroundColor={Color.BLUE_BOX}>
                 <p>8. <span className="textred">Se encontrar pão integral</span></p>
-                <p>          <span className="textred">então</span> pegar os pães integrais</p>
-                <p>          <span className="textred">senão</span> pegar os pães comuns</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="textred">então</span> pegar os pães integrais</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="textred">senão</span> pegar os pães comuns</p>
             </Box>
         </CenterBoxContainer>
         <p>Essa t&eacute;cnica consiste em ocultar os detalhes de uma determinada a&ccedil;&atilde;o e apresent&aacute;-los em novas vers&otilde;es do algoritmo. Podemos dizer que nesse caso estamos usando o pilar &ldquo;<strong>Abstra&ccedil;&atilde;o</strong>&rdquo; do pensamento computacional, ou seja, ocultamos detalhes desnecess&aacute;rios para a compreens&atilde;o da a&ccedil;&atilde;o.</p>

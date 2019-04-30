@@ -1,10 +1,8 @@
 import React from 'react'
 import Title from '../../../../generics/title'
 import CenterBoxContainer from '../../../../generics/center_box_container'
-import Alg08 from '../../../../../images/alg-08.png'
 import AlgorithmLevel from '../../../../generics/algorithm_level'
 import AlgorithmBox from '../../../../generics/algorithm_box'
-import Image from '../../../../generics/image'
 
 const AplicacoesParte3 = () => (
     <div>
@@ -13,7 +11,7 @@ const AplicacoesParte3 = () => (
         <CenterBoxContainer>
             <AlgorithmBox>
                 <Title>Algoritmo 10 – Explorando um tema na sala de aulao</Title><br />
-                (<span className="textblue">uma experiência de aprendizagem cooperativa na cultura digital</span>)
+                <p className="textblue pcenter">(uma experiência de aprendizagem cooperativa na cultura digital)</p>
                 <AlgorithmLevel>
                     <span className="textdarkgreen"><strong>Pré condições</strong>: sentados em suas mesas, dispostas em círculo, os alunos recebem um texto selecionado pelo(a) professor(a).</span><br />
                     <AlgorithmLevel showStyle={true} child={true}>

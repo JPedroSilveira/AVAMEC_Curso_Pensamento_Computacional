@@ -28,7 +28,7 @@ class AtividadeAvaliativaTres extends React.Component {
                     statement: "",
                     title: "Algoritmo 12",
                     algorithm: true,
-                    preInstructions: "Considere uma pilha de pratos sujos e a inexistência de uma pilha de pratos limpos.",
+                    preInstructions: "<span class=\"textdarkgreen\">Considere uma pilha de pratos sujos e a inexistência de uma pilha de pratos limpos.</span>",
                     instructions: [
                         {
                             text: "<span class=\"textred\">Enquanto</span> <span class=\"textblue\">a pilha de pratos sujos não estiver vazia</span> <span class=\"textred\">faça</span>:",

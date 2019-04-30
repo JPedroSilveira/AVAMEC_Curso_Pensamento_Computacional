@@ -407,7 +407,7 @@ class IntegralActivity extends BaseActivity {
         if (preInstructions !== undefined && preInstructions !== ""){
             return (
                 <Fragment className="textdarkgreen">
-                    {ReactHtmlParser(preInstructions)}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ReactHtmlParser(preInstructions)}
                 </Fragment>
             )
         }

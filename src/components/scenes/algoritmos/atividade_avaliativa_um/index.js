@@ -28,7 +28,7 @@ class AtividadeAvaliativaUm extends React.Component {
                     title: "Algoritmo 02",
                     statement: "",
                     algorithm: true,
-                    preInstructions: "Considere que: </br>a)Dois recipientes denominados R5 e R3 têm capacidade para 5 e 3 litros respectivamente;</br>b)Os dois recipientes estão inicialmente vazios.",
+                    preInstructions: "<span class=\"textdarkgreen\">Considere que: </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)Dois recipientes denominados R5 e R3 têm capacidade para 5 e 3 litros respectivamente;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)Os dois recipientes estão inicialmente vazios.</span>",
                     instructions: [
                         {
                             text: "Encha de água o recipiente R5;"

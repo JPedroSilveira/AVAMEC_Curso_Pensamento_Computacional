@@ -11,7 +11,7 @@ const TomandoDecisoes = () => (
         <p>Na nova vers&atilde;o, podemos observar que a opera&ccedil;&atilde;o &ldquo;pegar os p&atilde;es&rdquo; ganhou um detalhamento, considerando que a a&ccedil;&atilde;o a ser realizada no Passo 8 depende da disponibilidade do tipo de p&atilde;o na padaria que estamos visitando. Isso precisa ser observado por nosso agente computacional, introduzindo-se o que costumamos chamar de uma &ldquo;<strong>sele&ccedil;&atilde;o</strong>&rdquo;. Nesse caso estamos ilustrando com uma sele&ccedil;&atilde;o b&aacute;sica, que considera apenas duas possibilidades, ou seja, h&aacute; uma pergunta a ser respondida cuja resposta s&oacute; pode ser &ldquo;<strong>verdadeiro</strong>&rdquo; ou &ldquo;<strong>falso</strong>&rdquo;.</p>
         <CenterBoxContainer>
             <AlgorithmBox>
-                <Title>Algoritmo 03 <br /> Do acordar at&eacute; chegar no local de trabalho</Title>
+                <Title>Algoritmo 03 - Do acordar at&eacute; chegar no local de trabalho</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Ap&oacute;s o barulho do despertador:</span>
                     <AlgorithmLevel showStyle={true} child={true}>
