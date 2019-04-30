@@ -6,9 +6,7 @@ import AtividadeAvaliativaUm from './atividade_avaliativa_um'
 import Aplicacoes from './aplicacoes'
 import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
 import Recomendacoes from './recomendacoes'
-import Problemas from './problemas'
 import AtividadeComplementar from './atividade_complementar'
-import AssuntosCorrelatos from './assuntos_correlatos'
 import AtividadeCooperativa from './atividade_cooperativa'
 import ParaSaberMais from './para_saber_mais'
 
@@ -20,7 +18,7 @@ class ReconhecimentoDePadroes extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 9
+            availablePages: 7
         }
     }
 
@@ -56,18 +54,7 @@ class ReconhecimentoDePadroes extends UnitBase {
                 )
             case "7":
                 return (
-                    <AtividadeCooperativa />
-                )
-            case "8":
-                return (
-                    <div>
-                        <AtividadeComplementar unitId={this.props.id}/>
-                        <AssuntosCorrelatos />
-                    </div>
-                )
-            case "9":
-                return (
-                    <ParaSaberMais />
+                    <AtividadeCooperativa unitId={this.props.id} />
                 )
             default:
                 return null
