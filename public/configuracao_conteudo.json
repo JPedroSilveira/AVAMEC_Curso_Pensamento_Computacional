@@ -429,7 +429,7 @@
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_reconhecimento_de_padroes",
-                        "enunciado": "Passeando pelo centro de uma cidade conhecida, digamos que no Rio de Janeiro, você se depara com um aglomerado de pessoas. De repente um desconhecido estabelece uma conversa buscando também entender o que está acontecendo. Nessa conversa, levantando hipóteses e trocando opiniões quando percebem já se passaram uns 30 minutos e se despedem sem descobrirem o motivo da aglomeração. Pensando na conversa com o estranho, você se dá conta que o mesmo não parecia ser carioca nato ou criado naquela cidade. Motivado pela curiosidade, você tenta reconhecer em qual estado aquela pessoa teria nascido e/ou sido criada. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?",
+                        "enunciado": "A1. Passeando pelo centro de uma cidade conhecida, digamos, o Rio de Janeiro, você se depara com um aglomerado de pessoas. De repente um desconhecido estabelece uma conversa com você, buscando também entender o que está acontecendo. Essa conversa segue, levantando hipóteses e trocando opiniões, quando percebem que já se passaram uns 30 minutos e se despedem sem descobrirem o motivo da aglomeração. Pensando na conversa com o estranho, você se dá conta que o mesmo não parecia ser carioca nato ou criado no Rio. Motivado pela curiosidade, você tenta reconhecer em qual estado aquela pessoa teria nascido e/ou sido criada. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?",
                         "gabaritos": [
                             {
                                 "alternativa": "Sotaque.",
@@ -442,7 +442,7 @@
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Aspecto físicos.",
+                                "alternativa": "Uso de roupas formais.",
                                 "chave": "3",
                                 "valor": "1"
                             },
@@ -457,11 +457,17 @@
                                 "valor": "0"
                             }
                         ]
-                    },
+                    }
+                ]   
+            },
+            {
+                "identificador": "atividade_2_reconhecimento_de_padroes",
+                "nomeAtividade": "Atividades Avaliativas",
+                "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q2_a1_reconhecimento_de_padroes",
-                        "enunciado": "A2. Pense em alguma vez que você ou alguém próximo adoeceu e a natureza da enfermidade foi sugerida por alguém e confirmada posteriormente por diagnóstico médico. Em contexto similar, diga qual, dentre os elementos a seguir, seria o menos provável de auxiliar a estabelecer um padrão adequado a tal propósito?",
+                        "identificador": "q1_a2_reconhecimento_de_padroes",
+                        "enunciado": "A2. Pense em alguma vez que você ou alguém próximo adoeceu e a natureza da enfermidade foi sugerida e confirmada posteriormente por diagnóstico médico. Em contexto similar, diga qual, dentre os elementos a seguir, seria o menos provável de auxiliar a estabelecer um padrão adequado a tal propósito.",
                         "gabaritos": [
                             {
                                 "alternativa": "Histórico de doenças.",
@@ -469,7 +475,7 @@
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Limpeza da pele e cabelo.",
+                                "alternativa": "Pele e cabelo limpos.",
                                 "chave": "2",
                                 "valor": "1"
                             },
@@ -492,72 +498,8 @@
                     },
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q3_a1_reconhecimento_de_padroes",
-                        "enunciado": "A3. Considere que uma telenovela que você acompanha aproxima-se dos capítulos finais e você, como vários de seus conhecidos, tentam prever como será o final da mesma e discutem entre si, as possibilidades de desfecho baseado nos acontecimentos dos capítulos anteriores. Considere qual, dentre os acontecimentos de capítulos recentes, seria o menos provável de ter impacto direto no final da novela.",
-                        "gabaritos": [
-                            {
-                                "alternativa": "Morte de um personagem.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Nascimento de gêmeos.",
-                                "chave": "2",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Fuga/Soltura de um personagem preso na etapa inicial.",
-                                "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Aproximação entre casal de personagens que antes eram adversários.",
-                                "chave": "4",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Revelação de fatos sobre o nascimento do protagonista.",
-                                "chave": "5",
-                                "valor": "0"
-                            }
-                        ]
-                    },
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q4_a1_reconhecimento_de_padroes",
-                        "enunciado": "Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores: ",
-                        "gabaritos": [
-                            {
-                                "alternativa": "Curso formal na área.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Habilidades sociais.",
-                                "chave": "2",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Contato com o público.",
-                                "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Local de estágio.",
-                                "chave": "4",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Uso de fardamento no dia a dia.",
-                                "chave": "5",
-                                "valor": "0"
-                            }
-                        ]
-                    },
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q5_a1_reconhecimento_de_padroes",
-                        "enunciado": "A5. Num mercado, determinar se o peixe está de fato fresco envolve analisar se cada exemplar está em conformidade com certos elementos, como os mencionados a seguir. Qual, dentre os aspectos abaixo, parece menos provável de caracterizar a frescura de um certo pescado?",
+                        "identificador": "q2_a2_reconhecimento_de_padroes",
+                        "enunciado": "A3. Num mercado, determinar se o peixe está de fato fresco envolve analisar se cada exemplar está em conformidade com certos elementos, como os mencionados a seguir. Qual, dentre os aspectos abaixo, parece menos provável de caracterizar a frescura de um certo pescado?",
                         "gabaritos": [
                             {
                                 "alternativa": "Cor dos olhos.",
@@ -580,13 +522,77 @@
                                 "valor": "1"
                             },
                             {
-                                "alternativa": "Cor/Estado das vísceras.",
+                                "alternativa": "Cor/estado das vísceras.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q3_a2_reconhecimento_de_padroes",
+                        "enunciado": "A4. Considere que uma telenovela que você acompanha aproxima-se dos capítulos finais. Você, como vários de seus conhecidos, tentam prever como será o final da mesma e discutem entre si as possibilidades de desfecho, baseados nos acontecimentos dos capítulos anteriores. Considere qual, dentre os acontecimentos de capítulos recentes, seria o menos provável de ter impacto direto no final da novela:",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Morte de um personagem.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Morte de um personagem.",
+                                "chave": "2",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Fuga/soltura de um personagem preso na etapa inicial.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Aproximação entre casal de personagens que antes eram adversários.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Revelação de fatos sobre o nascimento do protagonista.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q4_a2_reconhecimento_de_padroes",
+                        "enunciado": "A5. Retomando ao cenário da Atividade Avaliativa A1, considere o propósito de identificar a profissão do desconhecido. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Curso formal na área.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Marca do celular usado.",
+                                "chave": "2",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Habilidades sociais.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Local de estágio.",
+                                "chave": "4",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Uso de fardamento no dia a dia.",
                                 "chave": "5",
                                 "valor": "0"
                             }
                         ]
                     }
-                ]   
+                ]
             }
         ]
     },
