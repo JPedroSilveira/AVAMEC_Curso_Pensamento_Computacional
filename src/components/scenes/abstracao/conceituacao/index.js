@@ -10,8 +10,8 @@ const Conceituacao = () => (
         <p>Assim como na Biologia, em todos os campos do saber, seja com fins cient&iacute;ficos, empresariais e at&eacute; mesmo para as nossas atividades cotidianas, &eacute; importante organizar os objetos e os processos de forma conveniente. Para tratar de um problema bem atual, o cuidado com a preserva&ccedil;&atilde;o do meio ambiente, combinamos separar o lixo que produzimos. Para facilitar, ao inv&eacute;s de enumerar todos os res&iacute;duos que podemos produzir, criamos abstra&ccedil;&otilde;es, tendo como finalidade separar os res&iacute;duos pelo tipo de tratamento que podemos dar a eles.</p>
         <p>Abstra&ccedil;&atilde;o &eacute;, portanto, uma ferramenta conceitual important&iacute;ssima na organiza&ccedil;&atilde;o da realidade, segundo um determinado interesse.</p>
 
-        <h3>Quadro 3.1: Conceituando abstração</h3>
         <CenterBoxContainer>
+            <h3>Quadro 3.1: Conceituando abstração</h3>
             <Box backgroundColor={Color.BLUE_BOX}>
                 <p>Denominamos abstra&ccedil;&atilde;o o processo de selecionar os aspectos que interessa considerar, para satisfazer um determinado objetivo.</p>
             </Box>

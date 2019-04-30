@@ -2,8 +2,9 @@ import React from 'react'
 import UnitBase from '../../generics/unit_base'
 import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
+import AtividadeAvaliativaUm from './atividade_avaliativa_um'
 import Aplicacoes from './aplicacoes'
-import AtividadeAvaliativa from './atividade_avaliativa'
+import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
 import Recomendacoes from './recomendacoes'
 import Problemas from './problemas'
 import AtividadeComplementar from './atividade_complementar'
@@ -39,15 +40,15 @@ class ReconhecimentoDePadroes extends UnitBase {
                 )
             case "3":
                 return (
-                    <Aplicacoes />
+                    <AtividadeAvaliativaUm unitId={this.props.id} />
                 )
             case "4":
                 return (
-                    <AtividadeAvaliativa unitId={this.props.id}/>
+                    <Aplicacoes />
                 )
             case "5":
                 return (
-                    <Recomendacoes />
+                    <AtividadeAvaliativaDois unitId={this.props.id} />
                 )
             case "6":
                 return (
