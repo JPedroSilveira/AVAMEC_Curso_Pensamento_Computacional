@@ -1,9 +1,9 @@
 {
 "companyName": "NAPEAD",
 "productName": "Conceitos Interativos",
-"dataUrl": "Padroes.data.unityweb",
-"wasmCodeUrl": "Padroes.wasm.code.unityweb",
-"wasmFrameworkUrl": "Padroes.wasm.framework.unityweb",
+"dataUrl": "padroes.data.unityweb",
+"wasmCodeUrl": "padroes.wasm.code.unityweb",
+"wasmFrameworkUrl": "padroes.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
