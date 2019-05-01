@@ -5,14 +5,12 @@ import Conceituacao from './conceituacao'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'
 import Aplicacoes from './aplicacoes'
 import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
-import Recomendacoes from './recomendacoes'
-import AtividadeComplementar from './atividade_complementar'
+import Problemas from './problemas'
 import AtividadeCooperativa from './atividade_cooperativa'
-import ParaSaberMais from './para_saber_mais'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
-.*/
+*/
 class ReconhecimentoDePadroes extends UnitBase {
     constructor(props) {
         super(props)
