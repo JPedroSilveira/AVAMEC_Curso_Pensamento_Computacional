@@ -8,3 +8,7 @@
     margin-bottom: 2em;
     font-weight: 700;
 }
+
+.question-statement li{
+    font-size: inherit;
+}

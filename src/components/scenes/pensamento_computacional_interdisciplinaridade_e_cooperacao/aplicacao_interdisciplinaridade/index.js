@@ -1,4 +1,4 @@
-import { React, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 import QualidadeVida from '../../../../images/qualidade-de-vida.png'
@@ -10,7 +10,7 @@ class AplicacaoInterdisciplinaridade extends React.Component {
     render() {
         return (
             <Fragment>
-                <h1>Aplica&ccedil;&atilde;o: Manter o peso corporal adequado</h1>
+                <h2>Aplica&ccedil;&atilde;o: Manter o peso corporal adequado</h2>
                 <Image src={QualidadeVida} alt="Ilustração sobre o equilíbrio que mantem a qualidade de vida.">
                     <p>
                         <strong>Figura 2: Qualidade de Vida</strong>
@@ -24,8 +24,8 @@ class AplicacaoInterdisciplinaridade extends React.Component {
                 <p>O conhecimento necess&aacute;rio, tanto para a manuten&ccedil;&atilde;o de uma vida saud&aacute;vel, quanto para a recupera&ccedil;&atilde;o de uma situa&ccedil;&atilde;o de desequil&iacute;brio, envolve uma s&eacute;rie de conhecimentos por parte dos interessados. Muitas vezes &eacute; necess&aacute;rio recorrer ao apoio de profissionais de diferentes especialidades. Em todos os casos, por&eacute;m, h&aacute; uma necessidade em comum, conhecermos nosso pr&oacute;prio corpo.</p>
                 <p>Um primeiro passo &eacute; identificar os diferentes aspectos de nosso corpo e quais os cuidados que precisamos ter. Por exemplo, um aspecto importante &eacute; manter-se dentro de um peso compat&iacute;vel com nossa altura e idade. A manuten&ccedil;&atilde;o dessa compatibilidade vai requerer um conhecimento sobre as quantidades adequadas de elementos nutricionais em nossa alimenta&ccedil;&atilde;o, compat&iacute;veis com o esfor&ccedil;o f&iacute;sico di&aacute;rio e as nossas caracter&iacute;sticas gen&eacute;ticas. Quais tipos de exames preciso realizar e com que periodicidade, para garantir uma boa sa&uacute;de? Que exerc&iacute;cios f&iacute;sicos s&atilde;o compat&iacute;veis com minha atividade de trabalho? Quais s&atilde;o compat&iacute;veis com minhas condi&ccedil;&otilde;es f&iacute;sicas? Quais alimentos podem ser incorporados &agrave; minha alimenta&ccedil;&atilde;o? Onde posso compr&aacute;-los a um pre&ccedil;o de acordo com as minhas condi&ccedil;&otilde;es financeiras? Enfim, uma mir&iacute;ade de temas a serem estudados, cada um envolvendo um ou mais objetos de estudo.</p>
                 <CenterBoxContainer>
-                    <h3>Para saber mais</h3>
                     <Box backgroundColor={Color.ORANGE_BOX}>
+                        <h3>Para saber mais:</h3>
                         <p>O documento dispon&iacute;vel <ExternalLink href="http://bvsms.saude.gov.br/bvs/publicacoes/perspectivas_desafios_cuidado_pessoas_obesidade.pdf">neste link</ExternalLink> oferece melhores informa&ccedil;&otilde;es sobre cuidados com a sa&uacute;de, para pessoas fora do peso ideal.</p> 
                     </Box>
                 </CenterBoxContainer>

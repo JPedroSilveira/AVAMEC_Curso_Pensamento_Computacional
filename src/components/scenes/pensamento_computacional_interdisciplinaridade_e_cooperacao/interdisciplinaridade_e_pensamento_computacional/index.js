@@ -1,4 +1,4 @@
-import { React, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 import Petersen from '../../../../images/petersen-graph-example.png'

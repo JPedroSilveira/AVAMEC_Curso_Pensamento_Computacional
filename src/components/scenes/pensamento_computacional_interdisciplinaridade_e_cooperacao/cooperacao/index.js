@@ -1,4 +1,4 @@
-import { React, Fragment } from 'react'
+import React, { Fragment } from 'react'
 
 class Cooperacao extends React.Component {
     render() {

@@ -374,7 +374,7 @@ class IntegralActivity extends BaseActivity {
                 <div>
                     {this.renderAlgorithmStatement(question)}
                     {question.statement !== undefined && question.statement !== "" &&
-                        <p>{ReactHtmlParser(question.statement)}</p>
+                        <Fragment>{ReactHtmlParser(question.statement)}</Fragment>
                     }
                 </div>
             )
@@ -385,7 +385,9 @@ class IntegralActivity extends BaseActivity {
                         <h4>{ReactHtmlParser(question.title)}</h4>
                     }
                     {question.statement !== undefined && question.statement !== "" && 
-                        <p>{ReactHtmlParser(question.statement)}</p>
+                        <div className="question-statement">
+                            {ReactHtmlParser(question.statement)}
+                        </div>
                     }
                 </Fragment>
             )

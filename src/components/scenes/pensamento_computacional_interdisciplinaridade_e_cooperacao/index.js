@@ -1,4 +1,4 @@
-import { React, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
 
 import InterdisciplinaridadeParteUm from './interdisciplinaridade/parte_um'
