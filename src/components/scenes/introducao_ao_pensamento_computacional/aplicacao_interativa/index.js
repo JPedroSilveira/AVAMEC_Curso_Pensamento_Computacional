@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import MiniGameNames from '../../../../constants/miniGameNames'
 import MiniGameLoader from '../../../generics/mini_game_loader'
 

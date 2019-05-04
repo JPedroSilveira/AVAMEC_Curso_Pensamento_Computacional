@@ -29,7 +29,7 @@ import LoadImage from '../../../../images/load-image.png'
 import PressedLoadImage from '../../../../images/pressed-load-image.png'
 import './styles.css'
 
-import AvaMECApiConstants from '../../../../constants/avaMECApiConstants';
+import AvaMECApiConstants from '../../../../constants/avaMECApiConstants'
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETIVO "atividade" DO TIPO:
     activity: um objetivo com os atributos:

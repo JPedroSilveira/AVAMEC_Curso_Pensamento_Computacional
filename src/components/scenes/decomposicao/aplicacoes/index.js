@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import IMGDecomposicao1 from '../../../../images/decomposicao-1.jpg'
 import IMGDecomposicao2 from '../../../../images/decomposicao-2.png'
 import Image from '../../../generics/image'

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Title from '../../../generics/title'
 import Box from '../../../generics/box'
 import CenterBoxContainer from '../../../generics/center_box_container'

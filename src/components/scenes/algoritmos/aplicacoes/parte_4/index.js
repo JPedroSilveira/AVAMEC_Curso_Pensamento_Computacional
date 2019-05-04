@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Title from '../../../../generics/title'
 import CenterBoxContainer from '../../../../generics/center_box_container'
 import Alg08 from '../../../../../images/alg-08.png'
