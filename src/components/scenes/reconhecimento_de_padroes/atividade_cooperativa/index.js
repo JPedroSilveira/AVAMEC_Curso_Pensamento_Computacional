@@ -34,7 +34,7 @@ class AtividadeCooperativa extends React.Component {
                     maxAnswerLength: 400
                 },
                 {
-                    title: "A forma de uso do Pilar “Decomposição”",
+                    title: "A forma de uso do Pilar “Reconhecimento de Padrões”",
                     maxAnswerLength: 400
                 },
                 {

@@ -10,7 +10,7 @@ class AplicacaoInterdisciplinaridade extends React.Component {
     render() {
         return (
             <Fragment>
-                <h2>Aplica&ccedil;&atilde;o: Manter o peso corporal adequado</h2>
+                <h2>Manter o peso corporal adequado</h2>
                 <Image src={QualidadeVida} alt="Ilustração sobre o equilíbrio que mantem a qualidade de vida.">
                     <p>
                         <strong>Figura 2: Qualidade de Vida</strong>

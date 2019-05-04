@@ -382,7 +382,7 @@ class IntegralActivity extends BaseActivity {
             return (
                 <Fragment>
                     {question.title !== undefined && question.title !== "" && 
-                        <h4>{ReactHtmlParser(question.title)}</h4>
+                        <p>{ReactHtmlParser(question.title)}</p>
                     }
                     {question.statement !== undefined && question.statement !== "" && 
                         <div className="question-statement">

@@ -1,6 +1,6 @@
 .box-container{
     border: 0.05em solid;
-    padding: 1em;
+    padding: 0em 1em 1em 1em;
 }
 
 .box-container textarea{

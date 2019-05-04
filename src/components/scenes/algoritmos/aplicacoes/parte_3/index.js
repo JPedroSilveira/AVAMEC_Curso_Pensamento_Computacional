@@ -5,7 +5,7 @@ import AlgorithmLevel from '../../../../generics/algorithm_level'
 import AlgorithmBox from '../../../../generics/algorithm_box'
 
 const AplicacoesParte3 = () => (
-    <div>
+    <Fragment>
         <h3>Uma experiência escolar em tempo de Cultura Digital</h3>
         <p>Professores diariamente precisam propor atividades para seus alunos, buscando apoi&aacute;-los na constru&ccedil;&atilde;o de conhecimento sobre determinados assuntos. No caso a seguir, estamos supondo que os alunos tenham acesso a computadores e Internet, seja no laborat&oacute;rio de Inform&aacute;tica da escola ou mesmo em suas resid&ecirc;ncias. Assim, estamos considerando a possibilidade do uso de editor de texto, consultas &agrave; Internet e troca de mensagens por email.</p>
         <CenterBoxContainer>
@@ -31,7 +31,7 @@ const AplicacoesParte3 = () => (
                 </AlgorithmLevel>
             </AlgorithmBox>
         </CenterBoxContainer>
-    </div>
+    </Fragment>
 )
 
 export default AplicacoesParte3

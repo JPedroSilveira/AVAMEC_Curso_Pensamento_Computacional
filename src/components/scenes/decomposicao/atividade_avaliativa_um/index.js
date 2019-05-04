@@ -24,8 +24,8 @@ class AtividadeAvaliativaUm extends React.Component {
             questions: [
                 {
                     id: "q1_a1_decomposicao",
-                    title: "Qual das afirmativas abaixo lhe parece menos apropriada para se falar sobre o Pilar “Decomposição”?",
-                    statement: "",
+                    title: "",
+                    statement: "<strong>A1.</strong> Qual das afirmativas abaixo lhe parece menos apropriada para se falar sobre o Pilar “Decomposição”?",
                     options: [
                         {
                             value: "1",
@@ -36,7 +36,7 @@ class AtividadeAvaliativaUm extends React.Component {
                         {
                             value: "0",
                             key: "2",
-                            text: "O resultado de uma decomposição são partes ou sistemas mais simples os quais, entretanto, podem serem adequados a novas  decomposições.",
+                            text: "O resultado de uma decomposição são partes ou sistemas mais simples os quais podem ser adequados a novas  decomposições.",
                             tip: "De fato, um ou mais elementos de uma decomposição podem ainda serem complexos e com isso requererem novas decomposições."
                         },
                         {

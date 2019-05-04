@@ -61,12 +61,12 @@ class ReconhecimentoDePadroes extends UnitBase {
 
     render() {
         return (
-            <div>
+            <Fragment>
                 {this.renderTitle()}
                 {this.renderPage()}
                 {this.loadPagination()}
                 {this.loadUnitController()}
-            </div>
+            </Fragment>
         )
     }
 }

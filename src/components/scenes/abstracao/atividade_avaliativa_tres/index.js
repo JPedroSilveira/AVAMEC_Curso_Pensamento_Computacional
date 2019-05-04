@@ -25,7 +25,7 @@ class AtividadeAvaliativaTres extends React.Component {
                 {
                     id: "q1_a3_abstracao",
                     title: "",
-                    statement: "A4. Para organizar o seu guarda-roupa, o que lhe parece ser uma abstração mais conveniente para ajudá-lo na hora de escolher o que vestir: ",
+                    statement: "<strong>A4.</strong> Para organizar o seu guarda-roupa, o que lhe parece ser uma abstração mais conveniente para ajudá-lo na hora de escolher o que vestir: ",
                     options: [
                         {
                             value: "0",
@@ -56,7 +56,7 @@ class AtividadeAvaliativaTres extends React.Component {
                 {
                     id: "q2_a3_abstracao",
                     title: "",
-                    statement: "A5. Para organizar a circulação de veículos de uma cidade, o que parece ser uma característica irrelevante de suas vias:",
+                    statement: "<strong>A5.</strong> Para organizar a circulação de veículos de uma cidade, o que parece ser uma característica irrelevante de suas vias:",
                     options: [
                         {
                             value: "0",

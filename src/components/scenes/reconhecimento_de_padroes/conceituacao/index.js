@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color'
 
 const Conceituacao = () => (
-    <div>
-        <h2>Conceituação</h2>
+    <Fragment>
         <p>Ao longo de nossas vidas buscamos compreender o mundo em que vivemos, os seres que nele habitam, principalmente os de nossa esp&eacute;cie, nosso sistema solar, as gal&aacute;xias, enfim o universo. Al&eacute;m das preocupa&ccedil;&otilde;es mais gerais, metaf&iacute;sicas, precisamos compreender o mundo por quest&otilde;es pr&aacute;ticas, para nossa sobreviv&ecirc;ncia. Do princ&iacute;pio ao fim da vida estamos buscando identificar regularidades.</p>
         <p>Ao mudarmos para uma nova cidade, precisamos compreend&ecirc;-la para podermos andar com mais efic&aacute;cia por suas ruas, sabermos onde comprar alimentos, onde encontrar um m&eacute;dico ou at&eacute; mesmo onde assistir um show musical. Na feira, olhamos para as frutas, as verduras e os legumes, buscando identificar a qualidade, o estado de maturidade, a origem, etc.</p>
         <p>Quando dirigimos, precisamos entender o fluxo do tr&acirc;nsito, a arquitetura das vias, por onde fica mais f&aacute;cil circular, em quais trechos e hor&aacute;rios o tr&acirc;nsito fica engarrafado.</p>
@@ -38,7 +37,7 @@ const Conceituacao = () => (
                 <p>Entende-se por <strong>reconhecimento de padr&otilde;es</strong> a associa&ccedil;&atilde;o de algum objeto (ou parte dele), tang&iacute;vel ou conceitual, com padr&otilde;es familiares que permitam identific&aacute;-lo e classific&aacute;-lo.</p>            </Box>
         </CenterBoxContainer>
         <p>O reconhecimento de um determinado objeto nos permite trat&aacute;-lo segundo as prescri&ccedil;&otilde;es pr&eacute;-elaboradas, constru&iacute;das a partir de experi&ecirc;ncias anteriores.</p>
-    </div>
+    </Fragment>
 )
 
 export default Conceituacao

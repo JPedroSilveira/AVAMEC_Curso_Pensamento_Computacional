@@ -21,7 +21,7 @@ class AtividadeCooperativa extends React.Component {
         return {
             id: "atividade_completamentar_decomposicao_exemplos_um",
             unitId: this.props.unitId,
-            statement: "<strong>AC1:</strong> Apresente até 3 situações-problema, preferencialmente de sua área de interesse, em que você identifica a possibilidade de utilização deste pilar do pensamento  computacional, para apoiar a elaboração de soluções. Em cada caso, justifique o uso e argumente sobre sua importância.",
+            statement: "<strong>AC1:</strong> Apresente até 3 situações-problema, preferencialmente de sua área de interesse, em que você identifica a possibilidade de utilização do pilar Decomposição do pensamento computacional, para apoiar a elaboração de soluções. Em cada caso, justifique o uso e argumente sobre sua importância.",
             minExamplesAmount: MIN_EXAMPLES_AMOUNT,
             maxExamplesAmount: MAX_EXAMPLES_AMOUNT,
             questions: [

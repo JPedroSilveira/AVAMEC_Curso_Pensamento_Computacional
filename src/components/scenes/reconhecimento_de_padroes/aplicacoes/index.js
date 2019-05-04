@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import YouTubePlayer from '../../../generics/youtube_player'
 import ExternalLink from '../../../generics/external_link'
 
 const Aplicacoes = () => (
-    <div>
+    <Fragment>
         <h2>Aplicações</h2>
         <p>Como mencionamos no in&iacute;cio do texto, s&atilde;o in&uacute;meras as situa&ccedil;&otilde;es em que fazemos uso de nossa compet&ecirc;ncia para reconhecer padr&otilde;es. Na listagem a seguir mencionamos algumas situa&ccedil;&otilde;es espec&iacute;ficas que contribuem para a solu&ccedil;&atilde;o de problemas em situa&ccedil;&otilde;es cr&iacute;ticas, com potencial de salvar vidas e orientar percursos.</p>
         <p><strong>Primeiros socorros em AVC:</strong> V&aacute;rias situa&ccedil;&otilde;es cr&iacute;ticas que podem levar &agrave; morte podem ser atenuadas pelo reconhecimento de padr&otilde;es, dessas uma bem conhecida &eacute; o AVC (Acidente Vascular Cerebral). Veja o qu&ecirc; diz o Dr Drauzio Varela, um conceituado m&eacute;dico brasileiro, no v&iacute;deo a seguir, sobre as provid&ecirc;ncias a serem tomadas.</p>
@@ -16,7 +16,7 @@ const Aplicacoes = () => (
         <p>No filme &ldquo;Como uma Estrela na Terra - Toda Crian&ccedil;a &eacute; Especial&rdquo;, Isham, o personagem principal, uma crian&ccedil;a de 9 anos, encontra-se em dificuldades com a repet&ecirc;ncia, por n&atilde;o conseguir se alfabetizar. Seus pais e tamb&eacute;m seus professores n&atilde;o conseguem compreender suas dificuldade na escola e em consequ&ecirc;ncia n&atilde;o conseguem ajud&aacute;-lo. Com isso, os pais s&atilde;o orientados a procurar uma outra escola. A solu&ccedil;&atilde;o vem quando um de seus professores na nova escola identifica a dificuldade. Isham &eacute; disl&eacute;xico. A partir desse reconhecimento, o professor prepara materiais did&aacute;ticos espec&iacute;ficos que viabilizam a alfabetiza&ccedil;&atilde;o do aluno. Al&eacute;m disso, o professor apoia o garoto na descoberta de seus potenciais.</p>
         <p>Assista a vers&atilde;o completa legendada do &ldquo;Como uma Estrela na Terra - Toda Crian&ccedil;a &eacute; Especial&rdquo; no YouTube. </p>
         <YouTubePlayer videoId="iWqNRZ1ovU0" />
-    </div>
+    </Fragment>
 )
 
 export default Aplicacoes
