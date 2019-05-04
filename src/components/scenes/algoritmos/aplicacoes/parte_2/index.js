@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Title from '../../../../generics/title'
 import CenterBoxContainer from '../../../../generics/center_box_container'
 import AlgorithmLevel from '../../../../generics/algorithm_level'
 import AlgorithmBox from '../../../../generics/algorithm_box'
 
 const AplicacoesParte2 = () => (
-    <div>
+    <Fragment>
         <h3>Trocando um pneu do carro</h3>
         <p>Essa tamb&eacute;m &eacute; uma rotina bem corriqueira, mas alguns motoristas precisam recorrer ao manual, enquanto outros chamam o socorro do seguro ou algu&eacute;m com experi&ecirc;ncia no assunto. Seja como for, quem for trocar o pneu de um carro precisa executar essa rotina.</p>
         <CenterBoxContainer>
@@ -35,7 +35,7 @@ const AplicacoesParte2 = () => (
                 </AlgorithmLevel>
             </AlgorithmBox>
         </CenterBoxContainer>
-    </div>
+    </Fragment>
 )
 
 export default AplicacoesParte2

@@ -25,7 +25,7 @@ class AtividadeAvaliativaUm extends React.Component {
                 {
                     id: "q1_a1_abstracao",
                     title: "",
-                    statement: "A1. Para falar das atividades necessárias para detalhar a abstração “Organizar o seu guarda-roupa”, identifique a atividade que lhe parece menos adequada:",
+                    statement: "<strong>A1.</strong> Para falar das atividades necessárias para detalhar a abstração “Organizar o seu guarda-roupa”, identifique a atividade que lhe parece menos adequada:",
                     options: [
                         {
                             value: "0",

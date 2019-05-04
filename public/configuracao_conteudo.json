@@ -5,16 +5,7 @@
         "descricao": "",
         "permitePorcentagem": "true",
         "identificadorPai": "",
-        "topicos": [
-            {
-                "identificador": "topico_1",
-                "nome": "Introdução ao Pensamento Computacional"
-            },
-            {
-                "identificador": "topico_2",
-                "nome": "Desafios"
-            }
-        ],
+        "topicos": [],
         "atividades": []
     },
     {
@@ -23,32 +14,7 @@
         "descricao": "",
         "permitePorcentagem": "true",
         "identificadorPai": "",
-        "topicos": [
-            {
-                "identificador": "topico_1",
-                "nome": "Aplicação Interativa"
-            },
-            {
-                "identificador": "topico_2",
-                "nome": "Conceituação"
-            },
-            {
-                "identificador": "topico_3",
-                "nome": "Aplicações"
-            },
-            {
-                "identificador": "topico_4",
-                "nome": "Recomendações"
-            },
-            {
-                "identificador": "topico_5",
-                "nome": "Problemas"
-            },
-            {
-                "identificador": "topico_6",
-                "nome": "Atividade Cooperativa"
-            }
-        ],
+        "topicos": [],
         "atividades": [
             {
                 "identificador": "atividade_1_decomposicao",
@@ -65,7 +31,7 @@
                                 "valor": "1"
                             },
                             {
-                                "alternativa": "O resultado de uma decomposição são partes ou sistemas mais simples os quais, entretanto, podem serem adequados a novas  decomposições.",
+                                "alternativa": "O resultado de uma decomposição são partes ou sistemas mais simples os quais podem ser adequados a novas  decomposições.",
                                 "chave": "2",
                                 "valor": "0"
                             },
@@ -199,36 +165,7 @@
         "descricao": "",
         "permitePorcentagem": "true",
         "identificadorPai": "",
-        "topicos": [
-            {
-                "identificador": "topico_1",
-                "nome": "Aplicação Interativa"
-            },
-            {
-                "identificador": "topico_2",
-                "nome": "Conceituação"
-            },
-            {
-                "identificador": "topico_3",
-                "nome": "Aplicações"
-            },
-            {
-                "identificador": "topico_4",
-                "nome": "Recomendações"
-            },
-            {
-                "identificador": "topico_5",
-                "nome": "Problemas"
-            },
-            {
-                "identificador": "topico_6",
-                "nome": "Atividade Cooperativa"
-            },
-            {
-                "identificador": "topico_7",
-                "nome": "Para saber mais"
-            }
-        ],
+        "topicos": [],
         "atividades": [
             {
                 "identificador": "atividade_1_abstracao",
@@ -391,28 +328,7 @@
         "descricao": "",
         "permitePorcentagem": "true",
         "identificadorPai": "",
-        "topicos": [
-            {
-                "identificador": "topico_1",
-                "nome": "Aplicação Interativa"
-            },
-            {
-                "identificador": "topico_2",
-                "nome": "Conceituação"
-            },
-            {
-                "identificador": "topico_3",
-                "nome": "Aplicações"
-            },
-            {
-                "identificador": "topico_4",
-                "nome": "Problemas"
-            },
-            {
-                "identificador": "topico_5",
-                "nome": "Atividade Cooperativa"
-            }
-        ],
+        "topicos": [],
         "atividades": [
             {
                 "identificador": "atividade_1_reconhecimento_de_padroes",
@@ -594,44 +510,7 @@
         "descricao": "",
         "permitePorcentagem": "true",
         "identificadorPai": "",
-        "topicos": [
-            {
-                "identificador": "topico_1",
-                "nome": "Aplicação Interativa"
-            },
-            {
-                "identificador": "topico_2",
-                "nome": "Conceituação"
-            },
-            {
-                "identificador": "topico_3",
-                "nome": "Tomando decisões"
-            },
-            {
-                "identificador": "topico_4",
-                "nome": "Repetição de atividades"
-            },
-            {
-                "identificador": "topico_5",
-                "nome": "Aplicações"
-            },
-            {
-                "identificador": "topico_6",
-                "nome": "Recomendações"
-            },
-            {
-                "identificador":"topico_7",
-                "nome":"Problemas Propostos"   
-            },
-            {
-                "identificador": "topico_8",
-                "nome": "Atividade Cooperativa"
-            },
-            {
-                "identificador": "topico_9",
-                "nome": "Para saber mais"
-            }
-        ],
+        "topicos": [],
         "atividades": [
             {
                 "identificador": "atividade_1_algoritmos",
@@ -773,36 +652,7 @@
         "descricao": "",
         "permitePorcentagem": "true",
         "identificadorPai": "",
-        "topicos": [
-            {
-                "identificador": "topico_1",
-                "nome": "Interdisciplinaridade"
-            },
-            {
-                "identificador": "topico_2",
-                "nome": "Interdisciplinaridade e Pensamento Computacional"
-            },
-            {
-                "identificador": "topico_3",
-                "nome": "Aplicação: Manter o peso corporal adequado"
-            },
-            {
-                "identificador": "topico_4",
-                "nome": "Cooperação"
-            },
-            {
-                "identificador": "topico_5",
-                "nome": "Cooperação e Pensamento Computacional"
-            },
-            {
-                "identificador": "topico_6",
-                "nome": "Aplicação: Organização de eventos"
-            },
-            {
-                "identificador": "topico_7",
-                "nome": "Aplicação: Uso de Arquitetura Pedagógica (AP)"
-            }
-        ],
+        "topicos": [],
         "atividades": [
             {
                 "identificador": "atividade_1_pensamento_computacional_interdisciplinaridade_e_cooperacao",

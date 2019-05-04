@@ -24,8 +24,8 @@ class AtividadeAvaliativaDois extends React.Component {
             questions: [
                 {
                     id: "q1_a3_decomposicao",
-                    title: "A1. Avaliando um festival folclórico",
-                    statement: "Considere que você precisa definir como deve ser realizada a avaliação das danças apresentadas por grupos em um festival folclórico. Considere ainda que esse festival seja realizado pela comunidade de uma escola, de um bairro ou até de uma cidade inteira. Reflita sobre como a avaliação poderia ser decomposta em elementos e indique qual, dentre os seguintes, seria menos adequado para esse fim.",
+                    title: "<strong>A4.</strong> Avaliando um festival folclórico",
+                    statement: "Considere que você precisa definir como deve ser realizada a avaliação das danças apresentadas por grupos em um festival folclórico. Considere ainda que esse festival seja realizado pela comunidade de uma escola, de um bairro ou até de uma cidade inteira. Reflita sobre como a avaliação poderia ser decomposta em elementos e indique qual, dentre os seguintes elementos, seria menos adequado para esse fim.",
                     options: [
                         {
                             value: "0",

@@ -24,8 +24,8 @@ class AtividadeAvaliativaDois extends React.Component {
             questions: [
                 {
                     id: "q1_a2_decomposicao",
-                    title: "A1. Organizando um evento escolar",
-                    statement: "Qualquer evento, seja no âmbito pessoal (aniversários, casamentos, festas religiosas, etc.) quanto no profissional (congressos, seminários, premiações, etc.), requer, para sua realização, a execução de um conjunto de atividades que podem, dependendo da dimensão do evento em questão, envolver várias pessoas ou equipes, responsáveis pelos diferentes aspectos que constituem o evento. Considere a realização do seminário \"O Pensamento Computacional na Escola\", e dentre as diferentes listas apresentadas nas alternativas , indique qual lhe parece uma decomposição adequada de elementos envolvidos nesse evento.",
+                    title: "<strong>A2.</strong> Organizando um evento escolar",
+                    statement: "Qualquer evento, seja no âmbito pessoal (aniversários, casamentos, festas religiosas, etc.) quanto no profissional (congressos, seminários, premiações, etc.), requer, para sua realização, a execução de um conjunto de atividades que podem, dependendo da dimensão do evento em questão, envolver várias pessoas ou equipes, responsáveis pelos diferentes aspectos que constituem o evento. Considere a realização do seminário \"O Pensamento Computacional na Escola\", e dentre as diferentes listas apresentadas nas alternativas , indique qual lhe parece uma <strong>decomposição adequada</strong> de elementos envolvidos nesse evento.",
                     options: [
                         {
                             value: "0",
@@ -61,8 +61,8 @@ class AtividadeAvaliativaDois extends React.Component {
                 },
                 {
                     id: "q2_a2_decomposicao",
-                    title: "A2. Diagnose médica",
-                    statement: "Com o propósito de diagnosticar a origem de um problema de saúde, a partir de sintomas diversos, um médico usualmente analisa o corpo humano segundo seus sistemas ou elementos constituintes. Em tal cenário, qual dos seguintes conjuntos lhe parece menos adequado.",
+                    title: "<strong>A3.</strong> Diagnose médica",
+                    statement: "Com o propósito de diagnosticar a origem de um problema de saúde, a partir de sintomas diversos, um médico usualmente analisa o corpo humano segundo seus sistemas ou elementos constituintes. Em tal cenário, qual das seguintes decomposições lhe parece menos adequada.",
                     options: [
                         {
                             value: "0",

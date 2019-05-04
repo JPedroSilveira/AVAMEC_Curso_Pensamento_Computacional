@@ -25,7 +25,7 @@ class AtividadeAvaliativaDois extends React.Component {
                 {
                     id: "q1_a2_pensamento_computacional_interdisciplinaridade_e_cooperacao",
                     title: "",
-                    statement: "A2:	Considere o documento indicado no quadro \"Para saber mais...\". Aquele documento discute diversas ações e resultados na prevenção e tratamento de problemas decorrentes da obesidade. As afirmações a seguir foram construídas associando trechos do documento aos pilares do Pensamento Computacional. Escolha a opção com a associação <strong>menos adequada</strong>.",
+                    statement: "<strong>A2:</strong> Considere o documento indicado no quadro \"Para saber mais...\". Aquele documento discute diversas ações e resultados na prevenção e tratamento de problemas decorrentes da obesidade. As afirmações a seguir foram construídas associando trechos do documento aos pilares do Pensamento Computacional. Escolha a opção com a associação <strong>menos adequada</strong>.",
                     options: [
                         {
                             value: "0",

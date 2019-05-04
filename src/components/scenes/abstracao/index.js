@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
 import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
@@ -72,12 +72,12 @@ class Abstracao extends UnitBase {
 
     render() {
         return (
-            <div>
+            <Fragment>
                 {this.renderTitle()}
                 {this.renderPage()}
                 {this.loadPagination()}
                 {this.loadUnitController()}
-            </div>
+            </Fragment>
         )
     }
 }

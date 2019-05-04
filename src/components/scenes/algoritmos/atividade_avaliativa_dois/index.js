@@ -21,7 +21,7 @@ class AtividadeAvaliativaDois extends React.Component {
         return {
             unitId: this.props.unitId,
             id: "atividade_2_algoritmos",
-            statement: "A02. Considere a sequência de operações denominada de Algoritmo 07. Selecione a afirmação a seguir que lhe parece ser a menos indicada para se referir ao Algoritmo 07.",
+            statement: "<strong>A02.</strong> Considere a sequência de operações denominada de Algoritmo 07. Selecione a afirmação a seguir que lhe parece ser a menos indicada para se referir ao Algoritmo 07.",
             questions: [
                 {
                     id: "q1_a2_algoritmos",

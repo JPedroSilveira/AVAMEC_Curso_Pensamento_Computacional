@@ -21,14 +21,14 @@ class AtividadeAvaliativaUm extends React.Component {
         return {
             unitId: this.props.unitId,
             id: "atividade_1_algoritmos",
-            statement: "A1. Considere o Algoritmo 02, a seguir, sobre o qual fazemos algumas afirmações. Identifique a alternativa que parece menos apropriada para se referir a este algoritmo.",
+            statement: "<strong>A1.</strong> Considere o Algoritmo 02, a seguir, sobre o qual fazemos algumas afirmações. Identifique a alternativa que parece menos apropriada para se referir a este algoritmo.",
             questions: [
                 {
                     id: "q1_a1_algoritmos",
                     title: "Algoritmo 02",
                     statement: "",
                     algorithm: true,
-                    preInstructions: "<span class=\"textdarkgreen\">Considere que: </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)Dois recipientes denominados R5 e R3 têm capacidade para 5 e 3 litros respectivamente;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)Os dois recipientes estão inicialmente vazios.</span>",
+                    preInstructions: "<span class=\"textdarkgreen\">Considere que: </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) Dois recipientes denominados R5 e R3 têm capacidade para 5 e 3 litros respectivamente;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b) Os dois recipientes estão inicialmente vazios.</span>",
                     instructions: [
                         {
                             text: "Encha de água o recipiente R5;"

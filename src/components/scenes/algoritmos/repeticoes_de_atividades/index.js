@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Title from '../../../generics/title'
 import Box from '../../../generics/box'
 import CenterBoxContainer from '../../../generics/center_box_container'
@@ -7,7 +7,7 @@ import AlgorithmBox from '../../../generics/algorithm_box'
 import Color from '../../../../constants/color'
 
 const TomandoDecisoes = () => (
-    <div>
+    <Fragment>
         <h3>Repeti&ccedil;&atilde;o de atividades</h3>
         <p>Com muita frequ&ecirc;ncia, a realiza&ccedil;&atilde;o de uma atividade requer a execu&ccedil;&atilde;o de atividades mais simples, por v&aacute;rias vezes. Assim, al&eacute;m da tomada de decis&atilde;o, precisamos desse outro padr&atilde;o de a&ccedil;&atilde;o, conhecido como <strong>repeti&ccedil;&atilde;o</strong>. A ideia &eacute; simples e consiste na realiza&ccedil;&atilde;o da mesma atividade, ou sequ&ecirc;ncia de atividades, v&aacute;rias vezes.</p>
         <p>Prosseguindo no mesmo tema, ou seja, &ldquo;do acordar at&eacute; chegar no local de trabalho&rdquo;, vamos retomar o nosso <strong>Algoritmo 03</strong>. Nele encontramos as atividades &ldquo;pegar os p&atilde;es integrais&rdquo; e &ldquo;pegar os p&atilde;es comuns&rdquo;, que na verdade, como j&aacute; dissemos antes, s&atilde;o <strong>abstra&ccedil;&otilde;es</strong>, dado que agregam outras atividades. Vamos considerar que nosso agente compra sempre uma mesma quantidade de cinco p&atilde;es, se forem integrais e apenas tr&ecirc;s, se forem comuns. No quadro a seguir, apresentamos o Algoritmo 04, uma nova vers&atilde;o do <strong>Algoritmo 03</strong>, onde fazemos um detalhamento da atividade &ldquo;pegar os p&atilde;es integrais&rdquo; e &ldquo;pegar os p&atilde;es comuns&rdquo;.</p>
@@ -27,13 +27,17 @@ const TomandoDecisoes = () => (
                         <li><span className="textred">Se</span> encontrar p&atilde;o intergral<br />
                             <AlgorithmLevel child={true}>
                                 <span className="textred">ent&atilde;o </span>pegar um p&atilde;o integral.<br />
-                                pegar um p&atilde;o integral.<br />
-                                pegar um p&atilde;o integral.<br />
-                                pegar um p&atilde;o integral.<br />
-                                pegar um p&atilde;o integral.<br />
+                                <AlgorithmLevel child={true}>
+                                    <li>pegar um p&atilde;o integral.</li>
+                                    <li>pegar um p&atilde;o integral.</li>
+                                    <li>pegar um p&atilde;o integral.</li>
+                                    <li>pegar um p&atilde;o integral.</li>
+                                </AlgorithmLevel>
                                 <span className="textred">sen&atilde;o </span>pegar um p&atilde;o comum.<br />
-                                pegar um p&atilde;o comum.<br />
-                                pegar um p&atilde;o comum.<br />
+                                <AlgorithmLevel child={true}>
+                                    <li>pegar um p&atilde;o comum.</li>
+                                    <li>pegar um p&atilde;o comum.</li>
+                                </AlgorithmLevel>
                             </AlgorithmLevel>
                         </li>
                         <li>Pagar a conta.</li>
@@ -49,7 +53,7 @@ const TomandoDecisoes = () => (
                 </AlgorithmLevel>
             </AlgorithmBox>
         </CenterBoxContainer>
-        <p>Podemos observar no nosso novo algoritmo que a atividade <span className="textblue"><strong>&ldquo;pegar os p&atilde;es integrais&rdquo;</strong></span>, usando mais uma vez a ideia de refinamento, foi desdobrada em cinco repeti&ccedil;&otilde;es da atividade mais simples <strong>&ldquo;pegar um p&atilde;o integral&rdquo;</strong>.</p>
+        <p>Podemos observar no nosso novo algoritmo que a atividade <span className="textblue"><strong>&ldquo;pegar os p&atilde;es integrais&rdquo;</strong></span>, foi desdobrada em cinco repeti&ccedil;&otilde;es da atividade mais simples <strong>&ldquo;pegar um p&atilde;o integral&rdquo;</strong>.</p>
         <p>O que temos aqui de novidade &eacute; que as cinco atividades usadas para compor a defini&ccedil;&atilde;o de <span className="textblue"><strong>&ldquo;pegar os p&atilde;es integrais&rdquo;</strong></span> s&atilde;o id&ecirc;nticas, ou seja, temos cinco repeti&ccedil;&otilde;es da mesma opera&ccedil;&atilde;o. Do ponto de vista operacional, nada de errado, pois &eacute; isso mesmo que desejamos. J&aacute; do ponto de vista da escrita, podem surgir inconvenientes. Imaginem que, ao inv&eacute;s de 5 p&atilde;es integrais, quis&eacute;ssemos fazer um algoritmo que envolvesse a compra de cem (100) p&atilde;es integrais. Nesse caso precisar&iacute;amos escrever esse algoritmo colocando 100 linhas de texto id&ecirc;nticas com a atividade &quot;pegar um p&atilde;o integral&quot;. Introduzindo a express&atilde;o <strong>&ldquo;<span className="textblue">repita</span> <span className="textred">n</span> <span className="textblue">vezes</span>&rdquo;</strong>, podemos simplificar a escrita do algoritmo. Nesse caso, a atividade 8 do Algoritmo 4 poderia ser reescrita como:</p>
         <CenterBoxContainer>
             <AlgorithmBox>
@@ -119,7 +123,7 @@ const TomandoDecisoes = () => (
                 </AlgorithmLevel>
             </AlgorithmBox>
         </CenterBoxContainer>
-    </div>
+    </Fragment>
 )
 
 export default TomandoDecisoes

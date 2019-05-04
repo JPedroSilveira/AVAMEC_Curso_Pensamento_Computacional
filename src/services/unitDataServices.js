@@ -1,7 +1,7 @@
 import UnidId from '../constants/unitId'
-import UnitName from '../constants/unitName';
+import UnitName from '../constants/unitName'
 import UnitState from '../constants/unitState'
-import unitId from '../constants/unitId';
+import unitId from '../constants/unitId'
 
 class UnitDataServices {
 

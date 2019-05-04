@@ -25,7 +25,7 @@ class AtividadeAvaliativaUm extends React.Component {
                 {
                     id: "q1_a1_pensamento_computacional_interdisciplinaridade_e_cooperacao",
                     title: "",
-                    statement: "A1. Considere o cenário sugerido no Item 5 da lista de exemplos. O objeto em questão “Campanha de esclarecimento sobre cuidados na compra de alimentos” dificilmente poderia ser tratado sob apenas uma perspectiva, sendo necessárias várias contribuições, a partir de conhecimento de diferentes especialidades, competências e experiências. Escolha dentre as opções a seguir, a lista de profissionais que parece mais adequada para apoiar na elaboração dessa campanha.",
+                    statement: "<strong>A1:</strong> Considere o cenário sugerido no Item 5 da lista de exemplos. O objeto em questão “Campanha de esclarecimento sobre cuidados na compra de alimentos” dificilmente poderia ser tratado sob apenas uma perspectiva, sendo necessárias várias contribuições, a partir de conhecimento de diferentes especialidades, competências e experiências. Escolha dentre as opções a seguir, a lista de profissionais que parece mais adequada para apoiar na elaboração dessa campanha.",
                     options: [
                         {
                             value: "0",

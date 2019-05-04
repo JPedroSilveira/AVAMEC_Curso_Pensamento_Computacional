@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color'
@@ -7,7 +7,7 @@ import AlgorithmLevel from '../../../generics/algorithm_level'
 import Title from '../../../generics/title'
 
 const Recomendacoes = () => (
-    <div>
+    <Fragment>
         <h2>Recomendações</h2>
         <p>Ao elaborarmos um algoritmos &eacute; importante usar algumas t&eacute;cnicas que facilitam o processo de <strong>constru&ccedil;&atilde;o</strong>, outras que nos ajudam a <strong>testar</strong> se o algoritmo obtido resolve o problema, e ainda outras para aferir o <strong>desempenho</strong> da solu&ccedil;&atilde;o. Nos t&oacute;picos a seguir, fazemos uma breve apresenta&ccedil;&atilde;o desses temas.</p>
         <h3>Construção de Algoritmos</h3>
@@ -111,7 +111,7 @@ const Recomendacoes = () => (
         <h3>Desempenho das Soluções</h3>
         <p>Em geral, para um mesmo problema existem diversos algoritmos que produzem resultados corretos. Ter uma solu&ccedil;&atilde;o correta para um problema &eacute; fundamental, mas n&atilde;o basta. &Eacute; necess&aacute;rio tamb&eacute;m que ela possa ser executada em um tempo que permita-nos esperar pelos resultados.</p>
         <p>Problemas que tratam com grande quantidade de dados s&atilde;o alguns dos que podem nos apresentar essa dificuldade. Desses, um dos mais conhecidos &eacute; o problema da ordena&ccedil;&atilde;o de dados. Considere, por exemplo, criar uma lista ordenada dos alunos de uma turma, por ordem decrescente das alturas. Os dados podem estar registrados em fichas, uma ficha por aluno, com nome e altura. O problema da ordena&ccedil;&atilde;o de dados segundo algum crit&eacute;rio &eacute; muito importante em diversas aplica&ccedil;&otilde;es. Existem v&aacute;rios algoritmos bem conhecidos para resolv&ecirc;-lo e sabe-se que a diferen&ccedil;a de desempenho entre esses algoritmos pode ser da ordem de 100, ou seja, um algoritmo pode ser 100 vezes mais lento do que outros.</p>
-    </div>
+    </Fragment>
 )
 
 export default Recomendacoes

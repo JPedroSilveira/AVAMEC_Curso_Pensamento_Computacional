@@ -25,7 +25,7 @@ class AtividadeAvaliativaDois extends React.Component {
                 {
                     id: "q1_a2_abstracao",
                     title: "",
-                    statement: "A2. Considere a organização de uma biblioteca e indique o que lhe parece ser uma abstração mais conveniente para falar de livros:",
+                    statement: "<strong>A2.</strong> Considere a organização de uma biblioteca e indique o que lhe parece ser uma abstração mais conveniente para falar de livros:",
                     options: [
                         {
                             value: "0",
@@ -56,7 +56,7 @@ class AtividadeAvaliativaDois extends React.Component {
                 {
                     id: "q2_a2_abstracao",
                     title: "",
-                    statement: "A3. Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores:",
+                    statement: "<strong>A3.</strong> Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores:",
                     options: [
                         {
                             value: "0",

@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import IMGDecomposicao1 from '../../../../images/decomposicao-1.jpg'
 import IMGDecomposicao2 from '../../../../images/decomposicao-2.png'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 
 const Aplicacoes = () => (
-    <div>
+    <Fragment>
         <h2>APLICAÇÕES</h2>
         <p>Nesta se&ccedil;&atilde;o, veremos alguns exemplos do uso do Pilar &ldquo;Decomposi&ccedil;&atilde;o&rdquo; buscando apoiar a familiariza&ccedil;&atilde;o do leitor com essa ideia.</p>
         <h3>Aplicação 1: Planos de aula</h3>
@@ -29,7 +29,7 @@ const Aplicacoes = () => (
                     Fonte: http://breno.freeshell.org/Est_veic.pdf</ExternalLink>
             </p>
         </Image>
-    </div>
+    </Fragment>
 )
 
 export default Aplicacoes
