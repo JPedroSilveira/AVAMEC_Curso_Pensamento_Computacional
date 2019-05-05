@@ -444,7 +444,7 @@ class IntegralActivity extends BaseActivity {
                 }
                 {this.props.activity.statement !== undefined && this.props.activity.statement.length > 0 &&
                     <div className="activity-statement">
-                        <p>{this.props.activity.statement}</p>
+                        <p>{ReactHtmlParser(this.props.activity.statement)}</p>
                     </div>
                 }
             </Fragment>

@@ -14,7 +14,6 @@ import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
 import Recomendacoes from './recomendacoes'
 import AtividadeAvaliativaQuatro from './atividade_avaliativa_quatro'
 import Problemas from './problemas'
-import AtividadeComplementar from './atividade_complementar'
 import ParaSaberMais from './para_saber_mais'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -25,7 +24,7 @@ class Algoritmos extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 16
+            availablePages: 15
         }
     }
 
@@ -89,13 +88,9 @@ class Algoritmos extends UnitBase {
                 )
             case "14":
                 return (
-                    <Problemas unitId={this.props.id} />
+                    <Problemas />
                 )
             case "15":
-                return (
-                    <AtividadeComplementar unitId={this.props.id} />
-                )
-            case "16":
                 return(
                     <ParaSaberMais />
                 )

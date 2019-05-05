@@ -21,7 +21,7 @@ class AtividadeAvaliativaTres extends React.Component {
         return {
             unitId: this.props.unitId,
             id: "atividade_3_algoritmos",
-            statement: "A03. Considere o Algoritmo 12, sobre o qual se fazem algumas afirmações. Selecione aquela que lhe parece com menos possibilidade de estar correta.",
+            statement: "<strong>A3.</strong> Considere o Algoritmo 12, sobre o qual se fazem algumas afirmações. Selecione aquela que lhe parece com menos possibilidade de estar correta.",
             questions: [
                 {
                     id: "q1_a3_algoritmos",

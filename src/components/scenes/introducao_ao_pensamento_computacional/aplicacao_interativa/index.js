@@ -7,7 +7,6 @@ class AplicacaoInterativa extends React.Component {
         return (
             <Fragment>
                 <h2>Mini-jogo: Conceitos Interativos</h2>
-                <p>Entre no jogo e ajude o fazendeiro com uma estratégia para a travessia do rio!</p>
                 <MiniGameLoader miniGameName={MiniGameNames.INTRODUCAO} />
             </Fragment>
         )

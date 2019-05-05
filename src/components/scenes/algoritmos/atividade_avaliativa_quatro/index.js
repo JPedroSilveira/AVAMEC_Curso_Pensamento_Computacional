@@ -21,7 +21,7 @@ class AtividadeAvaliativaQuatro extends React.Component {
         return {
             unitId: this.props.unitId,
             id: "atividade_4_algoritmos",
-            statement: "A04. O Algoritmo 14 abaixo descreve o processo de retirada de um dos 4 pneus de um automóvel. Fazemos a seguir algumas afirmações sobre ele. Selecione a afirmação que você considera menos apropriada para se referir a este algoritmo.",
+            statement: "<strong>A4.</strong> O Algoritmo 14 abaixo descreve o processo de retirada de um dos 4 pneus de um automóvel. Fazemos a seguir algumas afirmações sobre ele. Selecione a afirmação que você considera menos apropriada para se referir a este algoritmo.",
             questions: [
                 {
                     id: "q1_a4_algoritmos",

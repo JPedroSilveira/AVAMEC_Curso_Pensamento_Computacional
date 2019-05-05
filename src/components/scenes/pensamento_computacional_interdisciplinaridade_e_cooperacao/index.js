@@ -7,14 +7,13 @@ import AtividadeAvaliativaUm from './atividade_avaliativa_um'
 import InterdisciplinaridadeEPensamentoComputacional from './interdisciplinaridade_e_pensamento_computacional'
 import AplicacaoInterdisciplinaridade from './aplicacao_interdisciplinaridade'
 import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
-import Problemas from './problemas'
-import AtividadeComplementarInterdisciplinaridade from './atividade_complementar_interdisciplinaridade'
+import ProblemasParteUm from './problemas/parte_um'
 import Cooperacao from './cooperacao'
 import CooperacaoEPensamentoComputacional from './cooperacao_e_pensamento_computacional'
 import AplicacaoCooperacaoParteUm from './aplicacao_cooperacao/parte_um'
 import AplicacaoCooperacaoParteDois from './aplicacao_cooperacao/parte_dois'
 import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
-import AtividadeComplementarCooperacao from './atividade_complementar_cooperacao'
+import ProblemasParteDois from './problemas/parte_dois'
 import Referencias from './referencias'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -25,12 +24,12 @@ class PensamentoComputacionalInterdisciplinidadeECooperacao extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 14
+            availablePages: 13
         }
     }
 
     renderTitle = () => {
-        return (<h1>6. Pensamento Computacional Interdisciplinaridade e Coopera&ccedil;&atilde;o</h1>)
+        return (<h1>6. Pensamento Computacional, Interdisciplinaridade e Coopera&ccedil;&atilde;o</h1>)
     }
 
     renderPage = () => {
@@ -61,36 +60,32 @@ class PensamentoComputacionalInterdisciplinidadeECooperacao extends UnitBase {
                 )
             case "7":
                 return (
-                    <Problemas unitId={this.props.id} />
+                    <ProblemasParteUm />
                 )
             case "8":
                 return (
-                    <AtividadeComplementarInterdisciplinaridade unitId={this.props.id} />
+                    <Cooperacao />
                 )
             case "9":
                 return (
-                    <Cooperacao />
-                )
-            case "10":
-                return (
                     <CooperacaoEPensamentoComputacional />
                 )  
-            case "11":
+            case "10":
                 return (
                     <AplicacaoCooperacaoParteUm />
                 )  
-            case "12":
+            case "11":
                 return (
                     <AplicacaoCooperacaoParteDois />
                 )
-            case "13":
+            case "12":
                 return (
                     <AtividadeAvaliativaTres unitId={this.props.id} />
                 )
-            case "14":
+            case "13":
                 return (
                     <Fragment>
-                        <AtividadeComplementarCooperacao unitId={this.props.id} />
+                        <ProblemasParteDois />
                         <Referencias />
                     </Fragment>
                 )

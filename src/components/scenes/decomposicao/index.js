@@ -8,8 +8,6 @@ import Problemas from './problemas'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'
 import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
 import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
-import AtividadeCooperativa from './atividade_cooperativa'
-
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -19,7 +17,7 @@ class Decomposicao extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 9
+            availablePages: 8
         }
     }
 
@@ -60,10 +58,6 @@ class Decomposicao extends UnitBase {
             case "8":
                 return (
                     <Problemas unitId={this.props.id} />
-                )
-            case "9":
-                return (
-                    <AtividadeCooperativa unitId={this.props.id} />
                 )
             default:
                 return null

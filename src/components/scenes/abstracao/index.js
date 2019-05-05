@@ -7,7 +7,6 @@ import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
 import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
 import Aplicacoes from './aplicacoes'
 import Problemas from './problemas'
-import AtividadeComplementar from './atividade_complementar'
 import Recomendacoes from './recomendacoes'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
@@ -18,8 +17,7 @@ class Abstracao extends UnitBase {
         super(props)
         
         this.state = {
-            availablePages: 9,
-            openPage: null
+            availablePages: 8
         }
     }
 
@@ -59,11 +57,7 @@ class Abstracao extends UnitBase {
                 )
             case "8":
                 return (
-                    <Problemas unitId={this.props.id} />
-                )
-            case "9":
-                return (
-                    <AtividadeComplementar unitId={this.props.id} />
+                    <Problemas />
                 )
             default: 
                 return null

@@ -6,7 +6,6 @@ import AtividadeAvaliativaUm from './atividade_avaliativa_um'
 import Aplicacoes from './aplicacoes'
 import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
 import Problemas from './problemas'
-import AtividadeCooperativa from './atividade_cooperativa'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -16,7 +15,7 @@ class ReconhecimentoDePadroes extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 7
+            availablePages: 6
         }
     }
 
@@ -49,10 +48,6 @@ class ReconhecimentoDePadroes extends UnitBase {
             case "6":
                 return (
                     <Problemas />
-                )
-            case "7":
-                return (
-                    <AtividadeCooperativa unitId={this.props.id} />
                 )
             default:
                 return null
