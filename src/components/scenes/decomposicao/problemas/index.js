@@ -22,7 +22,8 @@ const Problemas = () => (
         </Image>
         <p>Que tal determinar a &aacute;rea do Pol&iacute;gono irregular da Figura 4?</p>
         <p><strong>DICA:</strong> Decomponha o pol&iacute;gono irregular da Figura 4 em pol&iacute;gonos regulares, para calcular a &aacute;rea do pol&iacute;gono irregular com facilidade.</p>
-        <h3>PROBLEMA 2: Organizando uma Feira de Ciências</h3> Elabore uma decomposi&ccedil;&atilde;o em equipes para a organiza&ccedil;&atilde;o e realiza&ccedil;&atilde;o da Feira de Ci&ecirc;ncias da sua escola.
+        <h3>Problema 2: Organizando uma Feira de Ciências</h3> Elabore uma decomposi&ccedil;&atilde;o em equipes para a organiza&ccedil;&atilde;o e realiza&ccedil;&atilde;o da Feira de Ci&ecirc;ncias da sua escola.
+        <h3>Problema 3: Apresente uma situa&ccedil;&atilde;o-problema, preferencialmente de sua &aacute;rea de  interesse, em que voc&ecirc; identifica a possibilidade de utiliza&ccedil;&atilde;o do pilar Decomposi&ccedil;&atilde;o do  pensamento computacional, para apoiar a elabora&ccedil;&atilde;o de solu&ccedil;&otilde;es.</h3>
     </Fragment>
 )
 

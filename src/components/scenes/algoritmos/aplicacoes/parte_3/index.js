@@ -10,11 +10,11 @@ const AplicacoesParte3 = () => (
         <p>Professores diariamente precisam propor atividades para seus alunos, buscando apoi&aacute;-los na constru&ccedil;&atilde;o de conhecimento sobre determinados assuntos. No caso a seguir, estamos supondo que os alunos tenham acesso a computadores e Internet, seja no laborat&oacute;rio de Inform&aacute;tica da escola ou mesmo em suas resid&ecirc;ncias. Assim, estamos considerando a possibilidade do uso de editor de texto, consultas &agrave; Internet e troca de mensagens por email.</p>
         <CenterBoxContainer>
             <AlgorithmBox>
-                <Title>Algoritmo 10 – Explorando um tema na sala de aulao</Title><br />
+                <Title>Algoritmo 10 – Explorando um tema na sala de aula</Title><br />
                 <p className="textblue pcenter">(uma experiência de aprendizagem cooperativa na cultura digital)</p>
                 <AlgorithmLevel>
-                    <span className="textdarkgreen"><strong>Pré condições</strong>: sentados em suas mesas, dispostas em círculo, os alunos recebem um texto selecionado pelo(a) professor(a).</span><br />
-                    <AlgorithmLevel showStyle={true} child={true}>
+                    <span className="textdarkgreen"><strong>Pré condições</strong>: sentados em suas mesas, dispostas em círculo, os alunos recebem um texto selecionado pelo(a) professor(a).</span>
+                    <AlgorithmLevel showStyle={true}>
                         <li>Ler o texto atentamente;</li>
                         <li>Elaborar e registrar, em uma folha com seu nome, 2 questões sobre o texto lido;</li>
                         <li>Passar as suas questões para o colega que está à sua esquerda;</li>

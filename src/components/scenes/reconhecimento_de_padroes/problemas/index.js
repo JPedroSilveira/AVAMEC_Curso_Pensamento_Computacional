@@ -22,9 +22,10 @@ const Problemas = () => (
         </Image>
         <CenterBoxContainer>
             <Box backgroundColor={Color.ORANGE_BOX}>
-                <p><strong>DICA:</strong> (Voc&ecirc; pode fazer online no <ExternalLink href="https://rachacuca.com.br/raciocinio/tangram/1/">site</ExternalLink>, salvar a imagem em arquivo e post&aacute;-lo no site do PC).</p>
+                <p>DICA: Voc&ecirc; pode fazer online no <ExternalLink href="https://rachacuca.com.br/raciocinio/tangram/1/">site</ExternalLink>.</p>
             </Box>
         </CenterBoxContainer>
+        <p><strong>Problema 3.</strong> situa&ccedil;&otilde;es-problema, preferencialmente de sua &aacute;rea de interesse, nas  quais voc&ecirc; identifica a possibilidade de utiliza&ccedil;&atilde;o do pilar &ldquo;Reconhecimento de  Padr&otilde;es&rdquo; do Pensamento Computacional, para apoiar a elabora&ccedil;&atilde;o de solu&ccedil;&otilde;es.</p>
     </Fragment>
 )
 

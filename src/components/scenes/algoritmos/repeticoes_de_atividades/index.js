@@ -10,10 +10,10 @@ const TomandoDecisoes = () => (
     <Fragment>
         <h3>Repeti&ccedil;&atilde;o de atividades</h3>
         <p>Com muita frequ&ecirc;ncia, a realiza&ccedil;&atilde;o de uma atividade requer a execu&ccedil;&atilde;o de atividades mais simples, por v&aacute;rias vezes. Assim, al&eacute;m da tomada de decis&atilde;o, precisamos desse outro padr&atilde;o de a&ccedil;&atilde;o, conhecido como <strong>repeti&ccedil;&atilde;o</strong>. A ideia &eacute; simples e consiste na realiza&ccedil;&atilde;o da mesma atividade, ou sequ&ecirc;ncia de atividades, v&aacute;rias vezes.</p>
-        <p>Prosseguindo no mesmo tema, ou seja, &ldquo;do acordar at&eacute; chegar no local de trabalho&rdquo;, vamos retomar o nosso <strong>Algoritmo 03</strong>. Nele encontramos as atividades &ldquo;pegar os p&atilde;es integrais&rdquo; e &ldquo;pegar os p&atilde;es comuns&rdquo;, que na verdade, como j&aacute; dissemos antes, s&atilde;o <strong>abstra&ccedil;&otilde;es</strong>, dado que agregam outras atividades. Vamos considerar que nosso agente compra sempre uma mesma quantidade de cinco p&atilde;es, se forem integrais e apenas tr&ecirc;s, se forem comuns. No quadro a seguir, apresentamos o Algoritmo 04, uma nova vers&atilde;o do <strong>Algoritmo 03</strong>, onde fazemos um detalhamento da atividade &ldquo;pegar os p&atilde;es integrais&rdquo; e &ldquo;pegar os p&atilde;es comuns&rdquo;.</p>
+        <p>Prosseguindo no mesmo tema, ou seja, &ldquo;do acordar at&eacute; chegar no local de trabalho&rdquo;, vamos retomar o nosso <strong>Algoritmo 03</strong>. Nele encontramos as atividades &ldquo;pegar os p&atilde;es integrais&rdquo; e &ldquo;pegar os p&atilde;es comuns&rdquo;, que na verdade, como j&aacute; dissemos antes, s&atilde;o <strong>abstra&ccedil;&otilde;es</strong>, dado que agregam outras atividades. Vamos considerar que nosso agente compra sempre uma mesma quantidade de cinco p&atilde;es, se forem integrais e apenas tr&ecirc;s, se forem comuns. No quadro a seguir, apresentamos o <strong>Algoritmo 04</strong>, uma nova vers&atilde;o do <strong>Algoritmo 03</strong>, onde fazemos um detalhamento da atividade &ldquo;pegar os p&atilde;es integrais&rdquo; e &ldquo;pegar os p&atilde;es comuns&rdquo;.</p>
         <CenterBoxContainer>
             <AlgorithmBox>
-                <Title>Algoritmo 04 <br /> Do acordar at&eacute; chegar no local de trabalho</Title>
+                <Title>Algoritmo 04 - Do acordar at&eacute; chegar no local de trabalho</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Ap&oacute;s o barulho do despertador:</span>
                     <AlgorithmLevel showStyle={true} child={true}>
@@ -70,7 +70,7 @@ const TomandoDecisoes = () => (
         <p>Chegar&iacute;amos ent&atilde;o a uma nova vers&atilde;o de nosso algoritmo, obtendo o <strong>Algoritmo 05</strong>.</p>
         <CenterBoxContainer>
             <AlgorithmBox>
-                <Title>Algoritmo 05 <br /> Do acordar at&eacute; chegar no local de trabalho</Title>
+                <Title>Algoritmo 05 - Do acordar at&eacute; chegar no local de trabalho</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Ap&oacute;s o barulho do despertador:</span>
                     <AlgorithmLevel showStyle={true} child={true}>
@@ -110,7 +110,7 @@ const TomandoDecisoes = () => (
         <p>Suponha que lhe foi encomendada a revis&atilde;o completa de um determinado texto. <strong>O Algoritmo 06</strong>, apresentado a seguir, detalha os passos necess&aacute;rios para essa tarefa.</p>
         <CenterBoxContainer>
             <AlgorithmBox>
-                <Title>Algoritmo 06 <br /> Revis&atilde;o completa de um texto</Title>
+                <Title>Algoritmo 06 - Revis&atilde;o completa de um texto</Title>
                 <AlgorithmLevel showStyle={true}>
                     <li>Obtenha o texto.</li>
                     <li><span className="textred"><strong>Enquanto</strong></span> <span className="textblue">houver uma página por ler</span> <span className="textred"><strong>faça</strong></span><br />

@@ -14,7 +14,7 @@ class InterdisciplinaridadeEPensamentoComputacional extends React.Component {
                 <p>O <strong>Pilar Abstra&ccedil;&atilde;o</strong> apoia ainda a identifica&ccedil;&atilde;o de formas de representarmos informa&ccedil;&otilde;es, de interesse das mais variadas disciplinas, de forma intelig&iacute;vel por todos. A figura a seguir, por exemplo, chamada de grafo, pode representar uma rede de transportes entre cidades diferentes, onde os c&iacute;rculos representam cidades e as retas que os conectam representam a exist&ecirc;ncia de transporte entre as cidades. Esse grafo tamb&eacute;m podem representar intera&ccedil;&otilde;es entre os participantes de uma rede social, onde os c&iacute;rculos representam as pessoas e as retas que os ligam representam conex&otilde;es diretas entre elas.</p>
                 <Image src={Petersen} alt="Diagrama de Petersen">
                     <p>
-                        <strong>Figura 1: Grafo Petersen</strong>
+                        <strong>Figura 1: Grafo</strong>
                         <br />
                         <ExternalLink href="https://br.depositphotos.com/226152018/stock-photo-example-graph-called-petersen-graph.html">
                             Fonte: Depositphotos

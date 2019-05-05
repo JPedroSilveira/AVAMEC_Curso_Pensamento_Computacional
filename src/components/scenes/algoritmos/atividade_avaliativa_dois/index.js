@@ -34,10 +34,10 @@ class AtividadeAvaliativaDois extends React.Component {
                             text: "Pegue a lista de compras;"
                         },
                         {
-                            text: "<span class=\"textred\">Enquanto</span><span class=\"textblue\"> houver um item ainda não encontrado</span><span class=\"textred\"> faça:</span>",
+                            text: "<span class=\"textred\">Enquanto</span><span class=\"textblue\"> houver um item ainda não riscado na lista</span> <span class=\"textred\">faça:</span>",
                             instructions: [
                                 {
-                                    text: "1. selecione o primeiro item ainda não comprado;"
+                                    text: "1. selecione o primeiro item ainda não riscado;"
                                 },
                                 {
                                     text: "2. procure o produto nas prateleiras do supermercado;"

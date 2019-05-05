@@ -5,7 +5,7 @@ import Color from '../../../../constants/color'
 
 const Texto2 = () => (
     <Fragment>
-        <p>Neste curso iremos tratar do que tem sido chamado os 4 Pilares do Pensamento Computacional, a saber: <strong>Abstra&ccedil;&atilde;o</strong>, <strong>Decomposi&ccedil;&atilde;o</strong>, <strong>Reconhecimento de Padr&otilde;es</strong> e <strong>Algoritmos</strong>. Antes de prosseguirmos, vamos examinar dois exemplos de problemas cujo processo de busca de solu&ccedil;&otilde;es pode beneficiar-se enormemento do Pensamento Computacional.</p>
+        <p>Neste curso iremos tratar do que tem sido chamado os 4 Pilares do Pensamento Computacional, a saber: <strong>Abstra&ccedil;&atilde;o</strong>, <strong>Decomposi&ccedil;&atilde;o</strong>, <strong>Reconhecimento de Padr&otilde;es</strong> e <strong>Algoritmos</strong>. Antes de prosseguirmos, vamos examinar dois exemplos de problemas cujo processo de busca de solu&ccedil;&otilde;es pode beneficiar-se do Pensamento Computacional.</p>
         <p>No <strong>Quadro 1</strong> apresentamos uma situa&ccedil;&atilde;o que pode acontecer com qualquer pessoa que resolva fazer compras em um supermercado sem ter se organizado com anteced&ecirc;ncia e &ldquo;pensado computacionalmente&rdquo; sobre essa atividade.</p>
         <h2>Quadro 1</h2>
         <CenterBoxContainer>

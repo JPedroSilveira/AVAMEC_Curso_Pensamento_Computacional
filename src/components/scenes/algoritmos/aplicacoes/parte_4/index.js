@@ -19,7 +19,7 @@ const AplicacoesParte4 = () => (
                 <Title>Algoritmo 11 - Mesclagem de duas listas ordenadas</Title>
                 <AlgorithmLevel>
                     <span className="textdarkgreen">Vamos chamar de L1 e L2 as duas listas ordenadas e de L3 uma nova lista a ser construída com os elementos de L1 e L2, garantindo que os elementos de L3 também estarão ordenados.  A lista L3 inicialmente estará sem elementos (vazia).</span><br />
-                    <AlgorithmLevel showStyle={true} child={true}>
+                    <AlgorithmLevel showStyle={true}>
                         <li><span className="textred">Enquanto</span> L1 tem elementos e L2 tem elementos <span className="textred">faça</span> <br />
                             <AlgorithmLevel child={true}>
                                 a. <span className="textred">Se</span> primeiro de L1 é mais pesado do que primeiro de L2<br />

@@ -12,7 +12,7 @@ const Recomendacoes = () => (
         <p>Ao elaborarmos um algoritmos &eacute; importante usar algumas t&eacute;cnicas que facilitam o processo de <strong>constru&ccedil;&atilde;o</strong>, outras que nos ajudam a <strong>testar</strong> se o algoritmo obtido resolve o problema, e ainda outras para aferir o <strong>desempenho</strong> da solu&ccedil;&atilde;o. Nos t&oacute;picos a seguir, fazemos uma breve apresenta&ccedil;&atilde;o desses temas.</p>
         <h3>Construção de Algoritmos</h3>
         <p>A constru&ccedil;&atilde;o de algoritmos mais sofisticados requer um pouco mais de cuidado na sua elabora&ccedil;&atilde;o. A seguir apresentamos dois bem importantes.</p>
-        <p><strong>Refinamentos sucessivos</strong> - Uma t&eacute;cnica muito usada &eacute; a que chamamos de Refinamentos Sucessivos. Um exemplo disso foi apresentado no <strong>Algoritmo 02</strong>, ao substituirmos o Passo 8 do <strong>Algoritmo 01</strong>.</p>
+        <p><strong>Refinamentos sucessivos</strong> - Uma t&eacute;cnica muito usada &eacute; a que chamamos de Refinamentos Sucessivos. Um exemplo disso foi apresentado no <strong>Algoritmo 03</strong>, ao substituirmos o Passo 8 do <strong>Algoritmo 01</strong>.</p>
         <CenterBoxContainer>
             <h3>Quadro 5.2 – Substituição do Passo 8 do Algoritmo 01 no Algoritmo 03</h3>
         </CenterBoxContainer>

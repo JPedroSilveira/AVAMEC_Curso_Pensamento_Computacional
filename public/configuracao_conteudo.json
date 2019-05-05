@@ -693,12 +693,12 @@
                 ]
             },
             {
-                "identificador": "atividade_2_pensamento_computacional_e_interdisciplinaridade",
+                "identificador": "atividade_2_pensamento_computacional_interdisciplinaridade_e_cooperacao",
                 "nomeAtividade": "Atividade Avaliativa 2",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q1_a2_pensamento_computacional_e_interdisciplinaridade",
+                        "identificador": "q1_a2_pensamento_computacional_interdisciplinaridade_e_cooperacao",
                         "enunciado": "A2: Considere o documento indicado no quadro \"Para saber mais...\". Aquele documento discute diversas ações e resultados na prevenção e tratamento de problemas decorrentes da obesidade. As afirmações a seguir foram construídas associando trechos do documento aos pilares do Pensamento Computacional. Escolha a opção com a associação menos adequada.",
                         "gabaritos": [
                             {
@@ -726,12 +726,12 @@
                 ]
             },
             {
-                "identificador": "atividade_3_pensamento_computacional_e_interdisciplinaridade",
+                "identificador": "atividade_3_pensamento_computacional_interdisciplinaridade_e_cooperacao",
                 "nomeAtividade": "Atividade Avaliativa 3",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q1_a3_pensamento_computacional_e_interdisciplinaridade",
+                        "identificador": "q1_a3_pensamento_computacional_interdisciplinaridade_e_cooperacao",
                         "enunciado": "Aprendizagem ativa - o método JIGSAW II (Slavin, 1955) (Pereira, 2003) - A lista de ações, a seguir, descreve um método (Algoritmo) de aprendizagem cooperativa, denominado JIGSAW II.",
                         "gabaritos": [
                             {
