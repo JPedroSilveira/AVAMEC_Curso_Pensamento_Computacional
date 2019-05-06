@@ -226,6 +226,7 @@ class IntegralActivity extends BaseActivity {
                 grade: info.detail.data.notaAtividade
             })
 
+            this.getUnitConclusionData()
             this.getSavedAnswer()
         }
 
@@ -459,12 +460,18 @@ class IntegralActivity extends BaseActivity {
         }
     }
 
-    renderSendButton = () => {
-        if (this.state.unitState !== UnitState.COMPLETED){
-            if(this.state.activityState !== ActivityState.ANSWERED) {
+    renderSendButton = () => {   
+        if(this.state.activityState !== ActivityState.ANSWERED) {
+            if (this.state.unitState !== UnitState.COMPLETED) {
                 return (
                     <BasicButton onClick={this.saveActivityAnswer}>
                         ENVIAR RESPOSTAS
+                    </BasicButton>
+                )
+            } else {
+                return (
+                    <BasicButton disabled={true}>
+                        UNIDADE CONCLUÍDA
                     </BasicButton>
                 )
             }
@@ -472,14 +479,18 @@ class IntegralActivity extends BaseActivity {
     }
 
     renderRetryButton = () => {
-        if (this.state.unitState !== UnitState.COMPLETED) {
-            if (this.state.activityState === ActivityState.ANSWERED) {
-
-                let hasWrongOrEmptyOption = this.state.selectedOptions
-                    .some(selectedOption => selectedOption.state === QuestionState.ANSWERED_WRONG
-                            || selectedOption.state === QuestionState.NOT_ANSWERED)
-
-                if (hasWrongOrEmptyOption) {
+        if (this.state.activityState === ActivityState.ANSWERED) {
+            let hasWrongOrEmptyOption = this.state.selectedOptions
+                .some(selectedOption => selectedOption.state === QuestionState.ANSWERED_WRONG
+                        || selectedOption.state === QuestionState.NOT_ANSWERED)
+            if (hasWrongOrEmptyOption) {
+                if(this.state.unitState === UnitState.COMPLETED){
+                    return (
+                        <BasicButton disabled={true}>
+                            UNIDADE CONCLUÍDA
+                        </BasicButton>
+                    )
+                } else {
                     return (
                         <BasicButton
                             onClick={this.retry}
@@ -490,6 +501,7 @@ class IntegralActivity extends BaseActivity {
                         </BasicButton>
                     )
                 }
+                
             }
         }
     }

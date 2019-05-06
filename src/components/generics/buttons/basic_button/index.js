@@ -36,12 +36,18 @@ class BasicButton extends React.Component {
     render() {
         return (
             <div id={this.props.id} className={this.containerClass}>
-                <button type="button" className={this.class}
-                    onClick={this.props.onClick}
-                    onMouseOver={this.props.onMouseOver}
-                    onMouseOut={this.props.onMouseOut}>
-                    {this.props.children}
-                </button>
+                {this.props.disabled ?
+                    <button type="button" className={this.class} disabled>
+                        {this.props.children}
+                    </button>
+                    :
+                    <button type="button" className={this.class}
+                        onClick={this.props.onClick}
+                        onMouseOver={this.props.onMouseOver}
+                        onMouseOut={this.props.onMouseOut}>
+                        {this.props.children}
+                    </button>
+                }
             </div>            
         )
     }

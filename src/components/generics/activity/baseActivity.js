@@ -5,7 +5,7 @@ import UnitState from '../../../constants/unitState'
 class BaseActivity extends React.Component {
 
     getUnitConclusionData = () => {
-        AvaMecApiServices.getUnitConclusionData(this.props.unitId, this.callbackUnitConclusionData)
+        AvaMecApiServices.getUnitConclusionData(this.props.activity.unitId, this.callbackUnitConclusionData)
     }
 
     callbackUnitConclusionData = info => {
