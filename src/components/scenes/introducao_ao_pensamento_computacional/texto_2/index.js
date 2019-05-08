@@ -17,7 +17,7 @@ const Texto2 = () => (
                 <p>Quando terminou de guardar as compras, j&aacute; eram 21h30 e ainda n&atilde;o havia jantado, sendo que pretendia trabalhar ainda um pouco depois do jantar. Sobre a mesa da cozinha, ficaram algumas compras que n&atilde;o conseguiu guardar na geladeira, por falta de espa&ccedil;o. Observou ainda que alguns itens importantes, at&eacute; mesmo imprescind&iacute;veis para o resto da semana, n&atilde;o haviam sido comprados, enquanto itens dos quais tinha uma boa quantidade em casa haviam sido comprados novamente, sem necessidade. Bom, o mais dif&iacute;cil mesmo ia ser descobrir onde guardar os perec&iacute;veis que n&atilde;o couberam no refrigerador.</p>
             </Box>
         </CenterBoxContainer>
-        <p><strong>Problema 1:</strong> Elabore uma lista de sugest&otilde;es para o Sr. Jos&eacute;, para ele n&atilde;o incorrer nos problemas identificados ap&oacute;s sua visita ao supermercado (Quadro 1).</p>
+        <p><strong>Problema 1.</strong> Elabore uma lista de sugest&otilde;es para o Sr. Jos&eacute;, para ele n&atilde;o incorrer nos problemas identificados ap&oacute;s sua visita ao supermercado (Quadro 1).</p>
     </Fragment>
 )
 

@@ -12,7 +12,7 @@ const AplicacoesParte4 = () => (
         <p>No contexto escolar, quando temos duas filas de alunos, organizadas do maior para o menor, pode ser que surja a necessidade de fazer uma mesclagem das duas, para produzir uma &uacute;nica fila, mantendo ainda os alunos em ordem decrescente de altura. </p>
         <p>Vamos ilustrar essa ideia de mesclagem com uma aplica&ccedil;&atilde;o em um contexto ligeiramente diferente. Suponha que temos duas listas ordenadas de recipientes cil&iacute;ndricos com as mesmas dimens&otilde;es, altura e raio da base, portanto com mesmo volume. Cada um deles guarda um conte&uacute;do diferente, o qu&ecirc; os faz ter pesos diferentes. A lista come&ccedil;a pelo cilindro mais pesado e termina pelo cilindro mais leve. Como podemos obter uma lista totalmente ordenada com todos os cilindros das duas listas? Observe na Figura 1, a seguir, um exemplo de duas listas, L1 e L2, com seus cilindros em ordem decrescente de peso e a lista resultante, L3, com todos os cilindros ordenados.</p>
         <Image wide={true} src={Alg08} alt="Representação de três listas ordenadas de números em ordem decrescente">
-            <p><strong>Figura 1: Três filas de cilindros, todos com as mesmas dimensões, altura e diâmetro da base. Em cada cilindro aparece um rótulo com seu peso para explicitar que as listas estão em ordem decrescente de peso. A lista L3 é formada por todos os elementos de L1 e L2.</strong></p>
+            <p><strong>Figura 1: Tr&ecirc;s filas de cilindros em ordem decrescente de peso.</strong></p>
         </Image>
         <CenterBoxContainer>
             <AlgorithmBox>

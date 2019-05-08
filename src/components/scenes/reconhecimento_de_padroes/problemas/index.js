@@ -15,8 +15,8 @@ const Problemas = () => (
             <p><strong>Figura 1: Um Tangram com suas 7 peças coloridas.</strong></p>
         </Image>
         <p>Existe grande variedade de figuras que podem ser formadas com essas 7 pe&ccedil;as. Uma quest&atilde;o central que se coloca &eacute; a cobertura de uma determinada imagem com as pe&ccedil;as de um Tangram.</p>
-        <p><strong>Problema 1:</strong> Escreva uma sequ&ecirc;ncia de instru&ccedil;&otilde;es explicando como produzir as pe&ccedil;as de um Tangram a partir de uma folha de papel em forma de quadrado. </p>
-        <p><strong>Problema 2:</strong> Fazer a cobertura de uma imagem com as pe&ccedil;as de um Tangram, conforme o molde na imagem da Figura 2 a seguir. </p>
+        <p><strong>Problema 1.</strong> Escreva uma sequ&ecirc;ncia de instru&ccedil;&otilde;es explicando como produzir as pe&ccedil;as de um Tangram a partir de uma folha de papel em forma de quadrado. </p>
+        <p><strong>Problema 2.</strong> Fazer a cobertura de uma imagem com as pe&ccedil;as de um Tangram, conforme o molde na imagem da Figura 2 a seguir. </p>
         <Image src={Tangram2} alt="Tangram desmontado feito com sete peças coloridas.">
             <p><strong>Figura 2: Proposta para cobertura de um fundo com as peças de um Tangram.</strong></p>
         </Image>
@@ -25,7 +25,7 @@ const Problemas = () => (
                 <p>DICA: Voc&ecirc; pode fazer online no <ExternalLink href="https://rachacuca.com.br/raciocinio/tangram/1/">site</ExternalLink>.</p>
             </Box>
         </CenterBoxContainer>
-        <p><strong>Problema 3.</strong> situa&ccedil;&otilde;es-problema, preferencialmente de sua &aacute;rea de interesse, nas  quais voc&ecirc; identifica a possibilidade de utiliza&ccedil;&atilde;o do pilar &ldquo;Reconhecimento de  Padr&otilde;es&rdquo; do Pensamento Computacional, para apoiar a elabora&ccedil;&atilde;o de solu&ccedil;&otilde;es.</p>
+        <p><strong>Problema 3.</strong> Apresente 1 situa&ccedil;&atilde;o-problema, preferencialmente de sua &aacute;rea de interesse, nas quais voc&ecirc; identifica a possibilidade de utiliza&ccedil;&atilde;o do pilar &ldquo;Reconhecimento de Padr&otilde;es&rdquo; do Pensamento Computacional, para apoiar a elabora&ccedil;&atilde;o de solu&ccedil;&otilde;es.</p>
     </Fragment>
 )
 
