@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactPaginate from 'react-paginate'
 import LocalStorageUtils from '../../../utils/localStorageUtils.js'
+import PCenter from '../p_center'
+import StrongL from '../strong_l'
+import SmallFont from '../font/small'
 import './styles.css'
 
 class Pagination extends React.Component {
@@ -11,9 +14,7 @@ class Pagination extends React.Component {
 
         this.state = {
             availablePages: this.props.availablePages,
-            page: page,
-            marginPagesDisplayed: 1,
-            pageRangeDisplayed: 0
+            page: page
         }
     }
 
@@ -26,18 +27,25 @@ class Pagination extends React.Component {
 
     render() {
         return (
-            <ReactPaginate
-                previousLabel={'<'}
-                nextLabel={'>'}
-                breakLabel={'...'}
-                pageCount={this.state.availablePages}
-                initialPage={this.state.page - 1}
-                activeClassName={'selected-page'}
-                marginPagesDisplayed={this.marginPagesDisplayed}
-                pageRangeDisplayed={this.pageRangeDisplayed}
-                onPageChange={this.onPageChange}
-                containerClassName={'pagination'}
-            />
+            <Fragment>
+                <div>
+                    
+                </div>
+                <PCenter><SmallFont><StrongL>IR PARA OS SLIDE: </StrongL></SmallFont></PCenter>
+                <ReactPaginate
+                    disabledClassName={'disabled-page'}
+                    previousLabel={'<'}
+                    nextLabel={'>'}
+                    breakLabel={'...'}
+                    pageCount={this.state.availablePages}
+                    initialPage={this.state.page - 1}
+                    activeClassName={'selected-page'}
+                    marginPagesDisplayed={this.state.availablePages}
+                    pageRangeDisplayed={this.state.availablePages}
+                    onPageChange={this.onPageChange}
+                    containerClassName={'pagination'}
+                />
+            </Fragment>
         )
     }
 }

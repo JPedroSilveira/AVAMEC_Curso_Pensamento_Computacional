@@ -6,7 +6,12 @@
     background-color: inherit;
     text-align: center;
     margin-bottom: 0em;
+    margin-top: 0em;
     padding-left: 0;
+}
+
+.disabled-page{
+    visibility: hidden;
 }
 
 @media only screen and (max-width: 520px) {
@@ -20,29 +25,25 @@
 }
 
 .pagination li a {
-    padding: 0.7em 1.3em;
-    margin: 0.7em 0.7em;
+    padding-top: 0.25em;
+    width: 2.25em;
+    height: 2em;
+    margin: 0.2em 0.2em;
     display: inline-block;
-    background-color:#f9f7f7;
-    border: 0.1em solid #f9f7f7;
-    color: #585858;
+    background-color:#DDC683;
+    border: 0.15em solid #A08655;
+    color: white;
     border-radius: 50%;
 }
 
 .pagination li a:hover{
-    border: 0.1em solid rgb(242, 132, 158);
-    font-size: 1.2em;
-    margin: 0.4em 0.5em;
-    padding: 0.6em 1.1em;
-}
-
-.pagination li a:active{
-    border: 0.1em solid rgb(242, 132, 158);
-    color: rgb(242, 132, 158);
-    font-size: 1.4em;
-    margin: 0em 0.1em;
+    border-color: #999D9E;
+    background: rgba(0, 0, 0, 0);
+    color: #999D9E;
 }
 
 .pagination .selected-page a{
-    color: rgb(242, 132, 158);
+    border-color: #999D9E;
+    background: rgba(0, 0, 0, 0);
+    color: #999D9E;
 }
