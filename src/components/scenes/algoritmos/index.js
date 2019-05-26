@@ -105,7 +105,6 @@ class Algoritmos extends UnitBase {
                 {this.renderTitle()}
                 {this.renderPage()}
                 {this.loadPagination()}
-                {this.loadUnitController()}
             </Fragment>
         )
     }

@@ -30,10 +30,10 @@ h4{
 }
 
 p{
-    margin-bottom: 1em;
     line-height: 1.7em;
     font-size: 1.15em;
     text-align: justify;
+    margin-bottom: 0em;
 }
 
 .pcenter{
@@ -84,7 +84,7 @@ a{
 .algoritmos textarea{
     width: 100%;
     font-size: 1em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #585858;
 }
 
