@@ -14,7 +14,7 @@ div.animation-fade-in-out.img{
 }
 
 div.animation-fade-in-out.text{
-    top: 280px;
+    top: 260px;
     left: 725px;
     max-width: 650px;
     font-size: 18px;
@@ -38,7 +38,7 @@ div.animation-button{
     border-radius: 10px 10px 10px 10px;
     padding-left: 5px;
     padding-right: 5px;
-    margin-top: 30px;
+    margin-top: 50px;
     width: 50px;
     font-size: 50px;
     float: left;
@@ -56,14 +56,14 @@ div.animation-button.first-button{
     margin-right: 0px;
     margin-left: 300px;
     font-size: 40px;
-    height: 55px;
+    height: 63px;
     padding-top: 5px;
 }
 
 div.animation-button.ok-button{
     width: 80px;
     font-size: 40px;
-    height: 55px;
+    height: 63px;
     padding-top: 5px;
 }   
 
@@ -75,7 +75,7 @@ div.animation-button.last-previous{
 div.animation-button.read-more{
     width: 300px;
     font-size: 40px;
-    height: 55px;
+    height: 63px;
     padding-top: 5px;
     margin-right: 25px;
 }   
