@@ -1,7 +1,6 @@
 import React from 'react'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import Pagination from '../pagination'
-import UnitController from '../unit_controller'
 import LocalStorageUtils from '../../../utils/localStorageUtils'
 import './styles.css'
 
@@ -25,7 +24,8 @@ class UnitBase extends React.Component {
             openPage: LocalStorageUtils.getOpenPage()
         })
 
-        window.scrollTo(0, 0)
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 
         AvaMecApiServices.saveLastPage(this.props.id)
     }
@@ -39,12 +39,6 @@ class UnitBase extends React.Component {
                     unit={this.props.id} />
             )
         }
-    }
-
-    loadUnitController = () => {
-        return (
-            <UnitController unit={this.props.id}/>        
-        )
     }
 }
 

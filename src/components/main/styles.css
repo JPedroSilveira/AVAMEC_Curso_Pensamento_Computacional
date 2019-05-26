@@ -4,11 +4,11 @@
 }
 
 .unit-container{
-    width: 80%;
-    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
     color: #585858;
     font-weight: 100;
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 768px){

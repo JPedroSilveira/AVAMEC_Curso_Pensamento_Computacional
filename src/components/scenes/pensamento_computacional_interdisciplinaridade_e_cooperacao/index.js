@@ -100,7 +100,6 @@ class PensamentoComputacionalInterdisciplinidadeECooperacao extends UnitBase {
                 {this.renderTitle()}
                 {this.renderPage()}
                 {this.loadPagination()}
-                {this.loadUnitController()}
             </div>
         )
     }

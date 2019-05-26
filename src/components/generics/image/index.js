@@ -4,14 +4,15 @@ import './styles.css'
 class Image extends React.Component {
     constructor(props){
         super(props)
-        this.state = {
-            className: props.wide ? "wide-image-style" : "image-style"
+        this.style = {
+            width: props.width ? props.width : (props.wide ? "50%" : "30%"),
+            height: props.height ? props.height : null
         }
     }
     render() {
         return (
             <div className="image-container">
-                <img src={this.props.src} className={this.state.className} alt={this.props.alt} />
+                <img src={this.props.src} style={this.style} alt={this.props.alt} />
                 {this.props.children}
             </div>
         )

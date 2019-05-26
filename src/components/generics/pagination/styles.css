@@ -1,7 +1,4 @@
 .pagination{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1em;
-    font-weight: 700;
     list-style: none;
     background-color: inherit;
     text-align: center;
@@ -12,12 +9,6 @@
 
 .disabled-page{
     visibility: hidden;
-}
-
-@media only screen and (max-width: 520px) {
-  .pagination{
-      font-size: 0.7em;
-  }
 }
 
 .pagination li{
@@ -47,3 +38,96 @@
     background: rgba(0, 0, 0, 0);
     color: #999D9E;
 }
+
+div.unit-box-container{
+    border: 0.05em solid #A0864D;
+    border-radius: 0em 0em 0.4em 0.4em;
+    padding: 0.5em 0em 0.5em 0em;
+    background-color: #A0864D;
+    box-shadow: 0em 0.3em 0.5em rgb(160, 134, 77, 0.5);
+    color: white;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+div.unit-box-item{
+    float: right;
+    padding: 0.1em 1em 0em 1em;
+}
+
+div.unit-box-text{
+    padding-top: 0.33em;
+}
+
+div.unit-text-one{
+    padding-left: 10em;
+}
+
+div.unit-box-bar{
+    float: right;
+    width: 0.113em;
+    height: 1.35em;
+    margin-top: 0.3em;
+    background-color: #ddc683;
+}
+
+div.slide-box-container{
+    background-color: #FFFFFF;
+    border: 0.2em solid #A0864D;
+    border-bottom: 0em;
+    border-radius: 0.7em 0.7em 0em 0em;
+    padding: 0.6em 1em 0.6em 1em;
+    color: #a0864d;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+div.pagination-container{
+    background-color: #f4f3f3;
+}
+
+.slide-text{
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #a0864d;
+}
+
+div.greek-column-item{
+    float: left;
+}
+
+div.greek-column-item:nth-child(2){
+    width: 35em;
+    max-width: 35em; 
+}
+
+div.return-button-container{
+    float: right;
+    margin-right: 10em;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.return-button{
+    background-color: #FFFFFF;
+    border: 0.05em solid rgb(196, 196, 196);
+    box-shadow: 0em 0.3em 0.5em rgb(196, 196, 196, 1);
+    border-radius: 0.6em;
+    padding: 1em 0em 1em 0em;
+    width: 4.7em;
+    height: 4.5em;  
+    float: right;
+}
+
+.return-button-text{
+    padding-top: 1em;
+    padding-right: 1em;
+    float: left;
+    font-weight: 700;
+    color: #989ea0;
+}
+
+div.slides-text-container{
+    margin-left: 25em;
+}
+
