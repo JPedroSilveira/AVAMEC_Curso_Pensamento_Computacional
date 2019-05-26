@@ -1,0 +1,108 @@
+div.animation-fade-in-out{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    animation-name: fadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+div.animation-fade-in-out.img{
+    background-color: rgba(244, 243, 243, 0.5);
+}
+
+div.animation-fade-in-out.text{
+    top: 280px;
+    left: 725px;
+    max-width: 650px;
+    font-size: 18px;
+    text-align: justify;
+    color: black;
+    font-weight: 500;
+    font-size: 1.7em;
+}
+
+div.animation-fade-in-out.buttons{
+    top: 580px;
+    left: 750px;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+}
+
+div.animation-button{
+    border: 2px solid #2DDAF7;
+    background-color: #2DDAF7;
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 30px;
+    width: 50px;
+    font-size: 50px;
+    float: left;
+    cursor: pointer;
+    box-shadow: 0em 5px 15px rgb(160, 134, 77, 0.5);
+}
+
+div.animation-button:first-child{
+    margin-right: 50px;
+    margin-left: 200px;
+}
+
+div.animation-button.first-button{
+    width: 250px;
+    margin-right: 0px;
+    margin-left: 300px;
+    font-size: 40px;
+    height: 55px;
+    padding-top: 5px;
+}
+
+div.animation-button.ok-button{
+    width: 80px;
+    font-size: 40px;
+    height: 55px;
+    padding-top: 5px;
+}   
+
+div.animation-button.last-previous{
+    margin-right: 25px;
+    margin-left: 50px;
+}   
+
+div.animation-button.read-more{
+    width: 300px;
+    font-size: 40px;
+    height: 55px;
+    padding-top: 5px;
+    margin-right: 25px;
+}   
+
+.animation-image{
+    width: 1400px;
+    padding-top: 4em;
+    padding-left: 4em;
+}
+
+@keyframes fadeInOut {
+    100% {
+        opacity:1;
+    }
+    80% {
+        opacity:0.8;
+    }
+    60% {
+        opacity:0.6;
+    }
+    40% {
+        opacity:0.4;
+    }
+    20% {
+        opacity:0.2;
+    }
+    0% {
+        opacity:0;
+    }
+}
