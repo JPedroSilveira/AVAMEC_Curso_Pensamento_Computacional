@@ -27,11 +27,11 @@ class Pagination extends React.Component {
             hasPreviousUnit: false
         }
 
-        AvaMecApiServices.getIfNextUnitExist(this.props.unit, this.nextUnitCallback)
-        AvaMecApiServices.getIfPreviousUnitExist(this.props.unit, this.previousUnitCallback)
+        AvaMecApiServices.getIfNextUnitExist(this.props.unit, this.hasNextUnitCallback)
+        AvaMecApiServices.getIfPreviousUnitExist(this.props.unit, this.hasPreviousUnitCallback)
     }
 
-    nextUnitCallback = info => {
+    hasNextUnitCallback = info => {
         if (info.detail.status === 200) {
             this.setState({
                 hasNextUnit: info.detail.data
@@ -41,14 +41,14 @@ class Pagination extends React.Component {
         AvaMecApiServices.closeGetIfNextUnitExistListener(this.hasNextUnitCallback)
     }
 
-    previousUnitCallback = info => {
+    hasPreviousUnitCallback = info => {
         if (info.detail.status === 200) {
             this.setState({
                 hasPreviousUnit: info.detail.data
             })
         }
 
-        AvaMecApiServices.closeGetIfPreviousUnitExistListener(this.previousUnitCallback)
+        AvaMecApiServices.closeGetIfPreviousUnitExistListener(this.hasPreviousUnitCallback)
     }
 
     nextUnit = () => {
@@ -57,7 +57,6 @@ class Pagination extends React.Component {
 
     nextUnitCallback = info => {
         if (info.detail.status === 200) {
-            console.log(info.detail.data)
             if (info.detail.data.unidade !== undefined && info.detail.data.unidade.permitePorcentagem) {
                 if (String(info.detail.data.porcentagemConclusao) < "100") {
                     AvaMecApiServices.saveUnitProgress(this.props.unit, 100)
