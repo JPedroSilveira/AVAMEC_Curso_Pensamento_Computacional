@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
+import BasicTextContainer from '../../generics/basic-text-container'
 import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'
@@ -67,8 +68,10 @@ class Abstracao extends UnitBase {
     render() {
         return (
             <Fragment>
-                {this.renderTitle()}
-                {this.renderPage()}
+                <BasicTextContainer>
+                    {this.renderTitle()}
+                    {this.renderPage()}
+                </BasicTextContainer>
                 {this.loadPagination()}
             </Fragment>
         )

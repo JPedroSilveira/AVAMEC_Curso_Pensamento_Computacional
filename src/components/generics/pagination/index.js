@@ -143,14 +143,26 @@ class Pagination extends React.Component {
                         <div className="unit-box-bar"></div>
                         <div className="unit-box-item unit-box-text unit-text-one">
                             {this.state.page === this.state.availablePages ?
-                                <span>PRÓXIMA UNIDADE</span>
+                                <Fragment>
+                                    {this.state.hasNextUnit ?
+                                        <span>PRÓXIMA UNIDADE</span>
+                                        :
+                                        <span>VOCÊ ESTÁ NA ÚLTIMA UNIDADE</span>
+                                    }
+                                </Fragment>
                                 :
                                 <span>SLIDE {this.state.page + 1}</span>
                             }
                         </div>
                         <div className="unit-box-item unit-box-text">
                             {this.state.page === 1 ?
-                                <span>UNIDADE ANTERIOR</span>    
+                                <Fragment>
+                                    {this.state.hasPreviousUnit ?
+                                        <span>UNIDADE ANTERIOR</span>  
+                                        :
+                                        <span>VOCÊ ESTÁ NA PRIMEIRA UNIDADE</span>  
+                                    }
+                                </Fragment>
                                 :
                                 <span>SLIDE {this.state.page - 1}</span>
                             }

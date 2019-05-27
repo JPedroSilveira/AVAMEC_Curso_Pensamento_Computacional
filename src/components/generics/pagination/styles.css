@@ -131,6 +131,7 @@ div.return-button-container{
     float: left;
     font-weight: 700;
     color: #989ea0;
+    cursor: pointer;
 }
 
 div.slides-text-container{
