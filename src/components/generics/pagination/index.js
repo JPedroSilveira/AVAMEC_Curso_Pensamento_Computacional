@@ -57,7 +57,8 @@ class Pagination extends React.Component {
 
     nextUnitCallback = info => {
         if (info.detail.status === 200) {
-            if (info.detail.data.unidade.permitePorcentagem) {
+            console.log(info.detail.data)
+            if (info.detail.data.unidade !== undefined && info.detail.data.unidade.permitePorcentagem) {
                 if (String(info.detail.data.porcentagemConclusao) < "100") {
                     AvaMecApiServices.saveUnitProgress(this.props.unit, 100)
                 }
@@ -122,7 +123,7 @@ class Pagination extends React.Component {
             <Fragment>
             <div className="return-button-container">
                 <span className="return-button-text">VOLTAR PARA O TOPO</span>
-                <button onClick={this.returnButton} className="return-button"><Image width="3.5em" height="2.5em" src={UpArrow} alt="Avançar" /></button>
+                <button onClick={this.returnButton} className="return-button"><Image width="3.5em" height="2.5em" src={UpArrow} alt="Retornar para o topo da página." /></button>
             </div>
             <div className="slides-text-container">
                <PCenter><span className="slide-text">VOCÊ ESTÁ EM: </span></PCenter>
@@ -137,7 +138,7 @@ class Pagination extends React.Component {
             <div className="pagination-container">
                 <CenterBoxContainer>
                     <div className="unit-box-container">
-                        <div onClick={this.nextPageOrUnit} className="unit-box-item">
+                        <div onClick={this.nextPageOrUnit} className="unit-box-item button-item">
                             <Image width="1.3em" height="1.7em" src={RightArrow} alt="Avançar" />
                         </div>
                         <div className="unit-box-bar"></div>
@@ -156,7 +157,7 @@ class Pagination extends React.Component {
                             }
                         </div>
                         <div className="unit-box-bar"></div>
-                        <div onClick={this.previousPageOrUnit} className="unit-box-item">
+                        <div onClick={this.previousPageOrUnit} className="unit-box-item button-item">
                             <Image width="1.3em" height="1.7em" src={LeftArrow} alt="Voltar" />
                         </div>
                     </div>

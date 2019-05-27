@@ -94,10 +94,10 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
                 return "Γεια σου! Isso quer dizer olá, em grego! Meu nome é Fidípedes, hoje vou encarar a missão mais importante da minha vida! Preciso avisar em Atenas que os Persas estão fugindo daqui de Maratona, antes que eles cheguem lá e peguem eles desprevenidos!"
             case 2:
                 this.state.animation = FidipidesTwo;
-                return "não imagino que será fácil, vou precisar de tecnologia para apoiar minha solução de problemas, e quando se vive em 490 a.C. não temos muitos recursos, precisamos evitar o desperdício."
+                return "Não imagino que será fácil, vou precisar de tecnologia para apoiar minha solução de problemas, e quando se vive em 490 a.C. não temos muitos recursos, precisamos evitar o desperdício."
             case 3:
                 this.state.animation = FidipidesThree;
-                return "Vamos resolver os desafio dessa jornada com o que vocês chamam de Pensamento Computacional, e antes que pergunte, não, não sei o que é um computador."
+                return "Vamos resolver os desafios dessa jornada com o que vocês chamam de Pensamento Computacional, e antes que pergunte, não, não sei o que é um computador."
             case 4:
                 this.state.animation = FidipidesFour;
                 return "Pensamento Computacional pode ser visto como sendo um processo de pensamento para encontrar e especificar soluções para problemas, não necessariamente usando uma máquina e usamos isso todo o dia como quando decidimos o que vamos fazer durante um dia, ou nesse caso que vamos enfrentar essa incrível jornada até Atenas."
