@@ -5,31 +5,30 @@ class AnimationFadeInOut extends React.Component {
    render() {
         return (
             <Fragment>
-                <div className="animation-fade-in-out img">
-                    <img className="animation-image" src={this.props.src} alt={this.props.alt}/>
-                </div>
-                <div className="animation-fade-in-out text">
-                    {this.props.text}
-                </div>
-                <div className="animation-fade-in-out buttons">
-                    {this.props.hasPreviousTalk ?
-                        <Fragment>
-                            {this.props.hasNextTalk ?
+                <div className="animation-fade-in-out">
+                    <div className="animation-container" style={{backgroundImage: "url("+this.props.src+")"}}>
+                        <div className="animation-text">{this.props.text}</div>
+                        <div className="animation-buttons">
+                            {this.props.hasPreviousTalk ?
                                 <Fragment>
-                                    <div onClick={this.props.previousTalk} className="animation-button">{"<"}</div>
-                                    <div onClick={this.props.nextTalk} className="animation-button">{">"}</div>
+                                    {this.props.hasNextTalk ?
+                                        <Fragment>
+                                            <div onClick={this.props.previousTalk} className="animation-button last">{"<"}</div>
+                                            <div onClick={this.props.nextTalk} className="animation-button next">{">"}</div>
+                                        </Fragment>
+                                        :
+                                        <Fragment>
+                                            <div onClick={this.props.previousTalk} className="animation-button last-previous">{"<"}</div>
+                                            <div className="animation-button read-more">Leia Mais</div>
+                                            <div onClick={this.props.finishTalk} className="animation-button ok-button">Ok!</div>
+                                        </Fragment>
+                                    }
                                 </Fragment>
                                 :
-                                <Fragment>
-                                    <div onClick={this.props.previousTalk} className="animation-button last-previous">{"<"}</div>
-                                    <div className="animation-button read-more">Leia Mais</div>
-                                    <div onClick={this.props.finishTalk} className="animation-button ok-button">Ok!</div>
-                                </Fragment>
+                                <div onClick={this.props.nextTalk} className="animation-button first-button">{"Próximo"}</div>
                             }
-                        </Fragment>
-                        :
-                        <div onClick={this.props.nextTalk} className="animation-button first-button">{"Próximo"}</div>
-                    }
+                        </div>
+                    </div>
                 </div>
             </Fragment>
         )

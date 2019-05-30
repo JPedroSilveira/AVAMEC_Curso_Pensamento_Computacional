@@ -7,84 +7,93 @@ div.animation-fade-in-out{
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-duration: 1s;
-}
-
-div.animation-fade-in-out.img{
     background-color: rgba(244, 243, 243, 0.5);
 }
 
-div.animation-fade-in-out.text{
-    top: 260px;
-    left: 725px;
-    max-width: 650px;
-    font-size: 18px;
-    text-align: justify;
-    color: black;
-    font-weight: 500;
-    font-size: 1.7em;
+div.animation-container{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top: 2%;
+    background-repeat: no-repeat;
 }
 
-div.animation-fade-in-out.buttons{
-    top: 580px;
-    left: 750px;
-    font-size: 28px;
+div.animation-container div.animation-text{
+    margin-left: 47%;
+    margin-right: 10%;
+    margin-top: 15%;
+    height: 17%;
+    font-weight: 700;
+    color: black;
+    text-align: justify;
+    font-size: 115%;
+}
+
+div.animation-buttons{
     color: white;
     text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
 }
 
-div.animation-button{
-    border: 2px solid #2DDAF7;
+div.animation-buttons div.animation-button{
+    margin-top: 12%;
+    border: 1% solid #2DDAF7;
     background-color: #2DDAF7;
-    border-radius: 10px 10px 10px 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-top: 50px;
-    width: 50px;
-    font-size: 50px;
-    float: left;
+    border-radius: 2em 2em 2em 2em;
     cursor: pointer;
-    box-shadow: 0em 5px 15px rgb(160, 134, 77, 0.5);
-}
-
-div.animation-button:first-child{
-    margin-right: 50px;
-    margin-left: 200px;
+    box-shadow: 0.1em 0.2em 0.5em rgb(160, 134, 77, 0.5);
 }
 
 div.animation-button.first-button{
-    width: 250px;
-    margin-right: 0px;
-    margin-left: 300px;
-    font-size: 40px;
-    height: 63px;
-    padding-top: 5px;
+    float: right;
+    width: 15%;
+    font-size: 1.5em;
+    padding: 1% 0% 1% 0%;
+    margin-right: 10%;
+}
+
+div.animation-buttons div.animation-button.last{
+    float: left;
+    width: 5%;
+    margin-left: 63%;
+    padding: 1% 0% 1% 0%;
+    font-size: 1.5em;
+}
+
+div.animation-buttons div.animation-button.next{
+    float: right;
+    width: 5%;
+    margin-right: 25%;
+    padding: 1% 0% 1% 0%;
+    font-size: 1.5em;
 }
 
 div.animation-button.ok-button{
-    width: 80px;
-    font-size: 40px;
-    height: 63px;
-    padding-top: 5px;
+    float: left; 
+    width: 15%;
+    font-size: 1.5em;
+    padding: 1% 0% 1% 0%;
+    margin-left: 3%;
 }   
 
 div.animation-button.last-previous{
-    margin-right: 25px;
-    margin-left: 50px;
+    float: left;
+    width: 5%;
+    margin-left: 47%;
+    padding: 1% 0.5% 1% 0.5%;
+    font-size: 1.5em;
 }   
 
 div.animation-button.read-more{
-    width: 300px;
-    font-size: 40px;
-    height: 63px;
-    padding-top: 5px;
-    margin-right: 25px;
+    float: left; 
+    width: 15%;
+    font-size: 1.5em;
+    padding: 1% 0.5% 1% 0.5%;
+    margin-left: 3%;
 }   
-
-.animation-image{
-    width: 1400px;
-    padding-top: 4em;
-    padding-left: 4em;
-}
 
 @keyframes fadeInOut {
     100% {
