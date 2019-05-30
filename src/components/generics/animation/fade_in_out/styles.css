@@ -12,16 +12,16 @@ div.animation-fade-in-out{
 
 div.animation-container{
     position: absolute;
-    width: 75%;
+    width: 70%;
     height: 100%;
-    margin-left: 10%;
-    margin-top: 0%;
+    margin-left: 13%;
+    margin-top: 1%;
     background-repeat: no-repeat;
 }
 
 div.animation-container div.animation-text{
-    margin-left: 46%;
-    margin-right: 11%;
+    margin-left: 48%;
+    margin-right: 9%;
     margin-top: 13%;
     height: 17%;
     font-weight: 700;
@@ -58,7 +58,7 @@ div.animation-button.first-button{
 div.animation-buttons div.animation-button.previous{
     float: left;
     width: 5%;
-    margin-left: 61%;
+    margin-left: 63%;
     padding: 1% 0% 1% 0%;
     font-size: 1.5em;
 }
@@ -66,7 +66,7 @@ div.animation-buttons div.animation-button.previous{
 div.animation-buttons div.animation-button.next{
     float: right;
     width: 5%;
-    margin-right: 27%;
+    margin-right: 24%;
     padding: 1% 0% 1% 0%;
     font-size: 1.5em;
 }
@@ -82,7 +82,7 @@ div.animation-button.ok-button{
 div.animation-button.last-previous{
     float: left;
     width: 5%;
-    margin-left: 50%;
+    margin-left: 51.5%;
     padding: 1% 0.5% 1% 0.5%;
     font-size: 1.5em;
 }   
@@ -97,6 +97,8 @@ div.animation-button.read-more{
 
 @media only screen and (min-width: 1600px) {
     div.animation-container{
+        width: 75%;
+        margin-left: 10%;
         margin-top: 2%;
     }
     div.animation-container div.animation-text{
