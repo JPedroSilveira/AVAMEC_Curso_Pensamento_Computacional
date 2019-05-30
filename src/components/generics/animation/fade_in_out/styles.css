@@ -12,7 +12,7 @@ div.animation-fade-in-out{
 
 div.animation-container{
     position: absolute;
-    width: 80%;
+    width: 75%;
     height: 100%;
     margin-left: 10%;
     margin-top: 2%;
@@ -20,9 +20,9 @@ div.animation-container{
 }
 
 div.animation-container div.animation-text{
-    margin-left: 47%;
+    margin-left: 45%;
     margin-right: 10%;
-    margin-top: 15%;
+    margin-top: 12%;
     height: 17%;
     font-weight: 700;
     color: black;
@@ -39,7 +39,7 @@ div.animation-buttons{
 }
 
 div.animation-buttons div.animation-button{
-    margin-top: 12%;
+    margin-top: 15%;
     border: 1% solid #2DDAF7;
     background-color: #2DDAF7;
     border-radius: 2em 2em 2em 2em;
@@ -52,13 +52,13 @@ div.animation-button.first-button{
     width: 15%;
     font-size: 1.5em;
     padding: 1% 0% 1% 0%;
-    margin-right: 10%;
+    margin-right: 13%;
 }
 
-div.animation-buttons div.animation-button.last{
+div.animation-buttons div.animation-button.previous{
     float: left;
     width: 5%;
-    margin-left: 63%;
+    margin-left: 61%;
     padding: 1% 0% 1% 0%;
     font-size: 1.5em;
 }
@@ -66,14 +66,14 @@ div.animation-buttons div.animation-button.last{
 div.animation-buttons div.animation-button.next{
     float: right;
     width: 5%;
-    margin-right: 25%;
+    margin-right: 27%;
     padding: 1% 0% 1% 0%;
     font-size: 1.5em;
 }
 
 div.animation-button.ok-button{
     float: left; 
-    width: 15%;
+    width: 8%;
     font-size: 1.5em;
     padding: 1% 0% 1% 0%;
     margin-left: 3%;
@@ -82,7 +82,7 @@ div.animation-button.ok-button{
 div.animation-button.last-previous{
     float: left;
     width: 5%;
-    margin-left: 47%;
+    margin-left: 50%;
     padding: 1% 0.5% 1% 0.5%;
     font-size: 1.5em;
 }   
@@ -94,6 +94,21 @@ div.animation-button.read-more{
     padding: 1% 0.5% 1% 0.5%;
     margin-left: 3%;
 }   
+
+@media only screen and (min-width: 1600px) {
+    div.animation-container div.animation-text{
+        margin-left: 48%;
+    }
+    div.animation-button.last-previous{
+        margin-left: 52%;
+    }  
+    div.animation-buttons div.animation-button.previous{
+        margin-left: 64%;
+    }
+    div.animation-buttons div.animation-button.next{
+        margin-right: 24%;
+    }
+}
 
 @keyframes fadeInOut {
     100% {

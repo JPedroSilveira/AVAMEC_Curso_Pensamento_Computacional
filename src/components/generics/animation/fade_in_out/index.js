@@ -13,7 +13,7 @@ class AnimationFadeInOut extends React.Component {
                                 <Fragment>
                                     {this.props.hasNextTalk ?
                                         <Fragment>
-                                            <div onClick={this.props.previousTalk} className="animation-button last">{"<"}</div>
+                                            <div onClick={this.props.previousTalk} className="animation-button previous">{"<"}</div>
                                             <div onClick={this.props.nextTalk} className="animation-button next">{">"}</div>
                                         </Fragment>
                                         :
