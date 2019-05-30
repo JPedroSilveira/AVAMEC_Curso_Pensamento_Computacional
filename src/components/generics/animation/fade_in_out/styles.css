@@ -15,19 +15,19 @@ div.animation-container{
     width: 75%;
     height: 100%;
     margin-left: 10%;
-    margin-top: 2%;
+    margin-top: 0%;
     background-repeat: no-repeat;
 }
 
 div.animation-container div.animation-text{
-    margin-left: 45%;
-    margin-right: 10%;
-    margin-top: 12%;
+    margin-left: 46%;
+    margin-right: 11%;
+    margin-top: 13%;
     height: 17%;
     font-weight: 700;
     color: black;
     text-align: justify;
-    font-size: 115%;
+    font-size: 100%;
 }
 
 div.animation-buttons{
@@ -96,8 +96,14 @@ div.animation-button.read-more{
 }   
 
 @media only screen and (min-width: 1600px) {
+    div.animation-container{
+        margin-top: 2%;
+    }
     div.animation-container div.animation-text{
         margin-left: 48%;
+        margin-right: 10%;
+        margin-top: 12%;
+        font-size: 115%;
     }
     div.animation-button.last-previous{
         margin-left: 52%;
