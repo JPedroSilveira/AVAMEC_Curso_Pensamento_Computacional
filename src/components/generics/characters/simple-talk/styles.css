@@ -1,0 +1,136 @@
+div.main-container{
+    width: 100%;
+    height: 100%;
+    padding-top: 1%;
+    top: 0;
+    position: fixed;
+    background-color: rgba(244, 243, 243, 0.5);
+}
+
+div.master-container{
+    position: relative;
+}
+
+div.character-container{
+    margin: auto;
+    width: 50em;
+    height: 50em;
+    padding-top: 6.5em;
+    background: no-repeat;
+    background-position-y: 1em;
+    animation-name: fadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 1.5s;
+}
+
+div.character-container div.content{
+    margin-left: 46%;
+    text-align: justify;
+    font-weight: 700;
+    width: 23em;
+}
+
+div.character-container div.text{
+    margin-top: 1em;
+    color: black;
+}
+
+div.character-container div.title{
+    text-align: center;
+}
+
+div.buttons-container{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 22em;
+    margin-top: 1em;
+}
+
+div.buttons-container div.button{
+    float: left;
+    border: 0.01em solid #2d2d2d;
+    background-color: #2DDAF7;
+    border-radius: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    cursor: pointer;
+    box-shadow: 0.1em 0.2em 0.5em rgb(160, 134, 77, 0.5);
+}
+
+div.buttons-container div.button.first-button{
+    margin-left: 9em;
+}
+
+div.buttons-container div.button.next-button, div.buttons-container div.button.previous-button, div.buttons-container div.button.last-previous{
+    padding: 0em;
+    padding-left: 0.8em;
+    padding-right: 0.6em;
+    border-radius: 0.5em;
+}
+
+div.buttons-container div.button.previous-button{
+    margin-right: 2em;
+    margin-left: 10.1em;
+}
+
+div.buttons-container div.button.last-previous{
+    margin-right: 0.8em;
+    margin-left: 4.4em;
+}
+
+div.buttons-container div.button.read-more{
+    margin-right: 0.8em;
+}
+
+@media only screen and (min-width: 1600px) {
+    div.character-container{
+        padding-top: 9em;
+        width: 70em;
+    }
+    div.character-container div.content{
+        margin-left: 47.5%;
+        width: 30em;
+    }
+    div.buttons-container{
+        margin-top: 4em;
+    }
+    div.buttons-container div.button.first-button{
+        margin-left: 25em;
+    }
+    div.buttons-container div.button.previous-button{
+        margin-left: 25em;
+        margin-right: 2em;
+    }
+    div.buttons-container div.button.last-previous{
+        margin-left: 19em;
+        margin-right: 0.8em;
+    }
+    div.buttons-container div.button.next-button, div.buttons-container div.button.previous-button, div.buttons-container div.button.last-previous{
+        padding-left: 1.1em;
+        padding-right: 0.9em;
+        border-radius: 0.5em;
+    }
+}
+
+@keyframes fadeInOut {
+    100% {
+        opacity:1;
+    }
+    80% {
+        opacity:0.8;
+    }
+    60% {
+        opacity:0.6;
+    }
+    40% {
+        opacity:0.4;
+    }
+    20% {
+        opacity:0.2;
+    }
+    0% {
+        opacity:0;
+    }
+}

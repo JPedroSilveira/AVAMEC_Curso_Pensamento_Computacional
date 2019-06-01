@@ -5,6 +5,7 @@ import QualidadeVida from '../../../../images/qualidade-de-vida.png'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color' 
+import Strong from '../../../generics/font/Strong'
 
 class AplicacaoInterdisciplinaridade extends React.Component {
     render() {
@@ -13,7 +14,7 @@ class AplicacaoInterdisciplinaridade extends React.Component {
                 <h2>Manter o peso corporal adequado</h2>
                 <Image src={QualidadeVida} alt="Ilustração sobre o equilíbrio que mantem a qualidade de vida.">
                     <p>
-                        <strong>Figura 2: Qualidade de Vida</strong>
+                        <Strong>Figura 2: Qualidade de Vida</Strong>
                         <br />
                         <ExternalLink href="https://medium.com/@amarcoscrf/o-que-%C3%A9-qualidade-de-vida-4cdb8ab7c4cc">
                             Fonte: O que é qualidade de vida? (Medium)
@@ -30,10 +31,10 @@ class AplicacaoInterdisciplinaridade extends React.Component {
                     </Box>
                 </CenterBoxContainer>
                 <p>O Pensamento Computacional, atrav&eacute;s de seus quatro pilares, disp&otilde;e de elementos que podem ajudar nessa tarefa interdisciplinar que &eacute; a organiza&ccedil;&atilde;o do nosso cuidado com a sa&uacute;de e nosso bem estar. Vejamos a seguir uma breve identifica&ccedil;&atilde;o do uso desses pilares nessa atividade.</p>
-                <p><strong>Pilar Decomposi&ccedil;&atilde;o:</strong> podemos us&aacute;-lo para identificar os diferentes aspectos a serem considerados na manuten&ccedil;&atilde;o de nossa sa&uacute;de; mas tamb&eacute;m podemos us&aacute;-lo para identificar as categorias de alimentos e as especialidades profissionais que podem nos ajudar.</p>
-                <p><strong>Pilar Abstra&ccedil;&atilde;o:</strong> podemos us&aacute;-lo para identificar, para cada aspecto, os &iacute;ndices (por exemplo: &iacute;ndice de massa corporal) que devemos observar e as caracter&iacute;sticas que devemos considerar, quando formos escolher um profissional da sa&uacute;de. Com respeitos aos alimentos, precisamos selecionar atributos importantes, tanto quanto ao seu uso, quanto &agrave; disponibilidade durante o ano.</p>
-                <p><strong>Pilar Reconhecimento de Padr&otilde;es:</strong> reconhecer situa&ccedil;&otilde;es adversas, como peso incompat&iacute;vel com altura e idade, ou reconhecer oportunidades para adquirir servi&ccedil;os e produtos, por exemplo, combinando sazonalidade, pre&ccedil;o e valor nutricional dos alimentos.</p>
-                <p><strong>Pilar Algoritmos:</strong> importante para definir diversas rotinas, tais como as relativas &agrave; alimenta&ccedil;&atilde;o, como distribuir os alimentos ao longo do dia, as rotinas de exerc&iacute;cios, a prepara&ccedil;&atilde;o dos alimentos, a visita aos especialistas, etc.</p>
+                <p><Strong>Pilar Decomposi&ccedil;&atilde;o:</Strong> podemos us&aacute;-lo para identificar os diferentes aspectos a serem considerados na manuten&ccedil;&atilde;o de nossa sa&uacute;de; mas tamb&eacute;m podemos us&aacute;-lo para identificar as categorias de alimentos e as especialidades profissionais que podem nos ajudar.</p>
+                <p><Strong>Pilar Abstra&ccedil;&atilde;o:</Strong> podemos us&aacute;-lo para identificar, para cada aspecto, os &iacute;ndices (por exemplo: &iacute;ndice de massa corporal) que devemos observar e as caracter&iacute;sticas que devemos considerar, quando formos escolher um profissional da sa&uacute;de. Com respeitos aos alimentos, precisamos selecionar atributos importantes, tanto quanto ao seu uso, quanto &agrave; disponibilidade durante o ano.</p>
+                <p><Strong>Pilar Reconhecimento de Padr&otilde;es:</Strong> reconhecer situa&ccedil;&otilde;es adversas, como peso incompat&iacute;vel com altura e idade, ou reconhecer oportunidades para adquirir servi&ccedil;os e produtos, por exemplo, combinando sazonalidade, pre&ccedil;o e valor nutricional dos alimentos.</p>
+                <p><Strong>Pilar Algoritmos:</Strong> importante para definir diversas rotinas, tais como as relativas &agrave; alimenta&ccedil;&atilde;o, como distribuir os alimentos ao longo do dia, as rotinas de exerc&iacute;cios, a prepara&ccedil;&atilde;o dos alimentos, a visita aos especialistas, etc.</p>
             </Fragment>
         )
     }

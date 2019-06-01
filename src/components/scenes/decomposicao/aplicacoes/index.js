@@ -3,6 +3,7 @@ import IMGDecomposicao1 from '../../../../images/decomposicao-1.jpg'
 import IMGDecomposicao2 from '../../../../images/decomposicao-2.png'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
+import Strong from '../../../generics/font/Strong'
 
 const Aplicacoes = () => (
     <Fragment>
@@ -14,7 +15,7 @@ const Aplicacoes = () => (
         <p>O corpo humano pode ser analisado segundo alguns de seus sistemas (Figura 1) - nervoso, digestivo, circulat&oacute;rio, muscular etc - e qualquer problema de sa&uacute;de, afetando um ou mais desses sistemas, poderia ser identificado atrav&eacute;s de um processo baseado em uma consulta m&eacute;dica seguida de exames laboratoriais e exames especiais como ultrassonografia, raio x, colonoscopia, endoscopia, eletrocardiograma etc. Em geral, as consultas s&atilde;o realizadas por especialistas nas &aacute;reas espec&iacute;ficas.</p>
         <Image src={IMGDecomposicao2} alt="Seis images do corpo humano, primeira com o esqueleto, segunda com o sistema nervoso, terceira com o sistema sanguíneo, quarta com o sistema respiratório, quinta com o sistema digestivo e sexta com o sistema muscular">
             <p>
-                <strong>Figura 1 : Corpo humano - Resumo dos Subsistemas</strong><br />
+                <Strong>Figura 1 : Corpo humano - Resumo dos Subsistemas</Strong><br />
                 <ExternalLink href="https://www.anatomiadocorpo.com">
                     Fonte: https://www.anatomiadocorpo.com/</ExternalLink>
             </p>
@@ -24,7 +25,7 @@ const Aplicacoes = () => (
         <p>Para descobrir o problema do carro que n&atilde;o funciona, podemos iniciar eliminando de nossa an&aacute;lise os elementos n&atilde;o diretamente relacionados com o funcionamento do motor, analisando ent&atilde;o cada sistema que potencialmente poderia gerar o defeito, verificando se seu funcionamento est&aacute; como esperado e, se n&atilde;o for o caso, identificando e corrigindo o defeito encontrado.</p>
         <Image src={IMGDecomposicao1} alt="Carro com a carroceria transparente, exibindo freios, sistema elétrico, motor, transmissão, suspensão e sistema de direção.">
             <p>
-                <strong>Figura 2: Componentes de um Veículo automotor</strong><br />
+                <Strong>Figura 2: Componentes de um Veículo automotor</Strong><br />
                 <ExternalLink href="http://breno.freeshell.org/Est_veic.pdf">
                     Fonte: http://breno.freeshell.org/Est_veic.pdf</ExternalLink>
             </p>

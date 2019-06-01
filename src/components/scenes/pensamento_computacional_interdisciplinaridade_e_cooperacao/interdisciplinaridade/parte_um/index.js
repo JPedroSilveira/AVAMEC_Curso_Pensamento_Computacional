@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 import ExternalLink from '../../../../generics/external_link'
-
+import Strong from '../../../../generics/font/Strong'
 
 class InterdisciplinaridadeUm extends React.Component {
     render() {
         return (
             <Fragment>
-                <p>Conclu&iacute;do o estudo dos quatro pilares do Pensamento Computacional, vamos examinar o Pensamento Computacional face a duas quest&otilde;es diretamente ligadas com a resolu&ccedil;&atilde;o de problemas, a saber, <strong>Interdisciplinaridade</strong> e <strong>Coopera&ccedil;&atilde;o</strong>.</p>
+                <p>Conclu&iacute;do o estudo dos quatro pilares do Pensamento Computacional, vamos examinar o Pensamento Computacional face a duas quest&otilde;es diretamente ligadas com a resolu&ccedil;&atilde;o de problemas, a saber, <Strong>Interdisciplinaridade</Strong> e <Strong>Coopera&ccedil;&atilde;o</Strong>.</p>
                 <h2>Interdisciplinaridade</h2>
                 <p>Muitos dos problemas do mundo real s&atilde;o, por natureza, interdisciplinares, ou seja, suas solu&ccedil;&otilde;es requerem o conhecimento de temas tratados em mais de uma disciplina.</p>
                 <p>De forma an&aacute;loga, os temas de pesquisa de diferentes &aacute;reas do conhecimento, requerem o uso de resultados de mais do que uma disciplina, para a elabora&ccedil;&atilde;o de novas teorias.</p>

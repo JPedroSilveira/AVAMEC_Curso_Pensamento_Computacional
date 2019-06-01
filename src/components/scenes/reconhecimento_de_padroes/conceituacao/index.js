@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color'
+import Strong from '../../../generics/font/Strong'
 
 const Conceituacao = () => (
     <Fragment>
@@ -13,7 +14,7 @@ const Conceituacao = () => (
         <p>Se pedirmos para um grupo de pessoas que n&atilde;o conhecemos pessoalmente e cujas datas de nascimento tamb&eacute;m desconhecemos que listem filmes, m&uacute;sicas, modas, tipos de lazeres e acontecimentos que marcaram suas adolesc&ecirc;ncias, &eacute; bem prov&aacute;vel que consigamos identificar a d&eacute;cada em que cada uma delas viveu esse per&iacute;odo de suas vidas. Isso porque filmes, m&uacute;sicas, modas, tipos de lazeres e acontecimentos marcantes costumam estabelecer um padr&atilde;o que permite identificar uma &eacute;poca.</p>
         <p>Desde crian&ccedil;a, o h&aacute;bito de identificar padr&otilde;es nos acompanha, &eacute; uma constru&ccedil;&atilde;o continuada e o nosso repert&oacute;rio de padr&otilde;es n&atilde;o p&aacute;ra de crescer e de se reconstruir. Somos uma competent&iacute;ssima f&aacute;brica de padr&otilde;es. Podemos dizer que ao longo da vida n&atilde;o paramos de construir um variad&iacute;ssimo repert&oacute;rio de padr&otilde;es, especializando-os quando necess&aacute;rio e sempre buscando generaliz&aacute;-los para ampliar a gama de situa&ccedil;&otilde;es onde possam ser usados. Ao nos deparamos com um novo problema, &eacute; muito comum adotarmos um padr&atilde;o de comportamento para abord&aacute;-lo.</p>
         <CenterBoxContainer>
-            <p><strong>&quot;J&aacute; vi alguma situa&ccedil;&atilde;o parecida?&quot;.</strong></p>
+            <p><Strong>&quot;J&aacute; vi alguma situa&ccedil;&atilde;o parecida?&quot;.</Strong></p>
         </CenterBoxContainer>
         <p>Padr&otilde;es de cores, de formas, de sons, de movimentos, de comportamentos, de consist&ecirc;ncia, de uso de palavras, padr&otilde;es de sequ&ecirc;ncias, padr&otilde;es recursivos e muitos outros.</p>
         <p>A seguir, apresentamos uma listagem de situa&ccedil;&otilde;es em que as solu&ccedil;&otilde;es requerem o reconhecimento de padr&otilde;es:</p>
@@ -34,7 +35,7 @@ const Conceituacao = () => (
         <CenterBoxContainer>
             <h3>Quadro 4.1: Conceituando Reconhecimento de Padr&otilde;es</h3>
             <Box backgroundColor={Color.BLUE_BOX}>
-                <p>Entende-se por <strong>reconhecimento de padr&otilde;es</strong> a associa&ccedil;&atilde;o de algum objeto (ou parte dele), tang&iacute;vel ou conceitual, com padr&otilde;es familiares que permitam identific&aacute;-lo e classific&aacute;-lo.</p>            </Box>
+                <p>Entende-se por <Strong>reconhecimento de padr&otilde;es</Strong> a associa&ccedil;&atilde;o de algum objeto (ou parte dele), tang&iacute;vel ou conceitual, com padr&otilde;es familiares que permitam identific&aacute;-lo e classific&aacute;-lo.</p>            </Box>
         </CenterBoxContainer>
         <p>O reconhecimento de um determinado objeto nos permite trat&aacute;-lo segundo as prescri&ccedil;&otilde;es pr&eacute;-elaboradas, constru&iacute;das a partir de experi&ecirc;ncias anteriores.</p>
     </Fragment>

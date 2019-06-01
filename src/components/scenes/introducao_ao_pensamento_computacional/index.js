@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
-import BasicTextContainer from '../../generics/basic-text-container'
+import ContentContainer from '../../generics/content-container'
 import Texto1 from './texto_1'
 import Texto2 from './texto_2'
 import Texto3 from './texto_3'
 import Desafios from './desafios'
 import AplicacaoInterativa from './aplicacao_interativa'
 import Referencias from './referencias'
-import AnimationFadeInOut from '../../generics/animation/fade_in_out'
+import CharacterTalk from '../../generics/characters/simple-talk'
 import FidipidesOne from '../../../images/introducao_ao_pensamento_computacional/fidipides-one.svg'
 import FidipidesTwo from '../../../images/introducao_ao_pensamento_computacional/fidipides-two.svg'
 import FidipidesThree from '../../../images/introducao_ao_pensamento_computacional/fidipides-three.svg'
@@ -91,16 +91,25 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         switch (this.state.currentTalk) {
             case 1:
                 this.state.animation = FidipidesOne;
-                return "Γεια σου! Isso quer dizer olá, em grego! Meu nome é Fidípedes, hoje vou encarar a missão mais importante da minha vida! Preciso avisar em Atenas que os Persas estão fugindo daqui de Maratona, antes que eles cheguem lá e peguem eles desprevenidos!"
+                return {
+                    title: "Γεια σου!",
+                    text: "Isso quer dizer olá, em grego! Meu nome é Fidípedes, hoje vou encarar a missão mais importante da minha vida! Preciso avisar em Atenas que os Persas estão fugindo daqui de Maratona, antes que eles cheguem lá e peguem eles desprevenidos!"
+                }
             case 2:
                 this.state.animation = FidipidesTwo;
-                return "Não imagino que será fácil, vou precisar de tecnologia para apoiar minha solução de problemas, e quando se vive em 490 a.C. não temos muitos recursos, precisamos evitar o desperdício."
+                return {
+                    text: "Não imagino que será fácil, vou precisar de tecnologia para apoiar minha solução de problemas, e quando se vive em 490 a.C. não temos muitos recursos, precisamos evitar o desperdício."
+                }
             case 3:
                 this.state.animation = FidipidesThree;
-                return "Vamos resolver os desafios dessa jornada com o que vocês chamam de Pensamento Computacional, e antes que pergunte, não, não sei o que é um computador."
+                return {
+                    text: "Vamos resolver os desafios dessa jornada com o que vocês chamam de Pensamento Computacional, e antes que pergunte, não, não sei o que é um computador."
+                }
             case 4:
                 this.state.animation = FidipidesFour;
-                return "Pensamento Computacional pode ser visto como sendo um processo de pensamento para encontrar e especificar soluções para problemas, não necessariamente usando uma máquina e usamos isso todo o dia como quando decidimos o que vamos fazer durante um dia, ou nesse caso que vamos enfrentar essa incrível jornada até Atenas."
+                return {
+                    text: "Pensamento Computacional pode ser visto como sendo um processo de pensamento para encontrar e especificar soluções para problemas, não necessariamente usando uma máquina e usamos isso todo o dia como quando decidimos o que vamos fazer durante um dia, ou nesse caso que vamos enfrentar essa incrível jornada até Atenas."
+                }
             default:
                 return null
         }
@@ -109,15 +118,15 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     renderTalk = () => {
         if(this.state.renderTalk){
             return (
-                <AnimationFadeInOut
+                <CharacterTalk
                     hasPreviousTalk={this.state.hasPreviousTalk}
                     hasNextTalk={this.state.hasNextTalk}
                     previousTalk={this.previousTalk}
                     nextTalk={this.nextTalk}
                     finishTalk={this.finishTalk}
-                    text={this.getCurrentTalk()}
+                    content={this.getCurrentTalk()}
                     src={this.state.animation}>
-                </AnimationFadeInOut>
+                </CharacterTalk>
             )
         }
     }
@@ -126,10 +135,10 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         return (
             <Fragment>
                 {this.renderTalk()}
-                <BasicTextContainer>
+                <ContentContainer>
                     {this.renderTitle()}
                     {this.renderPage()}
-                </BasicTextContainer>
+                </ContentContainer>
                 {this.loadPagination()}
             </Fragment>
         )

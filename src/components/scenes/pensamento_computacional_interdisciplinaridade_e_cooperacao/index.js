@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
-import BasicTextContainer from '../../generics/basic-text-container'
+import ContentContainer from '../../generics/content-container'
 import InterdisciplinaridadeParteUm from './interdisciplinaridade/parte_um'
 import InterdisciplinaridadeParteDois from './interdisciplinaridade/parte_dois'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'
@@ -97,10 +97,10 @@ class PensamentoComputacionalInterdisciplinidadeECooperacao extends UnitBase {
     render() {
         return (
             <div>
-                <BasicTextContainer>
+                <ContentContainer>
                     {this.renderTitle()}
                     {this.renderPage()}
-                </BasicTextContainer>
+                </ContentContainer>
                 {this.loadPagination()}
             </div>
         )

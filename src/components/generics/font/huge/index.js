@@ -1,14 +1,14 @@
 import React from 'react'
 import './styles.css'
 
-class StrongL extends React.Component {
+class FontHuge extends React.Component {
     render() {
         return (
-            <span className="strong-l">
+            <span className="huge-font">
                 {this.props.children}
             </span>
         )
     }
 }
 
-export default StrongL
+export default FontHuge

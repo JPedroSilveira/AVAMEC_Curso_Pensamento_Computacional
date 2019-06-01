@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
-import BasicTextContainer from '../../generics/basic-text-container'
+import ContentContainer from '../../generics/content-container'
 import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'
@@ -58,10 +58,10 @@ class ReconhecimentoDePadroes extends UnitBase {
     render() {
         return (
             <Fragment>
-                <BasicTextContainer>
+                <ContentContainer>
                     {this.renderTitle()}
                     {this.renderPage()}
-                </BasicTextContainer>
+                </ContentContainer>
                 {this.loadPagination()}
             </Fragment>
         )

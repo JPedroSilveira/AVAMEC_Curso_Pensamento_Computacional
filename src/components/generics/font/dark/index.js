@@ -1,14 +1,14 @@
 import React from 'react'
 import './styles.css'
 
-class PCenter extends React.Component {
+class FontDark extends React.Component {
     render() {
         return (
-            <p className="pcenter">
+            <span className="font-dark">
                 {this.props.children}
-            </p>
+            </span>
         )
     }
 }
 
-export default PCenter
+export default FontDark
