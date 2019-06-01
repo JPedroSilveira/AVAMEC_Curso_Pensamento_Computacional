@@ -5,6 +5,7 @@ import Box from '../../../generics/box'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 import IMGDecomposicao3 from '../../../../images/decomposicao-3.png'
+import Strong from '../../../generics/font/strong'
 
 const Recomendacoes = () => (
     <Fragment>
@@ -17,7 +18,7 @@ const Recomendacoes = () => (
             <Box backgroundColor={Color.BLUE_BOX}>
                 <Image src={IMGDecomposicao3} alt="Planta baixa de uma residência.">
                     <p>
-                        <strong>Figura 3: Planta baixa de uma residência</strong><br />
+                        <Strong>Figura 3: Planta baixa de uma residência</Strong><br />
                         <ExternalLink href="https://www.passeidireto.com/arquivo/42697341/planta-baixa">
                             Fonte: https://www.passeidireto.com/arquivo/42697341/planta-baixa</ExternalLink>
                     </p>

@@ -5,6 +5,7 @@ import AlgorithmLevel from '../../../generics/algorithm_level'
 import AlgorithmBox from '../../../generics/algorithm_box'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color'
+import Strong from '../../../generics/font/strong'
 
 const Conceituacao = () => (
     <Fragment>
@@ -37,16 +38,16 @@ const Conceituacao = () => (
                 </AlgorithmLevel>
             </AlgorithmBox>
         </CenterBoxContainer>
-        <p>No Algoritmo 01 podemos observar a presen&ccedil;a de v&aacute;rias <strong>abstra&ccedil;&otilde;es</strong>, como a atividade &ldquo;deslocar-se para at&eacute; o local de trabalho&rdquo;, que pode ser desdobrada em v&aacute;rias atividades menores, que aqui estamos deixando de detalhar.</p>
+        <p>No Algoritmo 01 podemos observar a presen&ccedil;a de v&aacute;rias <Strong>abstra&ccedil;&otilde;es</Strong>, como a atividade &ldquo;deslocar-se para at&eacute; o local de trabalho&rdquo;, que pode ser desdobrada em v&aacute;rias atividades menores, que aqui estamos deixando de detalhar.</p>
         <CenterBoxContainer>
             <h3>Quadro 5.1: Conceituando Algoritmo</h3>
             <Box backgroundColor={Color.BLUE_BOX}>
-                <p><strong>Algoritmo</strong>: uma sequ&ecirc;ncia finita de etapas (passos), para serem executadas por um agente, natural (humano) ou sint&eacute;tico (computador), em uma quantidade finita de tempo.</p>
+                <p><Strong>Algoritmo</Strong>: uma sequ&ecirc;ncia finita de etapas (passos), para serem executadas por um agente, natural (humano) ou sint&eacute;tico (computador), em uma quantidade finita de tempo.</p>
             </Box>
         </CenterBoxContainer>
         <br/>
         <p>Analisando em detalhes o Quadro 5.1, encontramos dois requisitos muito especiais: quantidade finita de passos e quantidade finita de tempo, para execu&ccedil;&atilde;o de um passo. Esses requisitos s&atilde;o essenciais para que possamos de fato chamar de algoritmo uma sequ&ecirc;ncia de passos.</p>
-        <p>O <strong>Algoritmo 01</strong> &eacute; t&atilde;o repetido por n&oacute;s, que o executamos automaticamente, ou seja, sem refletir. N&atilde;o &eacute; por acaso que, quando observamos algu&eacute;m repetir uma sequ&ecirc;ncia de etapas muito concentrado, dizemos &ldquo;hoje ele/ela est&aacute; no autom&aacute;tico&rdquo;. N&atilde;o se assuste, isso n&atilde;o faz de n&oacute;s uma m&aacute;quina, mas traz a evid&ecirc;ncia de que isso n&atilde;o &eacute; algo que apenas o pessoal da Ci&ecirc;ncia da Computa&ccedil;&atilde;o precisa conhecer.</p>
+        <p>O <Strong>Algoritmo 01</Strong> &eacute; t&atilde;o repetido por n&oacute;s, que o executamos automaticamente, ou seja, sem refletir. N&atilde;o &eacute; por acaso que, quando observamos algu&eacute;m repetir uma sequ&ecirc;ncia de etapas muito concentrado, dizemos &ldquo;hoje ele/ela est&aacute; no autom&aacute;tico&rdquo;. N&atilde;o se assuste, isso n&atilde;o faz de n&oacute;s uma m&aacute;quina, mas traz a evid&ecirc;ncia de que isso n&atilde;o &eacute; algo que apenas o pessoal da Ci&ecirc;ncia da Computa&ccedil;&atilde;o precisa conhecer.</p>
     </Fragment>
 )
 

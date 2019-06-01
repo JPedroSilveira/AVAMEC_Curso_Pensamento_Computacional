@@ -3,6 +3,8 @@ import Title from '../../../../generics/title'
 import CenterBoxContainer from '../../../../generics/center_box_container'
 import AlgorithmLevel from '../../../../generics/algorithm_level'
 import AlgorithmBox from '../../../../generics/algorithm_box'
+import CenterText from '../../../../generics/center_text'
+import Strong from '../../../../generics/font/strong'
 
 const AplicacoesParte3 = () => (
     <Fragment>
@@ -11,9 +13,9 @@ const AplicacoesParte3 = () => (
         <CenterBoxContainer>
             <AlgorithmBox>
                 <Title>Algoritmo 10 – Explorando um tema na sala de aula</Title><br />
-                <p className="textblue pcenter">(uma experiência de aprendizagem cooperativa na cultura digital)</p>
+                <p className="textblue"><CenterText>(uma experiência de aprendizagem cooperativa na cultura digital)</CenterText></p>
                 <AlgorithmLevel>
-                    <span className="textdarkgreen"><strong>Pré condições</strong>: sentados em suas mesas, dispostas em círculo, os alunos recebem um texto selecionado pelo(a) professor(a).</span>
+                    <span className="textdarkgreen"><Strong>Pré condições</Strong>: sentados em suas mesas, dispostas em círculo, os alunos recebem um texto selecionado pelo(a) professor(a).</span>
                     <AlgorithmLevel showStyle={true}>
                         <li>Ler o texto atentamente;</li>
                         <li>Elaborar e registrar, em uma folha com seu nome, 2 questões sobre o texto lido;</li>

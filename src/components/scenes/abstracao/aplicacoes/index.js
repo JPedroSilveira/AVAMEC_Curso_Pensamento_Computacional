@@ -3,6 +3,7 @@ import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 import IMGMapaParqueFarroupilha from '../../../../images/mapa-farroupilha.png'
 import IMGParqueFarroupilha from '../../../../images/parque-farroupilha.png'
+import Strong from '../../../generics/font/strong'
 
 const Aplicacoes = () => (
     <Fragment>
@@ -11,7 +12,7 @@ const Aplicacoes = () => (
         <p>Quando mudamos de resid&ecirc;ncia, muitas vezes ocorre de irmos morar em um bairro desconhecido, ou mesmo em uma outra cidade. Nessa situa&ccedil;&atilde;o, n&oacute;s e nossos familiares ficamos um tanto perdidos, sem saber exatamente onde fica a padaria, o supermercado, a escola dos filhos, etc. Se escolhermos ir passeando pelo bairro, para conhecer in loco esses diferentes lugares, precisaremos de um pouco de ajuda, perguntando aos moradores onde ficam os locais onde desejamos ir. Uma outra estrat&eacute;gia &eacute; desenhar um mapa de nosso bairro, indicando as ruas que nos interessam e marcando bem onde fica cada local importante para n&oacute;s. O mapa &eacute; uma abstra&ccedil;&atilde;o do nosso bairro, no qual colocaremos apenas as informa&ccedil;&otilde;es que necessitamos para nos localizarmos. Isso inclui as ruas e os locais importantes para n&oacute;s. Nas Figuras 1 e 2 apresentamos dois mapas de uma regi&atilde;o conhecida da cidade de Porto Alegre, o entorno do Parque Farroupilha. Em uma das imagens, na Figura 1, est&atilde;o em destaque as vias. Na Figura 2, est&atilde;o mais n&iacute;tidas as constru&ccedil;&otilde;es e &aacute;reas de vegeta&ccedil;&atilde;o.</p>        
         <Image src={IMGMapaParqueFarroupilha} alt="Mapa do Parque Farroupilha">
             <p>
-                <strong>Figura 1: Sistema viário no entorno do Parque Farroupilha, Porto Alegre-RS</strong>
+                <Strong>Figura 1: Sistema viário no entorno do Parque Farroupilha, Porto Alegre-RS</Strong>
                 <br />
                 <ExternalLink href="https://www.google.com/maps/place/Farroupilha+Park/@-30.0445546,-51.2044402,15z/data=!4m5!3m4!1s0x951978534879152d:0xa9522f5e1a9af85b!8m2!3d-30.0368367!4d-51.2160596">
                     Fonte: Google Maps
@@ -20,7 +21,7 @@ const Aplicacoes = () => (
         </Image>
         <Image src={IMGParqueFarroupilha} alt="Construções e áreas de vegetação no entorno do Parque Farroupilha">
             <p>
-                <strong>Figura 2: Construções e áreas de vegetação no entorno do Parque Farroupilha, Porto Alegre-RS</strong>
+                <Strong>Figura 2: Construções e áreas de vegetação no entorno do Parque Farroupilha, Porto Alegre-RS</Strong>
                 <br />
                 <ExternalLink href="https://www.google.com/maps/place/Farroupilha+Park/@-30.0445546,-51.2044402,4067m/data=!3m1!1e3!4m5!3m4!1s0x951978534879152d:0xa9522f5e1a9af85b!8m2!3d-30.0368367!4d-51.2160596">
                     Fonte: Google Maps

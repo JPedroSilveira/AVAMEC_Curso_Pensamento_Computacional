@@ -17,10 +17,11 @@ import AlgorithmLevel from '../../algorithm_level'
 import CenterBoxContainer from '../../center_box_container'
 import StatementAlgorithmBox from '../../statement_algorithm_box'
 import InlineBox from '../../inline_box'
-import ActivityOption from '../../activity_option'
+import ActivityOption from '../activity_option'
 import InputRadioButton from '../../buttons/input_radio_button'
 import GradeBox from '../../grade_box'
 import Box from '../../box'
+import Strong from '../../font/strong'
 import Color from '../../../../constants/color'
 
 import ReactHtmlParser from 'react-html-parser'
@@ -337,14 +338,14 @@ class IntegralActivity extends BaseActivity {
             if (selectedOption.state === QuestionState.ANSWERED_RIGHT) {
                 return (
                     <Box backgroundColor={Color.HINT_RIGHT_BG}>
-                        <strong>Resposta Certa: </strong>
+                        <Strong>Resposta Certa: </Strong>
                         {option.tip}
                     </Box>
                 )
             } else if (selectedOption.state === QuestionState.ANSWERED_WRONG) {
                 return (
                     <Box backgroundColor={Color.HINT_WRONG_BG}>
-                        <strong>Resposta Errada: </strong>
+                        <Strong>Resposta Errada: </Strong>
                         {option.tip}
                     </Box>
                 )

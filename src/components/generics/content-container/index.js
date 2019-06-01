@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 
-class BasicTextContainer extends React.Component {
+class ContentContainer extends React.Component {
     render() {
         return (
             <div className="basic-text-container">
@@ -11,4 +11,4 @@ class BasicTextContainer extends React.Component {
     }
 }
 
-export default BasicTextContainer
+export default ContentContainer

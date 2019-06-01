@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import ReactPaginate from 'react-paginate'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import LocalStorageUtils from '../../../utils/localStorageUtils.js'
-import PCenter from '../p_center'
-import StrongL from '../strong_l'
+import CenterText from '../center_text'
+import Strong from '../font/strong'
 import SmallFont from '../font/small'
 import CenterBoxContainer from '../center_box_container'
 import Image from '../image'
@@ -125,7 +125,7 @@ class Pagination extends React.Component {
                 <button onClick={this.returnButton} className="return-button"><Image width="3.5em" height="2.5em" src={UpArrow} alt="Retornar para o topo da página." /></button>
             </div>
             <div className="slides-text-container">
-               <PCenter><span className="slide-text">VOCÊ ESTÁ EM: </span></PCenter>
+                <p><CenterText><span className="slide-text">VOCÊ ESTÁ EM: </span></CenterText></p>
             </div>
             <div style={{ backgroundImage: "url(" + Padrao + ")", backgroundRepeat: "repeat-x", backgroundSize: "contain"}}>
                 <CenterBoxContainer>
@@ -179,7 +179,7 @@ class Pagination extends React.Component {
                             <Image width="5em" height="8em" src={GreekColumn} alt="Greek column" />
                         </div>
                         <div className="greek-column-item"> 
-                            <PCenter><SmallFont><StrongL>IR PARA OS SLIDE: </StrongL></SmallFont></PCenter>
+                            <p><CenterText><SmallFont><Strong>IR PARA OS SLIDE: </Strong></SmallFont></CenterText></p>
                             <ReactPaginate
                                 disabledClassName={'disabled-page'}
                                 previousLabel={'<'}
