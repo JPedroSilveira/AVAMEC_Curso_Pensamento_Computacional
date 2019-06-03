@@ -6,7 +6,7 @@ import AlgorithmLevel from '../../../generics/algorithm_level'
 import AlgorithmBox from '../../../generics/algorithm_box'
 import Color from '../../../../constants/color'
 import CenterText from '../../../generics/center_text'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 const TomandoDecisoes = () => (
     <Fragment>

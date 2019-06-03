@@ -3,7 +3,7 @@ import IMGDecomposicao1 from '../../../../images/decomposicao-1.jpg'
 import IMGDecomposicao2 from '../../../../images/decomposicao-2.png'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 const Aplicacoes = () => (
     <Fragment>

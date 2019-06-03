@@ -1,0 +1,10 @@
+.context-menu-container{
+    position: fixed;
+    background: yellow;
+    width: 100%;
+    height: 4em;
+    bottom: 0;
+}
+.context-menu-container-hidden{
+    width: 0%;
+}

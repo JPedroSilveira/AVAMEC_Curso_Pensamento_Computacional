@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import ExternalLink from '../../../../generics/external_link'
-import Strong from '../../../../generics/font/Strong'
+import Strong from '../../../../generics/font/strong'
 
 class InterdisciplinaridadeUm extends React.Component {
     render() {

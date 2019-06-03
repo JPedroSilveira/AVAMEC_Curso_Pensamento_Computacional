@@ -3,7 +3,7 @@ import Title from '../../../generics/title'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import AlgorithmLevel from '../../../generics/algorithm_level'
 import AlgorithmBox from '../../../generics/algorithm_box'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 const TomandoDecisoes = () => (
     <Fragment>

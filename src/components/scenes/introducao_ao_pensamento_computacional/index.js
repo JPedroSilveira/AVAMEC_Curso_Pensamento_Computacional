@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
-import ContentContainer from '../../generics/content-container'
+import ContextMenu from '../../generics/context_menu'
+import ContentContainer from '../../generics/content_container'
 import Texto1 from './texto_1'
 import Texto2 from './texto_2'
 import Texto3 from './texto_3'
@@ -134,6 +135,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     render() {
         return (
             <Fragment>
+                <ContextMenu/>
                 {this.renderTalk()}
                 <ContentContainer>
                     {this.renderTitle()}
