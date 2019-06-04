@@ -1,5 +1,6 @@
 import React from 'react'
 import ContextMenu from '../context_menu'
+import TopBar from '../top_bar'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import Pagination from '../pagination'
 import LocalStorageUtils from '../../../utils/localStorageUtils'
@@ -48,6 +49,12 @@ class UnitBase extends React.Component {
                 hidden={this.state.contextMenuHidden}
                 onPageChange={this.updatePage}
                 unit={this.props.id} />
+        )
+    }
+
+    renderTopBar = () => {
+        return (
+            <TopBar hidden={this.state.topBarHidden} unit={this.props.id} />
         )
     }
 }

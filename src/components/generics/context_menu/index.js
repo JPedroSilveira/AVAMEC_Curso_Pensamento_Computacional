@@ -16,7 +16,7 @@ import './styles.css'
 class ContextMenu extends React.Component {
     constructor(props){
         super(props)
-        window.onscroll = this.onScroll
+        window.addEventListener('scroll', this.onScroll)
         this.state = {
             contextMenuClass: props.hidden ? "context-menu-container-hidden" : "context-menu-container",
             page: parseInt(props.openPage)

@@ -28,7 +28,8 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
             hasPreviousTalk: false,
             hasNextTalk: true,
             renderTalk: true,
-            contextMenuHidden: true
+            contextMenuHidden: true,
+            topBarHidden: true
         }
     }
 
@@ -85,7 +86,8 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     finishTalk = () => {
         this.setState({
             renderTalk: false,
-            contextMenuHidden: false
+            contextMenuHidden: false,
+            topBarHidden: false
         })
     }
 
@@ -142,6 +144,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
                     {this.renderPage()}
                 </ContentContainer>
                 {this.renderContextMenu()}
+                {this.renderTopBar()}
                 {this.loadPagination()}
             </Fragment>
         )

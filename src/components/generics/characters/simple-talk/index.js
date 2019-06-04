@@ -5,7 +5,6 @@ import FontDark from '../../font/dark'
 import FontMedium from '../../font/medium'
 import FontLarge from '../../font/large'
 import FontSmall from '../../font/small'
-import FontHuge from '../../font/huge'
 import './styles.css'
 
 class SimpleTalk extends React.Component {
@@ -29,12 +28,12 @@ class SimpleTalk extends React.Component {
                     <Fragment>
                         {this.props.hasNextTalk ?
                             <Fragment>
-                                <div onClick={this.props.previousTalk} className="button previous-button"><FontHuge>{"<"}</FontHuge></div>
-                                <div onClick={this.props.nextTalk} className="button next-button"><FontHuge>{">"}</FontHuge></div>
+                                <div onClick={this.props.previousTalk} className="button previous-button"><FontLarge>{"<"}</FontLarge></div>
+                                <div onClick={this.props.nextTalk} className="button next-button"><FontLarge>{">"}</FontLarge></div>
                             </Fragment>
                             :
                             <Fragment>
-                                <div onClick={this.props.previousTalk} className="button last-previous"><FontHuge>{"<"}</FontHuge></div>
+                                <div onClick={this.props.previousTalk} className="button last-previous"><FontLarge>{"<"}</FontLarge></div>
                                 <div className="button read-more"><FontLarge>Leia Mais</FontLarge></div>
                                 <div onClick={this.props.finishTalk} className="button ok-button"><FontLarge>Ok!</FontLarge></div>
                             </Fragment>
