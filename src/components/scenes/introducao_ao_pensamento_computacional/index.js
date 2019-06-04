@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
-import ContextMenu from '../../generics/context_menu'
 import ContentContainer from '../../generics/content_container'
 import Texto1 from './texto_1'
 import Texto2 from './texto_2'
@@ -28,7 +27,8 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
             currentTalk: 1,
             hasPreviousTalk: false,
             hasNextTalk: true,
-            renderTalk: true
+            renderTalk: true,
+            contextMenuHidden: true
         }
     }
 
@@ -84,7 +84,8 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
 
     finishTalk = () => {
         this.setState({
-            renderTalk: false
+            renderTalk: false,
+            contextMenuHidden: false
         })
     }
 
@@ -135,12 +136,12 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     render() {
         return (
             <Fragment>
-                <ContextMenu/>
                 {this.renderTalk()}
                 <ContentContainer>
                     {this.renderTitle()}
                     {this.renderPage()}
                 </ContentContainer>
+                {this.renderContextMenu()}
                 {this.loadPagination()}
             </Fragment>
         )

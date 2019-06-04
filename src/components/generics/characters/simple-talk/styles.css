@@ -60,7 +60,7 @@ div.buttons-container div.button{
 }
 
 div.buttons-container div.button.first-button{
-    margin-left: 9em;
+    margin-left: 10em;
 }
 
 div.buttons-container div.button.next-button, div.buttons-container div.button.previous-button, div.buttons-container div.button.last-previous{
@@ -84,20 +84,39 @@ div.buttons-container div.button.read-more{
     margin-right: 0.8em;
 }
 
+div.close-button-container{
+    color: white;
+    height: 2em;
+    margin-left: 32.5em;
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+div.close-button-container:hover{
+    color: yellow;
+}
+
+div.close-button-underline{
+    height: 0.05em;
+    width: 3.2em;
+    margin-left: 1em;
+    background-color: white;
+}
+
 @media only screen and (min-width: 1600px) {
     div.character-container{
         padding-top: 9em;
         width: 70em;
     }
     div.character-container div.content{
-        margin-left: 47.5%;
+        margin-left: 48.5%;
         width: 30em;
     }
     div.buttons-container{
         margin-top: 4em;
     }
     div.buttons-container div.button.first-button{
-        margin-left: 25em;
+        margin-left: 25.45em;
     }
     div.buttons-container div.button.previous-button{
         margin-left: 25em;
@@ -111,6 +130,14 @@ div.buttons-container div.button.read-more{
         padding-left: 1.1em;
         padding-right: 0.9em;
         border-radius: 0.5em;
+    }
+    div.close-button-container{
+        margin-left: 46.2em;
+        margin-top: 5em;
+    }
+    div.close-button-underline{
+        width: 5.2em;
+        margin-left: 0.77em;
     }
 }
 

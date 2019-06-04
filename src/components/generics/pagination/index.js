@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import ReactPaginate from 'react-paginate'
+import UnitServices from '../../../services/unitServices'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import LocalStorageUtils from '../../../utils/localStorageUtils.js'
 import CenterText from '../center_text'
@@ -53,25 +54,11 @@ class Pagination extends React.Component {
     }
 
     nextUnit = () => {
-        AvaMecApiServices.getUnitConclusionData(this.props.unit, this.nextUnitCallback)
-    }
-
-    nextUnitCallback = info => {
-        if (info.detail.status === 200) {
-            if (info.detail.data.unidade !== undefined && info.detail.data.unidade.permitePorcentagem) {
-                if (String(info.detail.data.porcentagemConclusao) < "100") {
-                    AvaMecApiServices.saveUnitProgress(this.props.unit, 100)
-                }
-            }
-        }
-
-        AvaMecApiServices.closeGetUnitConclusionDataListener(this.nextUnitCallback)
-
-        AvaMecApiServices.getNextUnit(this.props.unit)
+        UnitServices.nextUnit(this.props.unit)
     }
 
     previousUnit = () => {
-        AvaMecApiServices.getPreviousUnit(this.props.unit)
+        UnitServices.previousUnit(this.props.unit)
     }
 
     onPageChange = data => {

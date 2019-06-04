@@ -1,4 +1,5 @@
 import React from 'react'
+import ContextMenu from '../context_menu'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import Pagination from '../pagination'
 import LocalStorageUtils from '../../../utils/localStorageUtils'
@@ -31,14 +32,23 @@ class UnitBase extends React.Component {
     }
     
     loadPagination = () => {
-        if(this.state.availablePages > 1){
-            return (
-                <Pagination
-                    availablePages={this.state.availablePages}
-                    onPageChange={this.updatePage}
-                    unit={this.props.id} />
-            )
-        }
+        return (
+            <Pagination
+                availablePages={this.state.availablePages}
+                onPageChange={this.updatePage}
+                unit={this.props.id} />
+        )
+    }
+
+    renderContextMenu = () => {
+        return (
+            <ContextMenu
+                pagesCount={this.state.availablePages}
+                openPage={this.state.openPage}
+                hidden={this.state.contextMenuHidden}
+                onPageChange={this.updatePage}
+                unit={this.props.id} />
+        )
     }
 }
 
