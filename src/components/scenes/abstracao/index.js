@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
-import ContentContainer from '../../generics/content-container'
+import ContentContainer from '../../generics/content_container'
 import AplicacaoInterativa from './aplicacao_interativa'
 import Conceituacao from './conceituacao'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'

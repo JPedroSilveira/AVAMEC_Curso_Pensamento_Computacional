@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Strong from '../../../../generics/font/Strong'
+import Strong from '../../../../generics/font/strong'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     unitId: String, representa o id da unidade em que a atividade se encontra

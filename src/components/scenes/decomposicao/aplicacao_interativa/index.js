@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import MiniGameNames from '../../../../constants/miniGameNames'
 import MiniGameLoader from '../../../generics/mini_game_loader'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 class AplicacaoInterativa extends React.Component {
     render() {

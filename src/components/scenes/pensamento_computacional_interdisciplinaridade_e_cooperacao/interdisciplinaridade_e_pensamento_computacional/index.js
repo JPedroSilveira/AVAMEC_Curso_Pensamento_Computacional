@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import Image from '../../../generics/image'
 import ExternalLink from '../../../generics/external_link'
 import Petersen from '../../../../images/petersen-graph-example.png'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 class InterdisciplinaridadeEPensamentoComputacional extends React.Component {
     render() {

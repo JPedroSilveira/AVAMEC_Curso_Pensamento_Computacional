@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import YouTubePlayer from '../../../generics/youtube_player'
 import ExternalLink from '../../../generics/external_link'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 const Aplicacoes = () => (
     <Fragment>

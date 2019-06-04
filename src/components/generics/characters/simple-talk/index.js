@@ -4,6 +4,7 @@ import FontLight from '../../font/light'
 import FontDark from '../../font/dark'
 import FontMedium from '../../font/medium'
 import FontLarge from '../../font/large'
+import FontSmall from '../../font/small'
 import FontHuge from '../../font/huge'
 import './styles.css'
 
@@ -46,6 +47,15 @@ class SimpleTalk extends React.Component {
         )
     }
 
+    renderCloseButton = () => {
+        return (
+            <div onClick={this.props.finishTalk} className="close-button-container">
+                <div><FontSmall>PULAR DIÁLOGO</FontSmall></div>
+                <div className="close-button-underline"></div>
+            </div>
+        )
+    }
+
     render() {
         return (
             <div className="main-container">
@@ -53,6 +63,7 @@ class SimpleTalk extends React.Component {
                     <div className="character-container" style={{ backgroundImage: "url(" + this.props.src + ")" }}>
                         {this.renderContent()}
                         {this.renderButtons()}
+                        {this.renderCloseButton()}
                     </div>
                 </div>
             </div>

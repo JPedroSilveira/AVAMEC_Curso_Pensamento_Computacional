@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import ReactPaginate from 'react-paginate'
+import UnitServices from '../../../services/unitServices'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import LocalStorageUtils from '../../../utils/localStorageUtils.js'
 import CenterText from '../center_text'
@@ -12,6 +13,7 @@ import RightArrow from '../../../images/right-arrow.png'
 import UpArrow from '../../../images/up-arrow.png'
 import GreekColumn from '../../../images/greek-column.png'
 import Padrao from '../../../images/padrao.png'
+import IDs from '../../../constants/ids'
 import './styles.css'
 
 class Pagination extends React.Component {
@@ -52,25 +54,11 @@ class Pagination extends React.Component {
     }
 
     nextUnit = () => {
-        AvaMecApiServices.getUnitConclusionData(this.props.unit, this.nextUnitCallback)
-    }
-
-    nextUnitCallback = info => {
-        if (info.detail.status === 200) {
-            if (info.detail.data.unidade !== undefined && info.detail.data.unidade.permitePorcentagem) {
-                if (String(info.detail.data.porcentagemConclusao) < "100") {
-                    AvaMecApiServices.saveUnitProgress(this.props.unit, 100)
-                }
-            }
-        }
-
-        AvaMecApiServices.closeGetUnitConclusionDataListener(this.nextUnitCallback)
-
-        AvaMecApiServices.getNextUnit(this.props.unit)
+        UnitServices.nextUnit(this.props.unit)
     }
 
     previousUnit = () => {
-        AvaMecApiServices.getPreviousUnit(this.props.unit)
+        UnitServices.previousUnit(this.props.unit)
     }
 
     onPageChange = data => {
@@ -120,23 +108,23 @@ class Pagination extends React.Component {
     render() {
         return (
             <Fragment>
-            <div className="return-button-container">
-                <span className="return-button-text">VOLTAR PARA O TOPO</span>
-                <button onClick={this.returnButton} className="return-button"><Image width="3.5em" height="2.5em" src={UpArrow} alt="Retornar para o topo da página." /></button>
-            </div>
-            <div className="slides-text-container">
-                <p><CenterText><span className="slide-text">VOCÊ ESTÁ EM: </span></CenterText></p>
-            </div>
-            <div style={{ backgroundImage: "url(" + Padrao + ")", backgroundRepeat: "repeat-x", backgroundSize: "contain"}}>
-                <CenterBoxContainer>
-                    <div className="slide-box-container">
-                        SLIDE {this.state.page} DE {this.state.availablePages}
-                    </div>
-                </CenterBoxContainer>
-            </div>
-            <div className="pagination-container">
-                <CenterBoxContainer>
-                    <div className="unit-box-container">
+                <div className="return-button-container">
+                    <span className="return-button-text">VOLTAR PARA O TOPO</span>
+                    <button onClick={this.returnButton} className="return-button"><Image width="3.5em" height="2.5em" src={UpArrow} alt="Retornar para o topo da página." /></button>
+                </div>
+                <div id={IDs.SLIDE_INFO_PAGINATION} className="slides-text-container">
+                    <p><CenterText><span className="slide-text">VOCÊ ESTÁ EM: </span></CenterText></p>
+                </div>
+                <div style={{ backgroundImage: "url(" + Padrao + ")", backgroundRepeat: "repeat-x", backgroundSize: "contain"}}>
+                    <CenterBoxContainer>
+                        <div className="slide-box-container">
+                            SLIDE {this.state.page} DE {this.state.availablePages}
+                        </div>
+                    </CenterBoxContainer>
+                </div>
+                <div className="pagination-container">
+                    <CenterBoxContainer>
+                        <div className="unit-box-container">
                         <div onClick={this.nextPageOrUnit} className="unit-box-item button-item">
                             <Image width="1.3em" height="1.7em" src={RightArrow} alt="Avançar" />
                         </div>
@@ -172,9 +160,9 @@ class Pagination extends React.Component {
                             <Image width="1.3em" height="1.7em" src={LeftArrow} alt="Voltar" />
                         </div>
                     </div>
-                </CenterBoxContainer>
-                <CenterBoxContainer>
-                    <div className="greek-column-container">
+                    </CenterBoxContainer>
+                    <CenterBoxContainer>
+                        <div className="greek-column-container">
                         <div className="greek-column-item">
                             <Image width="5em" height="8em" src={GreekColumn} alt="Greek column" />
                         </div>
@@ -199,8 +187,8 @@ class Pagination extends React.Component {
                             <Image width="5em" height="8em" src={GreekColumn} alt="Greek column" />
                         </div>
                     </div>
-                </CenterBoxContainer>
-            </div>
+                    </CenterBoxContainer>
+                </div>
             </Fragment>
         )
     }

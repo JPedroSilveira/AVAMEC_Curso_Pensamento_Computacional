@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
-import ContentContainer from '../../generics/content-container'
+import ContentContainer from '../../generics/content_container'
 import InterdisciplinaridadeParteUm from './interdisciplinaridade/parte_um'
 import InterdisciplinaridadeParteDois from './interdisciplinaridade/parte_dois'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'

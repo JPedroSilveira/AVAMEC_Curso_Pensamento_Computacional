@@ -1,0 +1,70 @@
+div.context-menu-container{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 2.2em;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+div.context-menu-container-hidden{
+    display: none;
+}
+div.page-circle-container{
+    margin-left: 10%;
+}
+div.page-circle-container div.page-circle{
+    border: 0.1em #13C4D6 solid;
+    border-radius: 50%;
+    width: 0.7em;
+    height: 0.7em;
+    float: left;
+    margin-left: 1em;
+    cursor: pointer;
+}
+div.page-circle-container div.page-circle.page-circle-selected{
+    background-color: #EEAD2D;
+    cursor: default;
+}
+div.extra-content-button-container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+    padding-bottom: 0.3em;
+    cursor: pointer;
+}
+div.extra-content-button-container div.button-underline{
+    height: 0.07em;
+    width: 80%;
+    background-color: white;
+}
+div.page-info-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25%;
+}
+div.page-info-container div.page-info-button{
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+div.page-info-text{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #13C4D6;
+    color: white;
+    border-radius: 0.6em;
+    height: 2.2em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+@media only screen and (min-width: 1600px) {
+    div.extra-content-button-container{
+        margin-left: 28%;
+    }
+}

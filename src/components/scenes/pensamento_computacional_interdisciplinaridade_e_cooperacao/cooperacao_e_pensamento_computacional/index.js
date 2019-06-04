@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 class CooperacaoEPensamentoComputacional extends React.Component {
     render() {

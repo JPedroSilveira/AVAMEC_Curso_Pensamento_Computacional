@@ -5,7 +5,7 @@ import QualidadeVida from '../../../../images/qualidade-de-vida.png'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color' 
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 class AplicacaoInterdisciplinaridade extends React.Component {
     render() {

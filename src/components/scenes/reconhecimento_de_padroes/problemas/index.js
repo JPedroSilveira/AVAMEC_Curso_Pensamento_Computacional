@@ -6,7 +6,7 @@ import CenterBoxContainer from '../../../generics/center_box_container'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color'
 import ExternalLink from '../../../generics/external_link'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 const Problemas = () => (
     <Fragment>

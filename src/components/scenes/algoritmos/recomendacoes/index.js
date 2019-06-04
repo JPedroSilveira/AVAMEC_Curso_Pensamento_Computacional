@@ -5,7 +5,7 @@ import Color from '../../../../constants/color'
 import AlgorithmBox from '../../../generics/algorithm_box'
 import AlgorithmLevel from '../../../generics/algorithm_level'
 import Title from '../../../generics/title'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 const Recomendacoes = () => (
     <Fragment>

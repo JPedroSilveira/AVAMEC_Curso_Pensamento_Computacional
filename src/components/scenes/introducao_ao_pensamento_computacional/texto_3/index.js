@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Box from '../../../generics/box'
 import Color from '../../../../constants/color'
-import Strong from '../../../generics/font/Strong'
+import Strong from '../../../generics/font/strong'
 
 const Texto3 = () => (
     <Fragment>
