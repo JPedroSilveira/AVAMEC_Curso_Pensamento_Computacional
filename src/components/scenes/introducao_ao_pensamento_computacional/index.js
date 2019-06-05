@@ -28,7 +28,9 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
             hasPreviousTalk: false,
             hasNextTalk: true,
             renderTalk: true,
-            contextMenuHidden: true
+            talkPage: "1",
+            contextMenuHidden: true,
+            topBarHidden: true
         }
     }
 
@@ -85,7 +87,8 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     finishTalk = () => {
         this.setState({
             renderTalk: false,
-            contextMenuHidden: false
+            contextMenuHidden: false,
+            topBarHidden: false
         })
     }
 
@@ -118,7 +121,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     }
 
     renderTalk = () => {
-        if(this.state.renderTalk){
+        if (this.state.renderTalk && this.state.openPage === this.state.talkPage){
             return (
                 <CharacterTalk
                     hasPreviousTalk={this.state.hasPreviousTalk}
@@ -142,6 +145,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
                     {this.renderPage()}
                 </ContentContainer>
                 {this.renderContextMenu()}
+                {this.renderTopBar()}
                 {this.loadPagination()}
             </Fragment>
         )

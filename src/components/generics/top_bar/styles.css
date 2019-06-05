@@ -1,0 +1,148 @@
+div.top-bar-container{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation-name: fadeInOutTopBar;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+}
+div.top-bar-container-hidden{
+    animation-name: fadeInOutTopBarInverse;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    height: 0%;
+}
+div.top-bar-container div.top-bar-line{
+    background-color: #eead2d;
+    height: 40%;
+    width: 100%;
+}
+div.top-bar-container div.top-context-menu-container{
+    background: rgb(0,158,195); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(0,158,195,1) 50%, rgba(0,183,234,1) 50%, rgba(0,183,234,1) 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(0,158,195,1) 50%,rgba(0,183,234,1) 50%,rgba(0,183,234,1) 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(0,158,195,1) 50%,rgba(0,183,234,1) 50%,rgba(0,183,234,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009ec3', endColorstr='#00b7ea',GradientType=1 ); /* IE6-9 */
+    height: 60%;
+    width: 50%;
+    border-radius: 0em 0em 0.25em 0.25em;
+    animation-name: fadeInOutTopBarContextMenu;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+}
+div.top-bar-container .top-context-menu-container.top-context-menu-container-hidden{
+    animation-name: fadeInOutTopBarContextMenuInverse;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    opacity: 0;
+}
+div.top-bar-container div.top-context-menu-container div.course-name{
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 0.5%;
+}
+div.top-bar-container div.top-context-menu-container div.unit-name{
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 0.5%;
+}
+
+@media only screen and (min-width: 1600px) {
+    div.top-bar-container{
+        height: 7%;
+    }
+}
+
+@keyframes fadeInOutTopBar {
+    100% {
+        height: 7%;
+    }
+    80% {
+        height: 6%;
+    }
+    60% {
+        height: 5%;
+    }
+    40% {
+        height: 4%;
+    }
+    20% {
+        height: 2%;
+    }
+    0% {
+        height: 0%;
+    }
+}
+
+@keyframes fadeInOutTopBarInverse{
+    100% {
+        height: 0%;
+    }
+    80% {
+        height: 2%;
+    }
+    60% {
+        height: 4%;
+    }
+    40% {
+        height: 5%;
+    }
+    20% {
+        height: 6%;
+    }
+    0% {
+        height: 7%;
+    }
+}
+
+@keyframes fadeInOutTopBarContextMenu {
+    100% {
+        height: 60%;
+    }
+    80% {
+        height: 48%;
+    }
+    60% {
+        height: 36%;
+    }
+    40% {
+        height: 24%;
+    }
+    20% {
+        height: 12%;
+    }
+    0% {
+        height: 0%;
+    }
+}
+
+@keyframes fadeInOutTopBarContextMenuInverse {
+    100% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    0% {
+        opacity: 1;
+    }
+}
