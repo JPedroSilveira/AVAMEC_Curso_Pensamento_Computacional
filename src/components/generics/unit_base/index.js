@@ -22,8 +22,14 @@ class UnitBase extends React.Component {
     }
 
     updatePage = () => {
+        const openPage = LocalStorageUtils.getOpenPage()
+        const isTalkPage = openPage === this.state.talkPage
+        
         this.setState({
-            openPage: LocalStorageUtils.getOpenPage()
+            openPage: openPage,
+            renderTalk: isTalkPage,
+            contextMenuHidden: isTalkPage,
+            topBarHidden: isTalkPage
         })
 
         document.body.scrollTop = 0; // For Safari

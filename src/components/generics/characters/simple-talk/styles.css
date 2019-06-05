@@ -85,7 +85,7 @@ div.close-button-container{
     color: white;
     height: 2em;
     margin-left: 32.5em;
-    margin-top: 2em;
+    margin-top: 1.2em;
     cursor: pointer;
 }
 
@@ -94,9 +94,9 @@ div.close-button-container:hover{
 }
 
 div.close-button-underline{
-    height: 0.05em;
-    width: 3.2em;
-    margin-left: 1em;
+    height: 0.1em;
+    width: 4em;
+    margin-left: 0.6em;
     background-color: white;
 }
 

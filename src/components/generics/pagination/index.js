@@ -3,7 +3,6 @@ import ReactPaginate from 'react-paginate'
 import UnitServices from '../../../services/unitServices'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import LocalStorageUtils from '../../../utils/localStorageUtils.js'
-import CenterText from '../center_text'
 import Strong from '../font/strong'
 import SmallFont from '../font/small'
 import CenterBoxContainer from '../center_box_container'
@@ -113,7 +112,7 @@ class Pagination extends React.Component {
                     <button onClick={this.returnButton} className="return-button"><Image width="3.5em" height="2.5em" src={UpArrow} alt="Retornar para o topo da página." /></button>
                 </div>
                 <div id={IDs.SLIDE_INFO_PAGINATION} className="slides-text-container">
-                    <p><CenterText><span className="slide-text">VOCÊ ESTÁ EM: </span></CenterText></p>
+                    <p><span className="slide-text">VOCÊ ESTÁ EM: </span></p>
                 </div>
                 <div style={{ backgroundImage: "url(" + Padrao + ")", backgroundRepeat: "repeat-x", backgroundSize: "contain"}}>
                     <CenterBoxContainer>
@@ -164,10 +163,10 @@ class Pagination extends React.Component {
                     <CenterBoxContainer>
                         <div className="greek-column-container">
                         <div className="greek-column-item">
-                            <Image width="5em" height="8em" src={GreekColumn} alt="Greek column" />
+                            <Image width="4em" height="8em" src={GreekColumn} alt="Greek column" />
                         </div>
                         <div className="greek-column-item"> 
-                            <p><CenterText><SmallFont><Strong>IR PARA OS SLIDE: </Strong></SmallFont></CenterText></p>
+                            <p className="greek-slide-text"><SmallFont><Strong>IR PARA OS SLIDE: </Strong></SmallFont></p>
                             <ReactPaginate
                                 disabledClassName={'disabled-page'}
                                 previousLabel={'<'}
@@ -184,7 +183,7 @@ class Pagination extends React.Component {
                             />
                         </div>
                         <div className="greek-column-item">
-                            <Image width="5em" height="8em" src={GreekColumn} alt="Greek column" />
+                            <Image width="4em" height="8em" src={GreekColumn} alt="Greek column" />
                         </div>
                     </div>
                     </CenterBoxContainer>

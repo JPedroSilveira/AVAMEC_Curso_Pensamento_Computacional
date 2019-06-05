@@ -95,6 +95,7 @@ div.pagination-container{
     font-size: 0.9em;
     font-weight: 600;
     color: #a0864d;
+    text-align: center;
 }
 
 div.greek-column-item{
@@ -102,8 +103,7 @@ div.greek-column-item{
 }
 
 div.greek-column-item:nth-child(2){
-    width: 46em;
-    max-width: 46em; 
+    width: 29em;
 }
 
 div.return-button-container{
@@ -136,5 +136,9 @@ div.return-button-container{
 
 div.slides-text-container{
     margin-left: 25em;
+}
+
+.greek-slide-text{
+    text-align: center;
 }
 

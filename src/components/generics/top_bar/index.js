@@ -13,6 +13,14 @@ class TopBar extends React.Component {
         window.addEventListener('scroll', this.onScroll)
         this.state = {
             componentClass: "top-bar-container top-bar-container-hidden",
+            componentContextMenuClass: "top-context-menu-container"
+        }
+    }
+    componentDidUpdate(prevProps) {
+        if (this.props.hidden !== prevProps.hidden) {
+            this.setState({
+                componentClass: this.props.hidden ? "top-bar-container top-bar-container-hidden" : "top-bar-container top-bar-container"
+            })
         }
     }
     onScroll = (event) => {
@@ -25,23 +33,23 @@ class TopBar extends React.Component {
         if (scrollTop > clientHeight*0.2) {
             if (this.isHidden() && !this.props.hidden) {
                 this.setState({
-                    componentClass: "top-bar-container"
+                    componentContextMenuClass: "top-context-menu-container"
                 })
             }
         } else if (!this.isHidden()) {
             this.setState({
-                componentClass: "top-bar-container top-bar-container-hidden"
+                componentContextMenuClass: "top-context-menu-container top-context-menu-container-hidden"
             })
         }
     }
     isHidden = () => {
-        return this.state.componentClass === "top-bar-container top-bar-container-hidden"
+        return this.state.componentContextMenuClass === "top-context-menu-container top-context-menu-container-hidden"
     }
     render() {
         return (
             <div className={this.state.componentClass}>
                 <div className="top-bar-line"></div>
-                <div className="top-context-menu-container">
+                <div className={this.state.componentContextMenuClass}>
                     <div className="course-name"><FontLight><Strong><FontSmall>Pensamento Computacional</FontSmall></Strong></FontLight></div>
                     <div className="unit-name"><FontLight><Strong><FontSmall>{UnitNameUtils.getUnitName(this.props.unit)}</FontSmall></Strong></FontLight></div>
                 </div>            
