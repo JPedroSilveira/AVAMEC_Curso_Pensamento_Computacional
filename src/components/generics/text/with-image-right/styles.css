@@ -1,0 +1,4 @@
+div.text-with-image-right-container{
+    display: flex;
+    flex-direction: row;
+}

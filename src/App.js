@@ -11,9 +11,7 @@ class App extends React.Component {
                     <Main />
                     <div className="push"></div>
                 </div>
-                <div className="footer">
-                    <Footer />
-                </div>
+                <Footer />
             </div>
         )
     }

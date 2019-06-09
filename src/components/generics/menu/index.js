@@ -11,7 +11,7 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import ArrowForward from '@material-ui/icons/ArrowForward'
 import Divider from '@material-ui/core/Divider'
-import Logo from '../../../images/logo.png'
+import Logo from '../../../images/logo.svg'
 import './styles.css'
 
 class Menu extends React.Component {

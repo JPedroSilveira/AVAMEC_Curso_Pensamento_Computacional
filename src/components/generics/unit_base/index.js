@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../header'
 import ContextMenu from '../context_menu'
 import TopBar from '../top_bar'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
@@ -24,12 +25,14 @@ class UnitBase extends React.Component {
     updatePage = () => {
         const openPage = LocalStorageUtils.getOpenPage()
         const isTalkPage = openPage === this.state.talkPage
+        const topBarShowEverything = openPage !== "1"
         
         this.setState({
             openPage: openPage,
             renderTalk: isTalkPage,
             contextMenuHidden: isTalkPage,
-            topBarHidden: isTalkPage
+            topBarHidden: isTalkPage,
+            topBarShowEverything: topBarShowEverything
         })
 
         document.body.scrollTop = 0; // For Safari
@@ -58,9 +61,15 @@ class UnitBase extends React.Component {
         )
     }
 
+    renderHeader = () => {
+        return (
+            <Header/>
+        )
+    }
+
     renderTopBar = () => {
         return (
-            <TopBar hidden={this.state.topBarHidden} unit={this.props.id} />
+            <TopBar hidden={this.state.topBarHidden} showEverything={this.state.topBarShowEverything} unit={this.props.id} />
         )
     }
 }

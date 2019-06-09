@@ -3,23 +3,33 @@ import UnitNameUtils from '../../../utils/unitNameUtils'
 import FontSmall from '../font/small'
 import Strong from '../font/strong'
 import FontLight from '../font/light'
+import TopBarIntro from '../../../images/component/top-bar-intro.svg'
 import './styles.css'
 
 //props.hidden = indica se a barra deve ser exibida
 //props.unit = indica o id da unidade
+//props.showEverything = não esconde seus componentes
 class TopBar extends React.Component {
     constructor(props){
         super(props)
         window.addEventListener('scroll', this.onScroll)
+        console.log(this.props.showEverything)
         this.state = {
-            componentClass: "top-bar-container top-bar-container-hidden",
-            componentContextMenuClass: "top-context-menu-container"
+            componentClass: "top-bar-container top-bar-container-hidden-without-animation",
+            componentContextMenuClass: this.props.showEverything ? "top-context-menu-container" : "top-context-menu-container top-context-menu-container-hidden-without-animation",
+            topBar: TopBarIntro
         }
     }
     componentDidUpdate(prevProps) {
         if (this.props.hidden !== prevProps.hidden) {
             this.setState({
-                componentClass: this.props.hidden ? "top-bar-container top-bar-container-hidden" : "top-bar-container top-bar-container"
+                componentClass: this.props.showEverything ? "top-bar-container top-bar-container" : (this.props.hidden ? "top-bar-container top-bar-container-hidden" : "top-bar-container top-bar-container")
+            })
+        }
+        if (this.props.showEverything !== prevProps.showEverything){
+            this.setState({
+                componentClass: this.props.showEverything ? "top-bar-container top-bar-container" : (this.props.hidden ? "top-bar-container top-bar-container-hidden" : "top-bar-container top-bar-container"),
+                componentContextMenuClass: this.props.showEverything ? "top-context-menu-container" : "top-context-menu-container top-context-menu-container-hidden-without-animation"
             })
         }
     }
@@ -36,20 +46,21 @@ class TopBar extends React.Component {
                     componentContextMenuClass: "top-context-menu-container"
                 })
             }
-        } else if (!this.isHidden()) {
+        } else if (!this.isHidden() && !this.props.showEverything) {
             this.setState({
                 componentContextMenuClass: "top-context-menu-container top-context-menu-container-hidden"
             })
         }
     }
     isHidden = () => {
-        return this.state.componentContextMenuClass === "top-context-menu-container top-context-menu-container-hidden"
+        return (this.state.componentContextMenuClass === "top-context-menu-container top-context-menu-container-hidden")
+            || (this.state.componentContextMenuClass === "top-context-menu-container top-context-menu-container-hidden-without-animation")
     }
     render() {
         return (
             <div className={this.state.componentClass}>
                 <div className="top-bar-line"></div>
-                <div className={this.state.componentContextMenuClass}>
+                <div className={this.state.componentContextMenuClass} style={{ backgroundImage: "url(" + this.state.topBar + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
                     <div className="course-name"><FontLight><Strong><FontSmall>Pensamento Computacional</FontSmall></Strong></FontLight></div>
                     <div className="unit-name"><FontLight><Strong><FontSmall>{UnitNameUtils.getUnitName(this.props.unit)}</FontSmall></Strong></FontLight></div>
                 </div>            

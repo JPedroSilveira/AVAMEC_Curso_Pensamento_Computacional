@@ -1,17 +1,13 @@
 import React, { Fragment } from 'react'
-import Logo from '../../../images/logo.png'
+import Logo from '../../../images/logo.svg'
 import './styles.css'
 
 const Header = () => (
     <Fragment>
-        <div className="course-bar">
-
-        </div>
-        <div className="unit-bar">
-
-        </div>
-        <div className="image-box">
-            <img src={Logo} className="image" alt='Pensamento Computacional' />
+        <div className="image-header-container">
+            <div className="image-header-sub-container">
+                <img src={Logo} className="image-header" alt='Pensamento Computacional' />
+            </div>    
         </div>
     </Fragment>
 )

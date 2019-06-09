@@ -1,16 +1,14 @@
 .app{
     position: relative;
-    background: white;
     font-size: 18px;
     height: 100vh;
 }
 
 .wrapper{
     min-height: 100%;
-    margin-bottom: -7.8em;
+    margin-bottom: -6.4em;
 }
 
-.footer,
 .push {
     height: 6em;
 }

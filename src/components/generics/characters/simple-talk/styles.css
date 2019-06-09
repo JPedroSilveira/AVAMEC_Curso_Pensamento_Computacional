@@ -26,7 +26,6 @@ div.character-container{
 div.character-container div.content{
     margin-left: 46%;
     text-align: justify;
-    font-weight: 700;
     width: 23em;
     height: 12em;
 }
@@ -60,7 +59,7 @@ div.buttons-container div.button{
 }
 
 div.buttons-container div.button.first-button{
-    margin-left: 10em;
+    margin-left: 11em;
 }
 
 div.buttons-container div.button.next-button, div.buttons-container div.button.previous-button, div.buttons-container div.button.last-previous{
@@ -69,12 +68,12 @@ div.buttons-container div.button.next-button, div.buttons-container div.button.p
 
 div.buttons-container div.button.previous-button{
     margin-right: 2em;
-    margin-left: 10.1em;
+    margin-left: 11em;
 }
 
 div.buttons-container div.button.last-previous{
     margin-right: 0.8em;
-    margin-left: 4.4em;
+    margin-left: 6em;
 }
 
 div.buttons-container div.button.read-more{
@@ -84,7 +83,7 @@ div.buttons-container div.button.read-more{
 div.close-button-container{
     color: white;
     height: 2em;
-    margin-left: 32.5em;
+    margin-left: 32.4em;
     margin-top: 1.2em;
     cursor: pointer;
 }
@@ -95,7 +94,7 @@ div.close-button-container:hover{
 
 div.close-button-underline{
     height: 0.1em;
-    width: 4em;
+    width: 4.7em;
     margin-left: 0.6em;
     background-color: white;
 }
@@ -127,11 +126,11 @@ div.close-button-underline{
         border-radius: 0.5em;
     }
     div.close-button-container{
-        margin-left: 45.7em;
+        margin-left: 44.5em;
         margin-top: 1.5em;
     }
     div.close-button-underline{
-        width: 5.2em;
+        width: 6.6em;
         height: 0.1em;
         margin-left: 0.77em;
     }

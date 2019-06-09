@@ -1,17 +1,15 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
 import ContentContainer from '../../generics/content_container'
-import Texto1 from './texto_1'
-import Texto2 from './texto_2'
-import Texto3 from './texto_3'
-import Desafios from './desafios'
-import AplicacaoInterativa from './aplicacao_interativa'
-import Referencias from './referencias'
+import UnitTitle from '../../generics/unit_title'
+import Slide1 from './slide_1'
+import Slide2 from './slide_2'
+import Slide3 from './slide_3'
 import CharacterTalk from '../../generics/characters/simple-talk'
-import FidipidesOne from '../../../images/introducao_ao_pensamento_computacional/fidipides-one.svg'
-import FidipidesTwo from '../../../images/introducao_ao_pensamento_computacional/fidipides-two.svg'
-import FidipidesThree from '../../../images/introducao_ao_pensamento_computacional/fidipides-three.svg'
-import FidipidesFour from '../../../images/introducao_ao_pensamento_computacional/fidipides-four.svg'
+import FidipidesOne from '../../../images/fidipides/fidipides-one.svg'
+import FidipidesTwo from '../../../images/fidipides/fidipides-two.svg'
+import FidipidesThree from '../../../images/fidipides/fidipides-three.svg'
+import FidipidesFour from '../../../images/fidipides/fidipides-four.svg'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -21,7 +19,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 5,
+            availablePages: 3,
             animation: FidipidesOne,
             talkCount: 4,
             currentTalk: 1,
@@ -35,33 +33,26 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     }
 
     renderTitle = () => {
-        return (<h1>1. Introdução ao Pensamento Computacional</h1>)
+        return (<UnitTitle>INTRODUÇÃO</UnitTitle>)
     }
 
     renderPage = () => {
         switch (this.state.openPage) {
             case "1":
                 return (
-                    <Texto1 />
+                    <Fragment>
+                        {this.renderHeader()}
+                        {this.renderTitle()}
+                        <Slide1 />
+                    </Fragment>
                 )
             case "2":
                 return (
-                    <Texto2 />
+                    <Slide2 />
                 )
             case "3":
                 return (
-                    <Texto3 />
-                )
-            case "4":
-                return (
-                    <AplicacaoInterativa />
-                )
-            case "5":
-                return (
-                    <Fragment>
-                        <Desafios />
-                        <Referencias />
-                    </Fragment>
+                    <Slide3 />
                 )
             default:
                 return null
@@ -141,7 +132,6 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
             <Fragment>
                 {this.renderTalk()}
                 <ContentContainer>
-                    {this.renderTitle()}
                     {this.renderPage()}
                 </ContentContainer>
                 {this.renderContextMenu()}

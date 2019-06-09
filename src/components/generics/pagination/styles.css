@@ -1,6 +1,5 @@
 .pagination{
     list-style: none;
-    background-color: inherit;
     text-align: center;
     margin-bottom: 0em;
     margin-top: 0em;
@@ -21,124 +20,177 @@
     height: 2em;
     margin: 0.2em 0.2em;
     display: inline-block;
-    background-color:#DDC683;
-    border: 0.15em solid #A08655;
-    color: white;
+    background-color: #f4f3f3;
+    border: 0.15em solid #65c4d1;
+    color: #41b4c4;
+    font-weight: 700;
     border-radius: 50%;
 }
 
 .pagination li a:hover{
-    border-color: #999D9E;
-    background: rgba(0, 0, 0, 0);
+    border-color: #027e8f;
+    background: #ffd478;
     color: #999D9E;
 }
 
 .pagination .selected-page a{
-    border-color: #999D9E;
-    background: rgba(0, 0, 0, 0);
+    border-color: #027e8f;
+    background: #ffd478;
     color: #999D9E;
     cursor: pointer;
 }
 
 div.unit-box-container{
-    border: 0.05em solid #A0864D;
+    border: 0.05em solid #41b4c4;
     border-radius: 0em 0em 0.4em 0.4em;
-    padding: 0.5em 0em 0.5em 0em;
-    background-color: #A0864D;
     box-shadow: 0em 0.3em 0.5em rgb(160, 134, 77, 0.5);
-    color: white;
-    font-weight: 600;
-    font-size: 1.4em;
+    background-color: #41b4c4;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-div.unit-box-item{
-    float: right;
-    padding: 0.1em 1em 0em 1em;
-}
-
-div.unit-box-item.button-item{
+div.button-item{
     cursor: pointer;
-}
-
-div.unit-box-text{
-    padding-top: 0.33em;
-}
-
-div.unit-text-one{
-    padding-left: 10em;
+    color: #027e8f;
+    padding-bottom: 11px;
+    width: 80px;
+    text-align: center;
 }
 
 div.unit-box-bar{
     float: right;
-    width: 0.113em;
-    height: 1.35em;
-    margin-top: 0.3em;
-    background-color: #ddc683;
+    width: 3px;
+    height: 20pt;
+    background-color: #027e8f;
 }
 
-div.slide-box-container{
-    background-color: #FFFFFF;
-    border: 0.2em solid #A0864D;
-    border-bottom: 0em;
-    border-radius: 0.7em 0.7em 0em 0em;
-    padding: 0.6em 1em 0.6em 1em;
-    color: #a0864d;
-    font-weight: 600;
-    font-size: 1.4em;
+div.unit-text{
+    width: 800px;
+}
+
+div.unit-text div.unit-text-left{
+    float: right;
+    text-align: right;
+    padding-right: 30px;
+}
+
+div.unit-text div.unit-text-right{
+    float: left;
+    text-align: left;
+    padding-left: 30px;
 }
 
 div.pagination-container{
     background-color: #f4f3f3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.slide-text{
-    font-size: 0.9em;
-    font-weight: 600;
-    color: #a0864d;
-    text-align: center;
+div.pagination-sub-container{
+    width: 850px;
 }
 
-div.greek-column-item{
+div.pagination-second-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.greek-first-column{
     float: left;
+    width: 80px;
 }
 
-div.greek-column-item:nth-child(2){
-    width: 29em;
+div.page-control-container{
+    width: 800px;
 }
 
-div.return-button-container{
+div.greek-second-column{
     float: right;
-    margin-right: 10em;
-    background-color: #FFFFFF;
-    text-align: center;
-    cursor: pointer;
-}
-
-.return-button{
-    background-color: #FFFFFF;
-    border: 0.05em solid rgb(196, 196, 196);
-    box-shadow: 0em 0.3em 0.5em rgb(196, 196, 196, 1);
-    border-radius: 0.6em;
-    padding: 1em 0em 1em 0em;
-    width: 4.7em;
-    height: 4.5em;  
-    float: right;
-}
-
-.return-button-text{
-    padding-top: 1em;
-    padding-right: 1em;
-    float: left;
-    font-weight: 700;
-    color: #989ea0;
-    cursor: pointer;
-}
-
-div.slides-text-container{
-    margin-left: 25em;
+    width: 80px;
 }
 
 .greek-slide-text{
     text-align: center;
+}
+
+div.slide-info-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f3f3;
+}
+
+div.slide-info-sub-container{
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.slide-info-box-container{
+    background-color: #FFFFFF;
+    border: 0.2em solid #41b4c4;
+    border-bottom: 0em;
+    border-radius: 0.7em 0.7em 0em 0em;
+    padding: 0.6em 1em 0.6em 1em;
+    width: 150px;
+    text-align: center;
+}
+
+div.pagination-top-container{
+    width: 100%;
+    background-color: #f4f3f3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.pagination-top-sub-container{
+    width: 960px;
+    background-color: white;
+    text-align: center;
+}
+
+div.return-button{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+div.return-button-container{
+    float: right;
+    width: 415px;
+    display: flex;
+    text-align: end;
+}
+
+div.return-button-sub-container{
+    background-color: white;
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+div.slides-text-container{
+    width: 545px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 

@@ -1,0 +1,15 @@
+import React, { Fragment } from 'react'
+import Image from '../../../generics/image'
+import IntroThree from '../../../../images/fidipides/intro-three.svg'
+import Pilares from '../../../../images/content/pilares.svg'
+import InfoTwo from '../../../../images/fidipides/info-two.svg' 
+
+const Slide3 = () => (
+    <Fragment>
+        <Image marginTop="100px" marginBottom="50px" height="auto" width="auto" src={IntroThree}/>
+        <Image marginBottom="50px" height="auto" width="auto" src={Pilares} />
+        <Image marginBottom="50px" height="auto" width="auto" src={InfoTwo} />
+    </Fragment>
+)
+
+export default Slide3

@@ -1,8 +1,3 @@
 .huge-font{
-    font-size: 2.26em;
-}
-@media only screen and (min-width: 1600px) {
-    .huge-font{
-        font-size: 2.55em;
-    }
+    font-size: 38pt;
 }

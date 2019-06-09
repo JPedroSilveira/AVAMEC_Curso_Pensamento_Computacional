@@ -5,8 +5,11 @@ class Image extends React.Component {
     constructor(props){
         super(props)
         this.style = {
-            width: props.width ? props.width : (props.wide ? "50%" : "30%"),
-            height: props.height ? props.height : null
+            width: props.width ? props.width : "auto",
+            height: props.height ? props.height : "auto",
+            backgroundColor: props.backgroundColor ? props.backgroundColor : "none",
+            marginBottom: props.marginBottom ? props.marginBottom : "0",
+            marginTop: props.marginTop ? props.marginTop : "0"
         }
         this.class = "image-container".concat(" ").concat(this.props.className)
     }

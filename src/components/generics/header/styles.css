@@ -1,14 +1,21 @@
-.image-box{
+.image-header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.image-header-container .image-header-sub-container{
+    width: 960px;
+    padding-top: 92px;
+    background-color: #ffffff;
     text-align: center;
-    margin-top: 0em;
 }
 
-.image{
-    height: 250px;
-}
-
-@media screen and (orientation: portrait) {
-   .image{
-        height: 125px;
-    }
+.image-header{
+    width: 190px;
+    height: auto;
+    margin: auto;
 }

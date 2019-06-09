@@ -5,6 +5,7 @@ import FontDark from '../../font/dark'
 import FontMedium from '../../font/medium'
 import FontLarge from '../../font/large'
 import FontSmall from '../../font/small'
+import Regular from '../../font/regular'
 import './styles.css'
 
 class SimpleTalk extends React.Component {
@@ -12,10 +13,10 @@ class SimpleTalk extends React.Component {
         return (
             <div className="content">
                 <div className="title">
-                    <FontLarge><FontLight>{ReactHtmlParser(this.props.content.title)}</FontLight></FontLarge>
+                    <Regular><FontLarge><FontLight>{ReactHtmlParser(this.props.content.title)}</FontLight></FontLarge></Regular>
                 </div>
                 <div className="text">
-                    <FontMedium><FontDark>{ReactHtmlParser(this.props.content.text)}</FontDark></FontMedium>
+                    <Regular><FontMedium><FontDark>{ReactHtmlParser(this.props.content.text)}</FontDark></FontMedium></Regular>
                 </div>
             </div>
         )
@@ -28,19 +29,19 @@ class SimpleTalk extends React.Component {
                     <Fragment>
                         {this.props.hasNextTalk ?
                             <Fragment>
-                                <div onClick={this.props.previousTalk} className="button previous-button"><FontLarge>{"<"}</FontLarge></div>
-                                <div onClick={this.props.nextTalk} className="button next-button"><FontLarge>{">"}</FontLarge></div>
+                                <div onClick={this.props.previousTalk} className="button previous-button"><Regular><FontMedium>{"<"}</FontMedium></Regular></div>
+                                <div onClick={this.props.nextTalk} className="button next-button"><Regular><FontMedium>{">"}</FontMedium></Regular></div>
                             </Fragment>
                             :
                             <Fragment>
-                                <div onClick={this.props.previousTalk} className="button last-previous"><FontLarge>{"<"}</FontLarge></div>
-                                <div className="button read-more"><FontLarge>Leia Mais</FontLarge></div>
-                                <div onClick={this.props.finishTalk} className="button ok-button"><FontLarge>Ok!</FontLarge></div>
+                                <div onClick={this.props.previousTalk} className="button last-previous"><Regular><FontMedium>{"<"}</FontMedium></Regular></div>
+                                <div className="button read-more"><Regular><FontMedium>Leia Mais</FontMedium></Regular></div>
+                                <div onClick={this.props.finishTalk} className="button ok-button"><Regular><FontMedium>Ok!</FontMedium></Regular></div>
                             </Fragment>
                         }
                     </Fragment>
                     :
-                    <div onClick={this.props.nextTalk} className="button first-button"><FontLarge>Próximo</FontLarge></div>
+                    <div onClick={this.props.nextTalk} className="button first-button"><Regular><FontMedium>Próximo</FontMedium></Regular></div>
                 }
             </div>
         )
@@ -49,7 +50,7 @@ class SimpleTalk extends React.Component {
     renderCloseButton = () => {
         return (
             <div onClick={this.props.finishTalk} className="close-button-container">
-                <div><FontSmall>PULAR DIÁLOGO</FontSmall></div>
+                <div><Regular><FontSmall>PULAR DIÁLOGO</FontSmall></Regular></div>
                 <div className="close-button-underline"></div>
             </div>
         )

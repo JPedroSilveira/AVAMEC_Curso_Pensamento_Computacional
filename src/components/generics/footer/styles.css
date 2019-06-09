@@ -1,23 +1,19 @@
 .footer-container{
-    font-weight: 400;
-    font-size: 0.8em;
-    padding-top: 3em;
-    padding-bottom: 4em;
-    padding-left: 12em;
-    background-color: rgb(246,246,246);
+    padding-top: 1em;
+    padding-bottom: 4.2em;
+    margin-bottom: 0em;
+    background-color: #027e8f;
 }
 
 .footer-content{
     list-style: none;
-    font-size: 1em;
-    color: gray;
-    font-weight: 400;
+    color: white;
+    text-align: center;
 }
 
 @media screen and (orientation: portrait) {
    .footer-container{
-       padding-left: 1em;
-       padding-top: 0.5em;
-       padding-bottom: 0.2em;
+       padding-top: 0.25em;
+       padding-bottom: 0.1em;
    }
 }

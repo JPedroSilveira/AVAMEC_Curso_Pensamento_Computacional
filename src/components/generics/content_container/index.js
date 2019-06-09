@@ -4,8 +4,10 @@ import './styles.css'
 class ContentContainer extends React.Component {
     render() {
         return (
-            <div className="basic-text-container">
-                {this.props.children}
+            <div className="content-container">
+                <div className="text-container">
+                    {this.props.children}
+                </div>
             </div>
         )
     }

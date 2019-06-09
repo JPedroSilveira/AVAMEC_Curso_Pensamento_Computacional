@@ -1,6 +1,5 @@
 import React from 'react'
 import Menu from '../generics/menu'
-import Header from '../generics/header'
 import localStorageUtils from '../../utils/localStorageUtils'
 import UnitId from '../../constants/unitId'
 
@@ -44,7 +43,6 @@ class Main extends React.Component {
         return (
             <div>
                 <Menu />
-                <Header />
                 <div className="main-content">
                     <div className="unit-container">
                         {this.LoadUnit()}

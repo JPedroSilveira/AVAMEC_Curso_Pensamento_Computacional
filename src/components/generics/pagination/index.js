@@ -4,16 +4,20 @@ import UnitServices from '../../../services/unitServices'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import LocalStorageUtils from '../../../utils/localStorageUtils.js'
 import Strong from '../font/strong'
+import Regular from '../font/regular'
 import SmallFont from '../font/small'
-import CenterBoxContainer from '../center_box_container'
+import MediumFont from '../font/medium' 
+import LargeFont from '../font/huge'
+import FontLight from '../font/light'
+import FontLightBlue from '../font/light-blue'
 import Image from '../image'
-import LeftArrow from '../../../images/left-arrow.png'
-import RightArrow from '../../../images/right-arrow.png'
-import UpArrow from '../../../images/up-arrow.png'
-import GreekColumn from '../../../images/greek-column.png'
+import UpArrow from '../../../images/component/up-arrow.svg'
+import GreekColumn from '../../../images/component/greek-column.svg'
 import Padrao from '../../../images/padrao.png'
 import IDs from '../../../constants/ids'
 import './styles.css'
+import FontMedium from '../font/medium';
+import FontSmall from '../font/small';
 
 class Pagination extends React.Component {
     constructor(props){
@@ -107,86 +111,94 @@ class Pagination extends React.Component {
     render() {
         return (
             <Fragment>
-                <div className="return-button-container">
-                    <span className="return-button-text">VOLTAR PARA O TOPO</span>
-                    <button onClick={this.returnButton} className="return-button"><Image width="3.5em" height="2.5em" src={UpArrow} alt="Retornar para o topo da página." /></button>
-                </div>
-                <div id={IDs.SLIDE_INFO_PAGINATION} className="slides-text-container">
-                    <p><span className="slide-text">VOCÊ ESTÁ EM: </span></p>
-                </div>
-                <div style={{ backgroundImage: "url(" + Padrao + ")", backgroundRepeat: "repeat-x", backgroundSize: "contain"}}>
-                    <CenterBoxContainer>
-                        <div className="slide-box-container">
-                            SLIDE {this.state.page} DE {this.state.availablePages}
+                <div className="pagination-top-container">
+                    <div className="pagination-top-sub-container">
+                        <div className="return-button-container">
+                            <div className="return-button-sub-container">
+                                <Strong><FontSmall><FontLightBlue>VOLTAR PARA O TOPO</FontLightBlue></FontSmall></Strong>
+                                <Image className="return-button" backgroundColor="#ffffff" onClick={this.returnButton} width="60px" height="6d0px" src={UpArrow} alt="Retornar para o topo da página." />     
+                            </div>
                         </div>
-                    </CenterBoxContainer>
+                        <div id={IDs.SLIDE_INFO_PAGINATION} className="slides-text-container">
+                            <Strong><FontSmall><FontLightBlue>VOCÊ ESTÁ EM: </FontLightBlue></FontSmall></Strong>
+                        </div>
+                    </div>
+                </div>
+                <div className="slide-info-container">
+                    <div className="slide-info-sub-container" style={{ backgroundImage: "url(" + Padrao + ")", backgroundRepeat: "repeat-x", backgroundSize: "contain" }}>
+                        <div className="slide-info-box-container">
+                            <Strong><FontMedium><FontLightBlue>SLIDE {this.state.page} DE {this.state.availablePages}</FontLightBlue></FontMedium></Strong>
+                        </div>
+                    </div>
                 </div>
                 <div className="pagination-container">
-                    <CenterBoxContainer>
+                    <div className="pagination-sub-container">
                         <div className="unit-box-container">
-                        <div onClick={this.nextPageOrUnit} className="unit-box-item button-item">
-                            <Image width="1.3em" height="1.7em" src={RightArrow} alt="Avançar" />
-                        </div>
-                        <div className="unit-box-bar"></div>
-                        <div className="unit-box-item unit-box-text unit-text-one">
-                            {this.state.page === this.state.availablePages ?
-                                <Fragment>
-                                    {this.state.hasNextUnit ?
-                                        <span>PRÓXIMA UNIDADE</span>
+                            <div onClick={this.previousPageOrUnit} className="button-item">
+                                <Regular><LargeFont>{"<"}</LargeFont></Regular>
+                            </div>
+                            <div className="unit-box-bar"></div>
+                            <div className="unit-text">
+                                <div className="unit-text-right">
+                                    {this.state.page === 1 ?
+                                        <Fragment>
+                                            {this.state.hasPreviousUnit ?
+                                                <MediumFont><Strong><FontLight>UNIDADE ANTERIOR</FontLight></Strong></MediumFont>
+                                                :
+                                                <MediumFont><Strong><FontLight>VOCÊ ESTÁ NA PRIMEIRA UNIDADE</FontLight></Strong></MediumFont>
+                                        }
+                                        </Fragment>
                                         :
-                                        <span>VOCÊ ESTÁ NA ÚLTIMA UNIDADE</span>
-                                    }
-                                </Fragment>
-                                :
-                                <span>SLIDE {this.state.page + 1}</span>
-                            }
-                        </div>
-                        <div className="unit-box-item unit-box-text">
-                            {this.state.page === 1 ?
-                                <Fragment>
-                                    {this.state.hasPreviousUnit ?
-                                        <span>UNIDADE ANTERIOR</span>  
+                                        <MediumFont><Strong><FontLight>SLIDE {this.state.page - 1}</FontLight></Strong></MediumFont>
+                                }
+                                </div>
+                                <div className="unit-text-left">
+                                    {this.state.page === this.state.availablePages ?
+                                        <Fragment>
+                                            {this.state.hasNextUnit ?
+                                                <MediumFont><Strong><FontLight>PRÓXIMA UNIDADE</FontLight></Strong></MediumFont>
+                                                :
+                                                <MediumFont><Strong><FontLight>VOCÊ ESTÁ NA ÚLTIMA UNIDADE</FontLight></Strong></MediumFont>
+                                            }
+                                        </Fragment>
                                         :
-                                        <span>VOCÊ ESTÁ NA PRIMEIRA UNIDADE</span>  
+                                        <MediumFont><Strong><FontLight>SLIDE {this.state.page + 1}</FontLight></Strong></MediumFont>
                                     }
-                                </Fragment>
-                                :
-                                <span>SLIDE {this.state.page - 1}</span>
-                            }
-                        </div>
-                        <div className="unit-box-bar"></div>
-                        <div onClick={this.previousPageOrUnit} className="unit-box-item button-item">
-                            <Image width="1.3em" height="1.7em" src={LeftArrow} alt="Voltar" />
+                                </div>
+                            </div>
+                            <div className="unit-box-bar"></div>
+                            <div onClick={this.nextPageOrUnit} className="button-item">
+                                <Regular><LargeFont>{">"}</LargeFont></Regular>
+                            </div>
                         </div>
                     </div>
-                    </CenterBoxContainer>
-                    <CenterBoxContainer>
-                        <div className="greek-column-container">
-                        <div className="greek-column-item">
-                            <Image width="4em" height="8em" src={GreekColumn} alt="Greek column" />
-                        </div>
-                        <div className="greek-column-item"> 
-                            <p className="greek-slide-text"><SmallFont><Strong>IR PARA OS SLIDE: </Strong></SmallFont></p>
-                            <ReactPaginate
-                                disabledClassName={'disabled-page'}
-                                previousLabel={'<'}
-                                nextLabel={'>'}
-                                breakLabel={'...'}
-                                pageCount={this.state.availablePages}
-                                initialPage={this.state.page - 1}
-                                forcePage={this.state.page - 1}
-                                activeClassName={'selected-page'}
-                                marginPagesDisplayed={this.state.availablePages}
-                                pageRangeDisplayed={this.state.availablePages}
-                                onPageChange={this.onPageChange}
-                                containerClassName={'pagination'}
-                            />
-                        </div>
-                        <div className="greek-column-item">
-                            <Image width="4em" height="8em" src={GreekColumn} alt="Greek column" />
+                    <div className="pagination-sub-container">
+                        <div className="pagination-second-container">
+                            <div className="greek-first-column">
+                                <Image backgroundColor="#f4f3f3" width="80px" height="auto" src={GreekColumn} alt="Greek column" />
+                            </div>
+                            <div className="page-control-container"> 
+                                <p className="greek-slide-text"><FontLightBlue><SmallFont><Strong>IR PARA OS SLIDE: </Strong></SmallFont></FontLightBlue></p>
+                                <ReactPaginate
+                                    disabledClassName={'disabled-page'}
+                                    previousLabel={'<'}
+                                    nextLabel={'>'}
+                                    breakLabel={'...'}
+                                    pageCount={this.state.availablePages}
+                                    initialPage={this.state.page - 1}
+                                    forcePage={this.state.page - 1}
+                                    activeClassName={'selected-page'}
+                                    marginPagesDisplayed={this.state.availablePages}
+                                    pageRangeDisplayed={this.state.availablePages}
+                                    onPageChange={this.onPageChange}
+                                    containerClassName={'pagination'}
+                                />
+                            </div>
+                            <div className="greek-second-column">
+                                <Image backgroundColor="#f4f3f3" width="80px" height="auto" src={GreekColumn} alt="Greek column" />
+                            </div>
                         </div>
                     </div>
-                    </CenterBoxContainer>
                 </div>
             </Fragment>
         )
