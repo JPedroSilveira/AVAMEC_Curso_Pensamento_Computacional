@@ -5,6 +5,7 @@ import TopBar from '../top_bar'
 import AvaMecApiServices from '../../../services/avaMecApiServices'
 import Pagination from '../pagination'
 import LocalStorageUtils from '../../../utils/localStorageUtils'
+import CharacterTalk from '../characters/talk'
 import './styles.css'
 
 class UnitBase extends React.Component {
@@ -12,14 +13,6 @@ class UnitBase extends React.Component {
         this.setState({
             openPage: LocalStorageUtils.getOpenPage()
         })
-
-        this.validateProperties()
-    }
-
-    validateProperties = () => {
-        if(this.props.id === undefined || this.props.id === ""){
-            throw Error("Error in property \"id\", this value can't be undefined or empty!")
-        }
     }
 
     updatePage = () => {
@@ -41,11 +34,12 @@ class UnitBase extends React.Component {
         AvaMecApiServices.saveLastPage(this.props.id)
     }
     
-    loadPagination = () => {
+    renderPagination = () => {
         return (
             <Pagination
                 availablePages={this.state.availablePages}
                 onPageChange={this.updatePage}
+                openPage={this.state.openPage}
                 unit={this.props.id} />
         )
     }
@@ -71,6 +65,49 @@ class UnitBase extends React.Component {
         return (
             <TopBar hidden={this.state.topBarHidden} showEverything={this.state.topBarShowEverything} unit={this.props.id} />
         )
+    }
+
+    renderTalk = () => {
+        if (this.state.renderTalk && this.state.openPage === this.state.talkPage) {
+            return (
+                <CharacterTalk
+                    hasPreviousTalk={this.state.hasPreviousTalk}
+                    hasNextTalk={this.state.hasNextTalk}
+                    previousTalk={this.previousTalk}
+                    nextTalk={this.nextTalk}
+                    finishTalk={this.finishTalk}
+                    content={this.getCurrentTalk()}
+                    src={this.state.animation}>
+                </CharacterTalk>
+            )
+        }
+    }
+
+    nextTalk = () => {
+        this.setState({
+            currentTalk: this.state.currentTalk + 1,
+            hasPreviousTalk: true,
+            hasNextTalk: (this.state.currentTalk + 1) < this.state.talkCount
+        })
+    }
+
+    previousTalk = () => {
+        this.setState({
+            currentTalk: this.state.currentTalk - 1,
+            hasNextTalk: true,
+            hasPreviousTalk: (this.state.currentTalk - 1) > 1
+        })
+    }
+
+    finishTalk = () => {
+        this.setState({
+            renderTalk: false,
+            contextMenuHidden: false,
+            topBarHidden: false,
+            currentTalk: 1,
+            hasNextTalk: 2 < this.state.talkCount,
+            hasPreviousTalk: false
+        })
     }
 }
 

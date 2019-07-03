@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import Image from '../../../generics/image'
-import IntroThree from '../../../../images/fidipides/intro-three.svg'
+import IntroThree from '../../../../images/fidipides/introducao/intro-three.svg'
 import Pilares from '../../../../images/content/pilares.svg'
-import InfoTwo from '../../../../images/fidipides/info-two.svg' 
+import InfoTwo from '../../../../images/fidipides/introducao/info-two.svg' 
 
 const Slide3 = () => (
     <Fragment>

@@ -21,7 +21,9 @@ class YouTubePlayer extends React.Component {
                 rel: 0,
                 fs: 1,
                 showinfo: 0,
-                start: 0
+                start: 0,
+                cc_load_policy: 1,
+                hl: "pt"
             }
         }
     }

@@ -31,6 +31,7 @@ import PressedLoadImage from '../../../../images/pressed-load-image.png'
 import './styles.css'
 
 import AvaMECApiConstants from '../../../../constants/avaMECApiConstants'
+import YouTubePlayer from '../../youtube_player';
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETIVO "atividade" DO TIPO:
     activity: um objetivo com os atributos:
@@ -360,6 +361,7 @@ class IntegralActivity extends BaseActivity {
                     return (
                         <div key={key}>
                             {this.renderActivityStatement(question)}
+                            {this.renderVideo(question)}
                             <InlineBox>
                                 {this.renderOptions(question)}
                             </InlineBox>
@@ -368,6 +370,16 @@ class IntegralActivity extends BaseActivity {
                 })}
             </Fragment>
         )
+    }
+
+    renderVideo = (question) => {
+        if (question.videoID !== undefined){
+            return (
+                <Fragment>
+                     <br /><YouTubePlayer videoId={question.videoID} /><br />
+                </Fragment>
+            )
+        }
     }
 
     renderActivityStatement = (question) => {

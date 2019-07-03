@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import Image from '../../../generics/image'
-import IntroTwo from '../../../../images/fidipides/intro-two.svg'
+import IntroTwo from '../../../../images/fidipides/introducao/intro-two.svg'
 import GreekBar from '../../../../images/component/greek-bar.svg'
 import MiniGameNames from '../../../../constants/miniGameNames'
 import MiniGameLoader from '../../../generics/mini_game_loader'

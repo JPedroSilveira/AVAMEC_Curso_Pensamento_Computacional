@@ -6,6 +6,7 @@ import AlgorithmLevel from '../../../../generics/algorithm_level'
 import AlgorithmBox from '../../../../generics/algorithm_box'
 import Image from '../../../../generics/image'
 import Strong from '../../../../generics/font/strong'
+import YouTubePlayer from '../../../../generics/youtube_player'
 
 const AplicacoesParte4 = () => (
     <Fragment>
@@ -39,6 +40,7 @@ const AplicacoesParte4 = () => (
                 </AlgorithmLevel>
             </AlgorithmBox>
         </CenterBoxContainer>
+        <YouTubePlayer videoId="Yiq-M8-ZC-U" />
     </Fragment>
 )
 

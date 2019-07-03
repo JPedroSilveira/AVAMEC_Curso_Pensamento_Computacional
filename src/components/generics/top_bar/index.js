@@ -1,8 +1,8 @@
 import React from 'react'
 import UnitNameUtils from '../../../utils/unitNameUtils'
-import FontSmall from '../font/small'
 import Strong from '../font/strong'
 import FontLight from '../font/light'
+import FontMedium from '../font/medium'
 import TopBarIntro from '../../../images/component/top-bar-intro.svg'
 import './styles.css'
 
@@ -13,7 +13,6 @@ class TopBar extends React.Component {
     constructor(props){
         super(props)
         window.addEventListener('scroll', this.onScroll)
-        console.log(this.props.showEverything)
         this.state = {
             componentClass: "top-bar-container top-bar-container-hidden-without-animation",
             componentContextMenuClass: this.props.showEverything ? "top-context-menu-container" : "top-context-menu-container top-context-menu-container-hidden-without-animation",
@@ -61,8 +60,8 @@ class TopBar extends React.Component {
             <div className={this.state.componentClass}>
                 <div className="top-bar-line"></div>
                 <div className={this.state.componentContextMenuClass} style={{ backgroundImage: "url(" + this.state.topBar + ")", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
-                    <div className="course-name"><FontLight><Strong><FontSmall>Pensamento Computacional</FontSmall></Strong></FontLight></div>
-                    <div className="unit-name"><FontLight><Strong><FontSmall>{UnitNameUtils.getUnitName(this.props.unit)}</FontSmall></Strong></FontLight></div>
+                    <div className="course-name"><FontLight><Strong><FontMedium>Pensamento Computacional</FontMedium></Strong></FontLight></div>
+                    <div className="unit-name"><FontLight><Strong><FontMedium>{UnitNameUtils.getUnitName(this.props.unit)}</FontMedium></Strong></FontLight></div>
                 </div>            
             </div>
         )

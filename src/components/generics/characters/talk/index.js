@@ -1,27 +1,10 @@
 import React, {Fragment} from 'react'
-import ReactHtmlParser from 'react-html-parser'
-import FontLight from '../../font/light'
-import FontDark from '../../font/dark'
 import FontMedium from '../../font/medium'
-import FontLarge from '../../font/large'
 import FontSmall from '../../font/small'
 import Regular from '../../font/regular'
 import './styles.css'
 
-class SimpleTalk extends React.Component {
-    renderContent = () => {
-        return (
-            <div className="content">
-                <div className="title">
-                    <Regular><FontLarge><FontLight>{ReactHtmlParser(this.props.content.title)}</FontLight></FontLarge></Regular>
-                </div>
-                <div className="text">
-                    <Regular><FontMedium><FontDark>{ReactHtmlParser(this.props.content.text)}</FontDark></FontMedium></Regular>
-                </div>
-            </div>
-        )
-    }
-
+class CharacterTalk extends React.Component {
     renderButtons = () => {
         return (
             <div className="buttons-container">
@@ -61,7 +44,6 @@ class SimpleTalk extends React.Component {
             <div className="main-container">
                 <div className="master-container">
                     <div className="character-container" style={{ backgroundImage: "url(" + this.props.src + ")" }}>
-                        {this.renderContent()}
                         {this.renderButtons()}
                         {this.renderCloseButton()}
                     </div>
@@ -71,4 +53,4 @@ class SimpleTalk extends React.Component {
     }
 }
 
-export default SimpleTalk
+export default CharacterTalk

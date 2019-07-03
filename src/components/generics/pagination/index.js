@@ -23,17 +23,23 @@ class Pagination extends React.Component {
     constructor(props){
         super(props)
 
-        let page = parseInt(LocalStorageUtils.getOpenPage())
-
         this.state = {
             availablePages: this.props.availablePages,
-            page: page,
+            page: this.props.openPage,
             hasNextUnit: false,
             hasPreviousUnit: false
         }
 
         AvaMecApiServices.getIfNextUnitExist(this.props.unit, this.hasNextUnitCallback)
         AvaMecApiServices.getIfPreviousUnitExist(this.props.unit, this.hasPreviousUnitCallback)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.openPage !== prevProps.openPage) {
+            this.setState({
+                page: parseInt(this.props.openPage)
+            })
+        }
     }
 
     hasNextUnitCallback = info => {
@@ -65,14 +71,16 @@ class Pagination extends React.Component {
     }
 
     onPageChange = data => {
-        let selectedPage = data.selected + 1
-        LocalStorageUtils.setOpenPage(selectedPage)
+        if(!isNaN(data.selected)){
+            let selectedPage = data.selected + 1
+            LocalStorageUtils.setOpenPage(selectedPage)
 
-        this.props.onPageChange()
+            this.props.onPageChange()
 
-        this.setState({
-            page: selectedPage
-        })
+            this.setState({
+                page: selectedPage
+            })
+        }
     }
 
     nextPageOrUnit = () =>{
