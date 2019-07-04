@@ -5,10 +5,10 @@ import UnitTitle from '../../generics/unit_title'
 import Slide1 from './slide_1'
 import Slide2 from './slide_2'
 import Slide3 from './slide_3'
-import FidipidesOne from '../../../images/fidipides/introducao/talk-one.svg'
-import FidipidesTwo from '../../../images/fidipides/introducao/talk-two.svg'
-import FidipidesThree from '../../../images/fidipides/introducao/talk-three.svg'
-import FidipidesFour from '../../../images/fidipides/introducao/talk-four.svg'
+import FidipidesOne from '../../../images/content/introducao/talk-one.svg'
+import FidipidesTwo from '../../../images/content/introducao/talk-two.svg'
+import FidipidesThree from '../../../images/content/introducao/talk-three.svg'
+import FidipidesFour from '../../../images/content/introducao/talk-four.svg'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade

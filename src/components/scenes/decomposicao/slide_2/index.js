@@ -9,7 +9,7 @@ const Slide2 = () => (
     <Fragment>
         <Image marginTop="100px" marginBottom="50px" height="auto" width="auto" src={IntroTwo}/>
         <Image marginBottom="10px" height="auto" width="100%" src={GreekBar} />
-        <MiniGameLoader miniGameName={MiniGameNames.INTRODUCAO} />
+        <MiniGameLoader miniGameName={MiniGameNames.DECOMPOSICAO} />
         <Image marginTop="10px" marginBottom="50px" height="auto" width="100%" src={GreekBar} />
     </Fragment>
 )

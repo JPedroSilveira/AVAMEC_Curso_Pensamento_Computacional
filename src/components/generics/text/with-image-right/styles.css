@@ -2,3 +2,7 @@ div.text-with-image-right-container{
     display: flex;
     flex-direction: row;
 }
+
+div.text-with-image-right-image-container{
+    margin-right: 70px;
+}

@@ -1,8 +1,8 @@
 .medium-font{
-    font-size: 12pt;
+    font-size: 10pt;
 }
 @media only screen and (min-width: 1600px) {
     .medium-font{
-        font-size: 16pt;
+        font-size: 14pt;
     }
 }

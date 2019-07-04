@@ -2,19 +2,17 @@ import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
 import UnitTitle from '../../generics/unit_title'
 import ContentContainer from '../../generics/content_container'
-import AplicacaoInterativa from './aplicacao_interativa'
-import Conceituacao from './conceituacao'
-import Aplicacoes from './aplicacoes'
-import Recomendacoes from './recomendacoes'
-import Problemas from './problemas'
-import AtividadeAvaliativaUm from './atividade_avaliativa_um'
-import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
-import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
+import Slide1 from './slide_1'
+import Slide2 from './slide_2'
+import Slide3 from './slide_3'
+import Slide4 from './slide_4'
+import Slide5 from './slide_5'
+import Slide6 from './slide_6'
 import CharacterTalk from '../../generics/characters/talk'
-import FidipidesOne from '../../../images/fidipides/decomposicao/talk-one.svg'
-import FidipidesTwo from '../../../images/fidipides/decomposicao/talk-two.svg'
-import FidipidesThree from '../../../images/fidipides/decomposicao/talk-three.svg'
-import FidipidesFour from '../../../images/fidipides/decomposicao/talk-four.svg'
+import FidipidesOne from '../../../images/content/decomposicao/talk-one.svg'
+import FidipidesTwo from '../../../images/content/decomposicao/talk-two.svg'
+import FidipidesThree from '../../../images/content/decomposicao/talk-three.svg'
+import FidipidesFour from '../../../images/content/decomposicao/talk-four.svg'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -24,7 +22,7 @@ class Decomposicao extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 8,
+            availablePages: 6,
             animation: FidipidesOne,
             talkCount: 4,
             currentTalk: 1,
@@ -44,36 +42,28 @@ class Decomposicao extends UnitBase {
                     <Fragment>
                         {this.renderHeader()}
                         {this.renderTitle()}
-                        
+                        <Slide1/>
                     </Fragment>
                 ) 
             case "2":
                 return (
-                    <AplicacaoInterativa />
+                    <Slide2 />
                 )
             case "3":
                 return (
-                    <AtividadeAvaliativaUm unitId={this.props.id} />
+                    <Slide3 />
                 )
             case "4":
                 return (
-                    <Aplicacoes />
+                    <Slide4 />
                 )
             case "5":
                 return (
-                    <AtividadeAvaliativaDois unitId={this.props.id} />
+                    <Slide5 />
                 )
             case "6":
                 return (
-                    <Recomendacoes />
-                )
-            case "7":
-                return (
-                    <AtividadeAvaliativaTres unitId={this.props.id} />
-                )
-            case "8":
-                return (
-                    <Problemas unitId={this.props.id} />
+                    <Slide6 />
                 )
             default:
                 return null

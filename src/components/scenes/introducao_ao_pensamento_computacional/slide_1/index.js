@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import TextWithImageRight from '../../../generics/text/with-image-right'
 import Image from '../../../generics/image'
-import FidipidesPensando from '../../../../images/fidipides/introducao/fidipides-thinking.svg'
-import IntroOne from '../../../../images/fidipides/introducao/intro-one.svg'
-import Papiro from '../../../../images/content/papiro-one.svg'
-import InfoOne from '../../../../images/fidipides/introducao/info-one.svg'
+import FidipidesPensando from '../../../../images/content/introducao/fidipides-thinking.svg'
+import IntroOne from '../../../../images/content/introducao/intro-one.svg'
+import Papiro from '../../../../images/content/introducao/papiro-one.svg'
+import InfoOne from '../../../../images/content/introducao/info-one.svg'
 
 const Slide1 = () => (
     <Fragment>

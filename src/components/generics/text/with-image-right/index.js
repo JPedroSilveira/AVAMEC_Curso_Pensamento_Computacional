@@ -8,10 +8,14 @@ import './styles.css'
 //props.height = Altura da imagem introduzida
 class TextWithImageRight extends React.Component {
     render() {
+        let width = this.props.width !== undefined ? this.props.width : "auto"
+
         return (
             <div className="text-with-image-right-container">
-                <Regular><FontMedium>{this.props.children}</FontMedium></Regular>
-                <Image height={this.props.height} width="auto" src={this.props.src} />
+                <div className="text-with-image-right-image-container">
+                    <Regular><FontMedium>{this.props.children}</FontMedium></Regular>
+                </div>
+                <Image height={this.props.height} width={width} src={this.props.src} />
             </div>
         )
     }
