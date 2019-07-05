@@ -4,13 +4,12 @@ div.text-standard-box-container{
 }
 
 div.text-standard-box{
-    border: 1pt solid #41b4c4;
+    border: 1pt solid transparent;
     border-radius: 10px;
     width: 750px;
 }
 
 div.text-standard-box-text-container{
     padding: 50px;
-    padding-top: 10px;
     text-align: justify;
 }

@@ -9,13 +9,14 @@ import ManuscriptIcon from '../../../../images/content/decomposicao/manuscript-i
 import IntroSix from '../../../../images/content/decomposicao/intro-six.svg'
 import InfoSix from '../../../../images/content/decomposicao/info-six.svg'
 import ExampleSix from '../../../../images/content/decomposicao/example-six.svg'
+import BorderSix from '../../../../images/content/decomposicao/border-six.svg'
 
 class Slide6 extends React.Component {
     render() {
         return (
             <Fragment>
                 <Image marginTop="100px" marginBottom="-100px" height="auto" width="auto" src={IntroSix} />
-                <TextStandardBox>
+                <TextStandardBox image={BorderSix}>
                     <CenterBoxContainer>
                         <TextWithImageLeft paddingTop="30px" marginRight="20px" height="auto" width="50px" src={ManuscriptIcon}>
                             <p><Strong>Cálculo de área de um polígono irregular usando o Geoplano</Strong></p>

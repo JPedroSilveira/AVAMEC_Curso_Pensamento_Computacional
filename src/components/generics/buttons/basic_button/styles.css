@@ -1,11 +1,12 @@
 .button{
-    border: 0.1em solid black;
+    border: 0.1em solid #41B4C4;
     background-color: white;
     border-radius: 0.2em;
     font-size: 0.9em;
     font-weight: 900;
     letter-spacing: 0.2em;
     padding: 1em 2em;
+    color: #41B4C4;
 }
 
 .bigger-button{

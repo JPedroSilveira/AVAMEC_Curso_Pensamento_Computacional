@@ -12,11 +12,15 @@ class TextStandardBox extends React.Component {
             marginBottom: props.marginBottom ? props.marginBottom : "0",
             marginTop: props.marginTop ? props.marginTop : "0"
         }
+
+        this.borderStyle = {
+            borderImage: "url(" + props.image + ") 0 fill",
+        }
     }
     render() {
         return (
             <div className="text-standard-box-container" style={this.style}> 
-                <div className="text-standard-box">
+                <div className="text-standard-box" style={this.borderStyle}>
                     <div className="text-standard-box-text-container">
                         <Regular><FontMedium>{this.props.children}</FontMedium></Regular>
                     </div>

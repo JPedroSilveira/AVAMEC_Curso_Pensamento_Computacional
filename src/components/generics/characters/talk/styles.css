@@ -12,15 +12,19 @@ div.master-container{
 
 div.character-container{
     margin: auto;
-    width: 50em;
-    height: 50em;
-    padding-top: 6.5em;
+    width: 820px;
+    height: 820px;
     background: no-repeat;
-    background-position-y: 1em;
+    background-position-y: 40px;
+    background-size: 100%;
     animation-name: fadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-duration: 1.5s;
+}
+
+div.character-container.green-container{
+    background-position-y: 0px;
 }
 
 div.character-container div.content{
@@ -44,9 +48,14 @@ div.buttons-container{
     text-align: center;
     font-weight: 700;
     display: inline-block;
-    margin-left: 22.2em;
-    margin-top: 15.5em;
+    margin-left: 340px;
+    margin-top: 390px;
 }  
+
+div.character-container.green-container .buttons-container{
+    margin-left: 330px;
+}
+
 div.buttons-container div.button{
     float: left;
     border: 0.01em solid #2d2d2d;
@@ -81,10 +90,13 @@ div.buttons-container div.button.read-more{
 
 div.close-button-container{
     color: rgb(255, 212, 120);
-    height: 2em;
-    margin-left: 32.4em;
-    margin-top: 0.8em;
+    margin-left: 525px;
+    margin-top: 5px;
     cursor: pointer;
+}
+
+div.character-container.green-container .close-button-container{
+    margin-left: 515px;
 }
 
 div.close-button-underline{
@@ -96,6 +108,9 @@ div.close-button-underline{
 
 @media only screen and (min-width: 1600px) {
     div.character-container{
+        width: 920px;
+        height: 920px;
+        background-position-y: 50px;
         width: 70em;
     }
     div.character-container div.content{
@@ -104,7 +119,8 @@ div.close-button-underline{
         height: 19em;
     }
     div.buttons-container{
-        margin-top: 24em;
+        margin-left: 410px;
+        margin-top: 550px;
     }
     div.buttons-container div.button.first-button{
         margin-left: 25.5em;
@@ -121,13 +137,20 @@ div.close-button-underline{
         border-radius: 1em;
     }
     div.close-button-container{
-        margin-left: 46em;
+        margin-left: 835px;
         margin-top: 1.5em;
     }
     div.close-button-underline{
         width: 4.9em;
         height: 0.1em;
         margin-left: 0.5em;
+    }
+    div.character-container.green-container .close-button-container{
+        margin-left: 815px;
+    }
+    div.character-container.green-container .buttons-container{
+        margin-top: 600px;
+        margin-left: 385px;
     }
 }
 

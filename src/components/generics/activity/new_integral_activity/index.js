@@ -1,10 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import ListUtils from '../../../../utils/listUtils'
 
 import AvaMecApiServices from '../../../../services/avaMecApiServices'
 
-import ActivityConstants from '../../../../constants/activityConstants'
 import ActivityState from '../../../../constants/activityState'
 import UnitState from '../../../../constants/unitState' 
 import QuestionState from '../../../../constants/questionState'
@@ -13,25 +12,12 @@ import OptionValues from '../../../../constants/optionValues.js'
 import BaseActivity from '../baseActivity'
 
 import BasicButton from '../../buttons/basic_button'
-import AlgorithmLevel from '../../algorithm_level'
-import CenterBoxContainer from '../../center_box_container'
-import StatementAlgorithmBox from '../../statement_algorithm_box'
-import InlineBox from '../../inline_box'
-import ActivityOption from '../activity_option'
-import InputRadioButton from '../../buttons/input_radio_button'
-import GradeBox from '../../grade_box'
-import Box from '../../box'
-import Strong from '../../font/strong'
-import Color from '../../../../constants/color'
-
-import ReactHtmlParser from 'react-html-parser'
 
 import LoadImage from '../../../../images/load-image.png'
 import PressedLoadImage from '../../../../images/pressed-load-image.png'
 import './styles.css'
 
 import AvaMECApiConstants from '../../../../constants/avaMECApiConstants'
-import YouTubePlayer from '../../youtube_player';
 
 /*PROPS DESTA CLASSE DEVE CONTER UM OBJETIVO "atividade" DO TIPO:
     activity: um objetivo com os atributos:
@@ -47,18 +33,15 @@ import YouTubePlayer from '../../youtube_player';
                 text: String,
                 tip: String
 .*/
-const MAX_CARACTERES_ID = 250
 
 class IntegralActivity extends BaseActivity {
     constructor(props) {
         super(props)
 
-        this.validateProps()
-
         this.state = {
             activityState: ActivityState.EMPTY,
             grade: 0,
-            selectedOptions: this.generateSelectedOptionsInitialData(), 
+            selectedOptions: this.generateDefaultOptionsData(), 
             unitState: UnitState.NOT_COMPLETED
         }
     }
@@ -69,47 +52,7 @@ class IntegralActivity extends BaseActivity {
         this.getUnitConclusionData()
     }
 
-    validateProps = () => {
-        if (this.props.activity === undefined){
-            throw Error("Property 'activity' can't be undefined!")
-        } else {
-            if (this.props.activity.unitId === undefined) {
-                throw Error("Property 'activity.unitId' can't be undefined!")
-            }
-
-            if (this.props.activity.id === undefined) {
-                throw Error("Property 'activity.id' can't be undefined!")
-            } else if (this.props.activity.id.length > ActivityConstants.MAX_LENGTH_ID){
-                throw Error("Property 'activity.id' length is greater than the limit of "+MAX_CARACTERES_ID+" characters!")
-            }
-
-            if (this.props.activity.questions === undefined || this.props.activity.questions.length === 0) {
-                throw Error("Property 'activity.questions' can't be undefined or empty!")
-            } else {
-                this.props.activity.questions.forEach(question => {
-                    if (question.id > ActivityConstants.MAX_LENGTH_ID){
-                        throw Error("Property 'question.id' of 'activity.question' is greater than the limit of " + MAX_CARACTERES_ID + " characters!")
-                    }
-                    question.options.forEach(option => {
-                        if (option.value === undefined){
-                            throw Error("Property 'option.value' can't be undefined!")
-                        }
-                        if (option.key === undefined) {
-                            throw Error("Property 'option.key' can't be undefined!")
-                        }
-                        if (option.text === undefined || option.text.length === 0) {
-                            throw Error("Property 'option.text' can't be undefined or empty!")
-                        }
-                        if (option.tip === undefined) {
-                            throw Error("Property 'option.tip' can't be undefined!")
-                        }
-                    })
-                })
-            }
-        }
-    }
-
-    generateSelectedOptionsInitialData = () => {
+    generateDefaultOptionsData = () => {
         let selectedOptions = []
 
         this.props.activity.questions.forEach(question => {
@@ -299,180 +242,6 @@ class IntegralActivity extends BaseActivity {
         })
     }
 
-    renderOptions = (question) => {
-        return (
-            <Fragment>
-                {question.options.map((option, key) => {
-                    return (
-                        <ActivityOption key={key}>
-                            {this.renderOptionText(question, option)}
-                            {this.renderOptionTip(question, option)}
-                        </ActivityOption>
-                    )
-                })}
-            </Fragment>
-        )
-    }
-
-    renderOptionText = (question, option) => {
-        let isSelectedOption = this.isSelectedOption(question, option)
-
-        return (
-            <InputRadioButton 
-                text={option.text}
-                radioName={question.id}
-                radioValue={option.key}
-                checked={isSelectedOption}
-                onChange={this.onChangeSelectedOption}/>
-        )
-    }
-    
-    renderOptionTip = (question, option) => {
-        let isSelectedOption = this.isSelectedOption(question, option)
-
-        if (isSelectedOption){
-    
-            let indexSelectedOption = this.getIndexSelectedOptionByQuestionId(question.id)
-
-            let selectedOption = this.state.selectedOptions[indexSelectedOption]
-            
-            if (selectedOption.state === QuestionState.ANSWERED_RIGHT) {
-                return (
-                    <Box backgroundColor={Color.HINT_RIGHT_BG}>
-                        <Strong>Resposta Certa: </Strong>
-                        {option.tip}
-                    </Box>
-                )
-            } else if (selectedOption.state === QuestionState.ANSWERED_WRONG) {
-                return (
-                    <Box backgroundColor={Color.HINT_WRONG_BG}>
-                        <Strong>Resposta Errada: </Strong>
-                        {option.tip}
-                    </Box>
-                )
-            }
-        }
-    }
-
-    renderQuestions = () => {
-        return (
-            <Fragment>
-                {this.props.activity.questions.map((question, key) => {
-                    return (
-                        <div key={key}>
-                            {this.renderActivityStatement(question)}
-                            {this.renderVideo(question)}
-                            <InlineBox>
-                                {this.renderOptions(question)}
-                            </InlineBox>
-                        </div>
-                    )
-                })}
-            </Fragment>
-        )
-    }
-
-    renderVideo = (question) => {
-        if (question.videoID !== undefined){
-            return (
-                <Fragment>
-                     <br /><YouTubePlayer videoId={question.videoID} /><br />
-                </Fragment>
-            )
-        }
-    }
-
-    renderActivityStatement = (question) => {
-        if (question.algorithm){
-            return (
-                <div>
-                    {this.renderAlgorithmStatement(question)}
-                    {question.statement !== undefined && question.statement !== "" &&
-                        <Fragment>{ReactHtmlParser(question.statement)}</Fragment>
-                    }
-                </div>
-            )
-        } else {
-            return (
-                <Fragment>
-                    {question.title !== undefined && question.title !== "" && 
-                        <p>{ReactHtmlParser(question.title)}</p>
-                    }
-                    {question.statement !== undefined && question.statement !== "" && 
-                        <div className="question-statement">
-                            {ReactHtmlParser(question.statement)}
-                        </div>
-                    }
-                </Fragment>
-            )
-        }
-    }
-
-    renderAlgorithmStatement = (question) => {
-        return (
-            <CenterBoxContainer>
-                <StatementAlgorithmBox title={question.title}>
-                    {this.renderPreInstructions(question.preInstructions)}
-                    {this.renderInstructions(question.instructions, true)}
-                </StatementAlgorithmBox>
-            </CenterBoxContainer>
-        )
-    }
-
-    renderPreInstructions = (preInstructions) => {
-        if (preInstructions !== undefined && preInstructions !== ""){
-            return (
-                <Fragment className="textdarkgreen">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ReactHtmlParser(preInstructions)}
-                </Fragment>
-            )
-        }
-    }
-    
-    renderInstructions = (instructions, first) => {
-        if (instructions !== undefined && instructions.length > 0){
-            return (
-                <AlgorithmLevel showStyle={first} child={!first}>
-                    {instructions.map((instruction, key) => {
-                        return this.renderInstruction(instruction, key)
-                    })}
-                </AlgorithmLevel>
-            )
-        }
-    }
-
-    renderInstruction = (instruction, key) => {
-        return (
-            <li key={key}>
-                {ReactHtmlParser(instruction.text)}
-                {this.renderInstructions(instruction.instructions, false)}
-            </li>
-        )
-    }
-
-    renderTitle = () => {
-        return (
-            <Fragment>
-                {this.props.activity.questions.length > 1 ?
-                    <h3>ATIVIDADES AVALIATIVAS</h3> : <h3>ATIVIDADE AVALIATIVA</h3>
-                }
-                {this.props.activity.statement !== undefined && this.props.activity.statement.length > 0 &&
-                    <div className="activity-statement">
-                        <p>{ReactHtmlParser(this.props.activity.statement)}</p>
-                    </div>
-                }
-            </Fragment>
-        )
-    }
-
-    renderGrade = () => {
-        if (this.state.activityState === ActivityState.ANSWERED) {
-            return (
-                <GradeBox value={this.state.grade}/>
-            )
-        }
-    }
-
     renderSendButton = () => {   
         if(this.state.activityState !== ActivityState.ANSWERED) {
             if (this.state.unitState !== UnitState.COMPLETED) {
@@ -521,11 +290,7 @@ class IntegralActivity extends BaseActivity {
 
     render() {
         return (
-            <div className="container-integral-activity">
-                {this.renderQuestions()}<br/>
-
-                {this.renderGrade()}
-
+            <div className="container-new-integral-activity">
                 {this.renderSendButton()}
 
                 {this.renderRetryButton()}
