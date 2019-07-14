@@ -49,10 +49,10 @@ class Slide4 extends React.Component {
     getActivityThree = () => {
         return {
             unitId: this.props.unitId,
-            id: "atividade_3_decomposicao",
+            id: "atividade_3_abstracao",
             questions: [
                 {
-                    id: "q1_a3_decomposicao",
+                    id: "q1_a3_abstracao",
                     options: [
                         {
                             value: "0",
