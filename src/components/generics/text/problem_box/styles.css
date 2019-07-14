@@ -1,0 +1,35 @@
+div.problem-box-container{
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(255, 212, 120);
+}
+
+div.problem-box-container .title-container{
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    padding: 25px 30px 30px 30px;
+    background: rgba(255,212,120,1);
+    background: -moz-linear-gradient(-45deg, rgba(255,212,120,1) 0%, rgba(255,212,120,1) 95%, rgba(248,181,0,1) 95%, rgba(252,205,77,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,212,120,1)), color-stop(95%, rgba(255,212,120,1)), color-stop(95%, rgba(248,181,0,1)), color-stop(100%, rgba(252,205,77,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(255,212,120,1) 0%, rgba(255,212,120,1) 95%, rgba(248,181,0,1) 95%, rgba(252,205,77,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(255,212,120,1) 0%, rgba(255,212,120,1) 95%, rgba(248,181,0,1) 95%, rgba(252,205,77,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(255,212,120,1) 0%, rgba(255,212,120,1) 95%, rgba(248,181,0,1) 95%, rgba(252,205,77,1) 100%);
+    background: linear-gradient(135deg, rgba(255,212,120,1) 0%, rgba(255,212,120,1) 95%, rgba(248,181,0,1) 95%, rgba(252,205,77,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd478', endColorstr='#fccd4d', GradientType=1 );
+}
+
+div.problem-box-container .title-container .image{
+    margin-top: -5px;
+}
+
+div.problem-box-container .title-container .title{
+    width: 100%;
+    text-align: center;
+    margin-left: -40px;
+}
+
+div.problem-box-container .text-container{
+    padding: 20px 30px 30px 30px;
+    width: auto;
+}

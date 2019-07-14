@@ -23,26 +23,31 @@
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_decomposicao",
-                        "enunciado": "Qual das afirmativas abaixo lhe parece menos apropriada para se falar sobre o Pilar “Decomposição”?",
+                        "enunciado": "Com o propósito de diagnosticar a origem de um problema de saúde, a partir de sintomas diversos, um médico usualmente analisa o corpo humano segundo seus sistemas ou elementos constituintes. Em tal cenário, qual dos seguintes conjuntos lhe parece menos adequado.",
                         "gabaritos": [
                             {
-                                "alternativa": "É uma atividade totalmente subjetiva, pois uma boa decomposição independe do objeto ou sistema que desejamos decompor e das finalidades às quais ela servirá.",
+                                "alternativa": "Cardiovascular, respiratório, digestivo, nervoso, sensorial, endócrino, excretor, urinário, reprodutor, esquelético, muscular, imunológico, linfático, tegumentar.",
                                 "chave": "1",
-                                "valor": "1"
+                                "valor": "0"
                             },
                             {
-                                "alternativa": "O resultado de uma decomposição são partes ou sistemas mais simples os quais podem ser adequados a novas  decomposições.",
+                                "alternativa": "Cavidades nasais, faringe, laringe, traquéia, brônquios, pulmões.",
                                 "chave": "2",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Quando um mesmo sistema é decomposto isoladamente por duas ou mais pessoas, é  possível que tenhamos decomposições diferentes.",
+                                "alternativa": "Cabeça, tronco, membros.",
                                 "chave": "3",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Visão, audição, olfato, paladar, tato.",
+                                "chave": "4",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "É possível comparar duas decomposições de um mesmo sistema ou objeto e com isso identificar entre elas a que parece mais adequada aos propósitos do problema a ser resolvido.",
-                                "chave": "4",
+                                "alternativa": "Artérias, veias, vasos capilares.",
+                                "chave": "5",
                                 "valor": "0"
                             }
                         ]
@@ -80,76 +85,6 @@
                             },
                             {
                                 "alternativa": "Convites; cardápio; música; bolo decorado; doces; salgados; bebidas; lembranças.",
-                                "chave": "5",
-                                "valor": "0"
-                            }
-                        ]
-                    },
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q2_a2_decomposicao",
-                        "enunciado": "Com o propósito de diagnosticar a origem de um problema de saúde, a partir de sintomas diversos, um médico usualmente analisa o corpo humano segundo seus sistemas ou elementos constituintes. Em tal cenário, qual dos seguintes conjuntos lhe parece menos adequado.",
-                        "gabaritos": [
-                            {
-                                "alternativa": "Cardiovascular, respiratório, digestivo, nervoso, sensorial, endócrino, excretor, urinário, reprodutor, esquelético, muscular, imunológico, linfático, tegumentar.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Cavidades nasais, faringe, laringe, traquéia, brônquios, pulmões.",
-                                "chave": "2",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Cabeça, tronco, membros.",
-                                "chave": "3",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Visão, audição, olfato, paladar, tato.",
-                                "chave": "4",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Artérias, veias, vasos capilares.",
-                                "chave": "5",
-                                "valor": "0"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "identificador": "atividade_3_decomposicao",
-                "nomeAtividade": "Atividades Avaliativas",
-                "questoes": [
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q1_a3_decomposicao",
-                        "enunciado": "Considere que você precisa definir como deve ser realizada a avaliação das danças apresentadas por grupos em um festival folclórico. Considere ainda que esse festival seja realizado pela comunidade de uma escola, de um bairro ou até de uma cidade inteira. Reflita sobre como a avaliação poderia ser decomposta em elementos e indique qual, dentre os seguintes, seria menos adequado para esse fim.",
-                        "gabaritos": [
-                            {
-                                "alternativa": "Tempo da apresentação.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Sincronia.",
-                                "chave": "2",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Precisão de movimentos.",
-                                "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Participação da audiência.",
-                                "chave": "4",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Figurino.",
                                 "chave": "5",
                                 "valor": "0"
                             }

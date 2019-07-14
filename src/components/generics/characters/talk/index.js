@@ -45,7 +45,6 @@ class CharacterTalk extends React.Component {
                             :
                             <Fragment>
                                 <div onClick={this.props.previousTalk} className="button last-previous"><Regular><FontMedium>{"<"}</FontMedium></Regular></div>
-                                <div className="button read-more"><Regular><FontMedium>Leia Mais</FontMedium></Regular></div>
                                 <div onClick={this.props.finishTalk} className="button ok-button"><Regular><FontMedium>Ok!</FontMedium></Regular></div>
                             </Fragment>
                         }

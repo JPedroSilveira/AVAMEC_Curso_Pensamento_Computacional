@@ -1,9 +1,10 @@
 import React from 'react'
 import FontMedium from '../../font/medium'
 import Regular from '../../font/regular'
+import Image from '../../image'
+import Logo from '../../../../images/component/logo.svg'
 import './styles.css'
 
-//props.text = Texto a ser exibido
 class TextStandardBox extends React.Component {
     constructor(props) {
         super(props)
@@ -12,15 +13,12 @@ class TextStandardBox extends React.Component {
             marginBottom: props.marginBottom ? props.marginBottom : "0",
             marginTop: props.marginTop ? props.marginTop : "0"
         }
-
-        this.borderStyle = {
-            borderImage: "url(" + props.image + ") 0 fill",
-        }
     }
     render() {
         return (
             <div className="text-standard-box-container" style={this.style}> 
                 <div className="text-standard-box" style={this.borderStyle}>
+                    <Image marginTop="10px" width="35px" src={Logo}/>
                     <div className="text-standard-box-text-container">
                         <Regular><FontMedium>{this.props.children}</FontMedium></Regular>
                     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 
 import ListUtils from '../../../../utils/listUtils'
 
@@ -12,6 +12,12 @@ import OptionValues from '../../../../constants/optionValues.js'
 import BaseActivity from '../baseActivity'
 
 import BasicButton from '../../buttons/basic_button'
+import InlineBox from '../../inline_box'
+import ActivityOption from '../activity_option'
+import InputRadioButton from '../../buttons/input_radio_button'
+import Box from '../../box'
+import Color from '../../../../constants/color'
+import Strong from '../../font/strong'
 
 import LoadImage from '../../../../images/load-image.png'
 import PressedLoadImage from '../../../../images/pressed-load-image.png'
@@ -242,17 +248,88 @@ class IntegralActivity extends BaseActivity {
         })
     }
 
+    renderQuestions = () => {
+        return (
+            <Fragment>
+                {this.props.activity.questions.map((question, key) => {
+                    return (
+                        <div key={key}>
+                            <InlineBox>
+                                {this.renderOptions(question)}
+                            </InlineBox>
+                        </div>
+                    )
+                })}
+            </Fragment>
+        )
+    }
+
+    renderOptions = (question) => {
+        return (
+            <Fragment>
+                {question.options.map((option, key) => {
+                    return (
+                        <ActivityOption key={key}>
+                            {this.renderOptionText(question, option)}
+                            {this.renderOptionTip(question, option)}
+                        </ActivityOption>
+                    )
+                })}
+            </Fragment>
+        )
+    }
+
+    renderOptionText = (question, option) => {
+        let isSelectedOption = this.isSelectedOption(question, option)
+
+        return (
+            <InputRadioButton
+                text={option.text}
+                radioName={question.id}
+                radioValue={option.key}
+                checked={isSelectedOption}
+                onChange={this.onChangeSelectedOption} />
+        )
+    }
+
+    renderOptionTip = (question, option) => {
+        let isSelectedOption = this.isSelectedOption(question, option)
+
+        if (isSelectedOption) {
+
+            let indexSelectedOption = this.getIndexSelectedOptionByQuestionId(question.id)
+
+            let selectedOption = this.state.selectedOptions[indexSelectedOption]
+
+            if (selectedOption.state === QuestionState.ANSWERED_RIGHT) {
+                return (
+                    <Box backgroundColor={Color.HINT_RIGHT_BG}>
+                        <Strong>Resposta Certa: </Strong>
+                        {option.tip}
+                    </Box>
+                )
+            } else if (selectedOption.state === QuestionState.ANSWERED_WRONG) {
+                return (
+                    <Box backgroundColor={Color.HINT_WRONG_BG}>
+                        <Strong>Resposta Errada: </Strong>
+                        {option.tip}
+                    </Box>
+                )
+            }
+        }
+    }
+
     renderSendButton = () => {   
         if(this.state.activityState !== ActivityState.ANSWERED) {
             if (this.state.unitState !== UnitState.COMPLETED) {
                 return (
-                    <BasicButton onClick={this.saveActivityAnswer}>
+                    <BasicButton centralize={true} onClick={this.saveActivityAnswer}>
                         ENVIAR RESPOSTAS
                     </BasicButton>
                 )
             } else {
                 return (
-                    <BasicButton disabled={true}>
+                    <BasicButton centralize={true} disabled={true}>
                         UNIDADE CONCLUÍDA
                     </BasicButton>
                 )
@@ -268,13 +345,14 @@ class IntegralActivity extends BaseActivity {
             if (hasWrongOrEmptyOption) {
                 if(this.state.unitState === UnitState.COMPLETED){
                     return (
-                        <BasicButton disabled={true}>
+                        <BasicButton centralize={true} disabled={true}>
                             UNIDADE CONCLUÍDA
                         </BasicButton>
                     )
                 } else {
                     return (
                         <BasicButton
+                            centralize={true}
                             onClick={this.retry}
                             onMouseOver={e => e.currentTarget.firstChild.src = PressedLoadImage}
                             onMouseOut={e => e.currentTarget.firstChild.src = LoadImage}>
@@ -291,6 +369,8 @@ class IntegralActivity extends BaseActivity {
     render() {
         return (
             <div className="container-new-integral-activity">
+                {this.renderQuestions()}<br />
+
                 {this.renderSendButton()}
 
                 {this.renderRetryButton()}

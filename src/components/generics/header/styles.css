@@ -8,8 +8,9 @@
 }
 
 .image-header-container .image-header-sub-container{
-    width: 150%;
+    width: 960px;
     padding-top: 92px;
+    padding-bottom: 75px;
     background-color: #ffffff;
     text-align: center;
 }

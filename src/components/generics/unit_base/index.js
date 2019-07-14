@@ -9,9 +9,14 @@ import CharacterTalk from '../characters/talk'
 import './styles.css'
 
 class UnitBase extends React.Component {
+
     componentDidMount() {
+        let openPage = LocalStorageUtils.getOpenPage()
         this.setState({
-            openPage: LocalStorageUtils.getOpenPage()
+            openPage: openPage,
+            contextMenuHidden: openPage === "1",
+            topBarHidden: openPage === "1",
+            topBarShowEverything: openPage !== "1"
         })
     }
 

@@ -14,7 +14,7 @@ class TopBar extends React.Component {
         super(props)
         window.addEventListener('scroll', this.onScroll)
         this.state = {
-            componentClass: "top-bar-container top-bar-container-hidden-without-animation",
+            componentClass: this.props.showEverything ? "top-bar-container" : "top-bar-container top-bar-container-hidden-without-animation",
             componentContextMenuClass: this.props.showEverything ? "top-context-menu-container" : "top-context-menu-container top-context-menu-container-hidden-without-animation",
             topBar: TopBarIntro
         }
@@ -22,12 +22,12 @@ class TopBar extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.hidden !== prevProps.hidden) {
             this.setState({
-                componentClass: this.props.showEverything ? "top-bar-container top-bar-container" : (this.props.hidden ? "top-bar-container top-bar-container-hidden" : "top-bar-container top-bar-container")
+                componentClass: this.props.showEverything ? "top-bar-container" : (this.props.hidden ? "top-bar-container top-bar-container-hidden" : "top-bar-container")
             })
         }
         if (this.props.showEverything !== prevProps.showEverything){
             this.setState({
-                componentClass: this.props.showEverything ? "top-bar-container top-bar-container" : (this.props.hidden ? "top-bar-container top-bar-container-hidden" : "top-bar-container top-bar-container"),
+                componentClass: this.props.showEverything ? "top-bar-container" : (this.props.hidden ? "top-bar-container top-bar-container-hidden" : "top-bar-container"),
                 componentContextMenuClass: this.props.showEverything ? "top-context-menu-container" : "top-context-menu-container top-context-menu-container-hidden-without-animation"
             })
         }

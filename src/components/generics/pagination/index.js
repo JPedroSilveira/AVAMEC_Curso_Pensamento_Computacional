@@ -186,7 +186,7 @@ class Pagination extends React.Component {
                                 <Image backgroundColor="#f4f3f3" height="135px" src={GreekColumn} alt="Greek column" />
                             </div>
                             <div className="page-control-container"> 
-                                <p className="greek-slide-text"><FontLightBlue><SmallFont><Strong>IR PARA OS SLIDE: </Strong></SmallFont></FontLightBlue></p>
+                                <p className="greek-slide-text"><FontLightBlue><SmallFont><Strong>IR PARA O SLIDE: </Strong></SmallFont></FontLightBlue></p>
                                 <ReactPaginate
                                     disabledClassName={'disabled-page'}
                                     previousLabel={'<'}

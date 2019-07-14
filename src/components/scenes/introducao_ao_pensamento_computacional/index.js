@@ -26,24 +26,28 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
             hasNextTalk: true,
             renderTalk: true,
             talkPage: "1",
-            contextMenuHidden: true,
-            topBarHidden: true
+            contextMenuHidden: false,
+            topBarHidden: false,
+            topBarShowEverything: true
         }
     }
 
-    renderTitle = () => {
-        return (<UnitTitle>INTRODUÇÃO</UnitTitle>)
+    renderUnitHeader = () => {
+        if (this.state.openPage === "1") {
+            return (
+                <Fragment>
+                    {this.renderHeader()}
+                    <UnitTitle>INTRODUÇÃO</UnitTitle>
+                </Fragment>
+            )
+        }
     }
 
     renderPage = () => {
         switch (this.state.openPage) {
             case "1":
                 return (
-                    <Fragment>
-                        {this.renderHeader()}
-                        {this.renderTitle()}
-                        <Slide1 />
-                    </Fragment>
+                    <Slide1 />
                 )
             case "2":
                 return (
@@ -82,6 +86,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         return (
             <Fragment>
                 {this.renderTalk()}
+                {this.renderUnitHeader()}
                 <ContentContainer>
                     {this.renderPage()}
                 </ContentContainer>

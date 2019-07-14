@@ -7,9 +7,10 @@ div.text-standard-box{
     border: 1pt solid transparent;
     border-radius: 10px;
     width: 750px;
+    border: 1px rgb(101, 196, 209) solid;
 }
 
 div.text-standard-box-text-container{
-    padding: 50px;
+    padding: 0px 50px 20px 50px;
     text-align: justify;
 }

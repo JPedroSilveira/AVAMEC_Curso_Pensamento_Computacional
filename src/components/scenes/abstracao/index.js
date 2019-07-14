@@ -1,7 +1,15 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
+import UnitTitle from '../../generics/unit_title'
 import ContentContainer from '../../generics/content_container'
+
 import CharacterTalk from '../../generics/characters/talk'
+import FidipidesOne from '../../../images/content/abstracao/fidipides-one.svg'
+import FidipidesTwo from '../../../images/content/abstracao/fidipides-two.svg'
+import FidipidesThree from '../../../images/content/abstracao/fidipides-three.svg'
+import FidipidesFour from '../../../images/content/abstracao/fidipides-four.svg'
+import FidipidesFive from '../../../images/content/abstracao/fidipides-five.svg'
+
 import Conceituacao from './conceituacao'
 import AtividadeAvaliativaUm from './atividade_avaliativa_um'
 import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
@@ -9,12 +17,6 @@ import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
 import Aplicacoes from './aplicacoes'
 import Problemas from './problemas'
 import Recomendacoes from './recomendacoes'
-import FidipidesOne from '../../../images/content/abstracao/fidipides-one.svg'
-import FidipidesTwo from '../../../images/content/abstracao/fidipides-two.svg'
-import FidipidesThree from '../../../images/content/abstracao/fidipides-three.svg'
-import FidipidesFour from '../../../images/content/abstracao/fidipides-four.svg'
-import FidipidesFive from '../../../images/content/abstracao/fidipides-five.svg'
-
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -33,8 +35,9 @@ class Abstracao extends UnitBase {
             hasNextTalk: true,
             renderTalk: true,
             talkPage: "1",
-            contextMenuHidden: true,
-            topBarHidden: true
+            contextMenuHidden: false,
+            topBarHidden: false,
+            topBarShowEverything: true
         }
     }
 
@@ -65,6 +68,17 @@ class Abstracao extends UnitBase {
         }
     }
 
+    renderUnitHeader = () => {
+        if (this.state.openPage === "1") {
+            return (
+                <Fragment>
+                    {this.renderHeader()}
+                    <UnitTitle>DECOMPOSIÇÃO</UnitTitle>
+                </Fragment>
+            )
+        }
+    }
+
     renderTalk = () => {
         if (this.state.renderTalk && this.state.openPage === this.state.talkPage) {
             return (
@@ -80,10 +94,6 @@ class Abstracao extends UnitBase {
                 </CharacterTalk>
             )
         }
-    }
-
-    renderTitle = () => {
-        return (<h1>3. Abstração</h1>)
     }
 
     renderPage = () => {
@@ -129,10 +139,12 @@ class Abstracao extends UnitBase {
         return (
             <Fragment>
                 {this.renderTalk()}
+                {this.renderUnitHeader()}
                 <ContentContainer>
-                    {this.renderTitle()}
                     {this.renderPage()}
                 </ContentContainer>
+                {this.renderContextMenu()}
+                {this.renderTopBar()}
                 {this.renderPagination()}
             </Fragment>
         )

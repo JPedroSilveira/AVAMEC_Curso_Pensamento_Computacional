@@ -30,8 +30,9 @@ class Decomposicao extends UnitBase {
             hasNextTalk: true,
             renderTalk: true,
             talkPage: "1",
-            contextMenuHidden: true,
-            topBarHidden: true
+            contextMenuHidden: false,
+            topBarHidden: false,
+            topBarShowEverything: true
         }
     }
 
@@ -39,11 +40,7 @@ class Decomposicao extends UnitBase {
         switch (this.state.openPage){
             case "1":
                 return (
-                    <Fragment>
-                        {this.renderHeader()}
-                        {this.renderTitle()}
-                        <Slide1/>
-                    </Fragment>
+                    <Slide1/>
                 ) 
             case "2":
                 return (
@@ -55,7 +52,7 @@ class Decomposicao extends UnitBase {
                 )
             case "4":
                 return (
-                    <Slide4 />
+                    <Slide4 unitId={this.props.id} />
                 )
             case "5":
                 return (
@@ -89,8 +86,15 @@ class Decomposicao extends UnitBase {
         }
     }
 
-    renderTitle = () => {
-        return (<UnitTitle>DECOMPOSIÇÃO</UnitTitle>)
+    renderUnitHeader = () => {
+        if(this.state.openPage === "1"){
+            return (
+                <Fragment>
+                    {this.renderHeader()}
+                    <UnitTitle>DECOMPOSIÇÃO</UnitTitle>
+                </Fragment>        
+            )
+        }
     }
 
     renderTalk = () => {
@@ -113,6 +117,7 @@ class Decomposicao extends UnitBase {
         return (
             <Fragment>
                 {this.renderTalk()}
+                {this.renderUnitHeader()}
                 <ContentContainer>
                     {this.renderPage()}
                 </ContentContainer>
