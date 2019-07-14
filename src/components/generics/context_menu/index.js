@@ -130,7 +130,6 @@ class ContextMenu extends React.Component {
         return (
             <div className="extra-content-button-container">
                 <FontSmall>SAIBA MAIS</FontSmall>
-                <div className="button-underline"></div>
             </div>
         )
     }

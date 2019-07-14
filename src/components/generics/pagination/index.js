@@ -183,10 +183,10 @@ class Pagination extends React.Component {
                     <div className="pagination-sub-container">
                         <div className="pagination-second-container">
                             <div className="greek-first-column">
-                                <Image backgroundColor="#f4f3f3" width="80px" height="auto" src={GreekColumn} alt="Greek column" />
+                                <Image backgroundColor="#f4f3f3" height="135px" src={GreekColumn} alt="Greek column" />
                             </div>
                             <div className="page-control-container"> 
-                                <p className="greek-slide-text"><FontLightBlue><SmallFont><Strong>IR PARA OS SLIDE: </Strong></SmallFont></FontLightBlue></p>
+                                <p className="greek-slide-text"><FontLightBlue><SmallFont><Strong>IR PARA O SLIDE: </Strong></SmallFont></FontLightBlue></p>
                                 <ReactPaginate
                                     disabledClassName={'disabled-page'}
                                     previousLabel={'<'}
@@ -203,7 +203,7 @@ class Pagination extends React.Component {
                                 />
                             </div>
                             <div className="greek-second-column">
-                                <Image backgroundColor="#f4f3f3" width="80px" height="auto" src={GreekColumn} alt="Greek column" />
+                                <Image backgroundColor="#f4f3f3" height="135px" src={GreekColumn} alt="Greek column" />
                             </div>
                         </div>
                     </div>

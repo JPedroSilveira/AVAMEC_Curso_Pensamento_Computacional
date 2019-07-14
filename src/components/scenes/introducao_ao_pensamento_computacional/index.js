@@ -5,10 +5,10 @@ import UnitTitle from '../../generics/unit_title'
 import Slide1 from './slide_1'
 import Slide2 from './slide_2'
 import Slide3 from './slide_3'
-import FidipidesOne from '../../../images/fidipides/introducao/talk-one.svg'
-import FidipidesTwo from '../../../images/fidipides/introducao/talk-two.svg'
-import FidipidesThree from '../../../images/fidipides/introducao/talk-three.svg'
-import FidipidesFour from '../../../images/fidipides/introducao/talk-four.svg'
+import FidipidesOne from '../../../images/content/introducao/talk-one.svg'
+import FidipidesTwo from '../../../images/content/introducao/talk-two.svg'
+import FidipidesThree from '../../../images/content/introducao/talk-three.svg'
+import FidipidesFour from '../../../images/content/introducao/talk-four.svg'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -26,24 +26,28 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
             hasNextTalk: true,
             renderTalk: true,
             talkPage: "1",
-            contextMenuHidden: true,
-            topBarHidden: true
+            contextMenuHidden: false,
+            topBarHidden: false,
+            topBarShowEverything: true
         }
     }
 
-    renderTitle = () => {
-        return (<UnitTitle>INTRODUÇÃO</UnitTitle>)
+    renderUnitHeader = () => {
+        if (this.state.openPage === "1") {
+            return (
+                <Fragment>
+                    {this.renderHeader()}
+                    <UnitTitle>INTRODUÇÃO</UnitTitle>
+                </Fragment>
+            )
+        }
     }
 
     renderPage = () => {
         switch (this.state.openPage) {
             case "1":
                 return (
-                    <Fragment>
-                        {this.renderHeader()}
-                        {this.renderTitle()}
-                        <Slide1 />
-                    </Fragment>
+                    <Slide1 />
                 )
             case "2":
                 return (
@@ -82,6 +86,7 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         return (
             <Fragment>
                 {this.renderTalk()}
+                {this.renderUnitHeader()}
                 <ContentContainer>
                     {this.renderPage()}
                 </ContentContainer>

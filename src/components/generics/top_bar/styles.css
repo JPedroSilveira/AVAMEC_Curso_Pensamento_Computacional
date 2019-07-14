@@ -1,7 +1,7 @@
 div.top-bar-container{
     position: fixed;
     width: 100%;
-    height: 75px;
+    height: 90px;
     top: 0;
     display: flex;
     align-items: center;
@@ -13,13 +13,13 @@ div.top-bar-container{
 }
 div.top-bar-container div.top-bar-line{
     background-color: #eaa000;
-    height: 25px;
+    height: 20px;
     width: 100%;
 }
-.top-bar-container.top-bar-container-hidden-without-animation .top-bar-line{
+div.top-bar-container.top-bar-container-hidden-without-animation div.top-bar-line{
     height: 0px;
 }
-.top-bar-container.top-bar-container-hidden .top-bar-line{
+div.top-bar-container.top-bar-container-hidden div.top-bar-line{
     animation-name: fadeInOutTopBarInverse;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
@@ -32,22 +32,22 @@ div.top-bar-container div.top-context-menu-container{
     background: -webkit-linear-gradient(left,  rgba(0,158,195,1) 50%,rgba(0,183,234,1) 50%,rgba(0,183,234,1) 50%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right,  rgba(0,158,195,1) 50%,rgba(0,183,234,1) 50%,rgba(0,183,234,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009ec3', endColorstr='#00b7ea',GradientType=1 ); /* IE6-9 */
-    height: 50px;
-    width: 960px;
-    border-radius: 0px 0px 15px 15px;
+    height: 40px;
+    width: 700px;
+    border-radius: 0px 0px 7.5px 7.5px;
     animation-name: fadeInOutTopBarContextMenu;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-duration: 0.3s;
 }
-div.top-bar-container .top-context-menu-container.top-context-menu-container-hidden{
+div.top-bar-container div.top-context-menu-container.top-context-menu-container-hidden{
     animation-name: fadeInOutTopBarContextMenuInverse;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-duration: 0.3s;
     opacity: 0;
 }
-div.top-bar-container .top-context-menu-container.top-context-menu-container-hidden-without-animation{
+div.top-bar-container div.top-context-menu-container.top-context-menu-container-hidden-without-animation{
     opacity: 0;
 }
 div.top-bar-container div.top-context-menu-container div.course-name{
@@ -55,14 +55,32 @@ div.top-bar-container div.top-context-menu-container div.course-name{
     width: 50%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 7.5px;
 }
 div.top-bar-container div.top-context-menu-container div.unit-name{
     float: left;
     width: 50%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 7.5px;
+}
+div.top-bar-container div.slide-top-bar {
+    width: 100px;
+    height: 25px;
+    border-radius: 0px 0px 12.5px 12.5px;
+    border: 2px solid rgb(0,158,195);
+    border-top: 0px;
+    background-color: #ffffff;
+    color: rgb(0,158,195);
+    text-align: center;
+    padding-top: 3px;
+}
+div.top-bar-container div.slide-top-bar-hidden{
+    animation-name: fadeInOutTopBarContextMenuInverse;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    opacity: 0;
 }
 
 @keyframes fadeInOutTopBar {

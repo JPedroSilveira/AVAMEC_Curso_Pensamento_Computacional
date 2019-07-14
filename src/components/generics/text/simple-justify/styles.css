@@ -1,0 +1,9 @@
+div.text-simple-justify-container{
+    display: flex;
+    justify-content: center;
+}
+
+div.text-simple-justify{
+    text-align: justify;
+    width: 750px;
+}

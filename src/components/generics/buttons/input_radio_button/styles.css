@@ -4,7 +4,6 @@
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 1em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -12,7 +11,7 @@
 }
 
 .radio-label:hover{
-    color:rgb(245, 0, 87);
+    color:#ED9070;
     cursor: pointer;
 }
 
@@ -26,13 +25,13 @@
 /* Create a custom radio button .*/
 .checkmark {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   height: 22px;
   width: 22px;
-  background-color: #eee;
+  background-color: #F7F7F7;
   border-radius: 50%;
-  border: 3px solid #eee;
+  border: 3px solid #CECECE;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) .*/
@@ -44,13 +43,13 @@
 
 /* On mouse-over, add a grey background color .*/
 .radio-label:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: #CECECE;
 }
 
 /* When the radio button is checked, add a blue background .*/
 .radio-label input:checked ~ .checkmark {
-  background-color: white;
-  border-color: rgb(245, 0, 87);
+  background-color: #CECECE;
+  border-color: #ED9070;
 }
 
 /* Show the indicator (dot/circle) when checked .*/
@@ -65,9 +64,13 @@
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
-	background: rgb(245, 0, 87);
+  background: #FFA37B;
 }
 
 .option-radio:hover{
     cursor: pointer;
+}
+
+.radio-label .selected-text{
+  color: #ED9070;
 }

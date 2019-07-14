@@ -1,4 +1,9 @@
 div.text-with-image-right-container{
     display: flex;
+    padding-left: 30px;
     flex-direction: row;
+}
+
+div.text-with-image-right-image-container{
+    margin-right: 70px;
 }

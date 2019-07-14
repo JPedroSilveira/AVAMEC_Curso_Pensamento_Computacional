@@ -68,7 +68,7 @@ div.unit-box-bar{
 }
 
 div.unit-text{
-    width: 800px;
+    width: 880px;
 }
 
 div.unit-text div.unit-text-left{
@@ -93,7 +93,7 @@ div.pagination-container{
 }
 
 div.pagination-sub-container{
-    width: 860px;
+    width: 960px;
 }
 
 div.pagination-second-container{
@@ -105,16 +105,16 @@ div.pagination-second-container{
 
 div.greek-first-column{
     float: left;
-    width: 80px;
+    height: 135px;
 }
 
 div.page-control-container{
-    width: 800px;
+    width: 880px;
 }
 
 div.greek-second-column{
     float: right;
-    width: 80px;
+    height: 135px;
 }
 
 .greek-slide-text{
@@ -186,7 +186,7 @@ div.return-button-sub-container{
 }
 
 div.slides-text-container{
-    width: 545px;
+    width: 530px;
     height: 60px;
     display: flex;
     flex-direction: row;

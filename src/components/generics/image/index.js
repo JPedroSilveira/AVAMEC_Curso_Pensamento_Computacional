@@ -9,10 +9,19 @@ class Image extends React.Component {
             height: props.height ? props.height : "auto",
             backgroundColor: props.backgroundColor ? props.backgroundColor : "none",
             marginBottom: props.marginBottom ? props.marginBottom : "0",
-            marginTop: props.marginTop ? props.marginTop : "0"
+            marginTop: props.marginTop ? props.marginTop : "0",
+            marginRight: props.marginRight ? props.marginRight : "0",
+            paddingTop: props.paddingTop ? props.paddingTop : "0"
         }
-        this.class = "image-container".concat(" ").concat(this.props.className)
+
+        this.class = "image-container"
+
+        if (this.props.className !== undefined){
+            this.class = this.class.concat(" ").concat(this.props.className)
+        }
+        
     }
+
     render() {
         return (
             <div className={this.class}>
