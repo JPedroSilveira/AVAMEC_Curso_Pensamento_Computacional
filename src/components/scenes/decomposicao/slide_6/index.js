@@ -29,9 +29,7 @@ class Slide6 extends React.Component {
                             <p>Tente determinar sua área e note que decompô-lo em partes regulares é fundamental!</p>
                         </TextWithImageRight><br/>
                     </ProblemBox>
-                </TextSimpleJustify>
-                <TextSimpleJustify marginTop="50px">
-                    <ProblemBox title={"Problema 2"}>
+                    <ProblemBox marginTop="50px" title={"Problema 2"}>
                         <CenterBoxContainer>
                             <TextWithImageLeft paddingTop="10px" marginRight="20px" height="auto" width="50px" src={ManuscriptIcon}>
                                 <p><Strong>Organização e realização de Feira de Ciências</Strong></p>
@@ -39,9 +37,7 @@ class Slide6 extends React.Component {
                         </CenterBoxContainer>
                         <p>Elabore uma decomposição em equipes, para a organização e realização da Feira de Ciências da sua escola.</p>
                     </ProblemBox>
-                </TextSimpleJustify>
-                <TextSimpleJustify marginTop="50px" marginBottom="100px">
-                    <ProblemBox title={"Problema 2"}>
+                    <ProblemBox marginTop="50px" title={"Problema 2"}>
                         <CenterBoxContainer>
                             <TextWithImageLeft paddingTop="10px" marginRight="20px" height="auto" width="50px" src={ManuscriptIcon}>
                                 <p><Strong>Pilar Decomposição apoiando soluções de situação-problema</Strong></p>

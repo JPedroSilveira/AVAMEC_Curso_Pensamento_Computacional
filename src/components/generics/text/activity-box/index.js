@@ -8,9 +8,16 @@ import ActivityImage from '../../../../images/component/activity.svg'
 import './styles.css'
 
 class ActivityBox extends React.Component {
+    constructor(props){
+        super(props)
+
+        this.style = {
+            marginTop: props.marginTop !== undefined ? props.marginTop : "0"
+        }
+    }
     render() {
         return (
-            <div className="activity-box-container">
+            <div className="activity-box-container" style={this.style}>
                 <div className="title-container">
                     <div className="image">
                         <Image center={false} width="40px" height="40px" src={ActivityImage} />

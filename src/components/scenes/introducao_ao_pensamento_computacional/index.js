@@ -32,6 +32,26 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
         }
     }
 
+    getCurrentTalk = () => {
+        console.log(this.state.currentTalk)
+        switch (this.state.currentTalk) {
+            case 1:
+                this.state.animation = FidipidesOne;
+                break;
+            case 2:
+                this.state.animation = FidipidesTwo;
+                break;
+            case 3:
+                this.state.animation = FidipidesThree;
+                break;
+            case 4:
+                this.state.animation = FidipidesFour;
+                break;
+            default:
+                return null
+        }
+    }
+
     renderUnitHeader = () => {
         if (this.state.openPage === "1") {
             return (
@@ -57,26 +77,6 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
                 return (
                     <Slide3 />
                 )
-            default:
-                return null
-        }
-    }
-
-    getCurrentTalk = () => {
-        console.log(this.state.currentTalk)
-        switch (this.state.currentTalk) {
-            case 1:
-                this.state.animation = FidipidesOne;
-                break;
-            case 2:
-                this.state.animation = FidipidesTwo;
-                break;
-            case 3:
-                this.state.animation = FidipidesThree;
-                break;
-            case 4:
-                this.state.animation = FidipidesFour;
-                break;
             default:
                 return null
         }

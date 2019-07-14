@@ -36,6 +36,25 @@ class Decomposicao extends UnitBase {
         }
     }
 
+    getCurrentTalk = () => {
+        switch (this.state.currentTalk) {
+            case 1:
+                this.state.animation = FidipidesOne;
+                break;
+            case 2:
+                this.state.animation = FidipidesTwo;
+                break;
+            case 3:
+                this.state.animation = FidipidesThree;
+                break;
+            case 4:
+                this.state.animation = FidipidesFour;
+                break;
+            default:
+                return null
+        }
+    }
+
     renderPage = () => {
         switch (this.state.openPage){
             case "1":
@@ -62,25 +81,6 @@ class Decomposicao extends UnitBase {
                 return (
                     <Slide6 />
                 )
-            default:
-                return null
-        }
-    }
-
-    getCurrentTalk = () => {
-        switch (this.state.currentTalk) {
-            case 1:
-                this.state.animation = FidipidesOne;
-                break;
-            case 2:
-                this.state.animation = FidipidesTwo;
-                break;
-            case 3:
-                this.state.animation = FidipidesThree;
-                break;
-            case 4:
-                this.state.animation = FidipidesFour;
-                break;
             default:
                 return null
         }
