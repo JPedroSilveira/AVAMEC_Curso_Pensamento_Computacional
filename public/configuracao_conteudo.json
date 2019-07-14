@@ -104,12 +104,12 @@
         "atividades": [
             {
                 "identificador": "atividade_1_abstracao",
-                "nomeAtividade": "Atividades Avaliativas",
+                "nomeAtividade": "Organizar guarda-roupa",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_abstracao",
-                        "enunciado": "A1. Para falar das atividades necessárias para detalhar a abstração “Organizar o seu guarda-roupa”, identifique a atividade que lhe parece menos adequada:",
+                        "enunciado": "Para falar das atividades necessárias para detalhar a abstração “Organizar o seu guarda-roupa”, identifique a atividade que lhe parece menos adequada:",
                         "gabaritos": [
                             {
                                 "alternativa": "Separar as peças de roupa por tipo.",
@@ -137,7 +137,7 @@
             },
             {
                 "identificador": "atividade_2_abstracao",
-                "nomeAtividade": "Atividades Avaliativas",
+                "nomeAtividade": "Organizar biblioteca",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
@@ -165,11 +165,17 @@
                                 "valor": "0"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "identificador": "atividade_3_abstracao",
+                "nomeAtividade": "Área de vendas",
+                "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q2_a2_abstracao",
-                        "enunciado": "A3. Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores:",
+                        "identificador": "q1_a3_abstracao",
+                        "enunciado": "Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores:",
                         "gabaritos": [
                             {
                                 "alternativa": "Padaria, Materiais de Limpeza, Congelados, Hortigranjeiros.",
@@ -188,66 +194,6 @@
                             },
                             {
                                 "alternativa": "Frios, Congelados, Matinais, Materiais Elétricos.",
-                                "chave": "4",
-                                "valor": "0"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "identificador": "atividade_3_abstracao",
-                "nomeAtividade": "Atividades Avaliativas",
-                "questoes": [
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q1_a3_abstracao",
-                        "enunciado": "A4. Para organizar seu guarda-roupas, o que lhe parece ser uma abstração mais conveniente para falar de roupas: ",
-                        "gabaritos": [
-                            {
-                                "alternativa": "O tecido com qual as peças são confeccionadas.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "O país onde as peças são fabricadas.",
-                                "chave": "2",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "O preço das peças.",
-                                "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "O tipo das peças, por exemplo, calça, bermuda, vestido, saia, blazer etc.",
-                                "chave": "4",
-                                "valor": "1"
-                            }
-                        ]
-                    },
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q2_a3_abstracao",
-                        "enunciado": "A5. Para organizar a circulação de veículos de uma cidade, o que parece ser uma característica irrelevante de suas vias: ",
-                        "gabaritos": [
-                            {
-                                "alternativa": "A largura da via.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "A altura máxima permitida para o tráfego de veículos.",
-                                "chave": "2",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "A idade média dos veículos que trafegam na via.",
-                                "chave": "3",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "A tonelagem máxima suportada pela via.",
                                 "chave": "4",
                                 "valor": "0"
                             }

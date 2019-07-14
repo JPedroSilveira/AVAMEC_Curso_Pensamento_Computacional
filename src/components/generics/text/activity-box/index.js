@@ -1,10 +1,10 @@
 import React from 'react'
-import FontLight from '../font/light'
-import FontDark from '../font/dark'
-import FontLarge from '../font/large'
-import FontRegular from '../font/regular'
-import Image from '../image'
-import ActivityImage from '../../../images/component/activity.svg'
+import FontLight from '../../font/light'
+import FontDark from '../../font/dark'
+import FontLarge from '../../font/large'
+import FontRegular from '../../font/regular'
+import Image from '../../image'
+import ActivityImage from '../../../../images/component/activity.svg'
 import './styles.css'
 
 class ActivityBox extends React.Component {

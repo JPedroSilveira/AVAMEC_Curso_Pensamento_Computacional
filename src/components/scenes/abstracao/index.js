@@ -3,20 +3,19 @@ import UnitBase from '../../generics/unit_base'
 import UnitTitle from '../../generics/unit_title'
 import ContentContainer from '../../generics/content_container'
 
+import Slide1 from './slide_1'
+import Slide2 from './slide_2'
+import Slide3 from './slide_3'
+import Slide4 from './slide_4'
+import Slide5 from './slide_5'
+import Slide6 from './slide_6'
+
 import CharacterTalk from '../../generics/characters/talk'
 import FidipidesOne from '../../../images/content/abstracao/fidipides-one.svg'
 import FidipidesTwo from '../../../images/content/abstracao/fidipides-two.svg'
 import FidipidesThree from '../../../images/content/abstracao/fidipides-three.svg'
 import FidipidesFour from '../../../images/content/abstracao/fidipides-four.svg'
 import FidipidesFive from '../../../images/content/abstracao/fidipides-five.svg'
-
-import Conceituacao from './conceituacao'
-import AtividadeAvaliativaUm from './atividade_avaliativa_um'
-import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
-import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
-import Aplicacoes from './aplicacoes'
-import Problemas from './problemas'
-import Recomendacoes from './recomendacoes'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -26,7 +25,7 @@ class Abstracao extends UnitBase {
         super(props)
         
         this.state = {
-            availablePages: 8,
+            availablePages: 6,
             animation: FidipidesOne,
             animationGreen: false,
             talkCount: 5,
@@ -73,7 +72,7 @@ class Abstracao extends UnitBase {
             return (
                 <Fragment>
                     {this.renderHeader()}
-                    <UnitTitle>DECOMPOSIÇÃO</UnitTitle>
+                    <UnitTitle>ABSTRAÇÃO</UnitTitle>
                 </Fragment>
             )
         }
@@ -100,35 +99,27 @@ class Abstracao extends UnitBase {
         switch (this.state.openPage){
             case "1":
                 return (
-                    <Conceituacao />
+                    <Slide1 />
                 )
             case "2":
                 return (
-                    <Conceituacao />
+                    <Slide2 />
                 )
             case "3":
                 return (
-                    <AtividadeAvaliativaUm unitId={this.props.id} />
+                    <Slide3 />
                 )
             case "4":
                 return (
-                    <Aplicacoes />
+                    <Slide4 unitId={this.props.id} />
                 )
             case "5":
                 return (
-                    <AtividadeAvaliativaDois unitId={this.props.id} />
+                    <Slide5 />
                 )
             case "6":
                 return (
-                    <Recomendacoes />
-                )
-            case "7":
-                return (
-                    <AtividadeAvaliativaTres unitId={this.props.id} />
-                )
-            case "8":
-                return (
-                    <Problemas />
+                    <Slide6 unitId={this.props.id} />
                 )
             default: 
                 return null

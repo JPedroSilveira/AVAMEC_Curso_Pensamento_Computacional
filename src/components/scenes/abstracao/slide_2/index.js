@@ -1,15 +1,17 @@
 import React, { Fragment } from 'react'
 import Image from '../../../generics/image'
-import IntroTwo from '../../../../images/content/introducao/intro-two.svg'
-import GreekBar from '../../../../images/component/greek-bar.svg'
+
 import MiniGameNames from '../../../../constants/miniGameNames'
 import MiniGameLoader from '../../../generics/mini_game_loader'
 
+import TitleOne from '../../../../images/content/abstracao/title-one.svg'
+import GreekBar from '../../../../images/component/greek-bar.svg'
+
 const Slide2 = () => (
     <Fragment>
-        <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroTwo}/>
+        <Image marginTop="100px" marginBottom="50px" height="auto" width="800px" src={TitleOne}/>
         <Image marginBottom="10px" height="auto" width="100%" src={GreekBar} />
-        <MiniGameLoader miniGameName={MiniGameNames.INTRODUCAO} />
+        <MiniGameLoader miniGameName={MiniGameNames.ABSTRACAO} />
         <Image marginTop="10px" marginBottom="50px" height="auto" width="100%" src={GreekBar} />
     </Fragment>
 )

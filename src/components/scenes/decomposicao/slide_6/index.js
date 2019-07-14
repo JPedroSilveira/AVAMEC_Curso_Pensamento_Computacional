@@ -5,7 +5,7 @@ import TextSimpleJustify from '../../../generics/text/simple-justify'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Strong from '../../../generics/font/strong'
 import Image from '../../../generics/image'
-import ProblemBox from '../../../generics/problem_box'
+import ProblemBox from '../../../generics/text/problem_box'
 
 import ManuscriptIcon from '../../../../images/content/decomposicao/manuscript-icon.svg'
 import IntroSix from '../../../../images/content/decomposicao/intro-six.svg'
@@ -15,7 +15,7 @@ class Slide6 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="-100px" height="auto" width="auto" src={IntroSix} />
+                <Image marginTop="100px" marginBottom="-100px" height="auto" width="700px" src={IntroSix} />
                 <TextSimpleJustify>
                     <ProblemBox title={"Problema 1"}>
                         <CenterBoxContainer>

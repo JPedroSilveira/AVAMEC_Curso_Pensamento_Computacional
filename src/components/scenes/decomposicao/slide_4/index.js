@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
-import ActivityBox from '../../../generics/activity-box'
+import ActivityBox from '../../../generics/text/activity-box'
 import Image from '../../../generics/image'
 
 import IntroFour from '../../../../images/content/decomposicao/intro-four.svg'
@@ -59,8 +59,6 @@ class Slide4 extends React.Component {
             questions: [
                 {
                     id: "q1_a2_decomposicao",
-                    title: "<strong>A2.</strong> Organizando um evento escolar",
-                    statement: "Qualquer evento, seja no âmbito pessoal (aniversários, casamentos, festas religiosas, etc.) quanto no profissional (congressos, seminários, premiações, etc.), requer, para sua realização, a execução de um conjunto de atividades que podem, dependendo da dimensão do evento em questão, envolver várias pessoas ou equipes, responsáveis pelos diferentes aspectos que constituem o evento. Considere a realização do seminário \"O Pensamento Computacional na Escola\", e dentre as diferentes listas apresentadas nas alternativas , indique qual lhe parece uma <strong>decomposição adequada</strong> de elementos envolvidos nesse evento.",
                     options: [
                         {
                             value: "0",

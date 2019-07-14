@@ -6,9 +6,9 @@ import InfoTwo from '../../../../images/content/introducao/info-two.svg'
 
 const Slide3 = () => (
     <Fragment>
-        <Image marginTop="100px" marginBottom="50px" height="auto" width="auto" src={IntroThree}/>
-        <Image marginBottom="50px" height="auto" width="auto" src={Pilares} />
-        <Image marginBottom="50px" height="auto" width="auto" src={InfoTwo} />
+        <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroThree}/>
+        <Image marginBottom="50px" height="auto" width="700px" src={Pilares} />
+        <Image marginBottom="50px" height="auto" width="700px" src={InfoTwo} />
     </Fragment>
 )
 
