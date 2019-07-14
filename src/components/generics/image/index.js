@@ -11,6 +11,7 @@ class Image extends React.Component {
             marginBottom: props.marginBottom ? props.marginBottom : "0",
             marginTop: props.marginTop ? props.marginTop : "0",
             marginRight: props.marginRight ? props.marginRight : "0",
+            marginLeft: props.marginLeft ? props.marginLeft : "0",
             paddingTop: props.paddingTop ? props.paddingTop : "0"
         }
 

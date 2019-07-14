@@ -5,7 +5,7 @@ import TextSimpleJustify from '../../../generics/text/simple-justify'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Strong from '../../../generics/font/strong'
 import Image from '../../../generics/image'
-import ProblemBox from '../../../generics/problem_box'
+import ProblemBox from '../../../generics/text/problem_box'
 
 import ManuscriptIcon from '../../../../images/content/decomposicao/manuscript-icon.svg'
 import IntroSix from '../../../../images/content/decomposicao/intro-six.svg'
@@ -15,7 +15,7 @@ class Slide6 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="-100px" height="auto" width="auto" src={IntroSix} />
+                <Image marginTop="100px" marginBottom="-100px" height="auto" width="700px" src={IntroSix} />
                 <TextSimpleJustify>
                     <ProblemBox title={"Problema 1"}>
                         <CenterBoxContainer>
@@ -29,9 +29,7 @@ class Slide6 extends React.Component {
                             <p>Tente determinar sua área e note que decompô-lo em partes regulares é fundamental!</p>
                         </TextWithImageRight><br/>
                     </ProblemBox>
-                </TextSimpleJustify>
-                <TextSimpleJustify marginTop="50px">
-                    <ProblemBox title={"Problema 2"}>
+                    <ProblemBox marginTop="50px" title={"Problema 2"}>
                         <CenterBoxContainer>
                             <TextWithImageLeft paddingTop="10px" marginRight="20px" height="auto" width="50px" src={ManuscriptIcon}>
                                 <p><Strong>Organização e realização de Feira de Ciências</Strong></p>
@@ -39,9 +37,7 @@ class Slide6 extends React.Component {
                         </CenterBoxContainer>
                         <p>Elabore uma decomposição em equipes, para a organização e realização da Feira de Ciências da sua escola.</p>
                     </ProblemBox>
-                </TextSimpleJustify>
-                <TextSimpleJustify marginTop="50px" marginBottom="100px">
-                    <ProblemBox title={"Problema 2"}>
+                    <ProblemBox marginTop="50px" title={"Problema 2"}>
                         <CenterBoxContainer>
                             <TextWithImageLeft paddingTop="10px" marginRight="20px" height="auto" width="50px" src={ManuscriptIcon}>
                                 <p><Strong>Pilar Decomposição apoiando soluções de situação-problema</Strong></p>

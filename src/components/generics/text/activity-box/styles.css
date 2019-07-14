@@ -4,7 +4,7 @@ div.activity-box-container{
     border-color: #ED9070;
 }
 
-div.activity-box-container .title-container{
+div.activity-box-container div.title-container{
     display: flex;
     flex-direction: row;
     height: 45px;
@@ -19,17 +19,17 @@ div.activity-box-container .title-container{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa37b', endColorstr='#ed9070', GradientType=1 );
 }
 
-div.activity-box-container .title-container .image{
+div.activity-box-container div.title-container div.image{
     margin-top: 10px;
 }
 
-div.activity-box-container .title-container .title{
+div.activity-box-container div.title-container div.title{
     width: 100%;
     text-align: center;
     margin-left: -40px;
 }
 
-div.activity-box-container .text-container{
-    padding: 20px 30px 30px 30px;
+div.activity-box-container div.text-container{
+    padding: 5px 60px 20px 60px;
     width: auto;
 }

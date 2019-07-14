@@ -29,6 +29,10 @@ div.problem-box-container .title-container .title{
     margin-left: -40px;
 }
 
+div.problem-box-container div.title div.problem-title{
+    margin-top: -20px;
+}
+
 div.problem-box-container .text-container{
     padding: 20px 30px 30px 30px;
     width: auto;

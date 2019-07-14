@@ -7,7 +7,7 @@ import MiniGameLoader from '../../../generics/mini_game_loader'
 
 const Slide2 = () => (
     <Fragment>
-        <Image marginTop="100px" marginBottom="50px" height="auto" width="auto" src={IntroTwo}/>
+        <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroTwo}/>
         <Image marginBottom="10px" height="auto" width="100%" src={GreekBar} />
         <MiniGameLoader miniGameName={MiniGameNames.DECOMPOSICAO} />
         <Image marginTop="10px" marginBottom="50px" height="auto" width="100%" src={GreekBar} />
