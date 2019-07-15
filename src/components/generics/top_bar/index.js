@@ -70,7 +70,7 @@ class TopBar extends React.Component {
                     <div className="unit-name"><FontLight><Regular><FontMedium>{UnitNameUtils.getUnitName(this.props.unit)}</FontMedium></Regular></FontLight></div>
                 </div>
                 <div className={this.state.slideTopBarClass}>
-                    <FontSmall><Regular>SLIDE 2 DE 6</Regular></FontSmall>
+                    <FontSmall><Regular>SLIDE {this.props.slide} DE {this.props.lastSlide}</Regular></FontSmall>
                 </div>            
             </div>
         )

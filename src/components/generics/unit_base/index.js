@@ -68,7 +68,7 @@ class UnitBase extends React.Component {
 
     renderTopBar = () => {
         return (
-            <TopBar hidden={this.state.topBarHidden} showEverything={this.state.topBarShowEverything} unit={this.props.id} />
+            <TopBar slide={this.state.openPage} lastSlide={this.state.availablePages} hidden={this.state.topBarHidden} showEverything={this.state.topBarShowEverything} unit={this.props.id} />
         )
     }
 
