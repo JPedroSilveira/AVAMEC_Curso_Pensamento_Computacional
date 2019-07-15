@@ -3,7 +3,7 @@ import TextSimpleJustify from '../../../generics/text/simple-justify'
 import TextStandardBox from '../../../generics/text/standard-box'
 import TextWithImageRight from '../../../generics/text/with-image-right'
 import TextWithImageLeft from '../../../generics/text/with-image-left'
-import ExampleBox from '../../../generics/text/example_box'
+import ExampleBox from '../../../generics/text/example-box'
 
 import Image from '../../../generics/image'
 

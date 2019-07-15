@@ -4,7 +4,7 @@ div.activity-box-container{
     border-color: #ED9070;
 }
 
-div.activity-box-container div.title-container{
+div.activity-box-container div.activity-title-container{
     display: flex;
     flex-direction: row;
     height: 45px;
@@ -19,11 +19,11 @@ div.activity-box-container div.title-container{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa37b', endColorstr='#ed9070', GradientType=1 );
 }
 
-div.activity-box-container div.title-container div.image{
+div.activity-box-container div.activity-title-container div.image{
     margin-top: 10px;
 }
 
-div.activity-box-container div.title-container div.title{
+div.activity-box-container div.activity-title-container div.title{
     width: 100%;
     text-align: center;
     margin-left: -40px;

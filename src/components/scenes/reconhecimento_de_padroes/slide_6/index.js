@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import StandardBox from '../../../generics/text/standard-box'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
 import Image from '../../../generics/image'
-import ProblemBox from '../../../generics/text/problem_box'
+import ProblemBox from '../../../generics/text/problem-box'
 import ExternalLink from '../../../generics/external_link'
 
 import IntroSix from '../../../../images/content/reconhecimento_de_padroes/intro-six.svg'

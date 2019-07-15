@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
 import Image from '../../../generics/image'
-import ExampleBox from '../../../generics/text/example_box'
+import ExampleBox from '../../../generics/text/example-box'
 import YouTubePlayer from '../../../generics/youtube_player'
 
 import IntroFour from '../../../../images/content/reconhecimento_de_padroes/intro-four.svg'

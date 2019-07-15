@@ -1,21 +1,25 @@
 import React, { Fragment } from 'react'
 import UnitBase from '../../generics/unit_base'
+import UnitTitle from '../../generics/unit_title'
 import ContentContainer from '../../generics/content_container'
-import AplicacaoInterativa from './aplicacao_interativa'
-import Conceituacao from './conceituacao'
-import AtividadeAvaliativaUm from './atividade_avaliativa_um'
-import TomandoDecisoes from './tomando_decisoes'
-import RepeticoesDeAtividades from './repeticoes_de_atividades'
-import AtividadeAvaliativaDois from './atividade_avaliativa_dois'
-import AplicacoesParte1 from './aplicacoes/parte_1'
-import AplicacoesParte2 from './aplicacoes/parte_2'
-import AplicacoesParte3 from './aplicacoes/parte_3'
-import AplicacoesParte4 from './aplicacoes/parte_4'
-import AtividadeAvaliativaTres from './atividade_avaliativa_tres'
-import Recomendacoes from './recomendacoes'
-import AtividadeAvaliativaQuatro from './atividade_avaliativa_quatro'
-import Problemas from './problemas'
-import ParaSaberMais from './para_saber_mais'
+
+import Slide1 from './slide_1'
+import Slide2 from './slide_2'
+import Slide3 from './slide_3'
+import Slide4 from './slide_4'
+import Slide5 from './slide_5'
+import Slide6 from './slide_6'
+import Slide7 from './slide_7'
+import Slide8 from './slide_8'
+import Slide9 from './slide_9'
+import Slide10 from './slide_10'
+import Slide11 from './slide_11'
+import Slide12 from './slide_12'
+
+import CharacterTalk from '../../generics/characters/talk'
+import FidipidesOne from '../../../images/content/decomposicao/talk-one.svg'
+import FidipidesTwo from '../../../images/content/decomposicao/talk-two.svg'
+import FidipidesThree from '../../../images/content/decomposicao/talk-three.svg'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade
@@ -25,75 +29,112 @@ class Algoritmos extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 15
+            availablePages: 12,
+            animation: FidipidesOne,
+            talkCount: 3,
+            currentTalk: 1,
+            hasPreviousTalk: false,
+            hasNextTalk: true,
+            renderTalk: true,
+            talkPage: "1",
+            contextMenuHidden: false,
+            topBarHidden: false,
+            topBarShowEverything: true
         }
     }
 
-    renderTitle = () => {
-        return (<h1>5. Algoritmos</h1>)
+    getCurrentTalk = () => {
+        switch (this.state.currentTalk) {
+            case 1:
+                this.state.animation = FidipidesOne;
+                break;
+            case 2:
+                this.state.animation = FidipidesTwo;
+                break;
+            case 3:
+                this.state.animation = FidipidesThree;
+                break;
+            default:
+                return null
+        }
+    }
+
+    renderUnitHeader = () => {
+        if (this.state.openPage === "1") {
+            return (
+                <Fragment>
+                    {this.renderHeader()}
+                    <UnitTitle>ALGORITMOS</UnitTitle>
+                </Fragment>
+            )
+        }
+    }
+
+    renderTalk = () => {
+        if (this.state.renderTalk && this.state.openPage === this.state.talkPage) {
+            return (
+                <CharacterTalk
+                    hasPreviousTalk={this.state.hasPreviousTalk}
+                    hasNextTalk={this.state.hasNextTalk}
+                    previousTalk={this.previousTalk}
+                    nextTalk={this.nextTalk}
+                    finishTalk={this.finishTalk}
+                    content={this.getCurrentTalk()}
+                    src={this.state.animation}>
+                </CharacterTalk>
+            )
+        }
     }
 
     renderPage = () => {
         switch (this.state.openPage) {
             case "1":
                 return (
-                    <AplicacaoInterativa />
+                    <Slide1 />
                 )
             case "2":
                 return (
-                    <Conceituacao />
+                    <Slide2 />
                 )
             case "3":
                 return (
-                    <AtividadeAvaliativaUm unitId={this.props.id}/>
+                    <Slide3 unitId={this.props.id}/>
                 )
             case "4":
                 return (
-                    <TomandoDecisoes />
+                    <Slide4 />
                 )
             case "5":
                 return (
-                    <RepeticoesDeAtividades  />
+                    <Slide5  />
                 )    
             case "6":
                 return (
-                    <AtividadeAvaliativaDois unitId={this.props.id} />
+                    <Slide6 unitId={this.props.id} />
                 )
             case "7":
                 return (
-                    <AplicacoesParte1 />
+                    <Slide7 />
                 )
             case "8":
                 return (
-                    <AplicacoesParte2 />
+                    <Slide8 />
                 )
             case "9":
                 return (
-                    <AplicacoesParte3 />
+                    <Slide9 unitId={this.props.id} />
                 )
             case "10":
                 return (
-                    <AplicacoesParte4 />
+                    <Slide10 />
                 )
             case "11":
                 return (
-                    <AtividadeAvaliativaTres unitId={this.props.id} />
+                    <Slide11 unitId={this.props.id} />
                 )
             case "12":
                 return (
-                    <Recomendacoes />
-                )
-            case "13":
-                return (
-                    <AtividadeAvaliativaQuatro unitId={this.props.id} />
-                )
-            case "14":
-                return (
-                    <Problemas />
-                )
-            case "15":
-                return(
-                    <ParaSaberMais />
+                    <Slide12 />
                 )
             default:
                 return null
@@ -103,10 +144,13 @@ class Algoritmos extends UnitBase {
     render() {
         return (
             <Fragment>
+                {this.renderTalk()}
+                {this.renderUnitHeader()}
                 <ContentContainer>
-                    {this.renderTitle()}
                     {this.renderPage()}
                 </ContentContainer>
+                {this.renderContextMenu()}
+                {this.renderTopBar()}
                 {this.renderPagination()}
             </Fragment>
         )

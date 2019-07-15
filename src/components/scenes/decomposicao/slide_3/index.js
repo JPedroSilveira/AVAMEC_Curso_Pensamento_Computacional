@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
 import Image from '../../../generics/image'
-import ExampleBox from '../../../generics/text/example_box'
+import ExampleBox from '../../../generics/text/example-box'
 import ExampleIntroOne from '../../../../images/content/decomposicao/examples-one.svg'
 
 class Slide3 extends React.Component {

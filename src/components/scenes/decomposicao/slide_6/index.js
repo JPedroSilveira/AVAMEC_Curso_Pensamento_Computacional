@@ -5,7 +5,7 @@ import TextSimpleJustify from '../../../generics/text/simple-justify'
 import CenterBoxContainer from '../../../generics/center_box_container'
 import Strong from '../../../generics/font/strong'
 import Image from '../../../generics/image'
-import ProblemBox from '../../../generics/text/problem_box'
+import ProblemBox from '../../../generics/text/problem-box'
 
 import ManuscriptIcon from '../../../../images/content/decomposicao/manuscript-icon.svg'
 import IntroSix from '../../../../images/content/decomposicao/intro-six.svg'

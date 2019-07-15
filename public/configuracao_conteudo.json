@@ -413,12 +413,12 @@
         "atividades": [
             {
                 "identificador": "atividade_1_algoritmos",
-                "nomeAtividade": "Atividades Avaliativas",
+                "nomeAtividade": "Algoritmo com recipientes",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_algoritmos",
-                        "enunciado": "A1. Considere o Algoritmo 02, a seguir, sobre o qual fazemos algumas afirmações. Identifique a alternativa que parece menos apropriada para se referir a este algoritmo.",
+                        "enunciado": "Considere o Algoritmo 02, a seguir, sobre o qual fazemos algumas afirmações. Identifique a alternativa que parece menos apropriada para se referir a este algoritmo.",
                         "gabaritos": [
                             {
                                 "alternativa": "O algoritmo descreve uma sequência de operações cuja execução completa nos permite obter exatos 4 litros de água no recipiente R5.",
@@ -446,7 +446,7 @@
             },
             {
                 "identificador": "atividade_2_algoritmos",
-                "nomeAtividade": "Atividades Avaliativas",
+                "nomeAtividade": "Lista de compras",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
@@ -484,7 +484,7 @@
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a3_algoritmos",
-                        "enunciado": "A03. Considere o Algoritmo 12, sobre o qual se fazem algumas afirmações. Selecione aquela que lhe parece com menos possibilidade de estar correta.",
+                        "enunciado": "Considere o Algoritmo 12, sobre o qual se fazem algumas afirmações. Selecione aquela que lhe parece com menos possibilidade de estar correta.",
                         "gabaritos": [
                             {
                                 "alternativa": "A execução do algoritmo certamente produzirá uma pilha vazia de pratos sujos e uma pilha de pratos limpos com a mesma quantidade de pratos que existia na pilha de pratos sujos.",
@@ -517,7 +517,7 @@
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a4_algoritmos",
-                        "enunciado": "A04. O Algoritmo 14 abaixo descreve o processo de retirada de um dos 4 pneus de um automóvel. Fazemos a seguir algumas afirmações sobre ele. Selecione a afirmação que você considera menos apropriada para se referir a este algoritmo.",
+                        "enunciado": "O Algoritmo 14 abaixo descreve o processo de retirada de um dos 4 pneus de um automóvel. Fazemos a seguir algumas afirmações sobre ele. Selecione a afirmação que você considera menos apropriada para se referir a este algoritmo.",
                         "gabaritos": [
                             {
                                 "alternativa": "A Operação 7 descreve uma repetição que nunca termina, pois a Operação 7.c tem efeito contrário ao que é realizado na Operação 7.a.",
