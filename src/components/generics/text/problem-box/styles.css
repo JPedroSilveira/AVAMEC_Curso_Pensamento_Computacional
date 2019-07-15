@@ -4,7 +4,7 @@ div.problem-box-container{
     border-color: rgb(255, 212, 120);
 }
 
-div.problem-box-container .title-container{
+div.problem-box-container div.problem-title-container{
     display: flex;
     flex-direction: row;
     height: 20px;
@@ -19,11 +19,11 @@ div.problem-box-container .title-container{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd478', endColorstr='#fccd4d', GradientType=1 );
 }
 
-div.problem-box-container .title-container .image{
+div.problem-box-container div.problem-title-container .image{
     margin-top: -5px;
 }
 
-div.problem-box-container .title-container .title{
+div.problem-box-container div.problem-title-container .title{
     width: 100%;
     text-align: center;
     margin-left: -40px;
@@ -33,7 +33,7 @@ div.problem-box-container div.title div.problem-title{
     margin-top: -20px;
 }
 
-div.problem-box-container .text-container{
+div.problem-box-container div.text-container{
     padding: 20px 30px 30px 30px;
     width: auto;
 }

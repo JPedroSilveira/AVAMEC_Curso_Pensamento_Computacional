@@ -188,6 +188,8 @@ class Pagination extends React.Component {
                             <div className="page-control-container"> 
                                 <p className="greek-slide-text"><FontLightBlue><SmallFont><Strong>IR PARA O SLIDE: </Strong></SmallFont></FontLightBlue></p>
                                 <ReactPaginate
+                                    pageRangeDisplayed={3}
+                                    marginPagesDisplayed={3}
                                     disabledClassName={'disabled-page'}
                                     previousLabel={'<'}
                                     nextLabel={'>'}
@@ -196,8 +198,6 @@ class Pagination extends React.Component {
                                     initialPage={this.state.page - 1}
                                     forcePage={this.state.page - 1}
                                     activeClassName={'selected-page'}
-                                    marginPagesDisplayed={this.state.availablePages}
-                                    pageRangeDisplayed={this.state.availablePages}
                                     onPageChange={this.onPageChange}
                                     containerClassName={'pagination'}
                                 />

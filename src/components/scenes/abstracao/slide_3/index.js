@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
 import Image from '../../../generics/image'
-import ExampleBox from '../../../generics/text/example_box'
+import ExampleBox from '../../../generics/text/example-box'
 
 import TitleTwo from '../../../../images/content/abstracao/title-two.svg'
 import ExampleOne from '../../../../images/content/abstracao/example-one.svg'

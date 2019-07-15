@@ -18,7 +18,7 @@ class ActivityBox extends React.Component {
     render() {
         return (
             <div className="activity-box-container" style={this.style}>
-                <div className="title-container">
+                <div className="activity-title-container">
                     <div className="image">
                         <Image center={false} width="40px" height="40px" src={ActivityImage} />
                     </div>
