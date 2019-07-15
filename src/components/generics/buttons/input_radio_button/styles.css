@@ -25,7 +25,7 @@
 /* Create a custom radio button .*/
 .checkmark {
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 0;
   height: 22px;
   width: 22px;
@@ -43,7 +43,7 @@
 
 /* On mouse-over, add a grey background color .*/
 .radio-label:hover input ~ .checkmark {
-  background-color: #CECECE;
+  border-color: #ED9070;
 }
 
 /* When the radio button is checked, add a blue background .*/

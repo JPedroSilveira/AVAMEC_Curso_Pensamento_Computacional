@@ -14,6 +14,8 @@ class ExampleBox extends React.Component {
             marginTop: props.marginTop ? props.marginTop : "0",
             marginBottom: props.marginBottom ? props.marginBottom : "0"
         }
+
+        this.textClass = props.styledList ? "text-container styled-list" : "text-container"
     }
 
     render() {
@@ -36,7 +38,7 @@ class ExampleBox extends React.Component {
                         </FontLarge></FontRegular>
                     </div>
                 </div>
-                <div className="text-container">
+                <div className={this.textClass}>
                     {this.props.children}
                 </div>
             </div>

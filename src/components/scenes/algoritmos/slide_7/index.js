@@ -12,7 +12,7 @@ class Slide7 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroSeven} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroSeven} />
                 <TextSimpleJustify marginBottom="100px">
                     <ExampleBox marginBottom="50px" title={"Exemplo 1"} exampleTitle={"Subindo as escadas"}>
                         <p>Comecemos por uma atividade, subir uma escada, que de tão corriqueira nem nos damos conta dela quando precisamos realizá-la, a menos em casos como quando a escada é muito alta e nos provoca preocupações. Nessas situações, em geral perguntamos “será que não tem um elevador por perto?”</p>

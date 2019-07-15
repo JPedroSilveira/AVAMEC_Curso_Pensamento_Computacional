@@ -4,5 +4,5 @@ export default {
     ABSTRACAO: 'Abstração',
     RECONHECIMENTO_DE_PADROES: 'Reconhecimento de Padrões',
     ALGORITMOS: 'Algoritmos',
-    PENSAMENTO_COMPUTACIONAL_INTERDISCIPLINARIDADE_E_COOPERACAO: 'Pensamento Computacional, Interdisciplinaridade e Cooperação',
+    PENSAMENTO_COMPUTACIONAL_INTERDISCIPLINARIDADE_E_COOPERACAO: 'Interdisciplinaridade e Cooperação',
 }

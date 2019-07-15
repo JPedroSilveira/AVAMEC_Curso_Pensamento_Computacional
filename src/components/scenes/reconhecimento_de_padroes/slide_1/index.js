@@ -33,7 +33,7 @@ class Slide1 extends React.Component {
     render(){
         return (
             <Fragment>
-                <Image marginTop="50px" marginBottom="50px" height="auto" width="700px" src={IntroOne} />
+                <Image marginTop="50px" marginBottom="50px" height="auto" width="900px" src={IntroOne} />
                 <Image marginBottom="10px" height="auto" width="100%" src={GreekBar} />
                 {this.renderGame()}
                 <Image marginTop="10px" marginBottom="50px" height="auto" width="100%" src={GreekBar} />

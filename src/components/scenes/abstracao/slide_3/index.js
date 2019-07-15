@@ -13,10 +13,10 @@ class Slide3 extends React.Component {
         return (
             <Fragment>
                 <TextSimpleJustify marginTop="150px">
-                    <Image marginLeft="-30px" marginBottom="50px" height="auto" width="800px" src={TitleTwo} />
+                    <Image marginLeft="-30px" marginBottom="50px" height="auto" width="900px" src={TitleTwo} />
                     <ExampleBox title={"Exemplo 1"} exampleTitle={"Mapa"} >
                         <p>Lembra do mapa que fizemos para o planejamento da nossa viagem? Ele é uma abstração da região que estamos percorrendo. Nele apontamos todos os pontos importantes para chegarmos até Atenas.</p>
-                        <p>O que acha de fazer um mapa semelhante para o bairro onde você mora? Com os pontos de seu interesse, onde você compra comida, roupas, pesca ou pratica esportes, etc. Enfim, pontos relativos a coisas que você faz cotidianamente.</p>
+                        <p>O que acha de fazer um mapa semelhante para o bairro onde você mora? Com os pontos de seu interesse onde você compra comida, roupas, pratica esportes, faz lanches, encontra com os amigos, enfim pontos relativos a coisas.</p>
                         <Image marginTop="50px" height="auto" width="700px" src={ExampleOne} />
                     </ExampleBox>
                     <ExampleBox marginTop="50px" title={"Exemplo 2"} exampleTitle={"Organizando uma biblioteca particular (ou coletiva)"} >

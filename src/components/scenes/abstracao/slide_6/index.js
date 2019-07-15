@@ -51,7 +51,7 @@ class Slide6 extends React.Component {
             <Fragment>
                 <Image marginTop="150px" marginBottom="50px" height="auto" width="900px" src={TitleFive} />
                 <TextSimpleJustify marginBottom="50px">
-                    <ActivityBox title={"Atividade Avaliativa 1"} activityTitle={"Organizar guarda-roupa"}>
+                    <ActivityBox title={"Atividade Avaliativa 3"} activityTitle={"Organizar guarda-roupa"}>
                         <p>Para falar das atividades necessárias para detalhar a abstração “Organizar o seu guarda-roupa”, identifique a atividade que lhe parece menos adequada:</p>
                         <IntegralActivity activity={this.getActivityOne()} />
                     </ActivityBox>

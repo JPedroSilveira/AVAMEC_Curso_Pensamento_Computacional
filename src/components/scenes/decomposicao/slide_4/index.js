@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
 import ActivityBox from '../../../generics/text/activity-box'
+import IntegralActivity from '../../../generics/activity/new_integral_activity'
 import Image from '../../../generics/image'
 
 import IntroFour from '../../../../images/content/decomposicao/intro-four.svg'
-import IntegralActivity from '../../../generics/activity/new_integral_activity'
 
 class Slide4 extends React.Component {
 
@@ -99,14 +99,14 @@ class Slide4 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="-100px" height="auto" width="auto" src={IntroFour} />
+                <Image marginTop="100px" marginBottom="-100px" height="auto" width="900px" src={IntroFour} />
                 <TextSimpleJustify>
                     <ActivityBox title={"Atividade Avaliativa 1"} activityTitle={"Diagnose Médica"}>
                         <p>Com o propósito de diagnosticar a origem de um problema de saúde, a partir de sintomas diversos, um médico usualmente analisa o corpo humano segundo seus sistemas ou elementos constituintes. Em tal cenário, qual dos seguintes conjuntos lhe parece menos adequado.</p>
                         <IntegralActivity activity={this.getActivityOne()} />
                     </ActivityBox>
                 </TextSimpleJustify>
-                <TextSimpleJustify marginTop="50px">
+                <TextSimpleJustify marginBottom="100px" marginTop="50px">
                     <ActivityBox title={"Atividade Avaliativa 2"} activityTitle={"Organizando um evento escolar"}>
                         <p>Qualquer evento, seja no âmbito pessoal (aniversários, casamentos, festas religiosas, etc.) quanto no profissional (congressos, seminários, premiações, etc.), requer, para sua realização, a execução de um conjunto de atividades que podem, dependendo da dimensão do evento em questão, envolver várias pessoas ou equipes, responsáveis pelos diferentes aspectos que constituem o evento. Considere a realização do seminário "O Pensamento Computacional na Escola", e dentre as diferentes listas apresentadas nas alternativas, indique qual lhe parece uma decomposição adequada de elementos envolvidos nesse evento.</p>
                         <IntegralActivity activity={this.getActivityTwo()} />

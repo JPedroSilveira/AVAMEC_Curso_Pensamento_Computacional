@@ -555,49 +555,11 @@
         "atividades": [
             {
                 "identificador": "atividade_1_pensamento_computacional_interdisciplinaridade_e_cooperacao",
-                "nomeAtividade": "Atividade Avaliativa 1",
+                "nomeAtividade": "Cuidados com a saúde",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_pensamento_computacional_interdisciplinaridade_e_cooperacao",
-                        "enunciado": "A1. Considere o cenário sugerido no Item 5 da lista de exemplos. O objeto em questão “Campanha de esclarecimento sobre cuidados na compra de alimentos” dificilmente poderia ser tratado sob apenas uma perspectiva, sendo necessárias várias contribuições, a partir de conhecimento de diferentes especialidades, competências e experiências. Escolha dentre as opções a seguir, a lista de profissionais que parece mais adequada para apoiar na elaboração dessa campanha.",
-                        "gabaritos": [
-                            {
-                                "alternativa": "Vendedor, médico pediatra, dono de mercado, engenheiro sanitário, advogado.",
-                                "chave": "1",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Dono de mercado, economista, médico cardiologista, nutricionista, jornalista.",
-                                "chave": "2",
-                                "valor": "1"
-                            },
-                            {
-                                "alternativa": "Nutrólogo, jornalista, dono de mercado, economista, arquiteto.",
-                                "chave": "3",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Dona de casa, transportador, advogado, publicitário, engenheiro sanitário.",
-                                "chave": "4",
-                                "valor": "0"
-                            },
-                            {
-                                "alternativa": "Organizador de eventos, advogado, dona de casa, transportador, vendedor.",
-                                "chave": "5",
-                                "valor": "0"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "identificador": "atividade_2_pensamento_computacional_interdisciplinaridade_e_cooperacao",
-                "nomeAtividade": "Atividade Avaliativa 2",
-                "questoes": [
-                    {
-                        "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q1_a2_pensamento_computacional_interdisciplinaridade_e_cooperacao",
                         "enunciado": "A2: Considere o documento indicado no quadro \"Para saber mais...\". Aquele documento discute diversas ações e resultados na prevenção e tratamento de problemas decorrentes da obesidade. As afirmações a seguir foram construídas associando trechos do documento aos pilares do Pensamento Computacional. Escolha a opção com a associação menos adequada.",
                         "gabaritos": [
                             {
@@ -625,36 +587,36 @@
                 ]
             },
             {
-                "identificador": "atividade_3_pensamento_computacional_interdisciplinaridade_e_cooperacao",
-                "nomeAtividade": "Atividade Avaliativa 3",
+                "identificador": "atividade_2_pensamento_computacional_interdisciplinaridade_e_cooperacao",
+                "nomeAtividade": "O método JIGSAW ll",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
-                        "identificador": "q1_a3_pensamento_computacional_interdisciplinaridade_e_cooperacao",
+                        "identificador": "q1_a2_pensamento_computacional_interdisciplinaridade_e_cooperacao",
                         "enunciado": "Aprendizagem ativa - o método JIGSAW II (Slavin, 1955) (Pereira, 2003) - A lista de ações, a seguir, descreve um método (Algoritmo) de aprendizagem cooperativa, denominado JIGSAW II.",
                         "gabaritos": [
                             {
-                                "alternativa": "Há uma clara interdependência entre os membros do grupo;",
+                                "alternativa": "Estabelece uma clara interdependência entre os membros dos grupos",
                                 "chave": "1",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "É possível perceber (e cobrar) responsabilidades individuais;",
+                                "alternativa": "Permite perceber (e cobrar) responsabilidades individuais",
                                 "chave": "2",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "A negociação de significados é contemplada;",
+                                "alternativa": "Contempla a negociação de significados",
                                 "chave": "3",
                                 "valor": "0"
                             },
                             {
-                                "alternativa": "Um melhor entendimento sobre o assunto resulta do método;",
+                                "alternativa": "O resultado da sua aplicação permite um melhor entendimento sobre o assunto do texto escolhido",
                                 "chave": "4",
                                 "valor": "1"
                             },
                             {
-                                "alternativa": "Há \"fases\" ou \"estágios\" bem definidos.;",
+                                "alternativa": "Apresenta  \"fases\" ou \"estágios\" bem definidos",
                                 "chave": "5",
                                 "valor": "0"
                             }

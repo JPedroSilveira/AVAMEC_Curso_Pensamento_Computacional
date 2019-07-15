@@ -128,9 +128,7 @@ class ContextMenu extends React.Component {
 
     renderExtraContentButton = () => {
         return (
-            <div className="extra-content-button-container">
-                <FontSmall>SAIBA MAIS</FontSmall>
-            </div>
+            <div className="extra-content-button-container"></div>
         )
     }
 

@@ -16,7 +16,7 @@ class Slide5 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroFive} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroFive} />
                 <TextStandardBox marginBottom="50px">
                     <p>Com muita frequência, a realização de uma atividade requer a execução de atividades mais simples, por várias vezes. Assim, além da tomada de decisão, precisamos desse outro padrão de ação, conhecido como repetição. A ideia é simples e consiste na realização da mesma atividade, ou sequência de atividades, várias vezes.</p>
                 </TextStandardBox>

@@ -15,8 +15,8 @@ class Slide5 extends React.Component {
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={TitleFour} />
                 <TextSimpleJustify>
                     <ProblemBox marginBottom="50px" title={"Problema 1"} problemTitle={"Feira em Atenas"}>
-                        <p>Você é o coordenador de uma feira em Atenas. Utilizando abstração, como você organizaria os feirantes, para facilitar a vida dos clientes ao tentar encontrar os itens de suas listas de compras?</p>
-                        <p>Já imaginou o que aconteceria se os clientes tivessem que fazer suas compras em uma feira na qual os produtos estivessem dispersos, sem qualquer agrupamento para facilitar sua localização?</p>
+                        <p>Você é o coordenador de uma feira em Atenas, de alimentos, vestuário, animais, e muitos outros itens.</p>
+                        <p>Já imaginou o que aconteceria se na feira os produtos estivessem dispersos, sem qualquer agrupamento para facilitar sua localização? Utilizando o pilar Abstração, como você organizaria os feirantes, para facilitar a vida dos clientes na busca dos itens de suas listas de compras?</p>
                         <Image marginTop="50px" height="auto" width="350px" src={Fruits} />
                     </ProblemBox>
                     <ProblemBox marginBottom="50px" title={"Problema 2"} problemTitle={"Diretor de escola"}>

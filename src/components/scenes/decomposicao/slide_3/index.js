@@ -8,8 +8,8 @@ class Slide3 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="-100px" height="auto" width="700px" src={ExampleIntroOne} />
-                <TextSimpleJustify>
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={ExampleIntroOne} />
+                <TextSimpleJustify marginBottom="100px">
                     <ExampleBox title={"Exemplo 1"}>
                         <p>Grandes mestres gregos entendem que o problema da decomposição é essencial para um bom planejamento de uma aula. Se dividirmos o planejamento em partes, ele pode ser elaborado de forma mais fácil: </p>
                         <ul>

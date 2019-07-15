@@ -7,7 +7,6 @@ import Strong from '../font/strong'
 import Regular from '../font/regular'
 import SmallFont from '../font/small'
 import MediumFont from '../font/medium' 
-import LargeFont from '../font/huge'
 import FontLight from '../font/light'
 import FontLightBlue from '../font/light-blue'
 import Image from '../image'
@@ -143,7 +142,7 @@ class Pagination extends React.Component {
                     <div className="pagination-sub-container">
                         <div className="unit-box-container">
                             <div onClick={this.previousPageOrUnit} className="button-item">
-                                <Regular><LargeFont>{"<"}</LargeFont></Regular>
+                                <Regular>{"<"}</Regular>
                             </div>
                             <div className="unit-box-bar"></div>
                             <div className="unit-text">
@@ -176,20 +175,20 @@ class Pagination extends React.Component {
                             </div>
                             <div className="unit-box-bar"></div>
                             <div onClick={this.nextPageOrUnit} className="button-item">
-                                <Regular><LargeFont>{">"}</LargeFont></Regular>
+                                <Regular>{">"}</Regular>
                             </div>
                         </div>
                     </div>
                     <div className="pagination-sub-container">
                         <div className="pagination-second-container">
                             <div className="greek-first-column">
-                                <Image backgroundColor="#f4f3f3" height="135px" src={GreekColumn} alt="Greek column" />
+                                <Image backgroundColor="#f4f3f3" width="auto" height="190px" src={GreekColumn} alt="Greek column" />
                             </div>
                             <div className="page-control-container"> 
                                 <p className="greek-slide-text"><FontLightBlue><SmallFont><Strong>IR PARA O SLIDE: </Strong></SmallFont></FontLightBlue></p>
                                 <ReactPaginate
-                                    pageRangeDisplayed={3}
-                                    marginPagesDisplayed={3}
+                                    pageRangeDisplayed={2}
+                                    marginPagesDisplayed={2}
                                     disabledClassName={'disabled-page'}
                                     previousLabel={'<'}
                                     nextLabel={'>'}
@@ -203,7 +202,7 @@ class Pagination extends React.Component {
                                 />
                             </div>
                             <div className="greek-second-column">
-                                <Image backgroundColor="#f4f3f3" height="135px" src={GreekColumn} alt="Greek column" />
+                                <Image backgroundColor="#f4f3f3" width="auto" height="190px" src={GreekColumn} alt="Greek column" />
                             </div>
                         </div>
                     </div>

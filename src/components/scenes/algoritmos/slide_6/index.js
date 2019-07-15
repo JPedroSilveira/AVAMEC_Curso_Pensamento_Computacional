@@ -53,7 +53,7 @@ class Slide6 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="auto" src={IntroSix} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroSix} />
                 <TextSimpleJustify marginBottom="100px">
                     <ActivityBox title={"Atividade Avaliativa 2"} activityTitle={"Lista de compras"}>
                         <p>Considere a sequência de operações denominada de Algoritmo 07. Selecione a afirmação a seguir que lhe parece ser a menos indicada para se referir ao Algoritmo 07.</p><br/>

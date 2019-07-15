@@ -10,7 +10,7 @@ class Slide4 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroFour} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroFour} />
                 <TextSimpleJustify marginBottom="50px">
                     <ExampleBox title="Exemplo 2" exampleTitle="Primeiros socorros em AVC">
                         <p>Várias situações críticas que podem levar à morte podem ser atenuadas pelo reconhecimento de padrões, dessas uma bem conhecida é o AVC (Acidente Vascular Cerebral). Veja o quê diz o Dr Drauzio Varella, um conceituado médico brasileiro, no vídeo a seguir, sobre as providências a serem tomadas.</p>

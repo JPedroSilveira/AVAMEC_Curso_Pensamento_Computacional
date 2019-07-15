@@ -12,7 +12,7 @@ class Slide12 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroTwelve} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroTwelve} />
                 <TextSimpleJustify>
                     <ProblemBox title="Problema 1" problemTitle="Dividir um círculo">
                         <p>Descreva a construção de um círculo, dividido em 8 partes iguais, usando um compasso, uma régua e um lápis.</p><br/>

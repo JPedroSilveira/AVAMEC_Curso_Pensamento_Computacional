@@ -15,8 +15,8 @@ class Slide1 extends React.Component {
                 </TextStandardBox>
                 <Image marginTop="50px" marginBottom="50px" height="auto" width="700px" src={GreekMap}/>
                 <TextStandardBox marginBottom="100px">
-                    <p>Chamamos isso de estratégia da <Strong>“divisão e conquista”</Strong>.</p>
                     <p>Dividindo o problema em <Strong>“subproblemas”</Strong>, Fidípides consegue mentalizar cada uma das partes do caminho, e se em alguma delas ele não conseguir fazer isso, pode dividir essa parte em outros “subproblemas” e a assim sucessivamente, até que tenha a solução para cada uma das partes.</p>
+                    <p>Chamamos isso de estratégia da <Strong>“divisão e conquista”</Strong>.</p>
                     <Image height="auto" width="600px" src={DiagramOne} />
                 </TextStandardBox>
             </Fragment>

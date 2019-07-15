@@ -53,7 +53,7 @@ class Slide9 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="auto" src={IntroNine} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroNine} />
                 <TextSimpleJustify marginBottom="100px">
                     <ActivityBox title={"Atividade Avaliativa 3"} activityTitle={"Pilha de pratos"}>
                         <p>Considere o Algoritmo 12, sobre o qual se fazem algumas afirmações. Selecione aquela que lhe parece com menos possibilidade de estar correta.</p><br/>

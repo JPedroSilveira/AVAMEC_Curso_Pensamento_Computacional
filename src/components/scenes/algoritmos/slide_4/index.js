@@ -12,7 +12,7 @@ class Slide4 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroFour} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroFour} />
                 <SimpleJustify marginBottom="50px">
                     <AlgorithmBox title="Algoritmo 03" algorithmTitle="Rotina diária">
                         <FontGreen><p>Após o sol raiar</p></FontGreen>

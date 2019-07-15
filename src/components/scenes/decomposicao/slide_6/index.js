@@ -10,13 +10,14 @@ import ProblemBox from '../../../generics/text/problem-box'
 import ManuscriptIcon from '../../../../images/content/decomposicao/manuscript-icon.svg'
 import IntroSix from '../../../../images/content/decomposicao/intro-six.svg'
 import ExampleSix from '../../../../images/content/decomposicao/example-six.svg'
+import GeoplanoTalk from '../../../../images/content/decomposicao/geoplano-talk.svg'
 
 class Slide6 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="-100px" height="auto" width="700px" src={IntroSix} />
-                <TextSimpleJustify>
+                <Image marginTop="100px" marginBottom="-100px" height="auto" width="900px" src={IntroSix} />
+                <TextSimpleJustify marginBottom="100px">
                     <ProblemBox title={"Problema 1"}>
                         <CenterBoxContainer>
                             <TextWithImageLeft paddingTop="10px" marginRight="20px" height="auto" width="50px" src={ManuscriptIcon}>
@@ -29,6 +30,7 @@ class Slide6 extends React.Component {
                             <p>Tente determinar sua área e note que decompô-lo em partes regulares é fundamental!</p>
                         </TextWithImageRight><br/>
                     </ProblemBox>
+                    <Image marginTop="50px" height="auto" width="700px" src={GeoplanoTalk} />
                     <ProblemBox marginTop="50px" title={"Problema 2"}>
                         <CenterBoxContainer>
                             <TextWithImageLeft paddingTop="10px" marginRight="20px" height="auto" width="50px" src={ManuscriptIcon}>

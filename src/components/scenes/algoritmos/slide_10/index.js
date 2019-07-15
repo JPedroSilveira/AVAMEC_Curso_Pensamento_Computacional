@@ -13,7 +13,7 @@ class Slide10 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroTen} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroTen} />
                 <TextStandardBox marginBottom="50px">
                     <p>Ao elaborarmos um algoritmo, é importante usar técnicas que facilitem o processo de construção, que ajudem a testar se o algoritmo obtido resolve o problema e, ainda, que permitam aferir o desempenho da solução. Nos tópicos a seguir, faremos uma breve apresentação desses temas.</p>
                     <Title>Refinamentos sucessivos</Title>
@@ -24,7 +24,7 @@ class Slide10 extends React.Component {
                 <TextStandardBox marginBottom="50px">
                     <Title>Modularização de Algoritmos</Title>
                     <p>Problemas de maior porte podem ser desdobrados em problemas menores, para facilitar a resolução. Usando o pilar “Decomposição”, podemos modularizar um algoritmo, definindo com isso novos problemas menores. Vejamos a seguir o algoritmo com a preparação do almoço de domingo, desdobrado em novos problemas. A solução apresentada a seguir considera uma decomposição formada por três módulos auxiliares, onde se prepara diferentes partes do cardápio e um módulo principal que organiza o uso dos módulos auxiliares.</p>
-                    <AlgorithmBox title="Algoritmo 13" algorithmTitle="Almoço de domingo">
+                    <AlgorithmBox marginBottom="50px" title="Algoritmo 13" algorithmTitle="Almoço de domingo">
                         <p><FontBlue>(Porção para 4 pessoas)</FontBlue></p>
                         <p><FontGreen>Cardápio: Filé de peixe, assado com molho de cogumelo, acompanhado de risoto de alho poró.</FontGreen></p>
                         <ul>
@@ -33,7 +33,8 @@ class Slide10 extends React.Component {
                             <li>Preparar o risoto de alho poró;</li>
                             <li>Servir o almoço.</li>
                         </ul>
-                        <Title>Preparando o filé</Title>
+                    </AlgorithmBox>
+                    <AlgorithmBox marginBottom="50px" title="Algoritmo 13.1" algorithmTitle="Preparando o filé">
                         <ul>
                             <li>Obtenha um quilo de filé de peixe;</li>
                             <li>Lave com suco de um limão;</li>
@@ -44,7 +45,8 @@ class Slide10 extends React.Component {
                             <li>Coloque o filé de peixe no prato e cubra com uma colher de azeite de oliva;</li>
                             <li>Leve o prato ao forno e deixe assar por 25 minutos.</li>
                         </ul>
-                        <Title>Preparar o molho de cogumelos</Title>
+                    </AlgorithmBox>
+                    <AlgorithmBox marginBottom="50px" title="Algoritmo 13.2" algorithmTitle="Preparar o molho de cogumelos">
                         <ul>
                             <li>Corte uma cebola média, bem picada;</li>
                             <li>Corte um tomate médio, bem picado;</li>
@@ -57,7 +59,8 @@ class Slide10 extends React.Component {
                             <li>Coloque uma xícara de água quente;</li>
                             <li>Mantenha no fogo até reduzir a água, dando a textura de molho.</li>
                         </ul>
-                        <Title>Preparar o risoto de alho poró</Title>
+                    </AlgorithmBox>
+                    <AlgorithmBox title="Algoritmo 13.3" algorithmTitle="Preparar o risoto de alho poró">
                         <ul>
                             <li>Pique uma cebola;</li>
                             <li>Corte em anéis o tronco do pé de um alho poró (a raiz e as folha são deixadas de fora);</li>
@@ -68,7 +71,7 @@ class Slide10 extends React.Component {
                             <li>Acrescente queijo ralado e dissolva-o, sem queimar ou grudar;</li>
                             <li>Acrescente o arroz já cozido, misture, e desligue o fogo.</li>
                         </ul>
-                    </AlgorithmBox>
+                    </AlgorithmBox>               
                 </TextStandardBox>
                 <TextStandardBox marginBottom="50px">
                     <Title>Teste das Soluções</Title>

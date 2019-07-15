@@ -89,13 +89,13 @@ class Slide4 extends React.Component {
             <Fragment>
                 <Image marginTop="150px" marginBottom="50px" height="auto" width="900px" src={TitleThree} />
                 <TextSimpleJustify>
-                    <ActivityBox title={"Atividade Avaliativa 2"} activityTitle={"Organizar biblioteca"}>
+                    <ActivityBox title={"Atividade Avaliativa 1"} activityTitle={"Organizar biblioteca"}>
                         <p>Considere a organização de uma biblioteca e indique o que lhe parece ser uma abstração mais conveniente para falar de livros:</p>
                         <IntegralActivity activity={this.getActivityTwo()} />
                     </ActivityBox>
                 </TextSimpleJustify>
                 <TextSimpleJustify marginTop="50px">
-                    <ActivityBox title={"Atividade Avaliativa 3"} activityTitle={"Área de vendas"}>
+                    <ActivityBox title={"Atividade Avaliativa 2"} activityTitle={"Área de vendas"}>
                         <p>Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores:</p>
                         <IntegralActivity activity={this.getActivityThree()} />
                     </ActivityBox>

@@ -55,7 +55,7 @@ class Slide3 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="auto" src={IntroTwo} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroTwo} />
                 <StandartTextBox marginBottom="50px">
                     <TextWithImageRight width="300px" src={TextImageOne}>
                         <p>Alguns algoritmos são tão repetidos por nós, que os executamos automaticamente, ou seja, sem refletir. Não é por acaso que, quando observamos alguém repetir uma sequência de etapas muito concentrado, dizemos “hoje ele/ela está no automático”. Mas não se assuste, isso não faz de nós uma máquina.</p>

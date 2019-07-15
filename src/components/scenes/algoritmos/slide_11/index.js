@@ -52,7 +52,7 @@ class Slide11 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="auto" src={IntroEleven} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroEleven} />
                 <TextSimpleJustify marginBottom="100px">
                     <ActivityBox title={"Atividade Avaliativa 4"} activityTitle={"Troca de pneu"}>
                         <p>O Algoritmo 14 abaixo descreve o processo de retirada de um dos 4 pneus de um automóvel. Fazemos a seguir algumas afirmações sobre ele. Selecione a afirmação que você considera menos apropriada para se referir a este algoritmo.</p><br/>

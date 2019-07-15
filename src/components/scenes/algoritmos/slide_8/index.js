@@ -15,7 +15,7 @@ class Slide8 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="700px" src={IntroEight} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroEight} />
                 <TextSimpleJustify marginBottom="100px">
                     <ExampleBox marginBottom="50px" title={"Exemplo 3"} exampleTitle={"Uma experiência escolar em tempo de Cultura Digital"}>
                         <p>Professores diariamente precisam propor atividades para seus alunos, buscando apoiá-los na construção de conhecimento sobre determinados assuntos. No caso a seguir, estamos supondo que os alunos tenham acesso a computadores e Internet, seja no laboratório de Informática da escola ou mesmo em suas residências. Assim, estamos considerando a possibilidade do uso de editor de texto, consultas à Internet e troca de mensagens por email.</p>
