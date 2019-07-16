@@ -10,7 +10,7 @@ class Slide5 extends React.Component {
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="-100px" height="auto" width="900px" src={IntroFive} />
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroFive} />
                 <TextStandardBox>
                     <p>No caso da decomposição de uma casa em cômodos, apresentada na figura abaixo. Se um dos cômodos tiver o rótulo “Sala de jantar e de estudo”, temos um claro indício de que ele servirá para dois propósitos e que por certo, algumas vezes haverá conflito no uso do espaço.</p>
                     <p>A interface entre duas partes quaisquer deve ser a mais simples possível, de forma que a interação entre as partes esteja restrita à interface, então, no caso dos dormitórios, quando em funcionamento normal, que ela ocorra apenas pelas portas.</p>

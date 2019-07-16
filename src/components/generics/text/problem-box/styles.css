@@ -7,8 +7,8 @@ div.problem-box-container{
 div.problem-box-container div.problem-title-container{
     display: flex;
     flex-direction: row;
-    height: 20px;
-    padding: 25px 30px 30px 30px;
+    height: auto;
+    padding: 25px 30px 10px 30px;
     background: rgba(255,212,120,1);
     background: -moz-linear-gradient(-45deg, rgba(255,212,120,1) 0%, rgba(255,212,120,1) 95%, rgba(248,181,0,1) 95%, rgba(252,205,77,1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,212,120,1)), color-stop(95%, rgba(255,212,120,1)), color-stop(95%, rgba(248,181,0,1)), color-stop(100%, rgba(252,205,77,1)));
@@ -24,9 +24,9 @@ div.problem-box-container div.problem-title-container .image{
 }
 
 div.problem-box-container div.problem-title-container .title{
-    width: 100%;
+    width: 80%;
     text-align: center;
-    margin-left: -40px;
+    margin-left: 5%;
 }
 
 div.problem-box-container div.title div.problem-title{

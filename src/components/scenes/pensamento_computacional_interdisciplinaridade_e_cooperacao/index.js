@@ -16,9 +16,9 @@ import Slide10 from './slide_10'
 import Slide11 from './slide_11'
 
 import CharacterTalk from '../../generics/characters/talk'
-import FidipidesOne from '../../../images/content/decomposicao/talk-one.svg'
-import FidipidesTwo from '../../../images/content/decomposicao/talk-two.svg'
-import FidipidesThree from '../../../images/content/decomposicao/talk-three.svg'
+import FidipidesOne from '../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/talk-one.svg'
+import FidipidesTwo from '../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/talk-two.svg'
+import FidipidesThree from '../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/talk-three.svg'
 
 /*ESTE COMPONENTE DEVE RECEBER COMO PROPRIEDADE O SEGUINTE ITEM:
     id: String, representa o id desta unidade

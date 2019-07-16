@@ -4,9 +4,9 @@ import Image from '../../../generics/image'
 import ProblemBox from '../../../generics/text/problem-box'
 
 import IntroTwelve from '../../../../images/content/algoritmos/intro-twelve.svg'
-import ProbOne from '../../../../images/content/algoritmos/loading.png'
-import ProbThree from '../../../../images/content/algoritmos/loading.png'
-import ProbFour from '../../../../images/content/algoritmos/loading.png'
+import ProbOne from '../../../../images/content/algoritmos/prob-one.svg'
+import ProbThree from '../../../../images/content/algoritmos/prob-three.svg'
+import ProbFour from '../../../../images/content/algoritmos/prob-four.svg'
 
 class Slide12 extends React.Component {
     render() {

@@ -9,7 +9,7 @@ import FontBlue from '../../../generics/font/blue'
 import FontGreen from '../../../generics/font/green'
 
 import IntroEight from '../../../../images/content/algoritmos/intro-eight.svg'
-import ListsL1L2L3 from '../../../../images/content/algoritmos/loading.png'
+import ListsL1L2L3 from '../../../../images/content/algoritmos/listsL1L2L3.svg'
 
 class Slide8 extends React.Component {
     render() {

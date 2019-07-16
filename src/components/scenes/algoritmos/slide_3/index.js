@@ -10,7 +10,7 @@ import FontGreen from '../../../generics/font/green'
 
 import IntroTwo from '../../../../images/content/algoritmos/intro-two.svg'
 import IntegralActivity from '../../../generics/activity/new_integral_activity'
-import TextImageOne from '../../../../images/content/algoritmos/loading.png'
+import Robot from '../../../../images/content/algoritmos/robot.svg'
 
 class Slide3 extends React.Component {
 
@@ -57,7 +57,7 @@ class Slide3 extends React.Component {
             <Fragment>
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroTwo} />
                 <StandartTextBox marginBottom="50px">
-                    <TextWithImageRight width="300px" src={TextImageOne}>
+                    <TextWithImageRight width="300px" src={Robot}>
                         <p>Alguns algoritmos são tão repetidos por nós, que os executamos automaticamente, ou seja, sem refletir. Não é por acaso que, quando observamos alguém repetir uma sequência de etapas muito concentrado, dizemos “hoje ele/ela está no automático”. Mas não se assuste, isso não faz de nós uma máquina.</p>
                     </TextWithImageRight>
                 </StandartTextBox>

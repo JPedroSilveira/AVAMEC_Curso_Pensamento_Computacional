@@ -52,13 +52,13 @@ div.example-box-container div.text-container.styled-list ul li::before{
 }
 
 div.example-box-container div.text-container.styled-list ul li::after{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    margin-left: 0%;
     height: 1px;
     display:flex;
     flex-direction: column;
     content: " ";
-    margin-top: 15px;
+    margin-top: 5px;
     margin-bottom: 20px;
     background-image: radial-gradient(circle, #88e0eb, #78d1e0, #69c3d5, #59b4ca, #4aa6bf);
 }
