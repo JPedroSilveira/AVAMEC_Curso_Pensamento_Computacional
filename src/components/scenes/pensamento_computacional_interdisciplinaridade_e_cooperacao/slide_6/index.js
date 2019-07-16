@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
+import TextWithImageRight from '../../../generics/text/with-image-right'
 import ExampleBox from '../../../generics/text/example-box'
 import FontLightBlue from '../../../generics/font/light-blue'
 import Strong from '../../../generics/font/strong'
@@ -15,8 +16,9 @@ class Slide6 extends React.Component {
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroFive} />
                 <TextSimpleJustify marginBottom="100px">
                     <ExampleBox title="Exemplo" exampleTitle="Manter o peso corporal">
-                        <p>O Pensamento Computacional, através de seus quatro pilares, dispõe de elementos que podem ajudar na tarefa interdisciplinar que é a organização do nosso cuidado com a saúde e nosso bem estar. Vejamos a seguir uma breve identificação do uso desses pilares nessa atividade, em particular no controle do nosso peso corporal.</p>
-                        <Image marginTop="25px" marginBottom="25px" height="auto" width="300px" src={WellBeing} />
+                        <TextWithImageRight width="300px" src={WellBeing}>
+                            <p>O Pensamento Computacional, através de seus quatro pilares, dispõe de elementos que podem ajudar na tarefa interdisciplinar que é a organização do nosso cuidado com a saúde e nosso bem estar. Vejamos a seguir uma breve identificação do uso desses pilares nessa atividade, em particular no controle do nosso peso corporal.</p>
+                        </TextWithImageRight>
                         <p><Strong><FontLightBlue>Pilar Decomposição</FontLightBlue></Strong>: podemos usá-lo para identificar os diferentes aspectos a serem considerados na manutenção de nossa saúde; mas também podemos usá-lo para identificar as categorias de alimentos e as especialidades profissionais que podem nos ajudar.</p>
                         <p><Strong><FontLightBlue>Pilar Abstração</FontLightBlue></Strong>: podemos usá-lo para identificar, para cada aspecto, os índices (por exemplo: índice de massa corporal) que devemos observar e as características que devemos considerar, quando formos escolher um profissional da saúde. Com respeitos aos alimentos, precisamos selecionar atributos importantes, tanto quanto ao seu uso, quanto à disponibilidade durante o ano.</p>
                         <p><Strong><FontLightBlue>Pilar Reconhecimento de Padrões</FontLightBlue></Strong>: reconhecer situações adversas, como peso incompatível com altura e idade, ou reconhecer a relação existente entre diversos aspectos, como por exemplo,   sazonalidade, preço e valor nutricional dos alimentos.</p>
