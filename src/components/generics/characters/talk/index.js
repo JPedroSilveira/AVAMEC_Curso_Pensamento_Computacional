@@ -1,5 +1,4 @@
 import React, {Fragment} from 'react'
-import FontMedium from '../../font/medium'
 import FontSmall from '../../font/small'
 import Regular from '../../font/regular'
 import './styles.css'

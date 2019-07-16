@@ -6,7 +6,7 @@ import Strong from '../../../generics/font/strong'
 import Image from '../../../generics/image'
 
 import IntroOne from '../../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/intro-one.svg'
-import PilarImage from '../../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/loading.png'
+import Graph from '../../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/graph.svg'
 
 class Slide2 extends React.Component {
     render() {
@@ -18,7 +18,7 @@ class Slide2 extends React.Component {
                     <ColoredBox backgroundColor="#D2DAFF" borderColor="#A8B4E2" marginTop="25px" marginBottom="25px">
                         <p>O <Strong>Pilar Abstração</Strong> contribui para que, dado um objeto que interessa a várias disciplinas, sejam levadas em conta as diferentes formas de percebê-lo. A abstração permite identificar os aspectos que interessam mais a uma área de estudo, propiciando um melhor entendimento do problema e de sua solução.</p>
                         <p>O <Strong>Pilar Abstração</Strong> apoia ainda a identificação de formas de representarmos informações, de interesse das mais variadas disciplinas, de forma inteligível por todos. A figura a seguir, por exemplo, chamada de grafo, pode representar uma rede de transportes entre cidades diferentes, onde os círculos representam cidades e as retas que os conectam representam a existência de transporte entre as cidades. Esse grafo também podem representar interações entre os participantes de uma rede social, onde os círculos representam as pessoas e as retas que os ligam representam conexões diretas entre elas.</p>
-                        <Image marginTop="25px" marginBottom="25px" height="auto" width="400px" src={PilarImage} />
+                        <Image marginTop="25px" marginBottom="25px" height="auto" width="400px" src={Graph} />
                     </ColoredBox>
                     <ColoredBox backgroundColor="#D2DAFF" borderColor="#A8B4E2" marginBottom="25px">
                         <p>O <Strong>Pilar Decomposição</Strong> está diretamente relacionado com a Interdisciplinaridade, tanto pelo fato da fragmentação estar na base de ambos, como pelo fato de que as ideias integradoras basicamente corresponderem à composição da solução de todas as partes resultando na solução de todo o problema.</p>

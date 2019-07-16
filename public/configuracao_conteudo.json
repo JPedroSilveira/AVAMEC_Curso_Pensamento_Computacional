@@ -213,12 +213,12 @@
         "atividades": [
             {
                 "identificador": "atividade_1_reconhecimento_de_padroes",
-                "nomeAtividade": "O estranho",
+                "nomeAtividade": "O Estranho",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a1_reconhecimento_de_padroes",
-                        "enunciado": "Passeando pelo centro de uma cidade conhecida, digamos, o Rio de Janeiro, você se depara com um aglomerado de pessoas. De repente um desconhecido estabelece uma conversa com você, buscando também entender o que está acontecendo. Essa conversa segue, levantando hipóteses e trocando opiniões, quando percebem que já se passaram uns 30 minutos e se despedem sem descobrirem o motivo da aglomeração. Pensando na conversa com o estranho, você se dá conta que o mesmo não parecia ser carioca nato ou criado no Rio. Motivado pela curiosidade, você tenta reconhecer em qual estado aquela pessoa teria nascido e/ou sido criada. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?",
+                        "enunciado": "Em lugar do texto que está no AVA, deve ser colocado o que segue, as opções de resposta permanecem as mesmas: Passeando pelo centro de uma cidade conhecida, você se depara com um aglomerado de pessoas. De repente um desconhecido estabelece uma conversa com você, buscando também entender o que está acontecendo. Essa conversa segue,  ambos levantando hipóteses e trocando opiniões, quando percebem que já se passaram uns 30 minutos e terminam por se despedir sem terem descoberto o motivo da aglomeração. Após a partida do estranho, você se dá por conta que o mesmo não parecia ser nativo do lugar. Motivado pela curiosidade, você repassa o que lembra ter visto e ouvido durante a conversa, para ver se lhe ocorre em qual região aquela pessoa poderia ter nascido e/ou sido criada. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito",
                         "gabaritos": [
                             {
                                 "alternativa": "Sotaque.",

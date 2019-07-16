@@ -4,7 +4,7 @@ import Image from '../../../generics/image'
 import ProblemBox from '../../../generics/text/problem-box'
 
 import IntroEleven from '../../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/intro-eleven.svg'
-import ProblemThreeImage from '../../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/loading.png'
+import ProblemThreeImage from '../../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/problem-three-image.svg'
 import ProblemFourImage from '../../../../images/content/pensamento_computacional_interdisciplinaridade_e_cooperacao/problem-four-image.svg'
 
 class Slide11 extends React.Component {

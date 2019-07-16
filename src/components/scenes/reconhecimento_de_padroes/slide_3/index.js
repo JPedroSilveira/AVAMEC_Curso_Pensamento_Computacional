@@ -101,14 +101,14 @@ class Slide3 extends React.Component {
             <Fragment>
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroThree} />
                 <TextSimpleJustify>
-                    <ActivityBox title={"Atividade Avaliativa 1"} activityTitle={"O estranho"}>
-                        <p>Considere o propósito de identificar a profissão do desconhecido dentro da mesma situação da atividade A1 acima. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?</p>
+                    <ActivityBox title={"Atividade Avaliativa 1"} activityTitle={"O Estranho"}>
+                        <p>Em lugar do texto que está no AVA, deve ser colocado o que segue, as opções de resposta permanecem as mesmas: Passeando pelo centro de uma cidade conhecida, você se depara com um aglomerado de pessoas. De repente um desconhecido estabelece uma conversa com você, buscando também entender o que está acontecendo. Essa conversa segue,  ambos levantando hipóteses e trocando opiniões, quando percebem que já se passaram uns 30 minutos e terminam por se despedir sem terem descoberto o motivo da aglomeração. Após a partida do estranho, você se dá por conta que o mesmo não parecia ser nativo do lugar. Motivado pela curiosidade, você repassa o que lembra ter visto e ouvido durante a conversa, para ver se lhe ocorre em qual região aquela pessoa poderia ter nascido e/ou sido criada. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito?</p>
                         <IntegralActivity activity={this.getActivityOne()} />
                     </ActivityBox>
                 </TextSimpleJustify>
                 <TextSimpleJustify marginTop="50px" marginBottom="100px">
                     <ActivityBox title={"Atividade Avaliativa 2"} activityTitle={"Profissão"}>
-                        <p>Considere o propósito de identificar a profissão do desconhecido dentro da mesma situação da atividade A1 acima. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito? </p>
+                        <p>Considere o propósito de identificar a profissão do desconhecido dentro da mesma situação da Atividade Avaliativa 1, acima. Qual, dentre os elementos a seguir, seria o menos provável de estabelecer um padrão adequado a tal propósito? </p>
                         <IntegralActivity activity={this.getActivityTwo()} />
                     </ActivityBox>
                 </TextSimpleJustify>

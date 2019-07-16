@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import StandardBox from '../../../generics/text/standard-box'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
+import ItalicFont from '../../../generics/font/italic'
 import Image from '../../../generics/image'
 import ProblemBox from '../../../generics/text/problem-box'
 import ExternalLink from '../../../generics/external_link'
@@ -29,7 +30,7 @@ class Slide6 extends React.Component {
                     <ProblemBox marginTop="50px" title="Problema 2" problemTitle="Cobrir área com peças de um Tangram">
                         <p>Fazer a cobertura de uma imagem com as peças de um Tangram, conforme o molde da imagem a seguir.</p>
                         <Image marginTop="50px" height="auto" width="300px" src={Problem2Image} />
-                        <p>DICA: Você pode fazer online no site <ExternalLink href="https://rachacuca.com.br/raciocinio/tangram/1/">Rachacuca</ExternalLink>.</p>
+                        <p>DICA: Você pode fazer <ItalicFont>online</ItalicFont> no <ItalicFont>site</ItalicFont> <ExternalLink href="https://rachacuca.com.br/raciocinio/tangram/1/">Rachacuca</ExternalLink>.</p>
                     </ProblemBox>
                     <ProblemBox marginTop="50px" title="Problema 3" problemTitle="Situação-problema">
                         <p>Apresente 1 situação-problema, preferencialmente de sua área de interesse, na qual você identifica a possibilidade de utilização do pilar Reconhecimento de Padrões do Pensamento Computacional, para apoiar a elaboração de soluções.</p>
