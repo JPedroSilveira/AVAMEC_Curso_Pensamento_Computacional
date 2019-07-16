@@ -39,18 +39,18 @@ class CharacterTalk extends React.Component {
                     <Fragment>
                         {this.props.hasNextTalk ?
                             <Fragment>
-                                <div onClick={this.props.previousTalk} className="button previous-button"><Regular><FontMedium>{"<"}</FontMedium></Regular></div>
-                                <div onClick={this.props.nextTalk} className="button next-button"><Regular><FontMedium>{">"}</FontMedium></Regular></div>
+                                <div onClick={this.props.previousTalk} className="button previous-button">{"‹"}</div>
+                                <div onClick={this.props.nextTalk} className="button next-button">{"›"}</div>
                             </Fragment>
                             :
                             <Fragment>
-                                <div onClick={this.props.previousTalk} className="button last-previous"><Regular><FontMedium>{"<"}</FontMedium></Regular></div>
-                                <div onClick={this.props.finishTalk} className="button ok-button"><Regular><FontMedium>Ok!</FontMedium></Regular></div>
+                                <div onClick={this.props.previousTalk} className="button last-previous">{"‹"}</div>
+                                <div onClick={this.props.finishTalk} className="button ok-button">Ok!</div>
                             </Fragment>
                         }
                     </Fragment>
                     :
-                    <div onClick={this.props.nextTalk} className="button first-button"><Regular><FontMedium>Próximo</FontMedium></Regular></div>
+                    <div onClick={this.props.nextTalk} className="button first-button">Próximo</div>
                 }
             </div>
         )
@@ -68,11 +68,9 @@ class CharacterTalk extends React.Component {
     render() {
         return (
             <div className="main-container">
-                <div className="master-container">
-                    <div className={this.state.characterContainerClass} style={{ backgroundImage: "url(" + this.props.src + ")" }}>
-                        {this.renderButtons()}
-                        {this.renderCloseButton()}
-                    </div>
+                <div className={this.state.characterContainerClass} style={{ backgroundImage: "url(" + this.props.src + ")" }}>
+                    {this.renderButtons()}
+                    {this.renderCloseButton()}
                 </div>
             </div>
         )
