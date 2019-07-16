@@ -91,6 +91,44 @@
                         ]
                     }
                 ]
+            },
+            {
+                "identificador": "atividade_3_decomposicao",
+                "nomeAtividade": "Avaliando um festival folclórico",
+                "questoes": [
+                    {
+                        "tipoQuestaoString": "INTEGRAL",
+                        "identificador": "q1_a3_decomposicao",
+                        "enunciado": "Considere que você precisa definir como deve ser realizada a avaliação das danças apresentadas por grupos em um festival folclórico. Considere ainda que esse festival seja realizado pela comunidade de uma escola, de um bairro ou até de uma cidade inteira. Reflita sobre como a avaliação poderia ser decomposta em elementos e indique qual, dentre os seguintes elementos, seria menos adequado para esse fim.",
+                        "gabaritos": [
+                            {
+                                "alternativa": "Tempo da apresentação.",
+                                "chave": "1",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Sincronia.",
+                                "chave": "2",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Precisão de movimentos.",
+                                "chave": "3",
+                                "valor": "0"
+                            },
+                            {
+                                "alternativa": "Participação da audiência.",
+                                "chave": "4",
+                                "valor": "1"
+                            },
+                            {
+                                "alternativa": "Figurino.",
+                                "chave": "5",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },

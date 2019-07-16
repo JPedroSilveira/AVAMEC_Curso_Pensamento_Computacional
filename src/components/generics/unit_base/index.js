@@ -12,12 +12,19 @@ class UnitBase extends React.Component {
 
     componentDidMount() {
         let openPage = LocalStorageUtils.getOpenPage()
-        this.setState({
-            openPage: openPage,
-            contextMenuHidden: openPage === "1",
-            topBarHidden: openPage === "1",
-            topBarShowEverything: openPage !== "1"
-        })
+        if(this.state.renderTalk){
+            this.setState({
+                openPage: openPage,
+                contextMenuHidden: openPage === "1",
+                topBarHidden: openPage === "1",
+                topBarShowEverything: openPage !== "1"
+            })
+        } else {
+            this.setState({
+                openPage: openPage
+            })
+        }
+        
     }
 
     updatePage = () => {

@@ -1,32 +1,104 @@
 import React, { Fragment } from 'react'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
+import ActivityBox from '../../../generics/text/activity-box'
 import Image from '../../../generics/image'
-import ProblemBox from '../../../generics/text/problem-box'
 
-import TitleFour from '../../../../images/content/abstracao/title-four.svg'
-import Fruits from '../../../../images/content/abstracao/fruits.svg'
-import Books from '../../../../images/content/abstracao/books.svg'
-import Light from '../../../../images/content/abstracao/light.svg'
+import TitleThree from '../../../../images/content/abstracao/title-three.svg'
+import IntegralActivity from '../../../generics/activity/new_integral_activity'
 
 class Slide5 extends React.Component {
+
+    getActivityTwo = () => {
+        return {
+            unitId: this.props.unitId,
+            id: "atividade_2_abstracao",
+            questions: [
+                {
+                    id: "q1_a2_abstracao",
+                    options: [
+                        {
+                            value: "0",
+                            key: "1",
+                            text: "Cores das capas.",
+                            tip: "A cor da capa pode despertar nosso lado artístico, mas não vai trazer informações sobre o conteúdo dos livros!"
+                        },
+                        {
+                            value: "1",
+                            key: "2",
+                            text: "Autores dos livros.",
+                            tip: "Se organizarmos os livros pelos seus autores, saberemos qual o estilo de escrita dos mesmos e se escrevem sobre ficção, romances, textos técnicos, etc, sendo uma boa opção de abstração."
+                        },
+                        {
+                            value: "0",
+                            key: "3",
+                            text: "Tamanho das letras.",
+                            tip: "O tamanho das letras ajuda na leitura, mas não vai trazer informações sobre o conteúdo dos livros!"
+                        },
+                        {
+                            value: "0",
+                            key: "4",
+                            text: "Gramatura do papel.",
+                            tip: "A gramatura do papel, pode revelar traços da qualidade dos livros, mas não vai trazer informações sobre o conteúdo dos mesmos!"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+
+    getActivityThree = () => {
+        return {
+            unitId: this.props.unitId,
+            id: "atividade_3_abstracao",
+            questions: [
+                {
+                    id: "q1_a3_abstracao",
+                    options: [
+                        {
+                            value: "0",
+                            key: "1",
+                            text: "Padaria, Materiais de Limpeza, Congelados, Hortigranjeiros.",
+                            tip: "Esses são setores adequados, correspondendo ao que geralmente encontramos em um mercado."
+                        },
+                        {
+                            value: "1",
+                            key: "2",
+                            text: "Produtos da empresa X, Produtos da Empresa Y, Produtos da Empresa Z.",
+                            tip: "Este conjunto não é adequado, pois as empresas podem ter segmentos de produtos diferentes, não contribuindo para a organização e facilidade de escolha dos clientes."
+                        },
+                        {
+                            value: "0",
+                            key: "3",
+                            text: "Higiene pessoal, Laticinios, Adega, Bomboniere, Açougue.",
+                            tip: "Esses são setores adequados, correspondendo ao que geralmente encontramos em um mercado."
+                        },
+                        {
+                            value: "0",
+                            key: "4",
+                            text: "Frios, Congelados, Matinais, Materiais Elétricos.",
+                            tip: "Esses são setores adequados, correspondendo ao que geralmente encontramos em um mercado."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={TitleFour} />
+                <Image marginTop="150px" marginBottom="50px" height="auto" width="900px" src={TitleThree} />
                 <TextSimpleJustify>
-                    <ProblemBox marginBottom="50px" title={"Problema 1"} problemTitle={"Feira em Atenas"}>
-                        <p>Você é o coordenador de uma feira em Atenas, de alimentos, vestuário, animais, e muitos outros itens.</p>
-                        <p>Já imaginou o que aconteceria se na feira os produtos estivessem dispersos, sem qualquer agrupamento para facilitar sua localização? Utilizando o pilar Abstração, como você organizaria os feirantes, para facilitar a vida dos clientes na busca dos itens de suas listas de compras?</p>
-                        <Image marginTop="50px" height="auto" width="350px" src={Fruits} />
-                    </ProblemBox>
-                    <ProblemBox marginBottom="50px" title={"Problema 2"} problemTitle={"Diretor de escola"}>
-                        <p>Você é o diretor de uma escola e precisa organizar o trabalho da equipe de apoio. Quais os grandes grupos de atividades que você consegue destacar para garantir o funcionamento de sua escola?</p>
-                        <Image marginTop="50px" height="auto" width="350px" src={Books} />
-                    </ProblemBox>
-                    <ProblemBox tmarginBottom="50px" itle={"Problema 3"} problemTitle={"Situação-problema"}>
-                        <p>Construa uma situação-problema, preferencialmente de sua área de interesse, onde você identifica a possibilidade de utilização do pilar Abstração do Pensamento Computacional, para apoiar a elaboração de soluções.</p>
-                        <Image marginTop="50px" height="auto" width="350px" src={Light} />
-                    </ProblemBox>
+                    <ActivityBox title={"Atividade Avaliativa 2"} activityTitle={"Organizar biblioteca"}>
+                        <p>Considere a organização de uma biblioteca e indique o que lhe parece ser uma abstração mais conveniente para falar de livros:</p>
+                        <IntegralActivity activity={this.getActivityTwo()} />
+                    </ActivityBox>
+                </TextSimpleJustify>
+                <TextSimpleJustify marginTop="50px">
+                    <ActivityBox title={"Atividade Avaliativa 3"} activityTitle={"Área de vendas"}>
+                        <p>Para organizar os produtos da área de vendas ao consumidor, o que lhe parece ser um conjunto menos adequado de setores:</p>
+                        <IntegralActivity activity={this.getActivityThree()} />
+                    </ActivityBox>
                 </TextSimpleJustify>
             </Fragment>
         )

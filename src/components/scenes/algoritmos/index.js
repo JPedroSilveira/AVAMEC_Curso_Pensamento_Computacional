@@ -36,10 +36,7 @@ class Algoritmos extends UnitBase {
             hasPreviousTalk: false,
             hasNextTalk: true,
             renderTalk: true,
-            talkPage: "1",
-            contextMenuHidden: false,
-            topBarHidden: false,
-            topBarShowEverything: true
+            talkPage: "1"
         }
     }
 

@@ -8,6 +8,7 @@ import Abstracao from '../scenes/abstracao'
 import ReconhecimentoDePadroes from '../scenes/reconhecimento_de_padroes'
 import Algoritmos from '../scenes/algoritmos'
 import PensamentoComputacionalInterdisciplinaridadeECooperacao from '../scenes/pensamento_computacional_interdisciplinaridade_e_cooperacao'
+import Conclusao from '../scenes/conclusao'
 import './styles.css'
 
 class Main extends React.Component {
@@ -33,6 +34,8 @@ class Main extends React.Component {
                 return (<Algoritmos id={UnitId.ALGORITMOS}/>)
             case UnitId.PENSAMENTO_COMPUTACIONAL_INTERDISCIPLINARIDADE_E_COOPERACAO:
                 return (<PensamentoComputacionalInterdisciplinaridadeECooperacao id={UnitId.PENSAMENTO_COMPUTACIONAL_INTERDISCIPLINARIDADE_E_COOPERACAO}/>)
+            case UnitId.CONCLUSAO:
+                return (<Conclusao id={UnitId.CONCLUSAO} />)
             default:
                 return null
         }  

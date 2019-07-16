@@ -10,6 +10,7 @@ div.main-container{
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-duration: 1.5s;
+    font-family: 'Nunito', sans-serif;
 }
 
 div.character-container{
@@ -49,7 +50,6 @@ div.buttons-container div.button{
     background-color: #FFD478;
     color: #41B4C4;
     font-weight: 700;
-    padding: 5px 10px 5px 10px;
     cursor: pointer;
     font-size: 14pt;
 }
@@ -68,7 +68,7 @@ div.buttons-container div.button.next-button, div.buttons-container div.button.p
 }
 
 div.buttons-container div.button.next-button, div.buttons-container div.button.previous-button, div.buttons-container div.button.last-previous{
-    font-size: 22pt;
+    font-size: 21pt;
     padding: 0px 9px 3px 12px;
 }
 
@@ -95,7 +95,6 @@ div.buttons-container div.button.last-previous{
 div.close-button-container{
     color: rgb(255, 212, 120);
     margin-left: 525px;
-    margin-top: 5px;
     cursor: pointer;
 }
 

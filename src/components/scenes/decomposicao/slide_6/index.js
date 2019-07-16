@@ -1,33 +1,66 @@
 import React, { Fragment } from 'react'
-import TextWithImageRight from '../../../generics/text/with-image-right'
 import TextSimpleJustify from '../../../generics/text/simple-justify'
+import ActivityBox from '../../../generics/text/activity-box'
+import IntegralActivity from '../../../generics/activity/new_integral_activity'
 import Image from '../../../generics/image'
-import ProblemBox from '../../../generics/text/problem-box'
 
-import IntroSix from '../../../../images/content/decomposicao/intro-six.svg'
-import ExampleSix from '../../../../images/content/decomposicao/example-six.svg'
-import GeoplanoTalk from '../../../../images/content/decomposicao/geoplano-talk.svg'
+import IntroLastActivity from '../../../../images/content/decomposicao/intro-last-activity.svg'
 
 class Slide6 extends React.Component {
+
+    getActivityThree = () => {
+        return {
+            unitId: this.props.unitId,
+            id: "atividade_3_decomposicao",
+            questions: [
+                {
+                    id: "q1_a3_decomposicao",
+                    options: [
+                        {
+                            value: "0",
+                            key: "1",
+                            text: "Tempo da apresentação.",
+                            tip: "Com certeza seria possível estabelecer um tempo máximo de apresentação e utilizar essa métrica para avaliar a performance do grupo."
+                        },
+                        {
+                            value: "0",
+                            key: "2",
+                            text: "Sincronia.",
+                            tip: "Um grupo que treinou adequadamente deve estar em sintonia, com sincronia de movimentos, sendo essa uma boa alternativa de avaliação."
+                        },
+                        {
+                            value: "0",
+                            key: "3",
+                            text: "Precisão de movimentos.",
+                            tip: "Movimentos precisos estão associados com dedicação aos treinos e podem ser uma ótima forma de avaliar os grupos."
+                        },
+                        {
+                            value: "1",
+                            key: "4",
+                            text: "Participação da audiência.",
+                            tip: "A participação da audiência não tem influência direta na dança apresentada pelos grupos não sendo uma forma correta de avaliar os grupos."
+                        },
+                        {
+                            value: "0",
+                            key: "5",
+                            text: "Figurino.",
+                            tip: "O figurino está geralmente associado com o tema a ser apresentado pelos grupos e seria uma boa forma de avaliar os mesmos."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+
     render() {
         return (
             <Fragment>
-                <Image marginTop="100px" marginBottom="-100px" height="auto" width="900px" src={IntroSix} />
-                <TextSimpleJustify marginBottom="100px">
-                    <ProblemBox title="Problema 1" problemTitle="Cálculo de área de um polígono irregular usando o Geoplano">
-                        <p>Como poderíamos calcular a área de um polígono irregular, ou seja, que não tem uma forma conhecida? Você tem alguma ideia?</p><br/>
-                        <TextWithImageRight height="auto" width="310px" src={ExampleSix}>
-                            <p>Veja este em um geoplano:</p>
-                            <p>Tente determinar sua área e note que decompô-lo em partes regulares é fundamental!</p>
-                        </TextWithImageRight><br/>
-                    </ProblemBox>
-                    <Image marginTop="50px" height="auto" width="700px" src={GeoplanoTalk} />
-                    <ProblemBox marginTop="50px" title="Problema 2" problemTitle="Organização e realização de Feira de Ciências">
-                        <p>Elabore uma decomposição em equipes, para a organização e realização da Feira de Ciências da sua escola.</p>
-                    </ProblemBox>
-                    <ProblemBox marginTop="50px" title="Problema 2" problemTitle="Pilar Decomposição apoiando soluções de situação-problema">
-                        <p>Apresente uma situação-problema, preferencialmente de sua área de interesse, em que você identifica a possibilidade de utilização do pilar Decomposição do pensamento computacional, para apoiar a elaboração de soluções.</p>
-                    </ProblemBox>
+                <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroLastActivity} />
+                <TextSimpleJustify>
+                    <ActivityBox title={"Atividade Avaliativa 3"} activityTitle={"Avaliando um festival folclórico"}>
+                        <p>Considere que você precisa definir como deve ser realizada a avaliação das danças apresentadas por grupos em um festival folclórico. Considere ainda que esse festival seja realizado pela comunidade de uma escola, de um bairro ou até de uma cidade inteira. Reflita sobre como a avaliação poderia ser decomposta em elementos e indique qual, dentre os seguintes elementos, seria menos adequado para esse fim.</p>
+                        <IntegralActivity activity={this.getActivityThree()} />
+                    </ActivityBox>
                 </TextSimpleJustify>
             </Fragment>
         )

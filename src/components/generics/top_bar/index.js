@@ -43,7 +43,7 @@ class TopBar extends React.Component {
         //Tamanho da pagina exibida ao usuario
         const clientHeight = event.target.scrollingElement.clientHeight
         
-        if (scrollTop > clientHeight*0.2) {
+        if (scrollTop > clientHeight*0.40) {
             if (this.isHidden() && !this.props.hidden) {
                 this.setState({
                     componentContextMenuClass: "top-context-menu-container",

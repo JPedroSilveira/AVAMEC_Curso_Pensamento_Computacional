@@ -8,6 +8,7 @@ import Slide3 from './slide_3'
 import Slide4 from './slide_4'
 import Slide5 from './slide_5'
 import Slide6 from './slide_6'
+import Slide7 from './slide_7'
 import CharacterTalk from '../../generics/characters/talk'
 import FidipidesOne from '../../../images/content/decomposicao/talk-one.svg'
 import FidipidesTwo from '../../../images/content/decomposicao/talk-two.svg'
@@ -22,17 +23,14 @@ class Decomposicao extends UnitBase {
         super(props)
 
         this.state = {
-            availablePages: 6,
+            availablePages: 7,
             animation: FidipidesOne,
             talkCount: 4,
             currentTalk: 1,
             hasPreviousTalk: false,
             hasNextTalk: true,
             renderTalk: true,
-            talkPage: "1",
-            contextMenuHidden: false,
-            topBarHidden: false,
-            topBarShowEverything: true
+            talkPage: "1"
         }
     }
 
@@ -79,7 +77,11 @@ class Decomposicao extends UnitBase {
                 )
             case "6":
                 return (
-                    <Slide6 />
+                    <Slide6 unitId={this.props.id} />
+                )
+            case "7":
+                return (
+                    <Slide7 />
                 )
             default:
                 return null
