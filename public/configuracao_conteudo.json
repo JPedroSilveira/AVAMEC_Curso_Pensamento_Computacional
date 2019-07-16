@@ -517,7 +517,7 @@
             },
             {
                 "identificador": "atividade_3_algoritmos",
-                "nomeAtividade": "Atividades Avaliativas",
+                "nomeAtividade": "Pilha de pratos",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
@@ -550,7 +550,7 @@
             },
             {
                 "identificador": "atividade_4_algoritmos",
-                "nomeAtividade": "Atividades Avaliativas",
+                "nomeAtividade": "Troca de pneu",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
