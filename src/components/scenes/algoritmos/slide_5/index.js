@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import TextStandardBox from '../../../generics/text/standard-box'
 import SimpleJustify from '../../../generics/text/simple-justify'
 import AlgorithmBox from '../../../generics/text/algorithm-box'
+import Strong from '../../../generics/font/strong'
 import Image from '../../../generics/image'
 import FontGreen from '../../../generics/font/green'
 import FontRed from '../../../generics/font/red'
@@ -18,7 +19,7 @@ class Slide5 extends React.Component {
             <Fragment>
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroFive} />
                 <TextStandardBox marginBottom="50px">
-                    <p>Com muita frequência, a realização de uma atividade requer a execução de atividades mais simples, por várias vezes. Assim, além da tomada de decisão, precisamos desse outro padrão de ação, conhecido como repetição. A ideia é simples e consiste na realização da mesma atividade, ou sequência de atividades, várias vezes.</p>
+                    <p>Com muita frequência, a realização de uma atividade requer a execução de atividades mais simples, por várias vezes. Assim, além da tomada de decisão, precisamos desse outro padrão de ação, conhecido como <Strong>repetição</Strong>. A ideia é simples e consiste na realização da mesma atividade, ou sequência de atividades, várias vezes.</p>
                 </TextStandardBox>
                 <Image marginBottom="50px" height="auto" width="700px" src={InfoThree} />
                 <SimpleJustify marginBottom="50px">
@@ -88,7 +89,7 @@ class Slide5 extends React.Component {
                     </AlgorithmBox>
                 </SimpleJustify>
                 <TextStandardBox marginBottom="100px">
-                    <p>A estrutura repita auxilia-nos a simplificar a escrita de algoritmos quando sabemos a quantidade de vezes que desejamos realizar determinadas ações. Essa estrutura permite evitar a escrita da mesma sequência de ações repetidas vezes. Entretanto, nem sempre o número de repetições é conhecido. Nesses casos, podemos fazer uso da estrutura:</p>
+                    <p>A estrutura <Strong>repita</Strong> auxilia-nos a simplificar a escrita de algoritmos quando sabemos a quantidade de vezes que desejamos realizar determinadas ações. Essa estrutura permite evitar a escrita da mesma sequência de ações repetidas vezes. Entretanto, nem sempre o número de repetições é conhecido. Nesses casos, podemos fazer uso da estrutura:</p>
                     <Image height="auto" width="600px" src={AlgOne} />
                     <p>Suponha que lhe foi encomendada a revisão completa de um determinado texto. O Algoritmo 06, apresentado a seguir, detalha os passos necessários para essa tarefa.</p>
                     <AlgorithmBox marginTop="25px" title="Algoritmo 06" algorithmTitle="Revisão completa de um texto">

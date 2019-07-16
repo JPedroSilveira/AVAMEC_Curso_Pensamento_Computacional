@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import TextStandardBox from '../../../generics/text/standard-box'
 import SimpleJustify from '../../../generics/text/simple-justify'
 import AlgorithmBox from '../../../generics/text/algorithm-box'
+import Strong from '../../../generics/font/strong'
 import Image from '../../../generics/image'
 import FontGreen from '../../../generics/font/green'
 import FontRed from '../../../generics/font/red'
@@ -14,6 +15,7 @@ class Slide4 extends React.Component {
             <Fragment>
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroFour} />
                 <SimpleJustify marginBottom="50px">
+                    <p>Você talvez acredite que na rotina de meu dia a dia não haja qualquer situação que exija que eu tome uma decisão. Mas isso não é exatamente uma verdade, já que em dias mais frios fazemos uma hora de aquecimento e em dias mais quentes 40 min. Veja como fica minha rotina diária com essa condição:</p>
                     <AlgorithmBox title="Algoritmo 03" algorithmTitle="Rotina diária">
                         <FontGreen><p>Após o sol raiar</p></FontGreen>
                         <ul>
@@ -41,8 +43,8 @@ class Slide4 extends React.Component {
                     </AlgorithmBox>
                 </SimpleJustify>
                 <TextStandardBox marginBottom="100px">
-                    <p>Na nova versão, perceba que o passo “Começar aquecimentos;” ganhou um detalhamento, considerando que a ação a ser realizada depende da temperatura do dia. Isso precisa ser observado por nosso agente computacional, introduzindo-se o que costumamos chamar de uma “seleção”. Nesse caso estamos ilustrando com uma seleção básica, que considera apenas duas possibilidades, ou seja, tem-se uma pergunta cuja resposta só pode ser “verdadeiro” ou “falso”.</p>
-                    <p>Durante a execução do novo algoritmo, se a sentença “Se for um dia frio” for satisfeita, a ação que sucede o termo “então”, “fazer 1h de aquecimento”, será realizada e, se a sentença não for satisfeita, a ação que sucede o termo “senão”, “fazer 40 min de aquecimento”, será realizada.</p>
+                    <p>Na nova versão, perceba que o passo “Começar aquecimentos;” ganhou um detalhamento, considerando que a ação a ser realizada depende da temperatura do dia. Isso precisa ser observado por nosso agente computacional, introduzindo-se o que costumamos chamar de uma <Strong>“seleção”</Strong>. Nesse caso estamos ilustrando com uma seleção básica, que considera apenas duas possibilidades, ou seja, tem-se uma pergunta cuja resposta só pode ser <Strong>“verdadeiro”</Strong> ou <Strong>“falso”</Strong>.</p>
+                    <p>Durante a execução do novo algoritmo, se a sentença “Se for um dia frio” for satisfeita, a ação que sucede o termo <Strong>“então”</Strong>, “fazer 1h de aquecimento”, será realizada e, se a sentença não for satisfeita, a ação que sucede o termo <Strong>“senão”</Strong>, “fazer 40 min de aquecimento”, será realizada.</p>
                 </TextStandardBox>
             </Fragment>
         )

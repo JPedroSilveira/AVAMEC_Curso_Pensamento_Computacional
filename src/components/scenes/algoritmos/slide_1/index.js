@@ -12,8 +12,7 @@ class Slide1 extends React.Component {
         return (
             <Fragment>
                 <TextStandardBox marginBottom="50px">
-                    <p>Conseguindo planejar bem o dia, otimizamos o uso do nosso tempo! O dia parece mais longo. Em vez de rotina, vamos chamar isso de algoritmo.</p>
-                    <Image marginTop="50px" marginBottom="50px" height="auto" width="600px" src={InfoOne} />
+                    <p>Conseguindo planejar bem o dia, otimizamos o uso do nosso tempo! O dia parece mais longo. Inicialmente vamos examinar a rotina diária, em tempos de treinamento,  do Fidípides.</p>
                     <AlgorithmBox title="Algoritmo 01" algorithmTitle="Rotina diária">
                         <FontGreen><p>Após o sol raiar</p></FontGreen>
                         <ul>
@@ -34,6 +33,7 @@ class Slide1 extends React.Component {
                             <li>Retornar ao alojamento.</li>
                         </ul>
                     </AlgorithmBox>
+                    <Image marginTop="50px" marginBottom="50px" height="auto" width="600px" src={InfoOne} />
                 </TextStandardBox>
                 <TextStandardBox marginBottom="100px">
                     <p>Algoritmo: uma sequência finita de etapas (passos), cada qual executável em um tempo finito, por um agente computacional, natural (humano) ou sintético (computador).</p>

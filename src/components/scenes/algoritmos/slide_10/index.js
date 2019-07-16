@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import TextStandardBox from '../../../generics/text/standard-box'
 import AlgorithmBox from '../../../generics/text/algorithm-box'
+import Strong from '../../../generics/font/strong'
 import Image from '../../../generics/image'
 import Title from '../../../generics/title'
 import FontGreen from '../../../generics/font/green'
@@ -15,9 +16,9 @@ class Slide10 extends React.Component {
             <Fragment>
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroTen} />
                 <TextStandardBox marginBottom="50px">
-                    <p>Ao elaborarmos um algoritmo, é importante usar técnicas que facilitem o processo de construção, que ajudem a testar se o algoritmo obtido resolve o problema e, ainda, que permitam aferir o desempenho da solução. Nos tópicos a seguir, faremos uma breve apresentação desses temas.</p>
+                    <p>Ao elaborarmos um algoritmo, é importante usar técnicas que facilitem o processo de <Strong>construção</Strong>, que ajudem a <Strong>testar</Strong> se o algoritmo obtido resolve o problema e, ainda, que permitam aferir o <Strong>desempenho</Strong> da solução. Nos tópicos a seguir, faremos uma breve apresentação desses temas.</p>
                     <Title>Refinamentos sucessivos</Title>
-                    <p>Uma técnica muito usada para o desenvolvimento de algoritmos é a que chamamos de Refinamentos Sucessivos. Um exemplo disso foi apresentado no início deste capítulo(Algoritmo 01), quando substituímos a tarefa de fazer o aquecimento por uma condição em relação ao clima:</p>
+                    <p>Uma técnica muito usada para o desenvolvimento de algoritmos é a que chamamos de Refinamentos Sucessivos. Um exemplo disso foi apresentado no início desta unidade(Algoritmo 01), quando substituímos a tarefa de fazer o aquecimento por uma condição em relação ao clima:</p>
                     <Image marginTop="25px" marginBottom="25px" height="auto" width="400px" src={AlgTwo} />
                     <p>Essa técnica consiste em ocultar os detalhes de uma determinada ação e apresentá-los em novas versões do algoritmo. Podemos dizer que nesse caso estamos usando o pilar “Abstração” do Pensamento Computacional, ou seja, ocultamos detalhes desnecessários para a compreensão da ação. Essa é uma técnica muito importante do ponto de vista do Pensamento Computacional, pois oferece ao autor de algoritmos a possibilidade de ir acrescentando detalhes progressivamente. Com isso podemos, em cada momento do processo de elaboração, dosar o nível da preocupação com detalhes.</p>
                 </TextStandardBox>

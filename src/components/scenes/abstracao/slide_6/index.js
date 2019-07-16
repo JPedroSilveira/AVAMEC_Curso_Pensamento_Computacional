@@ -23,7 +23,7 @@ class Slide6 extends React.Component {
                         <p>Você é o diretor de uma escola e precisa organizar o trabalho da equipe de apoio. Quais os grandes grupos de atividades que você consegue destacar para garantir o funcionamento de sua escola?</p>
                         <Image marginTop="50px" height="auto" width="350px" src={Books} />
                     </ProblemBox>
-                    <ProblemBox tmarginBottom="50px" itle={"Problema 3"} problemTitle={"Situação-problema"}>
+                    <ProblemBox tmarginBottom="50px" title={"Problema 3"} problemTitle={"Situação-problema"}>
                         <p>Construa uma situação-problema, preferencialmente de sua área de interesse, onde você identifica a possibilidade de utilização do pilar Abstração do Pensamento Computacional, para apoiar a elaboração de soluções.</p>
                         <Image marginTop="50px" height="auto" width="350px" src={Light} />
                     </ProblemBox>

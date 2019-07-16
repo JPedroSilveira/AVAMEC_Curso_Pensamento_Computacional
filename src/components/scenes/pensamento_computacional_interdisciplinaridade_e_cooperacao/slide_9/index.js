@@ -13,12 +13,12 @@ class Slide9 extends React.Component {
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroNine} />
                 <TextStandardBox marginBottom="50px">
                     <Title>Uso de Arquitetura Pedagógica (AP)</Title>
-                    <p>Ao longo do tempo, a Cooperação tem sido utilizada em contextos educacionais, tendo motivado, a partir dos anos 1970, o surgimento de vários métodos de aprendizagem cooperativa, que são recursos dos quais os professores podem fazer uso e cuja apropriação pode ser apoiada pelos Pilares do Pensamento Computacional. Usualmente cada método é estruturado em etapas:</p>
+                    <p>Ao longo do tempo, a Cooperação tem sido utilizada em contextos educacionais, tendo motivado, a partir dos anos 1970, o surgimento de vários métodos de aprendizagem cooperativa, que são recursos dos quais os professores podem fazer uso e cuja apropriação pode ser apoiada pelos Pilares do Pensamento Computacional. Usualmente cada método é estruturado em etapas pelos Pilares do Pensamento Computacional, pois:</p>
                     <p>
-                        <FontLightBlue>Decomposição</FontLightBlue> - Usualmente casa método é estruturado em etapas<br/>
-                        <FontLightBlue>Algoritmos</FontLightBlue> - desenvolve suas dinâmicas segundo certos scripts<br />
-                        <FontLightBlue>Reconhecimento de Padrões</FontLightBlue> - têm papéis ou funções bem definidos<br />
-                        <FontLightBlue>Abstração</FontLightBlue> - e tem foco e prioridade em aspectos específicos
+                        - usualmente casa método é estruturado em etapas(<FontLightBlue>Decomposição</FontLightBlue>)<br/>
+                        - desenvolve suas dinâmicas segundo certos scripts(<FontLightBlue>Algoritmos</FontLightBlue>)<br />
+                        - têm papéis ou funções bem definidos<FontLightBlue>Reconhecimento de Padrões</FontLightBlue>)<br />
+                        - e tem foco e prioridade em aspectos específicos(<FontLightBlue>Abstração</FontLightBlue>)
                     </p>
                     <p>Métodos de aprendizagem cooperativa podem também ser investigados segundo uma linha paradigmática, que vem sendo denominada Arquitetura Pedagógica (AP), que busca pensar propostas pedagógicas em sintonia com as possibilidades oferecidas pela tecnologia. Nessa perspectiva, ao invés de olharmos uma proposta pedagógica concebida independentemente dos elementos tecnológicos e tentarmos inserir a tecnologia, consideramos os dois aportes para pensar novas soluções. Sem entrar em detalhes das APs, podemos resumidamente relacionar o uso com os quatro pilares como segue:</p>
                     <p>

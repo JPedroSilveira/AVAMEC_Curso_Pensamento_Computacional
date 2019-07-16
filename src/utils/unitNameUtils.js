@@ -16,6 +16,8 @@ class UnitNameUtils {
                 return UnitName.ALGORITMOS
             case UnitId.PENSAMENTO_COMPUTACIONAL_INTERDISCIPLINARIDADE_E_COOPERACAO:
                 return UnitName.PENSAMENTO_COMPUTACIONAL_INTERDISCIPLINARIDADE_E_COOPERACAO
+            case UnitId.CONCLUSAO:
+                return UnitName.CONCLUSAO
             default:
                 return "NaN"
         }
