@@ -663,5 +663,14 @@
                 ]
             }
         ]
+    },
+    {
+        "identificador": "conclusao",
+        "nome": "Conclusão",
+        "descricao": "",
+        "permitePorcentagem": "true",
+        "identificadorPai": "",
+        "topicos": [],
+        "atividades": []
     }
 ]
