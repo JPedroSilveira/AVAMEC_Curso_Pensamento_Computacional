@@ -15,13 +15,14 @@ class UnitBase extends React.Component {
         if(this.state.renderTalk){
             this.setState({
                 openPage: openPage,
-                contextMenuHidden: openPage === "1",
-                topBarHidden: openPage === "1",
-                topBarShowEverything: openPage !== "1"
+                contextMenuHidden: openPage === this.state.talkPage,
+                topBarHidden: openPage === this.state.talkPage,
+                topBarShowEverything: openPage !== this.state.talkPage
             })
         } else {
             this.setState({
-                openPage: openPage
+                openPage: openPage,
+                topBarHidden: false
             })
         }
         

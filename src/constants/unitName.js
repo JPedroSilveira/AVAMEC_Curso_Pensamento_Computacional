@@ -1,5 +1,5 @@
 export default {
-    INTRO_PENSAMENTO_COMP: 'Introdução ao Pensamento Computacional',
+    INTRO_PENSAMENTO_COMP: 'Introdução',
     DECOMPOSICAO: 'Decomposição',
     ABSTRACAO: 'Abstração',
     RECONHECIMENTO_DE_PADROES: 'Reconhecimento de Padrões',

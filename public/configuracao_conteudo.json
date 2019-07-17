@@ -1,7 +1,7 @@
 [
     {
         "identificador": "introducao_ao_pensamento_computacional",
-        "nome": "Introdução ao Pensamento Computacional",
+        "nome": "Introdução",
         "descricao": "",
         "permitePorcentagem": "true",
         "identificadorPai": "",
@@ -403,12 +403,12 @@
             },
             {
                 "identificador": "atividade_5_reconhecimento_de_padroes",
-                "nomeAtividade": "Final da telenovela",
+                "nomeAtividade": "Identificação de doença",
                 "questoes": [
                     {
                         "tipoQuestaoString": "INTEGRAL",
                         "identificador": "q1_a5_reconhecimento_de_padroes",
-                        "enunciado": "Num mercado, determinar se o peixe está de fato fresco envolve analisar se cada exemplar está em conformidade com certos elementos, como os mencionados a seguir. Qual, dentre os aspectos abaixo, parece menos provável de caracterizar a frescura de um certo pescado?",
+                        "enunciado": "Pense em alguma vez que você ou alguém próximo adoeceu e a natureza da enfermidade foi sugerida e confirmada posteriormente por diagnóstico médico. Em contexto similar, diga qual, dentre os elementos a seguir, seria o menos provável de auxiliar a estabelecer um padrão adequado a tal propósito.",
                         "gabaritos": [
                             {
                                 "alternativa": "Histórico de doenças.",
@@ -585,7 +585,7 @@
     },
     {
         "identificador": "pensamento_computacional_interdisciplinaridade_e_cooperacao",
-        "nome": "Pensamento Computacional Interdisciplinaridade e Cooperação",
+        "nome": "Interdisciplinaridade e Cooperação",
         "descricao": "",
         "permitePorcentagem": "true",
         "identificadorPai": "",

@@ -14,7 +14,8 @@ class Conclusao extends UnitBase {
 
         this.state = {
             availablePages: 2,
-            renderTalk: false
+            renderTalk: false,
+            talkPage: "NaN"
         }
     }
 
