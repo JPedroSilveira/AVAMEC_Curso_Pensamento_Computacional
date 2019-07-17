@@ -8,6 +8,7 @@ import FontGreen from '../../../generics/font/green'
 import FontRed from '../../../generics/font/red'
 
 import IntroFour from '../../../../images/content/algoritmos/intro-four.svg'
+import InfoPageFour from '../../../../images/content/algoritmos/info-page-four.svg'
 
 class Slide4 extends React.Component {
     render() {
@@ -15,7 +16,7 @@ class Slide4 extends React.Component {
             <Fragment>
                 <Image marginTop="100px" marginBottom="50px" height="auto" width="900px" src={IntroFour} />
                 <SimpleJustify marginBottom="50px">
-                    <p>Você talvez acredite que na rotina de meu dia a dia não haja qualquer situação que exija que eu tome uma decisão. Mas isso não é exatamente uma verdade, já que em dias mais frios fazemos uma hora de aquecimento e em dias mais quentes 40 min. Veja como fica minha rotina diária com essa condição:</p>
+                    <Image marginTop="25px" marginBottom="25px" height="auto" width="700px" src={InfoPageFour} />
                     <AlgorithmBox title="Algoritmo 03" algorithmTitle="Rotina diária">
                         <FontGreen><p>Após o sol raiar</p></FontGreen>
                         <ul>
