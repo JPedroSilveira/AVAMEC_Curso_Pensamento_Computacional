@@ -30,7 +30,6 @@ class IntroducaoAoPensamentoComputacional extends UnitBase {
     }
 
     getCurrentTalk = () => {
-        console.log(this.state.currentTalk)
         switch (this.state.currentTalk) {
             case 1:
                 this.state.animation = FidipidesOne;
