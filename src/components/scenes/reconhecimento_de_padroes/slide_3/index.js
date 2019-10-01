@@ -14,7 +14,7 @@ class Slide3 extends React.Component {
             id: "atividade_1_reconhecimento_de_padroes",
             questions: [
                 {
-                    id: "q1_a1_reconhecimento_de_padroes",
+                    id: "q1_a2_reconhecimento_de_padroes",
                     options: [
                         {
                             value: "0",
@@ -55,7 +55,7 @@ class Slide3 extends React.Component {
     getActivityTwo = () => {
         return {
             unitId: this.props.unitId,
-            id: "atividade_2_decomposicao",
+            id: "atividade_2_reconhecimento_de_padroes",
             questions: [
                 {
                     id: "q1_a2_decomposicao",
